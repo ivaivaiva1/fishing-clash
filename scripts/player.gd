@@ -1,0 +1,18 @@
+extends Node2D
+class_name Player
+
+var player_name: String 
+var current_score: int
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if(area.is_in_group("bait")):
+		var bait: Bait = area.get_parent()
+		if(bait.bait_state != "catch"): return
+		current_score += bait.points
+		if(player_name == "player1"):
+			GlobalVars.player1_score = current_score
+		else:
+			GlobalVars.player2_score = current_score
+		bait.reset()
+		GlobalVars.GameManager_intance.att_score()
