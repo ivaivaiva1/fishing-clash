@@ -36,12 +36,12 @@ func _input(event):
 		peso_2.visible = true
 		
 		
-		var player_instance_2 = player_scene.instantiate()
-		var player2: Player = player_instance_2
-		player2.player_name = "player2"
-		player2.current_player = 2
-		add_child(player_instance_2)
-		player_instance_2.global_position = Vector2(353.0, 107)
+		#var player_instance_2 = player_scene.instantiate()
+		#var player2: Player = player_instance_2
+		#player2.player_name = "player2"
+		#player2.current_player = 2
+		#add_child(player_instance_2)
+		#player_instance_2.global_position = Vector2(353.0, 107)
 		
 		
 		

@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://duad37itfruxt" path="res://Stella Fishs/pixil-frame-0 (7).png" id="4_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://dpc2ttsjuuj82" path="res://Stella Fishs/pixil-frame-0 (5).png" id="5_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://d2wfdbx6aq8l2" path="res://SpearFishing Assets Pack/Sprites/Fish2 - 32x16/Orange.png" id="6_d2wvv"]
+[ext_resource type="Script" uid="uid://b1y7jwgfvfrda" path="res://scripts/boost_controller.gd" id="6_fjrip"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
 size = Vector2(20, 7)
@@ -224,19 +225,14 @@ size = Vector2(88.61045, 10.4589615)
 script = ExtResource("1_tuyoq")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1660507717]
-position = Vector2(-171, -106.75)
+position = Vector2(55.937405, -0.7496753)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1227957482]
-position = Vector2(171, 106)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1227957482]
+position = Vector2(0.0031776428, -0.0003247261)
 shape = SubResource("RectangleShape2D_1kice")
 
-[node name="boat" type="Sprite2D" parent="." unique_id=1585016192]
-position = Vector2(7.00002, -23.75)
-scale = Vector2(0.315, 0.315)
-texture = ExtResource("2_fjrip")
-
 [node name="bait" type="CharacterBody2D" parent="." unique_id=120479355 node_paths=PackedStringArray("blue_fish_list", "red_fish_list", "golden_fish_list")]
-position = Vector2(47.855633, 7.24999)
+position = Vector2(48.140896, 2.786106)
 script = ExtResource("3_smehm")
 blue_fish_list = [NodePath("blue fishs/blue_fish 1"), NodePath("blue fishs/blue_fish 2"), NodePath("blue fishs/blue_fish 3"), NodePath("blue fishs/blue_fish 4"), NodePath("blue fishs/blue_fish 5")]
 red_fish_list = [NodePath("red fishs/red_fish 0"), NodePath("red fishs/red_fish 1"), NodePath("red fishs/red_fish 2"), NodePath("red fishs/red_fish 3"), NodePath("red fishs/red_fish 4")]
@@ -407,8 +403,17 @@ sprite_frames = SubResource("SpriteFrames_8ool0")
 autoplay = "default"
 frame_progress = 0.899435
 
+[node name="boost_controller" type="Node" parent="bait" unique_id=1953729552]
+unique_name_in_owner = true
+script = ExtResource("6_fjrip")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127423675]
 position = Vector2(0.6225929, -43.84891)
 shape = SubResource("RectangleShape2D_tuyoq")
+
+[node name="boat" type="Sprite2D" parent="." unique_id=1585016192]
+position = Vector2(7.00002, -23.75)
+scale = Vector2(0.315, 0.315)
+texture = ExtResource("2_fjrip")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

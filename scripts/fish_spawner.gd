@@ -18,7 +18,6 @@ func _ready():
 	#spawn_fish()
 
 func _process(delta):
-	print(big_fish_rate)
 	if(spawn_timer > 0):
 		spawn_timer -= delta
 	else:
