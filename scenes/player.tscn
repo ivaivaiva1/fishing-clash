@@ -301,7 +301,7 @@ position = Vector2(6.54356, 23.1896)
 rotation = -1.5708
 sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
-frame_progress = 0.0854612
+frame_progress = 0.0951693
 
 [node name="red_fish 2" type="AnimatedSprite2D" parent="bait/red fishs"]
 unique_name_in_owner = true
@@ -309,7 +309,6 @@ visible = false
 z_index = 103
 position = Vector2(9.54356, 23.1896)
 rotation = -1.62316
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
 frame_progress = 0.716382
@@ -320,7 +319,6 @@ visible = false
 z_index = 103
 position = Vector2(12.5436, 23.1896)
 rotation = -1.69297
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
 frame_progress = 0.716382

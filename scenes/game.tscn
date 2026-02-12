@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://ebbi0lca86e4"]
+[gd_scene load_steps=30 format=4 uid="uid://ebbi0lca86e4"]
 
 [ext_resource type="PackedScene" uid="uid://c1fnyt64wu0b1" path="res://scenes/shark.tscn" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://cpddqal215nxs" path="res://scenes/fish blue.tscn" id="1_uwrxv"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dpxa08h6rwtoh" path="res://SpearFishing Assets Pack/Sprites/Corals - 16x16/Corals.png" id="9_vtaks"]
 [ext_resource type="Texture2D" uid="uid://dkvcby5ccnqaj" path="res://sky_test/Clouds.png" id="10_dinhu"]
 [ext_resource type="Texture2D" uid="uid://d2ajmhqbplr30" path="res://sky_test/8.png" id="14_trtic"]
+[ext_resource type="Texture2D" uid="uid://qb5owawq05gt" path="res://SpearFishing Assets Pack/Sprites/Bubble - 8x8.png" id="15_ir15t"]
 
 [sub_resource type="SystemFont" id="SystemFont_264po"]
 font_names = PackedStringArray("Cambria")
@@ -144,6 +145,49 @@ shader = ExtResource("7_gee14")
 shader_parameter/frequency = 8.0
 shader_parameter/intensity = 0.005
 shader_parameter/speed = 0.9
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir15t"]
+atlas = ExtResource("15_ir15t")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ca42v"]
+atlas = ExtResource("15_ir15t")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rysoc"]
+atlas = ExtResource("15_ir15t")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssvqc"]
+atlas = ExtResource("15_ir15t")
+region = Rect2(24, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_264po"]
+atlas = ExtResource("15_ir15t")
+region = Rect2(32, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1kice"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ir15t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ca42v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rysoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssvqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_264po")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="game" type="Node2D"]
 
@@ -657,3 +701,16 @@ offset_bottom = 485.0
 [node name="shark" parent="." instance=ExtResource("1_gee14")]
 unique_name_in_owner = true
 position = Vector2(-66, 167)
+
+[node name="Bubble-8x8" type="Sprite2D" parent="."]
+position = Vector2(-66, 382)
+texture = ExtResource("15_ir15t")
+
+[node name="bubble" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(65, 317)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_1kice")
+autoplay = "default"
+frame = 4
+frame_progress = 1.0

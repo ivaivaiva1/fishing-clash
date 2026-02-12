@@ -25,6 +25,7 @@ func _process(delta: float) -> void:
 
 func _input(event):
 	if event.is_action_pressed("ui_accept"): # "ui_accept" é a tecla espaço por padrão
+		if game_state == "game": return
 		game_state = "game"
 		FishSpawner_intance.remove_all_fish()
 		Shark.re_start()
