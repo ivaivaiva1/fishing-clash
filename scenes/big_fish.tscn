@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://by4oxgbthjk4u"]
+[gd_scene format=3 uid="uid://by4oxgbthjk4u"]
 
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_5lic5"]
 [ext_resource type="Texture2D" uid="uid://f82kynkrhuah" path="res://Stella Fishs/pixil-frame-0 (6).png" id="2_me2ul"]
@@ -70,7 +70,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8g0i4"]
 size = Vector2(47, 25.5781)
 
-[node name="big_fish" type="CharacterBody2D"]
+[node name="big_fish" type="CharacterBody2D" unique_id=759476320]
 z_index = 3
 script = ExtResource("1_5lic5")
 fish_name = "golden"
@@ -79,7 +79,7 @@ auto_destruction_timer = 100.0
 peso = 0.6
 points = 30.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2119729240]
 unique_name_in_owner = true
 position = Vector2(0, 26)
 scale = Vector2(3, 3)
@@ -87,10 +87,10 @@ sprite_frames = SubResource("SpriteFrames_jrlim")
 autoplay = "default"
 frame_progress = 0.669937
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1186832392]
 position = Vector2(0, 26)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1096265319]
 position = Vector2(-2.5, 3.78907)
 shape = SubResource("RectangleShape2D_8g0i4")
 

@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bphka414u1cly" path="res://sky_test/oie_transparent (1).png" id="2_fjrip"]
 [ext_resource type="Script" uid="uid://dn2m2bg4gmlh8" path="res://scripts/bait.gd" id="3_smehm"]
 [ext_resource type="Texture2D" uid="uid://duad37itfruxt" path="res://Stella Fishs/pixil-frame-0 (7).png" id="4_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://f82kynkrhuah" path="res://Stella Fishs/pixil-frame-0 (6).png" id="5_fjrip"]
 [ext_resource type="Texture2D" uid="uid://dpc2ttsjuuj82" path="res://Stella Fishs/pixil-frame-0 (5).png" id="5_tuyoq"]
-[ext_resource type="Texture2D" uid="uid://d2wfdbx6aq8l2" path="res://SpearFishing Assets Pack/Sprites/Fish2 - 32x16/Orange.png" id="6_d2wvv"]
 [ext_resource type="Script" uid="uid://b1y7jwgfvfrda" path="res://scripts/boost_controller.gd" id="6_fjrip"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
@@ -154,68 +154,68 @@ animations = [{
 "speed": 20.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v2yb1"]
-atlas = ExtResource("6_d2wvv")
-region = Rect2(0, 32, 32, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ni07"]
+atlas = ExtResource("5_fjrip")
+region = Rect2(0, 48, 32, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_js0lu"]
-atlas = ExtResource("6_d2wvv")
-region = Rect2(32, 32, 32, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_l71n6"]
+atlas = ExtResource("5_fjrip")
+region = Rect2(32, 48, 32, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gxtfn"]
-atlas = ExtResource("6_d2wvv")
-region = Rect2(64, 32, 32, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ke2ow"]
+atlas = ExtResource("5_fjrip")
+region = Rect2(64, 48, 32, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_twgab"]
-atlas = ExtResource("6_d2wvv")
-region = Rect2(96, 32, 32, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujl30"]
+atlas = ExtResource("5_fjrip")
+region = Rect2(96, 48, 32, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_02fa5"]
-atlas = ExtResource("6_d2wvv")
-region = Rect2(128, 32, 32, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_31cv2"]
+atlas = ExtResource("5_fjrip")
+region = Rect2(128, 48, 32, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nepv3"]
-atlas = ExtResource("6_d2wvv")
-region = Rect2(160, 32, 32, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_pf23h"]
+atlas = ExtResource("5_fjrip")
+region = Rect2(160, 48, 32, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7025r"]
-atlas = ExtResource("6_d2wvv")
-region = Rect2(192, 32, 32, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_dt7fs"]
+atlas = ExtResource("5_fjrip")
+region = Rect2(192, 48, 32, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m4url"]
-atlas = ExtResource("6_d2wvv")
-region = Rect2(224, 32, 32, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqfne"]
+atlas = ExtResource("5_fjrip")
+region = Rect2(224, 48, 32, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ool0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v2yb1")
+"texture": SubResource("AtlasTexture_4ni07")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_js0lu")
+"texture": SubResource("AtlasTexture_l71n6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gxtfn")
+"texture": SubResource("AtlasTexture_ke2ow")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_twgab")
+"texture": SubResource("AtlasTexture_ujl30")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_02fa5")
+"texture": SubResource("AtlasTexture_31cv2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nepv3")
+"texture": SubResource("AtlasTexture_pf23h")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7025r")
+"texture": SubResource("AtlasTexture_dt7fs")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m4url")
+"texture": SubResource("AtlasTexture_wqfne")
 }],
 "loop": true,
 "name": &"default",
-"speed": 15.0
+"speed": 20.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyoq"]
@@ -355,7 +355,7 @@ rotation = -1.5708
 scale = Vector2(1.531, 1.531)
 sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
-frame_progress = 0.0103795
+frame_progress = 0.39534628
 
 [node name="blue_fish 3" type="AnimatedSprite2D" parent="bait/blue fishs" unique_id=214574894]
 unique_name_in_owner = true
@@ -401,7 +401,7 @@ rotation = -1.5708
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_8ool0")
 autoplay = "default"
-frame_progress = 0.899435
+frame_progress = 0.474755
 
 [node name="boost_controller" type="Node" parent="bait" unique_id=1953729552]
 unique_name_in_owner = true

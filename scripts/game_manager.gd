@@ -10,6 +10,9 @@ var game_state: String = "menu"
 @onready var score_2: Label = %score_player_2
 @export var peso_1: Label 
 @export var peso_2: Label 
+var game_timer: int = 0
+var _time_accumulator: float = 0.0
+
 
 func _ready() -> void:
 	GlobalVars.GameManager_intance = self
@@ -17,11 +20,24 @@ func _ready() -> void:
 	FishSpawner_intance.big_fish_rate = GlobalVars.big_fish_rate_menu
 	FishSpawner_intance.red_fish_rate = GlobalVars.red_fish_rate_menu
 
+
 func _process(delta: float) -> void:
 	peso_1.text = "peso: " + str(GlobalVars.player1_peso)
 	peso_2.text = "peso: " + str(GlobalVars.player2_peso)
+	if game_state == "game":
+		_time_accumulator += delta
+		
+		if _time_accumulator >= 1.0:
+			game_timer += 1
+			_time_accumulator = 0.0
+	
+	print(game_timer)
+	if game_timer > 240: get_tree().paused = true
+	
+	
 	#print("peso 1: ", str(GlobalVars.player1_score))
 	#print("peso 2: ", str(GlobalVars.player2_score))
+
 
 func _input(event):
 	if event.is_action_pressed("ui_accept"): # "ui_accept" é a tecla espaço por padrão
@@ -36,12 +52,12 @@ func _input(event):
 		peso_2.visible = true
 		
 		
-		#var player_instance_2 = player_scene.instantiate()
-		#var player2: Player = player_instance_2
-		#player2.player_name = "player2"
-		#player2.current_player = 2
-		#add_child(player_instance_2)
-		#player_instance_2.global_position = Vector2(353.0, 107)
+		var player_instance_2 = player_scene.instantiate()
+		var player2: Player = player_instance_2
+		player2.player_name = "player2"
+		player2.current_player = 2
+		add_child(player_instance_2)
+		player_instance_2.global_position = Vector2(353.0, 107)
 		
 		
 		
@@ -63,5 +79,5 @@ func _input(event):
 func att_score():
 	score_1.text = str(GlobalVars.player1_score)
 	score_2.text = str(GlobalVars.player2_score)
-	if(GlobalVars.player1_score > 1500): get_tree().paused = true
-	if(GlobalVars.player2_score > 1500): get_tree().paused = true
+	#if(GlobalVars.player1_score > 1500): get_tree().paused = true
+	#if(GlobalVars.player2_score > 1500): get_tree().paused = true

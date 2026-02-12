@@ -30,11 +30,11 @@ var peso = 1
 
 
 func _physics_process(delta):
-	print(actual_boost)
+	#print(actual_boost)
 	var target_velocity_y = 0.0
 	
 	if Input.is_action_just_pressed(input_action):
-		print("just pressed")
+		#print("just pressed")
 		boost_controller.do_boost()
 	
 	
