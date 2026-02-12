@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://bb6ifiejbxjb7"]
+[gd_scene format=3 uid="uid://bb6ifiejbxjb7"]
 
 [ext_resource type="Script" uid="uid://c7qfstejcicpp" path="res://scripts/player.gd" id="1_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://bphka414u1cly" path="res://sky_test/oie_transparent (1).png" id="2_fjrip"]
@@ -217,63 +217,66 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="player" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyoq"]
+size = Vector2(88.61045, 10.4589615)
+
+[node name="player" type="CharacterBody2D" unique_id=1921051687]
 script = ExtResource("1_tuyoq")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1660507717]
 position = Vector2(-171, -106.75)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1227957482]
 position = Vector2(171, 106)
 shape = SubResource("RectangleShape2D_1kice")
 
-[node name="boat" type="Sprite2D" parent="."]
+[node name="boat" type="Sprite2D" parent="." unique_id=1585016192]
 position = Vector2(7.00002, -23.75)
 scale = Vector2(0.315, 0.315)
 texture = ExtResource("2_fjrip")
 
-[node name="bait" type="CharacterBody2D" parent="." node_paths=PackedStringArray("blue_fish_list", "red_fish_list", "golden_fish_list")]
-position = Vector2(-7, 7.24999)
+[node name="bait" type="CharacterBody2D" parent="." unique_id=120479355 node_paths=PackedStringArray("blue_fish_list", "red_fish_list", "golden_fish_list")]
+position = Vector2(47.855633, 7.24999)
 script = ExtResource("3_smehm")
 blue_fish_list = [NodePath("blue fishs/blue_fish 1"), NodePath("blue fishs/blue_fish 2"), NodePath("blue fishs/blue_fish 3"), NodePath("blue fishs/blue_fish 4"), NodePath("blue fishs/blue_fish 5")]
 red_fish_list = [NodePath("red fishs/red_fish 0"), NodePath("red fishs/red_fish 1"), NodePath("red fishs/red_fish 2"), NodePath("red fishs/red_fish 3"), NodePath("red fishs/red_fish 4")]
 golden_fish_list = [NodePath("golden fish/golden_fish 1"), NodePath("golden fish/golden_fish 2")]
 
-[node name="body" type="CollisionShape2D" parent="bait"]
+[node name="body" type="CollisionShape2D" parent="bait" unique_id=1471137798]
 position = Vector2(7.75, 7.5)
 shape = SubResource("RectangleShape2D_ssvqc")
 
-[node name="coloRect" type="ColorRect" parent="bait"]
+[node name="coloRect" type="ColorRect" parent="bait" unique_id=404261130]
 z_index = 100
 offset_right = 15.0
 offset_bottom = 15.0
 metadata/_edit_use_anchors_ = true
 
-[node name="BaitArea" type="Area2D" parent="bait" groups=["bait"]]
+[node name="BaitArea" type="Area2D" parent="bait" unique_id=585212492 groups=["bait"]]
 visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="bait/BaitArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bait/BaitArea" unique_id=1607113299]
 position = Vector2(7.5, 7.5)
 shape = SubResource("RectangleShape2D_trtic")
 
-[node name="FishsArea" type="Area2D" parent="bait" groups=["fish_on_bait"]]
+[node name="FishsArea" type="Area2D" parent="bait" unique_id=1554614141 groups=["fish_on_bait"]]
 visible = false
 
-[node name="blue_fish" type="CollisionShape2D" parent="bait/FishsArea"]
+[node name="blue_fish" type="CollisionShape2D" parent="bait/FishsArea" unique_id=302141889]
 position = Vector2(7, 24.5)
 shape = SubResource("RectangleShape2D_5newe")
 
-[node name="red_fish" type="CollisionShape2D" parent="bait/FishsArea"]
+[node name="red_fish" type="CollisionShape2D" parent="bait/FishsArea" unique_id=312363091]
 position = Vector2(7, 20.5)
 shape = SubResource("RectangleShape2D_37s47")
 
-[node name="golden_fish" type="CollisionShape2D" parent="bait/FishsArea"]
+[node name="golden_fish" type="CollisionShape2D" parent="bait/FishsArea" unique_id=1287623037]
 position = Vector2(-0.5, 35)
 shape = SubResource("RectangleShape2D_bt5mj")
 
-[node name="red fishs" type="Node2D" parent="bait"]
+[node name="red fishs" type="Node2D" parent="bait" unique_id=209871366]
 
-[node name="red_fish 3" type="AnimatedSprite2D" parent="bait/red fishs"]
+[node name="red_fish 3" type="AnimatedSprite2D" parent="bait/red fishs" unique_id=152600394]
 unique_name_in_owner = true
 visible = false
 z_index = 103
@@ -283,7 +286,7 @@ sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
 frame_progress = 0.765977
 
-[node name="red_fish 1" type="AnimatedSprite2D" parent="bait/red fishs"]
+[node name="red_fish 1" type="AnimatedSprite2D" parent="bait/red fishs" unique_id=253089831]
 unique_name_in_owner = true
 visible = false
 z_index = 103
@@ -293,7 +296,7 @@ sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
 frame_progress = 0.765977
 
-[node name="red_fish 0" type="AnimatedSprite2D" parent="bait/red fishs"]
+[node name="red_fish 0" type="AnimatedSprite2D" parent="bait/red fishs" unique_id=165153854]
 unique_name_in_owner = true
 visible = false
 z_index = 103
@@ -303,7 +306,7 @@ sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
 frame_progress = 0.0951693
 
-[node name="red_fish 2" type="AnimatedSprite2D" parent="bait/red fishs"]
+[node name="red_fish 2" type="AnimatedSprite2D" parent="bait/red fishs" unique_id=126465221]
 unique_name_in_owner = true
 visible = false
 z_index = 103
@@ -313,7 +316,7 @@ sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
 frame_progress = 0.716382
 
-[node name="red_fish 4" type="AnimatedSprite2D" parent="bait/red fishs"]
+[node name="red_fish 4" type="AnimatedSprite2D" parent="bait/red fishs" unique_id=1761894238]
 unique_name_in_owner = true
 visible = false
 z_index = 103
@@ -323,9 +326,9 @@ sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
 frame_progress = 0.716382
 
-[node name="blue fishs" type="Node2D" parent="bait"]
+[node name="blue fishs" type="Node2D" parent="bait" unique_id=60148122]
 
-[node name="blue_fish 4" type="AnimatedSprite2D" parent="bait/blue fishs"]
+[node name="blue_fish 4" type="AnimatedSprite2D" parent="bait/blue fishs" unique_id=1471294785]
 unique_name_in_owner = true
 visible = false
 z_index = 102
@@ -336,7 +339,7 @@ sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.0103795
 
-[node name="blue_fish 2" type="AnimatedSprite2D" parent="bait/blue fishs"]
+[node name="blue_fish 2" type="AnimatedSprite2D" parent="bait/blue fishs" unique_id=794034973]
 unique_name_in_owner = true
 visible = false
 z_index = 102
@@ -347,7 +350,7 @@ sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.0103795
 
-[node name="blue_fish 1" type="AnimatedSprite2D" parent="bait/blue fishs"]
+[node name="blue_fish 1" type="AnimatedSprite2D" parent="bait/blue fishs" unique_id=1539631134]
 unique_name_in_owner = true
 visible = false
 z_index = 102
@@ -358,7 +361,7 @@ sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.0103795
 
-[node name="blue_fish 3" type="AnimatedSprite2D" parent="bait/blue fishs"]
+[node name="blue_fish 3" type="AnimatedSprite2D" parent="bait/blue fishs" unique_id=214574894]
 unique_name_in_owner = true
 visible = false
 z_index = 102
@@ -369,7 +372,7 @@ sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.0103795
 
-[node name="blue_fish 5" type="AnimatedSprite2D" parent="bait/blue fishs"]
+[node name="blue_fish 5" type="AnimatedSprite2D" parent="bait/blue fishs" unique_id=1886833701]
 unique_name_in_owner = true
 visible = false
 z_index = 102
@@ -380,9 +383,9 @@ sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.0103795
 
-[node name="golden fish" type="Node2D" parent="bait"]
+[node name="golden fish" type="Node2D" parent="bait" unique_id=1998195511]
 
-[node name="golden_fish 1" type="AnimatedSprite2D" parent="bait/golden fish"]
+[node name="golden_fish 1" type="AnimatedSprite2D" parent="bait/golden fish" unique_id=1648564733]
 unique_name_in_owner = true
 visible = false
 z_index = 101
@@ -393,7 +396,7 @@ sprite_frames = SubResource("SpriteFrames_8ool0")
 autoplay = "default"
 frame_progress = 0.899435
 
-[node name="golden_fish 2" type="AnimatedSprite2D" parent="bait/golden fish"]
+[node name="golden_fish 2" type="AnimatedSprite2D" parent="bait/golden fish" unique_id=920252643]
 unique_name_in_owner = true
 visible = false
 z_index = 101
@@ -403,5 +406,9 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_8ool0")
 autoplay = "default"
 frame_progress = 0.899435
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127423675]
+position = Vector2(0.6225929, -43.84891)
+shape = SubResource("RectangleShape2D_tuyoq")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

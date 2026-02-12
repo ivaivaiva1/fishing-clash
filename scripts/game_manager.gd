@@ -35,18 +35,25 @@ func _input(event):
 		peso_1.visible = true
 		peso_2.visible = true
 		
-		var player_instance_1 = player_scene.instantiate()
-		var player1: Player = player_instance_1
-		player1.player_name = "player1"
-		add_child(player_instance_1)
-		player_instance_1.global_position = Vector2(150, 107)
-		
 		
 		var player_instance_2 = player_scene.instantiate()
 		var player2: Player = player_instance_2
 		player2.player_name = "player2"
+		player2.current_player = 2
 		add_child(player_instance_2)
 		player_instance_2.global_position = Vector2(353.0, 107)
+		
+		
+		
+		var player_instance_1 = player_scene.instantiate()
+		var player1: Player = player_instance_1
+		player1.player_name = "player1"
+		player1.current_player = 1
+		add_child(player_instance_1)
+		player_instance_1.global_position = Vector2(150, 107)
+		
+		
+		
 		
 		
 		FishSpawner_intance.spawn_cooldown = GlobalVars.spawn_cooldown_game
