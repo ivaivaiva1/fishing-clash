@@ -12,17 +12,34 @@ var spawn_pos_y: Array[float] = [210.0, 442.0]
 var spawn_cooldown: float
 @onready var spawn_timer: float
 
+
+var red_rain: bool = false
+var red_rain_duration: float = 30
+var red_rain_timer: float 
+
+
 func _ready():
 	randomize()
 	spawn_timer = spawn_cooldown
 	#spawn_fish()
 
+
 func _process(delta):
 	if(spawn_timer > 0):
 		spawn_timer -= delta
 	else:
-		spawn_timer = randf_range(spawn_cooldown * 0.84, spawn_cooldown * 0.16)
+		if red_rain: spawn_timer = randf_range((spawn_cooldown/3.5) * 0.84, (spawn_cooldown/3.5) * 0.16)
+		else: spawn_timer = randf_range(spawn_cooldown * 0.84, spawn_cooldown * 0.16)
 		spawn_fish()
+	
+	# RED RAIN
+	if red_rain:
+		red_rain_timer -= delta
+		if red_rain_timer <= 0:
+			red_rain = false
+	if Input.is_action_just_pressed("red_rain"):
+		do_red_rain()
+
 
 
 func spawn_fish():
@@ -50,7 +67,9 @@ func spawn_fish():
 	
 	
 	var fish_instance
-	if(is_big_fish):
+	if red_rain && randf() <= 0.9:
+		fish_instance = red_fish.instantiate()
+	elif is_big_fish:
 		fish_instance = big_fish.instantiate()
 	else:
 		if(randi() % red_fish_rate == 0):
@@ -65,8 +84,14 @@ func spawn_fish():
 	spawned_fish.append(fish_instance)
 
 
+
 func remove_all_fish():
 	for fish in spawned_fish:
 		if is_instance_valid(fish):
 			fish.queue_free()
 	spawned_fish.clear()
+
+
+func do_red_rain():
+	red_rain = true
+	red_rain_timer = red_rain_duration
