@@ -13,8 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://bm1sf3k08up8e" path="res://SpearFishing Assets Pack/Sprites/SeaWeed - 16x32/Light.png" id="8_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://dpxa08h6rwtoh" path="res://SpearFishing Assets Pack/Sprites/Corals - 16x16/Corals.png" id="9_vtaks"]
 [ext_resource type="Texture2D" uid="uid://dkvcby5ccnqaj" path="res://sky_test/Clouds.png" id="10_dinhu"]
+[ext_resource type="Script" uid="uid://bi06wla0inb6j" path="res://scripts/price_flutuation.gd" id="11_rysoc"]
 [ext_resource type="Texture2D" uid="uid://d2ajmhqbplr30" path="res://sky_test/8.png" id="14_trtic"]
 [ext_resource type="Texture2D" uid="uid://qb5owawq05gt" path="res://SpearFishing Assets Pack/Sprites/Bubble - 8x8.png" id="15_ir15t"]
+[ext_resource type="Texture2D" uid="uid://gd022ulvec03" path="res://artes joao/price placa.png" id="16_ca42v"]
 
 [sub_resource type="SystemFont" id="SystemFont_264po"]
 font_names = PackedStringArray("Cambria")
@@ -26,14 +28,17 @@ font_size = 36
 
 [sub_resource type="LabelSettings" id="LabelSettings_ir15t"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_264po"]
-size = Vector2(852, 20)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir15t"]
+bg_color = Color(0, 0, 0, 1)
+corner_detail = 1
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ir15t"]
-size = Vector2(0.5583954, 10.472702)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ca42v"]
+bg_color = Color(1, 0.90700006, 0.06999999, 1)
+corner_detail = 1
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1j6l"]
-size = Vector2(49, 64)
+[sub_resource type="LabelSettings" id="LabelSettings_ca42v"]
+font_size = 25
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtaks"]
 texture = ExtResource("7_0tnpc")
@@ -149,6 +154,15 @@ shader_parameter/frequency = 8.0
 shader_parameter/intensity = 0.005
 shader_parameter/speed = 0.9
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_264po"]
+size = Vector2(852, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ir15t"]
+size = Vector2(0.5583954, 10.472702)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1j6l"]
+size = Vector2(49, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ir15t"]
 atlas = ExtResource("15_ir15t")
 region = Rect2(0, 0, 8, 8)
@@ -197,10 +211,10 @@ animations = [{
 [node name="Game_Manager" type="Node2D" parent="." unique_id=75664626 node_paths=PackedStringArray("peso_1", "peso_2")]
 script = ExtResource("2_ir15t")
 player_scene = ExtResource("2_trtic")
-peso_1 = NodePath("Control/peso_player_1")
-peso_2 = NodePath("Control/peso_player_2")
+peso_1 = NodePath("UI/peso_player_1")
+peso_2 = NodePath("UI/peso_player_2")
 
-[node name="Control" type="Control" parent="Game_Manager" unique_id=110094207]
+[node name="UI" type="Control" parent="Game_Manager" unique_id=110094207]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -208,7 +222,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="press_to_play" type="Label" parent="Game_Manager/Control" unique_id=192793228]
+[node name="press_to_play" type="Label" parent="Game_Manager/UI" unique_id=192793228]
 unique_name_in_owner = true
 z_index = 150
 layout_mode = 1
@@ -232,7 +246,7 @@ text = "PRESS  ENTER  TO  PLAY"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Game_Manager/Control" unique_id=1719982392]
+[node name="MarginContainer" type="MarginContainer" parent="Game_Manager/UI" unique_id=1719982392]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -240,9 +254,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="score_player_1" type="Label" parent="Game_Manager/Control" unique_id=2147357386]
+[node name="score_player_1" type="Label" parent="Game_Manager/UI" unique_id=2147357386]
 unique_name_in_owner = true
-visible = false
 layout_mode = 0
 offset_left = 53.0
 offset_top = 6.0
@@ -253,7 +266,7 @@ label_settings = SubResource("LabelSettings_trtic")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="peso_player_1" type="Label" parent="Game_Manager/Control" unique_id=1391421069]
+[node name="peso_player_1" type="Label" parent="Game_Manager/UI" unique_id=1391421069]
 unique_name_in_owner = true
 visible = false
 layout_mode = 0
@@ -265,9 +278,8 @@ text = "peso: 8"
 label_settings = SubResource("LabelSettings_ir15t")
 vertical_alignment = 1
 
-[node name="score_player_2" type="Label" parent="Game_Manager/Control" unique_id=1546357248]
+[node name="score_player_2" type="Label" parent="Game_Manager/UI" unique_id=1546357248]
 unique_name_in_owner = true
-visible = false
 layout_mode = 0
 offset_left = 458.0
 offset_top = 6.0
@@ -278,7 +290,7 @@ label_settings = SubResource("LabelSettings_trtic")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="peso_player_2" type="Label" parent="Game_Manager/Control" unique_id=2114457178]
+[node name="peso_player_2" type="Label" parent="Game_Manager/UI" unique_id=2114457178]
 unique_name_in_owner = true
 visible = false
 layout_mode = 0
@@ -290,51 +302,40 @@ text = "peso: 8"
 label_settings = SubResource("LabelSettings_ir15t")
 vertical_alignment = 1
 
-[node name="limits" type="Node2D" parent="." unique_id=1792116995]
-position = Vector2(-14, -28)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="limits" unique_id=1351911903]
-position = Vector2(-1, -1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="limits/StaticBody2D" unique_id=1412709921]
-position = Vector2(274, 121)
-shape = SubResource("RectangleShape2D_264po")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="limits/StaticBody2D" unique_id=939987592]
-position = Vector2(280, 493)
-shape = SubResource("RectangleShape2D_264po")
-
-[node name="BOAT_LIMIT" type="CollisionShape2D" parent="limits/StaticBody2D" unique_id=1932804559]
-position = Vector2(-76.96178, 92.14646)
-shape = SubResource("RectangleShape2D_ir15t")
-
-[node name="BOAT_LIMIT2" type="CollisionShape2D" parent="limits/StaticBody2D" unique_id=231716808]
-position = Vector2(537.34015, 92.14646)
-shape = SubResource("RectangleShape2D_ir15t")
-
-[node name="shark_limit_left" type="Area2D" parent="limits" unique_id=2041098511 groups=["shark_limit_left"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="limits/shark_limit_left" unique_id=2055380176]
-position = Vector2(-127, 197)
-shape = SubResource("RectangleShape2D_e1j6l")
-
-[node name="shark_limite_right" type="Area2D" parent="limits" unique_id=44177726 groups=["shark_limit_right"]]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="limits/shark_limite_right" unique_id=255024537]
-position = Vector2(686, 197)
-shape = SubResource("RectangleShape2D_e1j6l")
-
-[node name="Fish_Spawner" type="Node2D" parent="." unique_id=167932852]
+[node name="ProgressBar" type="ProgressBar" parent="Game_Manager/UI" unique_id=1153696002]
 unique_name_in_owner = true
-script = ExtResource("3_lnu2h")
-blue_fish = ExtResource("1_uwrxv")
-red_fish = ExtResource("7_ir15t")
-big_fish = ExtResource("2_yqjtg")
+layout_mode = 0
+offset_top = -19.622944
+offset_right = 540.0
+offset_bottom = -7.736971
+theme_override_styles/background = SubResource("StyleBoxFlat_ir15t")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ca42v")
+value = 62.44
+show_percentage = false
 
-[node name="SpriteNames" type="Sprite2D" parent="." unique_id=1356140479]
-texture_filter = 1
-position = Vector2(978, 121)
-texture = ExtResource("4_lbhrr")
+[node name="Placa" type="TextureRect" parent="Game_Manager/UI" unique_id=686671489]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 203.38687
+offset_top = 6.413
+offset_right = 313.42532
+offset_bottom = 43.092445
+grow_horizontal = 2
+scale = Vector2(0.76, 0.76)
+texture = ExtResource("16_ca42v")
+expand_mode = 1
+
+[node name="price label" type="Label" parent="Game_Manager/UI/Placa" unique_id=1100059709]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 70.99408
+offset_bottom = 35.1659
+text = "$1.0X"
+label_settings = SubResource("LabelSettings_ca42v")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="decoration" type="Node2D" parent="." unique_id=851591682]
 
@@ -698,7 +699,7 @@ scale = Vector2(0.045, 0.045)
 
 [node name="Clouds" type="Sprite2D" parent="decoration" unique_id=1468820924]
 z_index = -4096
-position = Vector2(381, -46)
+position = Vector2(381.35583, -47.316612)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("10_dinhu")
 flip_v = true
@@ -706,13 +707,66 @@ flip_v = true
 [node name="WaterDistortion2" type="ColorRect" parent="." unique_id=781337332]
 z_index = 1000
 material = SubResource("ShaderMaterial_gee14")
-offset_top = 111.0
+offset_top = 110.09091
 offset_right = 540.0
 offset_bottom = 485.0
 
 [node name="shark" parent="." unique_id=2121875249 instance=ExtResource("1_gee14")]
 unique_name_in_owner = true
 position = Vector2(-66, 167)
+
+[node name="limits" type="Node2D" parent="." unique_id=1792116995]
+position = Vector2(-14, -28)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="limits" unique_id=1351911903]
+position = Vector2(-1, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="limits/StaticBody2D" unique_id=1412709921]
+position = Vector2(274, 121)
+shape = SubResource("RectangleShape2D_264po")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="limits/StaticBody2D" unique_id=939987592]
+position = Vector2(280, 493)
+shape = SubResource("RectangleShape2D_264po")
+
+[node name="BOAT_LIMIT" type="CollisionShape2D" parent="limits/StaticBody2D" unique_id=1932804559]
+position = Vector2(-85.07654, 93.15921)
+shape = SubResource("RectangleShape2D_ir15t")
+
+[node name="BOAT_LIMIT2" type="CollisionShape2D" parent="limits/StaticBody2D" unique_id=231716808]
+position = Vector2(650.0567, 92.14646)
+shape = SubResource("RectangleShape2D_ir15t")
+
+[node name="shark_limit_left" type="Area2D" parent="limits" unique_id=2041098511 groups=["shark_limit_left"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="limits/shark_limit_left" unique_id=2055380176]
+position = Vector2(-127, 197)
+shape = SubResource("RectangleShape2D_e1j6l")
+
+[node name="shark_limite_right" type="Area2D" parent="limits" unique_id=44177726 groups=["shark_limit_right"]]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="limits/shark_limite_right" unique_id=255024537]
+position = Vector2(686, 197)
+shape = SubResource("RectangleShape2D_e1j6l")
+
+[node name="PriceFlutuation" type="Node2D" parent="." unique_id=1768685234]
+unique_name_in_owner = true
+script = ExtResource("11_rysoc")
+
+[node name="Fish_Spawner" type="Node2D" parent="." unique_id=167932852]
+unique_name_in_owner = true
+script = ExtResource("3_lnu2h")
+blue_fish = ExtResource("1_uwrxv")
+red_fish = ExtResource("7_ir15t")
+big_fish = ExtResource("2_yqjtg")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=937120604]
+position = Vector2(270, 230)
+
+[node name="SpriteNames" type="Sprite2D" parent="." unique_id=1356140479]
+texture_filter = 1
+position = Vector2(978, 121)
+texture = ExtResource("4_lbhrr")
 
 [node name="Bubble-8x8" type="Sprite2D" parent="." unique_id=1109252683]
 position = Vector2(-66, 382)

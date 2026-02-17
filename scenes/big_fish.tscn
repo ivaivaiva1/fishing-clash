@@ -76,7 +76,7 @@ script = ExtResource("1_5lic5")
 fish_name = "golden"
 speed = 8.0
 auto_destruction_timer = 100.0
-peso = 0.6
+peso = 0.3
 points = 30.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2119729240]

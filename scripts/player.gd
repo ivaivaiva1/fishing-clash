@@ -4,12 +4,13 @@ class_name Player
 var player_name: String 
 var current_score: int
 var current_player: int = 0
+var game_manager: GameManager
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if(area.is_in_group("bait")):
 		var bait: Bait = area.get_parent()
 		if(bait.bait_state != "catch"): return
-		current_score += bait.points
+		current_score += bait.points * game_manager.price_flutuation.actual_price
 		if(player_name == "player1"):
 			GlobalVars.player1_score = current_score
 		else:

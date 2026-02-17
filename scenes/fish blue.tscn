@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cpddqal215nxs"]
+[gd_scene format=3 uid="uid://cpddqal215nxs"]
 
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_n6yr6"]
 [ext_resource type="Texture2D" uid="uid://qb5owawq05gt" path="res://SpearFishing Assets Pack/Sprites/Bubble - 8x8.png" id="2_vviqw"]
@@ -114,23 +114,23 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8g0i4"]
 size = Vector2(29, 11)
 
-[node name="fish blue" type="CharacterBody2D"]
+[node name="fish blue" type="CharacterBody2D" unique_id=1961594136]
 z_index = 6
 script = ExtResource("1_n6yr6")
 fish_name = "blue"
 speed = 30.0
 auto_destruction_timer = 30.0
-peso = 0.2
+peso = 0.1
 points = 10.0
 
-[node name="bubble" type="AnimatedSprite2D" parent="."]
+[node name="bubble" type="AnimatedSprite2D" parent="." unique_id=100640281]
 visible = false
 z_index = 20
 position = Vector2(15, 14)
 sprite_frames = SubResource("SpriteFrames_ggbtn")
 autoplay = "default"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1762243015]
 unique_name_in_owner = true
 position = Vector2(0, 10.25)
 scale = Vector2(1.53125, 1.53125)
@@ -139,10 +139,10 @@ autoplay = "default"
 frame = 3
 frame_progress = 0.240001
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1835001192]
 position = Vector2(0.5, 10.25)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1402471334]
 position = Vector2(1, 0.25)
 shape = SubResource("RectangleShape2D_8g0i4")
 

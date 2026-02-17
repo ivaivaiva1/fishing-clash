@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://f82kynkrhuah" path="res://Stella Fishs/pixil-frame-0 (6).png" id="5_fjrip"]
 [ext_resource type="Texture2D" uid="uid://dpc2ttsjuuj82" path="res://Stella Fishs/pixil-frame-0 (5).png" id="5_tuyoq"]
 [ext_resource type="Script" uid="uid://b1y7jwgfvfrda" path="res://scripts/boost_controller.gd" id="6_fjrip"]
+[ext_resource type="Texture2D" uid="uid://10x3sdxnhmp1" path="res://artes joao/barco joao.png" id="8_smehm"]
+[ext_resource type="Script" uid="uid://bgh28c2s6hwh3" path="res://scripts/Player/player_movement.gd" id="9_ur7pv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
 size = Vector2(20, 7)
@@ -219,20 +221,20 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyoq"]
-size = Vector2(88.61045, 10.4589615)
+size = Vector2(89.44316, 10.4589615)
 
 [node name="player" type="CharacterBody2D" unique_id=1921051687]
 script = ExtResource("1_tuyoq")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1660507717]
-position = Vector2(55.937405, -0.7496753)
+position = Vector2(-0.12500381, -0.7496753)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1227957482]
 position = Vector2(0.0031776428, -0.0003247261)
 shape = SubResource("RectangleShape2D_1kice")
 
 [node name="bait" type="CharacterBody2D" parent="." unique_id=120479355 node_paths=PackedStringArray("blue_fish_list", "red_fish_list", "golden_fish_list")]
-position = Vector2(48.140896, 2.786106)
+position = Vector2(-7.9215126, 2.786106)
 script = ExtResource("3_smehm")
 blue_fish_list = [NodePath("blue fishs/blue_fish 1"), NodePath("blue fishs/blue_fish 2"), NodePath("blue fishs/blue_fish 3"), NodePath("blue fishs/blue_fish 4"), NodePath("blue fishs/blue_fish 5")]
 red_fish_list = [NodePath("red fishs/red_fish 0"), NodePath("red fishs/red_fish 1"), NodePath("red fishs/red_fish 2"), NodePath("red fishs/red_fish 3"), NodePath("red fishs/red_fish 4")]
@@ -408,12 +410,21 @@ unique_name_in_owner = true
 script = ExtResource("6_fjrip")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127423675]
-position = Vector2(0.6225929, -43.84891)
+position = Vector2(0.06247902, -48.452816)
 shape = SubResource("RectangleShape2D_tuyoq")
 
-[node name="boat" type="Sprite2D" parent="." unique_id=1585016192]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1585016192]
+visible = false
 position = Vector2(7.00002, -23.75)
 scale = Vector2(0.315, 0.315)
 texture = ExtResource("2_fjrip")
+
+[node name="Sprite2" type="Sprite2D" parent="." unique_id=1452784344]
+position = Vector2(0, -24.937)
+scale = Vector2(1.865, 1.865)
+texture = ExtResource("8_smehm")
+
+[node name="PlayerMovement" type="Node2D" parent="." unique_id=1392657911]
+script = ExtResource("9_ur7pv")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

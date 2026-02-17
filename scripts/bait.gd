@@ -36,6 +36,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed(input_action):
 		#print("just pressed")
 		boost_controller.do_boost()
+		pass
 	
 	
 	if Input.is_action_pressed(input_action) || actual_boost > 0:
