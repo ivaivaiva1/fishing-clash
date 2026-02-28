@@ -6,6 +6,8 @@ var game_state: String = "menu"
 @onready var Shark: Shark = %shark
 @onready var press_to_play: Label = %press_to_play
 @export var player_scene: PackedScene
+var player1: Player
+var player2: Player
 @onready var score_1: Label = %score_player_1
 @onready var score_2: Label = %score_player_2
 @export var peso_1: Label 
@@ -19,6 +21,7 @@ var _time_accumulator: float = 0.0
 
 func _ready() -> void:
 	GlobalVars.GameManager_intance = self
+	KnockbackManager.game_manager = self
 	FishSpawner_intance.spawn_cooldown = GlobalVars.spawn_cooldown_menu
 	FishSpawner_intance.big_fish_rate = GlobalVars.big_fish_rate_menu
 	FishSpawner_intance.red_fish_rate = GlobalVars.red_fish_rate_menu
@@ -31,15 +34,11 @@ func _process(delta: float) -> void:
 	peso_2.text = "peso: " + str(GlobalVars.player2_peso)
 	if game_state == "game":
 		game_timer += delta
-
 	
-	print(game_timer)
+	
 	duration_bar.value = round_duration - game_timer
 	if game_timer > round_duration: get_tree().paused = true
-	
-	
-	#print("peso 1: ", str(GlobalVars.player1_score))
-	#print("peso 2: ", str(GlobalVars.player2_score))
+
 
 
 func _input(event):

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_wamdd"]
 [ext_resource type="Texture2D" uid="uid://duad37itfruxt" path="res://Stella Fishs/pixil-frame-0 (7).png" id="2_wamdd"]
+[ext_resource type="Texture2D" uid="uid://dsctslp8amwa2" path="res://artes joao/yellow fish.png" id="3_q6l0k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q6l0k"]
 atlas = ExtResource("2_wamdd")
@@ -67,6 +68,70 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4kpj"]
+atlas = ExtResource("3_q6l0k")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72vi5"]
+atlas = ExtResource("3_q6l0k")
+region = Rect2(1024, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fnc4"]
+atlas = ExtResource("3_q6l0k")
+region = Rect2(2048, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4uj0"]
+atlas = ExtResource("3_q6l0k")
+region = Rect2(3072, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iq5yf"]
+atlas = ExtResource("3_q6l0k")
+region = Rect2(0, 1024, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pudsf"]
+atlas = ExtResource("3_q6l0k")
+region = Rect2(1024, 1024, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnqo8"]
+atlas = ExtResource("3_q6l0k")
+region = Rect2(2048, 1024, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxaow"]
+atlas = ExtResource("3_q6l0k")
+region = Rect2(3072, 1024, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4gy1e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4kpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72vi5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fnc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4uj0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iq5yf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pudsf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnqo8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxaow")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8g0i4"]
 size = Vector2(24, 5.75)
 
@@ -81,11 +146,20 @@ points = 20.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=495332123]
 unique_name_in_owner = true
+visible = false
 position = Vector2(9.53674e-07, 4.76837e-07)
 scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_3ig6q")
 autoplay = "default"
 frame_progress = 0.0706536
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1560367381]
+unique_name_in_owner = true
+position = Vector2(9.53674e-07, 4.76837e-07)
+scale = Vector2(0.04, 0.04)
+sprite_frames = SubResource("SpriteFrames_4gy1e")
+autoplay = "default"
+flip_h = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1387036670]
 visible = false

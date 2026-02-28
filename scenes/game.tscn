@@ -305,15 +305,16 @@ vertical_alignment = 1
 [node name="ProgressBar" type="ProgressBar" parent="Game_Manager/UI" unique_id=1153696002]
 unique_name_in_owner = true
 layout_mode = 0
-offset_top = -19.622944
+offset_top = 494.33704
 offset_right = 540.0
-offset_bottom = -7.736971
+offset_bottom = 506.22302
 theme_override_styles/background = SubResource("StyleBoxFlat_ir15t")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ca42v")
 value = 62.44
 show_percentage = false
 
 [node name="Placa" type="TextureRect" parent="Game_Manager/UI" unique_id=686671489]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -761,7 +762,7 @@ red_fish = ExtResource("7_ir15t")
 big_fish = ExtResource("2_yqjtg")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=937120604]
-position = Vector2(270, 230)
+position = Vector2(270, 255.79999)
 
 [node name="SpriteNames" type="Sprite2D" parent="." unique_id=1356140479]
 texture_filter = 1

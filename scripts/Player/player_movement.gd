@@ -1,23 +1,61 @@
 extends Node2D
-@onready var playerScript: Player = get_parent()
-@onready var playerBody: CharacterBody2D = get_parent()
+class_name PlayerMovement
 
+@onready var player: Player = get_parent()
 
-
-
-@export var speed: float = 80.0
-@export var acceleration: float = 130.0
+@export var speed: float = 150
+@export var acceleration: float = 100.0
 @export var friction: float = 200.0
+
+var last_velocity: Vector2 = Vector2.ZERO
+var knockback_force: float = 0.0
+var knockback_tween: Tween
+
 
 func _physics_process(delta):
 	var direction
-	if playerScript.current_player == 1: direction = Input.get_axis("move_left1", "move_right1")
-	else: direction = Input.get_axis("move_left2", "move_right2")
+	
+	if player.current_player == 1:
+		direction = Input.get_axis("move_left1", "move_right1")
+	else:
+		direction = Input.get_axis("move_left2", "move_right2")
+	
+	
+	var current_velocity = player.character_body.velocity.x
 	
 	
 	if direction != 0:
-		playerBody.velocity.x = move_toward(playerBody.velocity.x, direction * speed, acceleration * delta)
+		if sign(direction) != sign(current_velocity) and current_velocity != 0:
+			player.character_body.velocity.x = move_toward(current_velocity, 0, friction * delta)
+		else:
+			player.character_body.velocity.x = move_toward(current_velocity, direction * speed, acceleration * delta)
 	else:
-		playerBody.velocity.x = move_toward(playerBody.velocity.x, 0, friction * delta)
+		player.character_body.velocity.x = move_toward(current_velocity, 0, friction * delta)
 	
-	playerBody.move_and_slide()
+	
+	# aplica knockback
+	player.character_body.velocity.x += knockback_force
+	
+	last_velocity = player.character_body.velocity
+	player.character_body.move_and_slide()
+
+
+
+func get_knockback(force: float):
+	# evita múltiplos tweens ao mesmo tempo
+	if knockback_tween:
+		knockback_tween.kill()
+	
+	knockback_force = force/10
+	
+	knockback_tween = get_tree().create_tween()
+	knockback_tween.set_ease(Tween.EASE_IN)
+	knockback_tween.set_trans(Tween.TRANS_QUINT)
+	knockback_tween.tween_property(self, "knockback_force", 0.0, 0.3)
+	
+	knockback_tween.finished.connect(_on_knockback_finished)
+
+
+
+func _on_knockback_finished():
+	knockback_tween = null

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_n6yr6"]
 [ext_resource type="Texture2D" uid="uid://qb5owawq05gt" path="res://SpearFishing Assets Pack/Sprites/Bubble - 8x8.png" id="2_vviqw"]
 [ext_resource type="Texture2D" uid="uid://dpc2ttsjuuj82" path="res://Stella Fishs/pixil-frame-0 (5).png" id="3_vviqw"]
+[ext_resource type="Texture2D" uid="uid://cxp8gjpeue570" path="res://artes joao/blue fish.png" id="4_ggbtn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ir15t"]
 atlas = ExtResource("2_vviqw")
@@ -111,6 +112,70 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgioi"]
+atlas = ExtResource("4_ggbtn")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ky7o"]
+atlas = ExtResource("4_ggbtn")
+region = Rect2(1024, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oove2"]
+atlas = ExtResource("4_ggbtn")
+region = Rect2(2048, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mdrr"]
+atlas = ExtResource("4_ggbtn")
+region = Rect2(3072, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ceqs2"]
+atlas = ExtResource("4_ggbtn")
+region = Rect2(0, 1024, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0i2ui"]
+atlas = ExtResource("4_ggbtn")
+region = Rect2(3072, 1024, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncl25"]
+atlas = ExtResource("4_ggbtn")
+region = Rect2(2048, 1024, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r55u4"]
+atlas = ExtResource("4_ggbtn")
+region = Rect2(1024, 1024, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6u8uh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgioi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ky7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oove2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mdrr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ceqs2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0i2ui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncl25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r55u4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8g0i4"]
 size = Vector2(29, 11)
 
@@ -132,12 +197,22 @@ autoplay = "default"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1762243015]
 unique_name_in_owner = true
+visible = false
 position = Vector2(0, 10.25)
 scale = Vector2(1.53125, 1.53125)
 sprite_frames = SubResource("SpriteFrames_3ig6q")
 autoplay = "default"
 frame = 3
 frame_progress = 0.240001
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=152551972]
+unique_name_in_owner = true
+position = Vector2(0, 10.25)
+scale = Vector2(0.041, 0.041)
+sprite_frames = SubResource("SpriteFrames_6u8uh")
+autoplay = "default"
+frame_progress = 0.6532998
+flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1835001192]
 position = Vector2(0.5, 10.25)
