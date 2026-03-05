@@ -8,8 +8,8 @@ var game_state: String = "menu"
 @export var player_scene: PackedScene
 var player1: Player
 var player2: Player
-@onready var score_1: Label = %score_player_1
-@onready var score_2: Label = %score_player_2
+@onready var score_1: Label = %player1_money
+@onready var score_2: Label = %player2_money
 @export var peso_1: Label 
 @export var peso_2: Label 
 @onready var price_flutuation: PriceFlutuation = %PriceFlutuation
@@ -83,7 +83,7 @@ func _input(event):
 		price_flutuation.open_market_func()
 
 func att_score():
-	score_1.text = str(GlobalVars.player1_score)
-	score_2.text = str(GlobalVars.player2_score)
+	score_1.text = str("$ "+str(GlobalVars.player1_score))
+	score_2.text = str("$ "+str(GlobalVars.player2_score))
 	#if(GlobalVars.player1_score > 1500): get_tree().paused = true
 	#if(GlobalVars.player2_score > 1500): get_tree().paused = true

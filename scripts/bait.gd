@@ -69,6 +69,7 @@ func get_fish(fish_name: String, fish_peso: float, fish_points: int) -> void:
 	
 	update_fishs(fish_name)
 
+
 func update_fishs(fish_name: String):
 	match fish_name:
 		"blue":
