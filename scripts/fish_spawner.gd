@@ -80,6 +80,7 @@ func spawn_fish():
 	
 	fish_instance.move_right = move_right
 	fish_instance.global_position = Vector2(posX, posY)
+	if red_rain: fish_instance.red_rain = true
 	add_child(fish_instance)
 	spawned_fish.append(fish_instance)
 

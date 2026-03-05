@@ -7,6 +7,8 @@ extends CharacterBody2D
 @export var points: float
 var move_right: bool = true
 @onready var sprite: AnimatedSprite2D = %AnimatedSprite2D
+var red_rain = false
+
 
 
 func _ready():
@@ -14,7 +16,12 @@ func _ready():
 		speed = speed * -1
 		scale.x = -1
 		#sprite.flip_h = true
-	if(fish_name != "red"): speed = randf_range(speed * 0.8, speed * 1.2)
+	if(fish_name != "red"): 
+		speed = randf_range(speed * 0.8, speed * 1.2)
+	else:
+		if red_rain: speed *= 2
+
+
 
 
 func _process(delta):
