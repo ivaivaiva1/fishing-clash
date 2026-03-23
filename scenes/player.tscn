@@ -3,10 +3,12 @@
 [ext_resource type="Script" uid="uid://c7qfstejcicpp" path="res://scripts/player.gd" id="1_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://bphka414u1cly" path="res://sky_test/oie_transparent (1).png" id="2_fjrip"]
 [ext_resource type="Script" uid="uid://dn2m2bg4gmlh8" path="res://scripts/bait.gd" id="3_smehm"]
+[ext_resource type="Texture2D" uid="uid://bfknudkvo2ya4" path="res://artes joao/isca 2.png" id="3_y4r1p"]
 [ext_resource type="Texture2D" uid="uid://duad37itfruxt" path="res://Stella Fishs/pixil-frame-0 (7).png" id="4_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://f82kynkrhuah" path="res://Stella Fishs/pixil-frame-0 (6).png" id="5_fjrip"]
 [ext_resource type="Texture2D" uid="uid://dpc2ttsjuuj82" path="res://Stella Fishs/pixil-frame-0 (5).png" id="5_tuyoq"]
 [ext_resource type="Script" uid="uid://b1y7jwgfvfrda" path="res://scripts/boost_controller.gd" id="6_fjrip"]
+[ext_resource type="Script" uid="uid://bkawldx4t15f6" path="res://scripts/Player/bait_rotation.gd" id="8_d2wvv"]
 [ext_resource type="Texture2D" uid="uid://10x3sdxnhmp1" path="res://artes joao/barco joao.png" id="8_smehm"]
 [ext_resource type="Script" uid="uid://bgh28c2s6hwh3" path="res://scripts/Player/player_movement.gd" id="9_ur7pv"]
 
@@ -14,7 +16,7 @@
 size = Vector2(20, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssvqc"]
-size = Vector2(14.5, 15)
+size = Vector2(15.264904, 18.167534)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trtic"]
 size = Vector2(15, 15)
@@ -234,20 +236,39 @@ position = Vector2(0.0031776428, -0.0003247261)
 shape = SubResource("RectangleShape2D_1kice")
 
 [node name="bait" type="CharacterBody2D" parent="." unique_id=120479355 node_paths=PackedStringArray("blue_fish_list", "red_fish_list", "golden_fish_list")]
+unique_name_in_owner = true
 position = Vector2(-7.9215126, 2.786106)
 script = ExtResource("3_smehm")
 blue_fish_list = [NodePath("blue fishs/blue_fish 1"), NodePath("blue fishs/blue_fish 2"), NodePath("blue fishs/blue_fish 3"), NodePath("blue fishs/blue_fish 4"), NodePath("blue fishs/blue_fish 5")]
 red_fish_list = [NodePath("red fishs/red_fish 0"), NodePath("red fishs/red_fish 1"), NodePath("red fishs/red_fish 2"), NodePath("red fishs/red_fish 3"), NodePath("red fishs/red_fish 4")]
 golden_fish_list = [NodePath("golden fish/golden_fish 1"), NodePath("golden fish/golden_fish 2")]
 
+[node name="Isca1" type="Sprite2D" parent="bait" unique_id=902352250]
+z_index = 100
+texture_filter = 1
+position = Vector2(7.3990955, 8.591688)
+scale = Vector2(0.95766973, 0.95766973)
+texture = ExtResource("3_y4r1p")
+
+[node name="Isca2" type="Sprite2D" parent="bait" unique_id=1282835592]
+visible = false
+z_index = 100
+texture_filter = 1
+position = Vector2(7.138604, 7.497617)
+scale = Vector2(0.8404479, 0.8404479)
+texture = ExtResource("3_y4r1p")
+
 [node name="body" type="CollisionShape2D" parent="bait" unique_id=1471137798]
-position = Vector2(7.75, 7.5)
+visible = false
+position = Vector2(7.376299, 9.083767)
 shape = SubResource("RectangleShape2D_ssvqc")
 
 [node name="coloRect" type="ColorRect" parent="bait" unique_id=404261130]
-z_index = 100
+visible = false
+z_index = 99
 offset_right = 15.0
 offset_bottom = 15.0
+color = Color(1, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="BaitArea" type="Area2D" parent="bait" unique_id=585212492 groups=["bait"]]
@@ -408,6 +429,9 @@ frame_progress = 0.474755
 [node name="boost_controller" type="Node" parent="bait" unique_id=1953729552]
 unique_name_in_owner = true
 script = ExtResource("6_fjrip")
+
+[node name="bait_rotation" type="Node" parent="bait" unique_id=1262276398]
+script = ExtResource("8_d2wvv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127423675]
 position = Vector2(0.06247902, -48.452816)

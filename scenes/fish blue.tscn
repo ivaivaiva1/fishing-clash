@@ -186,7 +186,7 @@ fish_name = "blue"
 speed = 30.0
 auto_destruction_timer = 30.0
 peso = 0.1
-points = 10.0
+points = 14.0
 
 [node name="bubble" type="AnimatedSprite2D" parent="." unique_id=100640281]
 visible = false

@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://by4oxgbthjk4u" path="res://scenes/big_fish.tscn" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://cr57ww4x28u4n" path="res://scripts/fish_spawner.gd" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cq4o85mwl4g24" path="res://artes joao/player_icon png.png" id="3_ssvqc"]
+[ext_resource type="Texture2D" uid="uid://cpjcbme3mfnnl" path="res://artes joao/mar fundo 2.png" id="4_1kice"]
 [ext_resource type="Texture2D" uid="uid://b2f2rmiut0qmt" path="res://artes joao/trophy.png" id="4_264po"]
 [ext_resource type="Texture2D" uid="uid://bjgivjbi6ryan" path="res://SpearFishing Assets Pack/Sprite names.png" id="4_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://dvf5ckm05munx" path="res://SpearFishing Assets Pack/Sprites/Tiles - 16x16/Sand.png" id="7_0tnpc"]
@@ -226,10 +227,23 @@ offset_bottom = 481.0
 color = Color(0.74, 0.757333, 1, 1)
 
 [node name="8" type="Sprite2D" parent="decoration" unique_id=832242535]
+visible = false
 z_index = -4000
 position = Vector2(237, 157)
 scale = Vector2(2.67, 2.67)
 texture = ExtResource("14_trtic")
+
+[node name="mar fundo" type="Sprite2D" parent="decoration" unique_id=1899638409]
+z_index = -4000
+position = Vector2(105.27385, 280.84808)
+scale = Vector2(0.5297382, 0.5297382)
+texture = ExtResource("4_1kice")
+
+[node name="mar fundo2" type="Sprite2D" parent="decoration" unique_id=4058285]
+z_index = -4000
+position = Vector2(435.60388, 280.84808)
+scale = Vector2(0.5297382, 0.5297382)
+texture = ExtResource("4_1kice")
 
 [node name="sea" type="ColorRect" parent="decoration" unique_id=399443375]
 visible = false
@@ -254,6 +268,7 @@ tile_map_data = PackedByteArray("AAAAAA4AAQABAAAAAAABAA4AAQABAAAAAAACAA4AAQABAAA
 tile_set = SubResource("TileSet_kvpfn")
 
 [node name="AlgasTras" type="Node2D" parent="decoration" unique_id=1205373241]
+visible = false
 
 [node name="Alga" type="Sprite2D" parent="decoration/AlgasTras" unique_id=833121527]
 z_index = -6
@@ -310,6 +325,7 @@ vframes = 8
 frame = 66
 
 [node name="AlgasFrente" type="Node2D" parent="decoration" unique_id=1502884955]
+visible = false
 
 [node name="Alga" type="Sprite2D" parent="decoration/AlgasFrente" unique_id=919308698]
 z_index = 11
@@ -410,6 +426,7 @@ vframes = 8
 frame = 21
 
 [node name="Corals" type="Node2D" parent="decoration" unique_id=1071316832]
+visible = false
 scale = Vector2(1.00291, 0.997358)
 
 [node name="Corals1" type="Sprite2D" parent="decoration/Corals" unique_id=1181417124]
