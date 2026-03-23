@@ -39,4 +39,5 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		var bait: Bait = area.get_parent()
 		#if(bait.bait_state != "free"): return
 		bait.get_fish(fish_name, peso, points)
+		EffectSpawner.spawn_effect(bait.global_position)
 		queue_free()

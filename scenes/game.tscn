@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c1fnyt64wu0b1" path="res://scenes/shark.tscn" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://cpddqal215nxs" path="res://scenes/fish blue.tscn" id="1_uwrxv"]
-[ext_resource type="Script" uid="uid://co4hvliqg3q3y" path="res://scripts/game_manager.gd" id="2_ir15t"]
+[ext_resource type="Script" uid="uid://co4hvliqg3q3y" path="res://scripts/Global/game_manager.gd" id="2_ir15t"]
 [ext_resource type="PackedScene" uid="uid://bb6ifiejbxjb7" path="res://scenes/player.tscn" id="2_trtic"]
 [ext_resource type="PackedScene" uid="uid://by4oxgbthjk4u" path="res://scenes/big_fish.tscn" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://cr57ww4x28u4n" path="res://scripts/fish_spawner.gd" id="3_lnu2h"]
@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bm1sf3k08up8e" path="res://SpearFishing Assets Pack/Sprites/SeaWeed - 16x32/Light.png" id="8_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://dpxa08h6rwtoh" path="res://SpearFishing Assets Pack/Sprites/Corals - 16x16/Corals.png" id="9_vtaks"]
 [ext_resource type="Texture2D" uid="uid://dkvcby5ccnqaj" path="res://sky_test/Clouds.png" id="10_dinhu"]
-[ext_resource type="Script" uid="uid://bi06wla0inb6j" path="res://scripts/price_flutuation.gd" id="11_rysoc"]
+[ext_resource type="Script" uid="uid://bi06wla0inb6j" path="res://scripts/Global/price_flutuation.gd" id="11_rysoc"]
 [ext_resource type="Texture2D" uid="uid://d2ajmhqbplr30" path="res://sky_test/8.png" id="14_trtic"]
 [ext_resource type="Texture2D" uid="uid://qb5owawq05gt" path="res://SpearFishing Assets Pack/Sprites/Bubble - 8x8.png" id="15_ir15t"]
 [ext_resource type="Texture2D" uid="uid://gd022ulvec03" path="res://artes joao/price placa.png" id="16_ca42v"]

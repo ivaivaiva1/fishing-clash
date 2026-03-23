@@ -23,6 +23,7 @@ config/icon="res://icon.svg"
 
 GlobalVars="*res://scripts/global_vars.gd"
 KnockbackManager="*uid://cbijb0v76rskn"
+EffectSpawner="*uid://ds657i2tqfihg"
 
 [display]
 

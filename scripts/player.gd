@@ -10,11 +10,15 @@ var current_player: int = 0
 var game_manager: GameManager
 var mass: float = 10
 var collision_timer: float 
+@onready var sprite: Sprite2D = %Sprite2
 
 
 func _ready() -> void:
 	if current_player == 1: game_manager.player1 = self
 	if current_player == 2: game_manager.player2 = self
+	if current_player == 2: 
+		sprite.modulate = Color("#efff96")
+		sprite.modulate.a = 100
 
 
 
