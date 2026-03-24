@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cpddqal215nxs"]
 
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_n6yr6"]
+[ext_resource type="PackedScene" uid="uid://dymjc3rwm5np6" path="res://scenes/effects/fish_collect_effect.tscn" id="3_vviqw"]
 [ext_resource type="Texture2D" uid="uid://cxp8gjpeue570" path="res://artes joao/blue fish.png" id="4_ggbtn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qgioi"]
@@ -76,8 +77,14 @@ script = ExtResource("1_n6yr6")
 fish_name = "blue"
 speed = 30.0
 auto_destruction_timer = 30.0
-peso = 0.1
+peso = 0.033
 points = 14.0
+effect_size = 1.414
+
+[node name="fish_collect_effect" parent="." unique_id=140967120 instance=ExtResource("3_vviqw")]
+visible = false
+position = Vector2(-1, 0)
+scale = Vector2(1.109, 1.109)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=152551972]
 unique_name_in_owner = true
@@ -88,10 +95,21 @@ frame_progress = 0.6532998
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1835001192]
+visible = false
 position = Vector2(0.5, 10.25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1402471334]
 position = Vector2(-0.5, -8.75)
 shape = SubResource("RectangleShape2D_8g0i4")
 
+[node name="right_effectPos" type="Marker2D" parent="." unique_id=80758587]
+unique_name_in_owner = true
+position = Vector2(1, 0)
+
+[node name="left_effectPos" type="Marker2D" parent="." unique_id=830084877]
+unique_name_in_owner = true
+position = Vector2(-1, 0)
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+
+[editable path="fish_collect_effect"]

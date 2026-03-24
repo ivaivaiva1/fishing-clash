@@ -224,7 +224,7 @@ visible = false
 z_index = -4096
 offset_right = 540.0
 offset_bottom = 481.0
-color = Color(0.74, 0.757333, 1, 1)
+color = Color(0.1674, 0.43430996, 0.93, 1)
 
 [node name="8" type="Sprite2D" parent="decoration" unique_id=832242535]
 visible = false

@@ -5,9 +5,13 @@ extends CharacterBody2D
 @export var auto_destruction_timer: float
 @export var peso: float
 @export var points: float
+@export var effect_size: float
 var move_right: bool = true
 @onready var sprite: AnimatedSprite2D = %AnimatedSprite2D
+@onready var right_effectPos: Marker2D = %right_effectPos
+@onready var left_effectPos: Marker2D = %left_effectPos
 var red_rain = false
+
 
 
 
@@ -39,5 +43,12 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		var bait: Bait = area.get_parent()
 		#if(bait.bait_state != "free"): return
 		bait.get_fish(fish_name, peso, points)
-		EffectSpawner.spawn_effect(bait.global_position)
+		spawn_catch_effect()
 		queue_free()
+
+
+func spawn_catch_effect():
+	var spawn_pos: Vector2
+	if move_right: spawn_pos = right_effectPos.global_position
+	else: spawn_pos = left_effectPos.global_position
+	EffectSpawner.spawn_effect(spawn_pos, effect_size)

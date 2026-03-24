@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_5lic5"]
 [ext_resource type="Texture2D" uid="uid://f82kynkrhuah" path="res://Stella Fishs/pixil-frame-0 (6).png" id="2_me2ul"]
+[ext_resource type="PackedScene" uid="uid://dymjc3rwm5np6" path="res://scenes/effects/fish_collect_effect.tscn" id="3_mc6go"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mc6go"]
 atlas = ExtResource("2_me2ul")
@@ -76,19 +77,36 @@ script = ExtResource("1_5lic5")
 fish_name = "golden"
 speed = 8.0
 auto_destruction_timer = 100.0
-peso = 0.8
+peso = 0.267
+effect_size = 2.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2119729240]
 unique_name_in_owner = true
+position = Vector2(1, 0)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_jrlim")
 autoplay = "default"
 frame_progress = 0.669937
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1186832392]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1096265319]
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_8g0i4")
 
+[node name="right_effectPos" type="Marker2D" parent="." unique_id=681224076]
+unique_name_in_owner = true
+visible = false
+position = Vector2(3, 2)
+
+[node name="fish_collect_effect" parent="right_effectPos" unique_id=140967120 instance=ExtResource("3_mc6go")]
+scale = Vector2(2.215, 2.215)
+
+[node name="left_effectPos" type="Marker2D" parent="." unique_id=279669195]
+unique_name_in_owner = true
+position = Vector2(-2, 2)
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+
+[editable path="right_effectPos/fish_collect_effect"]
