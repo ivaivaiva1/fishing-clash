@@ -225,7 +225,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyoq"]
 size = Vector2(89.44316, 10.4589615)
 
-[node name="player" type="CharacterBody2D" unique_id=1921051687]
+[node name="player" type="CharacterBody2D" unique_id=1921051687 groups=["player"]]
 script = ExtResource("1_tuyoq")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1660507717]
@@ -413,7 +413,7 @@ rotation = -1.5708
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_8ool0")
 autoplay = "default"
-frame_progress = 0.899435
+frame_progress = 0.05751223
 
 [node name="golden_fish 2" type="AnimatedSprite2D" parent="bait/golden fish" unique_id=920252643]
 unique_name_in_owner = true

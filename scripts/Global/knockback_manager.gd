@@ -9,6 +9,11 @@ var actual_collision: CollisionData = CollisionData.new()
 
 
 func start_collission(player_id: int, mass: float, impact_velocity: Vector2):
+	print("=== COLLISION DATA ===")
+	print("Player ID:", player_id)
+	print("Player Mass:", mass)
+	print("Player Velocity:", impact_velocity)
+	print("======================")
 	if player_id == 1:
 		actual_collision.player1_mass = mass
 		actual_collision.player1_velocity = impact_velocity
@@ -27,6 +32,7 @@ func start_collission(player_id: int, mass: float, impact_velocity: Vector2):
 var knockback_impact: float = 1.0
 
 func process_collision():
+	print("PROCESS COLISION")
 	if player1 == null || player2 == null:
 		get_player_data()
 	
@@ -39,10 +45,10 @@ func process_collision():
 	
 	var impact_strength = relative_velocity.dot(collision_normal)
 	
-	# Se não há impacto real
-	if impact_strength <= 0:
-		actual_collision = CollisionData.new()
-		return
+	## Se não há impacto real
+	#if impact_strength <= 0:
+		#actual_collision = CollisionData.new()
+		#return
 	
 	var impulse = collision_normal * impact_strength * knockback_impact
 	

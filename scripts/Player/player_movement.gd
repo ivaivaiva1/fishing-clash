@@ -67,7 +67,7 @@ func _on_knockback_finished():
 
 
 func player_warp():
-	#return
+	return
 	if player.global_position.x < -40.206:
 		player.global_position.x = 579
 	if player.global_position.x > 579.266:

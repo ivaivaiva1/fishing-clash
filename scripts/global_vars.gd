@@ -9,7 +9,7 @@ var red_fish_rate_menu: int = 5
 #var red_fish_rate_game: int = 5
 
 var spawn_cooldown_game: float = 2
-var big_fish_rate_game: int = 10
+var big_fish_rate_game: int = 8
 var red_fish_rate_game: int = 4
 
 var GameManager_intance: GameManager
