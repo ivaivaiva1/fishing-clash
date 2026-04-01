@@ -10,7 +10,9 @@ var current_player: int = 0
 var game_manager: GameManager
 var mass: float = 10
 var collision_timer: float 
+var boat_size: float
 @onready var sprite: Sprite2D = %Sprite2
+@onready var col: CollisionShape2D = %CollisionShape2D
 
 
 func _ready() -> void:
@@ -19,7 +21,7 @@ func _ready() -> void:
 	if current_player == 2: 
 		sprite.modulate = Color("#efff96")
 		sprite.modulate.a = 100
-
+	boat_size = col.shape.size.x
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
@@ -38,6 +40,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func _process(delta: float) -> void:
 	if collision_timer > 0:
 		collision_timer -= delta
+
 
 
 func _physics_process(delta: float) -> void:

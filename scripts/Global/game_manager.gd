@@ -13,6 +13,7 @@ var player2: Player
 @export var peso_1: Label 
 @export var peso_2: Label 
 @onready var price_flutuation: PriceFlutuation = %PriceFlutuation
+@onready var clone_boats: CloneBoats = %CloneBoats
 @onready var duration_bar: ProgressBar = %ProgressBar
 var round_duration: float = 240
 var game_timer: float = 0
@@ -22,6 +23,7 @@ var _time_accumulator: float = 0.0
 func _ready() -> void:
 	GlobalVars.GameManager_intance = self
 	KnockbackManager.game_manager = self
+	clone_boats.game_manager = self
 	FishSpawner_intance.spawn_cooldown = GlobalVars.spawn_cooldown_menu
 	FishSpawner_intance.big_fish_rate = GlobalVars.big_fish_rate_menu
 	FishSpawner_intance.red_fish_rate = GlobalVars.red_fish_rate_menu

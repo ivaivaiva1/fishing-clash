@@ -1,47 +1,44 @@
 [gd_scene format=3 uid="uid://by4oxgbthjk4u"]
 
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_5lic5"]
-[ext_resource type="Texture2D" uid="uid://f82kynkrhuah" path="res://Stella Fishs/pixil-frame-0 (6).png" id="2_me2ul"]
+[ext_resource type="Texture2D" uid="uid://hfnspc7q7u8g" path="res://artes joao/peixe_grande meio termo.png" id="2_mc6go"]
 [ext_resource type="PackedScene" uid="uid://dymjc3rwm5np6" path="res://scenes/effects/fish_collect_effect.tscn" id="3_mc6go"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mc6go"]
-atlas = ExtResource("2_me2ul")
-region = Rect2(0, 16, 32, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_1tbou"]
-atlas = ExtResource("2_me2ul")
-region = Rect2(32, 16, 32, 16)
+atlas = ExtResource("2_mc6go")
+region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yk56t"]
-atlas = ExtResource("2_me2ul")
-region = Rect2(64, 16, 32, 16)
+atlas = ExtResource("2_mc6go")
+region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgydp"]
-atlas = ExtResource("2_me2ul")
-region = Rect2(96, 16, 32, 16)
+atlas = ExtResource("2_mc6go")
+region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_afv3a"]
-atlas = ExtResource("2_me2ul")
-region = Rect2(128, 16, 32, 16)
+atlas = ExtResource("2_mc6go")
+region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5s586"]
-atlas = ExtResource("2_me2ul")
-region = Rect2(160, 16, 32, 16)
+atlas = ExtResource("2_mc6go")
+region = Rect2(0, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6irr0"]
-atlas = ExtResource("2_me2ul")
-region = Rect2(192, 16, 32, 16)
+atlas = ExtResource("2_mc6go")
+region = Rect2(64, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4prg2"]
-atlas = ExtResource("2_me2ul")
-region = Rect2(224, 16, 32, 16)
+atlas = ExtResource("2_mc6go")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5if3"]
+atlas = ExtResource("2_mc6go")
+region = Rect2(192, 64, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jrlim"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mc6go")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1tbou")
 }, {
@@ -62,14 +59,17 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4prg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5if3")
 }],
 "loop": true,
 "name": &"default",
-"speed": 4.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8g0i4"]
-size = Vector2(44, 37)
+size = Vector2(38, 29)
 
 [node name="big_fish" type="CharacterBody2D" unique_id=759476320]
 z_index = 3
@@ -83,29 +83,30 @@ effect_size = 2.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2119729240]
 unique_name_in_owner = true
 position = Vector2(1, 0)
-scale = Vector2(3, 3)
+scale = Vector2(1.7, 1.7)
 sprite_frames = SubResource("SpriteFrames_jrlim")
 autoplay = "default"
-frame_progress = 0.669937
+frame_progress = 0.6152615
+flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1186832392]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1096265319]
-position = Vector2(-1, 0)
+position = Vector2(-2, -0.5)
 shape = SubResource("RectangleShape2D_8g0i4")
 
 [node name="right_effectPos" type="Marker2D" parent="." unique_id=681224076]
 unique_name_in_owner = true
 visible = false
-position = Vector2(3, 2)
+position = Vector2(3, 0)
 
 [node name="fish_collect_effect" parent="right_effectPos" unique_id=140967120 instance=ExtResource("3_mc6go")]
 scale = Vector2(2.215, 2.215)
 
 [node name="left_effectPos" type="Marker2D" parent="." unique_id=279669195]
 unique_name_in_owner = true
-position = Vector2(-2, 2)
+visible = false
+position = Vector2(-2, 0)
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 

@@ -27,8 +27,8 @@ EffectSpawner="*uid://ds657i2tqfihg"
 
 [display]
 
-window/size/viewport_width=960
-window/size/viewport_height=540
+window/size/viewport_width=840
+window/size/viewport_height=500
 window/stretch/mode="canvas_items"
 
 [global_group]

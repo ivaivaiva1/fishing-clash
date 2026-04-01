@@ -434,7 +434,8 @@ script = ExtResource("6_fjrip")
 script = ExtResource("8_d2wvv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127423675]
-position = Vector2(0.06247902, -48.452816)
+unique_name_in_owner = true
+position = Vector2(-0.06036949, -48.452816)
 shape = SubResource("RectangleShape2D_tuyoq")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1585016192]

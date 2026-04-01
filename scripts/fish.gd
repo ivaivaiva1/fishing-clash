@@ -24,6 +24,15 @@ func _ready():
 		speed = randf_range(speed * 0.8, speed * 1.2)
 	else:
 		if red_rain: speed *= 2
+	
+	sprite.z_index = randi_range(0, 10)
+	
+	# calcula redução de escala baseada no z_index
+	var reduction_percent = (10 - sprite.z_index) * 0.01
+	reduction_percent = clamp(reduction_percent, 0.0, 0.10)
+	
+	var final_scale = 1.0 - reduction_percent
+	scale *= final_scale
 
 
 

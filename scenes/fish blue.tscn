@@ -86,7 +86,7 @@ visible = false
 position = Vector2(-1, 0)
 scale = Vector2(1.109, 1.109)
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=152551972]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=152551972]
 unique_name_in_owner = true
 scale = Vector2(0.041, 0.041)
 sprite_frames = SubResource("SpriteFrames_6u8uh")
