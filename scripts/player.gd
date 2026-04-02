@@ -52,5 +52,22 @@ func _physics_process(delta: float) -> void:
 		
 		if other.is_in_group("player"):
 			print("colidiu")
-			collision_timer = 0.3
-			KnockbackManager.start_collission(current_player, mass, player_movement.last_velocity)
+			var other_player: Player
+			var player1_mass: float
+			var player2_mass: float
+			var player1_velocity: Vector2
+			var player2_velocity: Vector2
+			
+			if current_player == 1:
+				other_player = game_manager.player2
+				player1_mass = mass
+				player1_velocity = player_movement.last_velocity
+				player2_mass = other_player.mass
+				player2_velocity = other_player.player_movement.last_velocity
+			else:
+				other_player = game_manager.player1
+				player1_mass = other_player.mass
+				player1_velocity = other_player.player_movement.last_velocity
+				player2_mass = mass
+				player2_velocity = player_movement.last_velocity
+			KnockbackManager.do_collision(player1_mass, player2_mass, player1_velocity, player2_velocity)

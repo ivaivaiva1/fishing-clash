@@ -3,42 +3,26 @@ extends Node
 var game_manager: GameManager
 var player1: Player
 var player2: Player
-var actual_collision: CollisionData = CollisionData.new()
+var timer: float 
 
-
-
-
-func start_collission(player_id: int, mass: float, impact_velocity: Vector2):
-	print("=== COLLISION DATA ===")
-	print("Player ID:", player_id)
-	print("Player Mass:", mass)
-	print("Player Velocity:", impact_velocity)
-	print("======================")
-	if player_id == 1:
-		actual_collision.player1_mass = mass
-		actual_collision.player1_velocity = impact_velocity
-		actual_collision.player1_received = true
-	elif player_id == 2:
-		actual_collision.player2_mass = mass
-		actual_collision.player2_velocity = impact_velocity
-		actual_collision.player2_received = true
-	
-	
-	if actual_collision.is_complete():
-		process_collision()
-
+func _process(delta: float) -> void:
+	if timer > 0:
+		timer -= delta
 
 
 var knockback_impact: float = 1.0
 
-func process_collision():
+
+func do_collision(player1_mass: float, player2_mass: float, player1_velocity: Vector2, player2_velocity: Vector2):
+	if timer > 0: return
+	timer = 0.3
 	print("PROCESS COLISION")
 	if player1 == null || player2 == null:
 		get_player_data()
 	
 	
-	var v1 = actual_collision.player1_velocity
-	var v2 = actual_collision.player2_velocity
+	var v1 = player1_velocity
+	var v2 = player2_velocity
 	
 	var collision_normal = (player2.global_position - player1.global_position).normalized()
 	var relative_velocity = v1 - v2
@@ -58,28 +42,9 @@ func process_collision():
 	
 	
 	print("Impact strength:", impact_strength)
-	
-	
-	actual_collision = CollisionData.new()
-
-
 
 
 
 func get_player_data():
 	player1 = game_manager.player1
 	player2 = game_manager.player2
-
-
-
-class CollisionData:
-	var player1_mass: float
-	var player1_velocity: Vector2
-	var player1_received := false
-	
-	var player2_mass: float
-	var player2_velocity: Vector2
-	var player2_received := false
-	
-	func is_complete() -> bool:
-		return player1_received and player2_received
