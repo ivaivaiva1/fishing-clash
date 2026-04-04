@@ -17,6 +17,8 @@ var GameManager_intance: GameManager
 
 
 
+var player1_money: int = 0
+var player2_money: int = 0
 var player1_score: int = 0
 var player2_score: int = 0
 var player1_peso: float = 0

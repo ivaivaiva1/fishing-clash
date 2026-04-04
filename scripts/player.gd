@@ -5,7 +5,7 @@ class_name Player
 @onready var character_body: CharacterBody2D = self
 @onready var player_movement: PlayerMovement = %PlayerMovement
 var player_name: String 
-var current_score: int
+var current_money: int
 var current_player: int = 0
 var game_manager: GameManager
 var mass: float = 10
@@ -28,13 +28,13 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if(area.is_in_group("bait")):
 		var bait: Bait = area.get_parent()
 		if(bait.bait_state != "catch"): return
-		current_score += bait.points * game_manager.price_flutuation.actual_price
+		current_money += bait.points
 		if(player_name == "player1"):
-			GlobalVars.player1_score = current_score
+			GlobalVars.player1_money = current_money
 		else:
-			GlobalVars.player2_score = current_score
+			GlobalVars.player2_money = current_money
 		bait.reset()
-		GlobalVars.GameManager_intance.att_score()
+		GlobalVars.GameManager_intance.att_money()
 
 
 func _process(delta: float) -> void:

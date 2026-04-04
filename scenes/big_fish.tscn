@@ -78,6 +78,7 @@ fish_name = "golden"
 speed = 8.0
 auto_destruction_timer = 100.0
 peso = 0.267
+points = 100.0
 effect_size = 2.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2119729240]
@@ -90,6 +91,7 @@ frame_progress = 0.6152615
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1186832392]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1096265319]
 position = Vector2(-2, -0.5)
