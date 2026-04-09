@@ -10,10 +10,13 @@ var move_right: bool = true
 @onready var sprite: AnimatedSprite2D = %AnimatedSprite2D
 @onready var right_effectPos: Marker2D = %right_effectPos
 @onready var left_effectPos: Marker2D = %left_effectPos
+@onready var bubble_rightPos: Marker2D = %bubble_rightPos
+@onready var bubble_leftPos: Marker2D = %bubble_leftPos
 var red_rain = false
 
 
-
+@onready var time_to_bubble: float = randf_range(0, 50)
+@onready var bubble_timer: float = time_to_bubble
 
 func _ready():
 	if(!move_right):
@@ -38,19 +41,33 @@ func _ready():
 
 
 func _process(delta):
+	if bubble_timer > 0:
+		bubble_timer -= delta
+	if  bubble_timer < 0:
+		var bubble_pos: Vector2
+		if sprite.flip_h: bubble_pos = bubble_rightPos.global_position
+		else: bubble_pos = bubble_leftPos.global_position
+		
+		EffectSpawner.spawn_bubble(bubble_pos, effect_size, (sprite.z_index + 2))
+		bubble_timer = randf_range(0, 50)
+	
+	
 	auto_destruction_timer -= delta
 	if(auto_destruction_timer < 0):
 		queue_free()
+
+
 
 func _physics_process(delta):
 	velocity = Vector2(speed, 0)
 	move_and_slide()
 
 
+
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if(area.is_in_group("bait")):
 		var bait: Bait = area.get_parent()
-		#if(bait.bait_state != "free"): return
+		if(bait.bait_state == "treasure"): return
 		bait.get_fish(fish_name, peso, points)
 		spawn_catch_effect()
 		queue_free()

@@ -68,9 +68,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8g0i4"]
-size = Vector2(38, 29)
-
 [node name="big_fish" type="CharacterBody2D" unique_id=759476320]
 z_index = 3
 script = ExtResource("1_5lic5")
@@ -83,6 +80,7 @@ effect_size = 2.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2119729240]
 unique_name_in_owner = true
+z_as_relative = false
 position = Vector2(1, 0)
 scale = Vector2(1.7, 1.7)
 sprite_frames = SubResource("SpriteFrames_jrlim")
@@ -91,11 +89,6 @@ frame_progress = 0.6152615
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1186832392]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1096265319]
-position = Vector2(-2, -0.5)
-shape = SubResource("RectangleShape2D_8g0i4")
 
 [node name="right_effectPos" type="Marker2D" parent="." unique_id=681224076]
 unique_name_in_owner = true
@@ -109,6 +102,19 @@ scale = Vector2(2.215, 2.215)
 unique_name_in_owner = true
 visible = false
 position = Vector2(-2, 0)
+
+[node name="bubble_rightPos" type="Marker2D" parent="." unique_id=259068415]
+unique_name_in_owner = true
+visible = false
+position = Vector2(15, 9)
+
+[node name="bubble_leftPos" type="Marker2D" parent="." unique_id=1701793375]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-15, 9)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=304766951]
+polygon = PackedVector2Array(-14, -22, -14, -22, 8, -22, 18, -12, 20, -8, 21, -1, 21, 8, 13, 14, -14, 14, -20, 7, -28, 10, -28, -7, -21, -3, -19, -12, -14, -16)
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 

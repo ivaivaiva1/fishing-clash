@@ -8,7 +8,7 @@ var spawned_fish: Array[Node2D] = []
 @export var big_fish: PackedScene
 var big_fish_rate: int
 var red_fish_rate: int
-var spawn_pos_y: Array[float] = [210.0, 442.0]
+var spawn_pos_y: Array[float] = [210.0, 466.0]
 var spawn_cooldown: float
 @onready var spawn_timer: float
 
@@ -62,7 +62,7 @@ func spawn_fish():
 	
 	
 	var maxY = spawn_pos_y[1]
-	if(is_big_fish): maxY = 410
+	if(is_big_fish): maxY = 460
 	var posY = randf_range(spawn_pos_y[0], maxY)
 	
 	

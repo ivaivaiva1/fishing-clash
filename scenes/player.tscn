@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://c7qfstejcicpp" path="res://scripts/player.gd" id="1_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://bphka414u1cly" path="res://sky_test/oie_transparent (1).png" id="2_fjrip"]
+[ext_resource type="PackedScene" uid="uid://c7qt0ej6xtmqc" path="res://scenes/effects/coin_falling.tscn" id="3_jej6c"]
 [ext_resource type="Script" uid="uid://dn2m2bg4gmlh8" path="res://scripts/bait.gd" id="3_smehm"]
 [ext_resource type="Texture2D" uid="uid://bfknudkvo2ya4" path="res://artes joao/isca 2.png" id="3_y4r1p"]
 [ext_resource type="Texture2D" uid="uid://duad37itfruxt" path="res://Stella Fishs/pixil-frame-0 (7).png" id="4_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://f82kynkrhuah" path="res://Stella Fishs/pixil-frame-0 (6).png" id="5_fjrip"]
 [ext_resource type="Texture2D" uid="uid://dpc2ttsjuuj82" path="res://Stella Fishs/pixil-frame-0 (5).png" id="5_tuyoq"]
 [ext_resource type="Script" uid="uid://b1y7jwgfvfrda" path="res://scripts/boost_controller.gd" id="6_fjrip"]
+[ext_resource type="Texture2D" uid="uid://dluvb4po015j2" path="res://SpearFishing Assets Pack/Sprites/Chests-16x32.png" id="7_3v2ag"]
 [ext_resource type="Script" uid="uid://bkawldx4t15f6" path="res://scripts/Player/bait_rotation.gd" id="8_d2wvv"]
 [ext_resource type="Texture2D" uid="uid://10x3sdxnhmp1" path="res://artes joao/barco joao.png" id="8_smehm"]
 [ext_resource type="Script" uid="uid://bgh28c2s6hwh3" path="res://scripts/Player/player_movement.gd" id="9_ur7pv"]
@@ -17,9 +19,6 @@ size = Vector2(20, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssvqc"]
 size = Vector2(15.264904, 18.167534)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_trtic"]
-size = Vector2(15, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5newe"]
 size = Vector2(18, 31)
@@ -222,6 +221,24 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnwbv"]
+atlas = ExtResource("7_3v2ag")
+region = Rect2(16, 32, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jej6c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wnwbv")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3v2ag"]
+size = Vector2(10.912278, 2.0125682)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyoq"]
 size = Vector2(89.44316, 10.4589615)
 
@@ -242,9 +259,10 @@ script = ExtResource("3_smehm")
 blue_fish_list = [NodePath("blue fishs/blue_fish 1"), NodePath("blue fishs/blue_fish 2"), NodePath("blue fishs/blue_fish 3"), NodePath("blue fishs/blue_fish 4"), NodePath("blue fishs/blue_fish 5")]
 red_fish_list = [NodePath("red fishs/red_fish 0"), NodePath("red fishs/red_fish 1"), NodePath("red fishs/red_fish 2"), NodePath("red fishs/red_fish 3"), NodePath("red fishs/red_fish 4")]
 golden_fish_list = [NodePath("golden fish/golden_fish 1"), NodePath("golden fish/golden_fish 2")]
+coin_scene = ExtResource("3_jej6c")
 
 [node name="Isca1" type="Sprite2D" parent="bait" unique_id=902352250]
-z_index = 100
+z_index = 90
 texture_filter = 1
 position = Vector2(7.3990955, 8.591688)
 scale = Vector2(0.95766973, 0.95766973)
@@ -274,9 +292,8 @@ metadata/_edit_use_anchors_ = true
 [node name="BaitArea" type="Area2D" parent="bait" unique_id=585212492 groups=["bait"]]
 visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="bait/BaitArea" unique_id=1607113299]
-position = Vector2(7.5, 7.5)
-shape = SubResource("RectangleShape2D_trtic")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="bait/BaitArea" unique_id=673132699]
+polygon = PackedVector2Array(6.443405, -0.054451942, 11.037558, -0.007088661, 13.074144, 1.982132, 13.074144, 3.734542, 12.174257, 3.6871786, 12.221621, 6.6236486, 15.016001, 8.660232, 15.016001, 14.248997, 11.132284, 18.085354, 4.5962715, 18.22744, -0.2820568, 13.207025, -0.42414474, 9.654843, 3.6016598, 5.8658495, 3.6016598, 5.8658495, 6.396042, 5.913213, 4.4541836, 4.7291517, 4.4541836, 1.982132)
 
 [node name="FishsArea" type="Area2D" parent="bait" unique_id=1554614141 groups=["fish_on_bait"]]
 visible = false
@@ -425,6 +442,23 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_8ool0")
 autoplay = "default"
 frame_progress = 0.474755
+
+[node name="treasure_sprite" type="AnimatedSprite2D" parent="bait" unique_id=1030464131]
+unique_name_in_owner = true
+visible = false
+z_index = 85
+position = Vector2(4.154724, 18.775444)
+rotation = -0.007167816
+scale = Vector2(2.27, 2.27)
+sprite_frames = SubResource("SpriteFrames_jej6c")
+autoplay = "default"
+
+[node name="coin_spawn_area" type="Area2D" parent="bait/treasure_sprite" unique_id=1949279333]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bait/treasure_sprite/coin_spawn_area" unique_id=953422727]
+position = Vector2(0.06856692, -1.748589)
+shape = SubResource("RectangleShape2D_3v2ag")
 
 [node name="boost_controller" type="Node" parent="bait" unique_id=1953729552]
 unique_name_in_owner = true

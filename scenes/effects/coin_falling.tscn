@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c7qt0ej6xtmqc"]
+
+[ext_resource type="Script" uid="uid://cvdrx3lifgqm0" path="res://scripts/Effects/vertical_basic_movement.gd" id="1_keamy"]
+[ext_resource type="Texture2D" uid="uid://cvlfr0qfhfltf" path="res://SpearFishing Assets Pack/Sprites/Coin Small - 16x16.png" id="2_tq4xt"]
+
+[node name="coin_falling" type="CharacterBody2D" unique_id=30085995]
+scale = Vector2(1.3, 1.3)
+script = ExtResource("1_keamy")
+max_pos_y = 800.0
+min_speed = 20.0
+max_speed = 150.0
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=402700216]
+z_index = 86
+texture = ExtResource("2_tq4xt")
+hframes = 6

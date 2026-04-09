@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cel27empameku"]
+
+[ext_resource type="Script" uid="uid://dgnevgrmkxvmr" path="res://scripts/Events/treasure.gd" id="1_0g4qu"]
+[ext_resource type="Texture2D" uid="uid://d4nuiuhkb4a3y" path="res://Bubbles/Greyscale/64x64/bubble_3.png" id="2_0g4qu"]
+[ext_resource type="Texture2D" uid="uid://dluvb4po015j2" path="res://SpearFishing Assets Pack/Sprites/Chests-16x32.png" id="2_it12x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0g4qu"]
+size = Vector2(36.14309, 34.112587)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0g4qu"]
+atlas = ExtResource("2_it12x")
+region = Rect2(0, 32, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h5oxq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0g4qu")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Treasure" type="Node2D" unique_id=1190474615]
+script = ExtResource("1_0g4qu")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1929635131]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1047955084]
+position = Vector2(-0.122862816, 1.0311065)
+shape = SubResource("RectangleShape2D_0g4qu")
+
+[node name="sprite" type="AnimatedSprite2D" parent="." unique_id=739201083]
+z_index = 20
+position = Vector2(0, -2.393921)
+scale = Vector2(2.27, 2.27)
+sprite_frames = SubResource("SpriteFrames_h5oxq")
+autoplay = "default"
+
+[node name="Bubble4" type="Sprite2D" parent="." unique_id=1047352690]
+z_index = 100
+texture = ExtResource("2_0g4qu")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

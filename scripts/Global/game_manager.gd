@@ -32,6 +32,7 @@ func _ready() -> void:
 	FishSpawner_intance.red_fish_rate = GlobalVars.red_fish_rate_menu
 	duration_bar.max_value = round_duration
 	duration_bar.value = round_duration - game_timer
+	EffectSpawner.fish_spawner = FishSpawner_intance
 	att_score()
 
 

@@ -51,14 +51,14 @@ func re_start():
 func _on_vision_area_area_entered(area: Area2D) -> void:
 	if(area.is_in_group("fish_on_bait")):
 		var bait: Bait = area.get_parent()
-		if(bait.bait_state == "catch"):
+		if(bait.points != 0):
 			attack()
 
 
 func _on_body_area_area_entered(area: Area2D) -> void:
 	if(area.is_in_group("fish_on_bait")):
 		var bait: Bait = area.get_parent()
-		if(bait.bait_state == "catch"):
+		if(bait.points != 0):
 			bait.reset()
 	
 	if(area.is_in_group("shark_limit_left")):
@@ -74,16 +74,3 @@ func _on_body_area_area_entered(area: Area2D) -> void:
 			speed_multiplier = -1
 			#sprite.flip_h = true
 			scale = Vector2(-1, 1)
-
-
-#func check_side():
-	#if(global_position.x > 600):
-		#if(moving_right):
-			#moving_right = false
-			#speed_multiplier = -1
-			#scale.x = -1
-	#if(global_position.x < -60):
-		#if(!moving_right):
-			#moving_right = true
-			#speed_multiplier = 1
-			#scale.x = 1
