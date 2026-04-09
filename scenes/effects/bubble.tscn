@@ -99,9 +99,8 @@ animations = [{
 
 [node name="Bubble" type="CharacterBody2D" unique_id=165428783]
 script = ExtResource("1_rp7jw")
-max_pos_y = 114.589
-min_speed = -46.667
-max_speed = -80.0
+min_speed = -31.111
+max_speed = -70.0
 is_up = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1649370032]
@@ -118,7 +117,7 @@ autoplay = "default"
 frame = 5
 frame_progress = 1.0
 
-[node name="bubble_script" type="Node" parent="." unique_id=558031785]
+[node name="bubble_script" type="Node2D" parent="." unique_id=1367413273]
 script = ExtResource("3_h2k0n")
 
 [connection signal="area_entered" from="Area2D" to="bubble_script" method="_on_area_2d_area_entered"]

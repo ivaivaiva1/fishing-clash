@@ -90,6 +90,9 @@ flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1186832392]
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=304766951]
+polygon = PackedVector2Array(-14, -22, -14, -22, 8, -22, 18, -12, 20, -8, 21, -1, 21, 8, 13, 14, -14, 14, -20, 7, -28, 10, -28, -7, -21, -3, -19, -12, -14, -16)
+
 [node name="right_effectPos" type="Marker2D" parent="." unique_id=681224076]
 unique_name_in_owner = true
 visible = false
@@ -112,9 +115,6 @@ position = Vector2(15, 9)
 unique_name_in_owner = true
 visible = false
 position = Vector2(-15, 9)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=304766951]
-polygon = PackedVector2Array(-14, -22, -14, -22, 8, -22, 18, -12, 20, -8, 21, -1, 21, 8, 13, 14, -14, 14, -20, 7, -28, 10, -28, -7, -21, -3, -19, -12, -14, -16)
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 

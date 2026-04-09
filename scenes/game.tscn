@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://gd022ulvec03" path="res://artes joao/price placa.png" id="16_ca42v"]
 [ext_resource type="Script" uid="uid://bv08l4gt2jmvq" path="res://scripts/clone_boats.gd" id="21_5newe"]
 [ext_resource type="PackedScene" uid="uid://cel27empameku" path="res://scenes/treasure.tscn" id="22_37s47"]
+[ext_resource type="PackedScene" uid="uid://dyruejh301o1y" path="res://scenes/effects/bubble.tscn" id="23_bt5mj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtaks"]
 texture = ExtResource("7_0tnpc")
@@ -936,3 +937,6 @@ script = ExtResource("21_5newe")
 
 [node name="Treasure" parent="." unique_id=1190474615 instance=ExtResource("22_37s47")]
 position = Vector2(275.7981, 513.55774)
+
+[node name="Bubble" parent="." unique_id=165428783 instance=ExtResource("23_bt5mj")]
+position = Vector2(53.89074, 126.86319)

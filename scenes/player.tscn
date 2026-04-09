@@ -15,7 +15,7 @@
 [ext_resource type="Script" uid="uid://bgh28c2s6hwh3" path="res://scripts/Player/player_movement.gd" id="9_ur7pv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
-size = Vector2(20, 7)
+size = Vector2(20, 9.1726265)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssvqc"]
 size = Vector2(15.264904, 18.167534)
@@ -249,7 +249,7 @@ script = ExtResource("1_tuyoq")
 position = Vector2(-0.12500381, -0.7496753)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1227957482]
-position = Vector2(0.0031776428, -0.0003247261)
+position = Vector2(0.0031776428, 1.0859885)
 shape = SubResource("RectangleShape2D_1kice")
 
 [node name="bait" type="CharacterBody2D" parent="." unique_id=120479355 node_paths=PackedStringArray("blue_fish_list", "red_fish_list", "golden_fish_list")]
