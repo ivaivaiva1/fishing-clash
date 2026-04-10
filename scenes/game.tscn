@@ -18,11 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://dkvcby5ccnqaj" path="res://sky_test/Clouds.png" id="10_dinhu"]
 [ext_resource type="Script" uid="uid://bi06wla0inb6j" path="res://scripts/Global/price_flutuation.gd" id="11_rysoc"]
 [ext_resource type="Texture2D" uid="uid://d2ajmhqbplr30" path="res://sky_test/8.png" id="14_trtic"]
-[ext_resource type="Texture2D" uid="uid://qb5owawq05gt" path="res://SpearFishing Assets Pack/Sprites/Bubble - 8x8.png" id="15_ir15t"]
 [ext_resource type="Texture2D" uid="uid://gd022ulvec03" path="res://artes joao/price placa.png" id="16_ca42v"]
 [ext_resource type="Script" uid="uid://bv08l4gt2jmvq" path="res://scripts/clone_boats.gd" id="21_5newe"]
 [ext_resource type="PackedScene" uid="uid://cel27empameku" path="res://scenes/treasure.tscn" id="22_37s47"]
-[ext_resource type="PackedScene" uid="uid://dyruejh301o1y" path="res://scenes/effects/bubble.tscn" id="23_bt5mj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtaks"]
 texture = ExtResource("7_0tnpc")
@@ -139,7 +137,7 @@ shader_parameter/intensity = 0.005
 shader_parameter/speed = 0.9
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_264po"]
-size = Vector2(852, 32.818962)
+size = Vector2(852, 25.634823)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ir15t"]
 size = Vector2(89.443, 41.139)
@@ -580,7 +578,7 @@ position = Vector2(274, 121)
 shape = SubResource("RectangleShape2D_264po")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="limits/StaticBody2D" unique_id=939987592]
-position = Vector2(284.04858, 520.0954)
+position = Vector2(315.27295, 509.64352)
 shape = SubResource("RectangleShape2D_264po")
 
 [node name="WARP COLLISION" type="StaticBody2D" parent="limits" unique_id=1406970048 groups=["player"]]
@@ -592,7 +590,6 @@ position = Vector2(-462.47012, 83.09421)
 shape = SubResource("RectangleShape2D_ir15t")
 
 [node name="ColorRect" type="ColorRect" parent="limits/WARP COLLISION/BOAT1_CLONE" unique_id=829575885]
-visible = false
 offset_left = -44.559555
 offset_top = -20.282948
 offset_right = 44.883446
@@ -606,7 +603,6 @@ shape = SubResource("RectangleShape2D_1kice")
 debug_color = Color(0, 0.5950001, 0.7, 0.85490197)
 
 [node name="ColorRect" type="ColorRect" parent="limits/WARP COLLISION/BOAT2_CLONE" unique_id=881367099]
-visible = false
 offset_left = -44.877197
 offset_top = -19.053402
 offset_right = 44.565804
@@ -632,10 +628,6 @@ position = Vector2(270, 263.698)
 texture_filter = 1
 position = Vector2(978, 121)
 texture = ExtResource("4_lbhrr")
-
-[node name="Bubble-8x8" type="Sprite2D" parent="." unique_id=1109252683]
-position = Vector2(-66, 382)
-texture = ExtResource("15_ir15t")
 
 [node name="UI" type="Control" parent="." unique_id=110094207]
 z_index = 4096
@@ -937,6 +929,3 @@ script = ExtResource("21_5newe")
 
 [node name="Treasure" parent="." unique_id=1190474615 instance=ExtResource("22_37s47")]
 position = Vector2(275.7981, 513.55774)
-
-[node name="Bubble" parent="." unique_id=165428783 instance=ExtResource("23_bt5mj")]
-position = Vector2(53.89074, 126.86319)

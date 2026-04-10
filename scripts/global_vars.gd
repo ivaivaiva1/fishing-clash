@@ -8,6 +8,7 @@ var spawn_cooldown_game: float = 2
 var big_fish_rate_game: int = 30
 var red_fish_rate_game: int = 5
 
+
 #var spawn_cooldown_game: float = 2
 #var big_fish_rate_game: int = 8
 #var red_fish_rate_game: int = 4

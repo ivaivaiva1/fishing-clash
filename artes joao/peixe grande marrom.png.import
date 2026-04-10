@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjbhvomui2tu1"
-path="res://.godot/imported/peixe grande 2.png-d0f20d4a9060335a9f804ee9e1687a15.ctex"
+uid="uid://d2bnhcej6b8fb"
+path="res://.godot/imported/peixe grande marrom.png-d08924c0bfd9b2acbd7ee97d0288b706.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://artes joao/peixe grande 2.png"
-dest_files=["res://.godot/imported/peixe grande 2.png-d0f20d4a9060335a9f804ee9e1687a15.ctex"]
+source_file="res://artes joao/peixe grande marrom.png"
+dest_files=["res://.godot/imported/peixe grande marrom.png-d08924c0bfd9b2acbd7ee97d0288b706.ctex"]
 
 [params]
 

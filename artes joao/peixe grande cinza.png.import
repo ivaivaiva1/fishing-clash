@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgp1rq53s4eqo"
-path="res://.godot/imported/peixe grande.png-862d34f41bd30eba6d55f49fb625011d.ctex"
+uid="uid://kyw0qpjw7nvc"
+path="res://.godot/imported/peixe grande cinza.png-3d479641564497d32d3fde376186f919.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://artes joao/peixe grande.png"
-dest_files=["res://.godot/imported/peixe grande.png-862d34f41bd30eba6d55f49fb625011d.ctex"]
+source_file="res://artes joao/peixe grande cinza.png"
+dest_files=["res://.godot/imported/peixe grande cinza.png-3d479641564497d32d3fde376186f919.ctex"]
 
 [params]
 

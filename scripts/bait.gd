@@ -8,6 +8,7 @@ var player_name
 @export var golden_fish_list: Array[Node2D]
 @onready var treasure_sprite: AnimatedSprite2D = %treasure_sprite 
 @onready var coin_spawn_area: Area2D = %coin_spawn_area
+@onready var bait_sprite: Sprite2D = %BaitSprite
 @export var coin_scene: PackedScene 
 var bait_state: String = "free"
 var points = 0
@@ -20,6 +21,9 @@ func _ready() -> void:
 	var player: Player = get_parent()
 	player_name = player.player_name
 	input_action = player.player_name
+	treasure_sprite.material = treasure_sprite.material.duplicate()
+	bait_sprite.material = bait_sprite.material.duplicate()
+
 
 
 
@@ -33,7 +37,13 @@ var peso = 1
 @onready var boost_controller: BoostController = %boost_controller
 var feedback_tween: Tween
 
+
 func chest_feedback():
+	var treasure_mat = treasure_sprite.material as ShaderMaterial
+	treasure_mat.set_shader_parameter("amplitude", 0.03)
+	var bait_mat = bait_sprite.material as ShaderMaterial
+	bait_mat.set_shader_parameter("amplitude", 0.03)
+	
 	# inicializa scale base se necessário
 	if treasure_scale == null or treasure_scale.length() == 0:
 		treasure_scale = treasure_sprite.scale
@@ -47,12 +57,24 @@ func chest_feedback():
 	
 	feedback_tween = create_tween()
 	
+	
+	var target_x
+	var target_y
+	if randi_range(0, 1) == 1:
+		print("é 1")
+		target_x = randf_range(1.1, 1.3)
+		target_y = randf_range(0.7, 0.9)
+	else:
+		print("é 0")
+		target_x = randf_range(0.7, 0.9)
+		target_y = randf_range(1.1, 1.3)
+	
 	# 🔥 squash mais forte e rápido
 	feedback_tween.tween_property(
 		treasure_sprite,
 		"scale",
-		Vector2(treasure_scale.x * 1.4, treasure_scale.y * 0.6),
-		0.05
+		Vector2(treasure_scale.x * target_x, treasure_scale.y * target_y),
+		0.1
 	)
 	
 	# volta mais rápido também
@@ -60,15 +82,24 @@ func chest_feedback():
 		treasure_sprite,
 		"scale",
 		treasure_scale,
-		0.08
+		0.05
 	).set_trans(Tween.TRANS_BOUNCE)\
 	 .set_ease(Tween.EASE_OUT)
+	
+	# 👇 zera o shader no final
+	feedback_tween.tween_callback(func():
+		treasure_mat.set_shader_parameter("amplitude", 0.0)
+		bait_mat.set_shader_parameter("amplitude", 0.0)
+	)
+
 
 func _physics_process(delta):
 	var target_velocity_y = 0.0
 	
 	if Input.is_action_just_pressed(input_action):
 		boost_controller.do_boost()
+		#pulse_shader(bait_sprite)
+		#pulse_shader(treasure_sprite)
 		if bait_state == "treasure":
 			spawn_coin()
 			chest_feedback()
@@ -92,7 +123,6 @@ func _physics_process(delta):
 	velocity.y = move_toward(velocity.y, target_velocity_y, ACCELERATION * delta)
 	
 	move_and_slide()
-
 
 
 func get_fish(fish_name: String, fish_peso: float, fish_points: int) -> void:
@@ -151,11 +181,13 @@ func reset_fishs():
 	has_red_fishs = 0
 	has_golden_fishs = 0
 
+
 func reset():
 	bait_state = "free"
 	peso = 1
 	points = 0
 	reset_fishs()
+
 
 func spawn_coin():
 	var shape = coin_spawn_area.get_node("CollisionShape2D").shape
@@ -177,3 +209,34 @@ func spawn_coin():
 	coin.global_position = spawn_pos
 	
 	get_tree().current_scene.add_child(coin)
+
+func pulse_shader(sprite, param_name: String = "amplitude", peak_value: float = 0.03, duration: float = 0.3):
+	# garante que o material não é compartilhado
+	var mat = sprite.material as ShaderMaterial
+	
+	# mata tween anterior se quiser evitar conflito
+	if sprite.has_meta("shader_tween"):
+		var old_tween = sprite.get_meta("shader_tween")
+		if old_tween and old_tween.is_running():
+			old_tween.kill()
+	
+	var tween = create_tween()
+	sprite.set_meta("shader_tween", tween)
+	
+	# sobe até o valor
+	tween.tween_method(
+		func(value):
+			mat.set_shader_parameter(param_name, value),
+		0.0,
+		peak_value,
+		duration * 1
+	)
+	
+	# volta pra 0
+	tween.tween_method(
+		func(value):
+			mat.set_shader_parameter(param_name, value),
+		peak_value,
+		0.0,
+		duration * 0.2
+	)

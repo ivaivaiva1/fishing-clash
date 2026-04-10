@@ -11,11 +11,17 @@
 [ext_resource type="Script" uid="uid://b1y7jwgfvfrda" path="res://scripts/boost_controller.gd" id="6_fjrip"]
 [ext_resource type="Texture2D" uid="uid://dluvb4po015j2" path="res://SpearFishing Assets Pack/Sprites/Chests-16x32.png" id="7_3v2ag"]
 [ext_resource type="Script" uid="uid://bkawldx4t15f6" path="res://scripts/Player/bait_rotation.gd" id="8_d2wvv"]
+[ext_resource type="Shader" uid="uid://dltsjnvd5v5sk" path="res://shaders/shake.gdshader" id="8_f1ej7"]
 [ext_resource type="Texture2D" uid="uid://10x3sdxnhmp1" path="res://artes joao/barco joao.png" id="8_smehm"]
 [ext_resource type="Script" uid="uid://bgh28c2s6hwh3" path="res://scripts/Player/player_movement.gd" id="9_ur7pv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
 size = Vector2(20, 9.1726265)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f1ej7"]
+shader = ExtResource("8_f1ej7")
+shader_parameter/amplitude = 0.0
+shader_parameter/speed = 1.6000000760000002
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssvqc"]
 size = Vector2(15.264904, 18.167534)
@@ -221,6 +227,11 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oprun"]
+shader = ExtResource("8_f1ej7")
+shader_parameter/amplitude = 0.0
+shader_parameter/speed = 1.234000058615
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_wnwbv"]
 atlas = ExtResource("7_3v2ag")
 region = Rect2(16, 32, 16, 32)
@@ -261,19 +272,13 @@ red_fish_list = [NodePath("red fishs/red_fish 0"), NodePath("red fishs/red_fish 
 golden_fish_list = [NodePath("golden fish/golden_fish 1"), NodePath("golden fish/golden_fish 2")]
 coin_scene = ExtResource("3_jej6c")
 
-[node name="Isca1" type="Sprite2D" parent="bait" unique_id=902352250]
+[node name="BaitSprite" type="Sprite2D" parent="bait" unique_id=902352250]
+unique_name_in_owner = true
 z_index = 90
 texture_filter = 1
+material = SubResource("ShaderMaterial_f1ej7")
 position = Vector2(7.3990955, 8.591688)
 scale = Vector2(0.95766973, 0.95766973)
-texture = ExtResource("3_y4r1p")
-
-[node name="Isca2" type="Sprite2D" parent="bait" unique_id=1282835592]
-visible = false
-z_index = 100
-texture_filter = 1
-position = Vector2(7.138604, 7.497617)
-scale = Vector2(0.8404479, 0.8404479)
 texture = ExtResource("3_y4r1p")
 
 [node name="body" type="CollisionShape2D" parent="bait" unique_id=1471137798]
@@ -447,6 +452,7 @@ frame_progress = 0.474755
 unique_name_in_owner = true
 visible = false
 z_index = 85
+material = SubResource("ShaderMaterial_oprun")
 position = Vector2(4.154724, 18.775444)
 rotation = -0.007167816
 scale = Vector2(2.27, 2.27)

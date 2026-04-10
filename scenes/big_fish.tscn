@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_5lic5"]
 [ext_resource type="Texture2D" uid="uid://hfnspc7q7u8g" path="res://artes joao/peixe_grande meio termo.png" id="2_mc6go"]
 [ext_resource type="PackedScene" uid="uid://dymjc3rwm5np6" path="res://scenes/effects/fish_collect_effect.tscn" id="3_mc6go"]
+[ext_resource type="Texture2D" uid="uid://nx0qayphrr3f" path="res://artes joao/peixe grande amarelo.png" id="4_1tbou"]
+[ext_resource type="Texture2D" uid="uid://kyw0qpjw7nvc" path="res://artes joao/peixe grande cinza.png" id="5_yk56t"]
+[ext_resource type="Texture2D" uid="uid://d2bnhcej6b8fb" path="res://artes joao/peixe grande marrom.png" id="6_vgydp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1tbou"]
 atlas = ExtResource("2_mc6go")
@@ -89,6 +92,7 @@ frame_progress = 0.6152615
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1186832392]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=304766951]
 polygon = PackedVector2Array(-14, -22, -14, -22, 8, -22, 18, -12, 20, -8, 21, -1, 21, 8, 13, 14, -14, 14, -20, 7, -28, 10, -28, -7, -21, -3, -19, -12, -14, -16)
@@ -115,6 +119,33 @@ position = Vector2(15, 9)
 unique_name_in_owner = true
 visible = false
 position = Vector2(-15, 9)
+
+[node name="PeixeGrandeAmarelo" type="Sprite2D" parent="." unique_id=771482798]
+visible = false
+position = Vector2(2, 1)
+scale = Vector2(1.785, 1.785)
+texture = ExtResource("4_1tbou")
+flip_h = true
+hframes = 4
+vframes = 3
+
+[node name="PeixeGrandeCinza" type="Sprite2D" parent="." unique_id=879112702]
+visible = false
+position = Vector2(2, 1)
+scale = Vector2(1.785, 1.785)
+texture = ExtResource("5_yk56t")
+flip_h = true
+hframes = 4
+vframes = 3
+
+[node name="PeixeGrandeMarrom" type="Sprite2D" parent="." unique_id=1846054439]
+visible = false
+position = Vector2(2, 1)
+scale = Vector2(1.785, 1.785)
+texture = ExtResource("6_vgydp")
+flip_h = true
+hframes = 4
+vframes = 3
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 
