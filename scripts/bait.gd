@@ -46,8 +46,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed(input_action):
 		boost_controller.do_boost()
-		#pulse_shader(bait_sprite)
-		#pulse_shader(treasure_sprite)
+		#EffectSpawner.collect_coin_effect(global_position)
 		if bait_state == "treasure":
 			spawn_coin()
 			chest_feedback()
