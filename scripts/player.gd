@@ -28,13 +28,17 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if(area.is_in_group("bait")):
 		var bait: Bait = area.get_parent()
 		if(bait.points == 0): return
-		current_money += bait.points
-		if(player_name == "player1"):
-			GlobalVars.player1_money = current_money
-		else:
-			GlobalVars.player2_money = current_money
+		add_points(bait.points)
 		bait.reset()
-		GlobalVars.GameManager_intance.att_money()
+
+
+func add_points(value: int):
+	current_money += value
+	if(player_name == "player1"):
+		GlobalVars.player1_money = current_money
+	else:
+		GlobalVars.player2_money = current_money
+	GlobalVars.GameManager_intance.att_money()
 
 
 func _process(delta: float) -> void:

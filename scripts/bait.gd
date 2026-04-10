@@ -1,7 +1,9 @@
 extends CharacterBody2D
 class_name Bait
 
+
 var input_action := ""
+var player: Player
 var player_name
 @export var blue_fish_list: Array[Node2D] 
 @export var red_fish_list: Array[Node2D] 
@@ -17,8 +19,9 @@ var has_red_fishs = 0
 var has_golden_fishs = 0
 var treasure_scale: Vector2
 
+
 func _ready() -> void:
-	var player: Player = get_parent()
+	player = get_parent()
 	player_name = player.player_name
 	input_action = player.player_name
 	treasure_sprite.material = treasure_sprite.material.duplicate()
@@ -36,61 +39,6 @@ const boost_time = 0.2
 var peso = 1
 @onready var boost_controller: BoostController = %boost_controller
 var feedback_tween: Tween
-
-
-func chest_feedback():
-	var treasure_mat = treasure_sprite.material as ShaderMaterial
-	treasure_mat.set_shader_parameter("amplitude", 0.03)
-	var bait_mat = bait_sprite.material as ShaderMaterial
-	bait_mat.set_shader_parameter("amplitude", 0.03)
-	
-	# inicializa scale base se necessário
-	if treasure_scale == null or treasure_scale.length() == 0:
-		treasure_scale = treasure_sprite.scale
-	
-	# mata tween anterior
-	if feedback_tween and feedback_tween.is_running():
-		feedback_tween.kill()
-	
-	# garante estado limpo
-	treasure_sprite.scale = treasure_scale
-	
-	feedback_tween = create_tween()
-	
-	
-	var target_x
-	var target_y
-	if randi_range(0, 1) == 1:
-		print("é 1")
-		target_x = randf_range(1.1, 1.3)
-		target_y = randf_range(0.7, 0.9)
-	else:
-		print("é 0")
-		target_x = randf_range(0.7, 0.9)
-		target_y = randf_range(1.1, 1.3)
-	
-	# 🔥 squash mais forte e rápido
-	feedback_tween.tween_property(
-		treasure_sprite,
-		"scale",
-		Vector2(treasure_scale.x * target_x, treasure_scale.y * target_y),
-		0.1
-	)
-	
-	# volta mais rápido também
-	feedback_tween.tween_property(
-		treasure_sprite,
-		"scale",
-		treasure_scale,
-		0.05
-	).set_trans(Tween.TRANS_BOUNCE)\
-	 .set_ease(Tween.EASE_OUT)
-	
-	# 👇 zera o shader no final
-	feedback_tween.tween_callback(func():
-		treasure_mat.set_shader_parameter("amplitude", 0.0)
-		bait_mat.set_shader_parameter("amplitude", 0.0)
-	)
 
 
 func _physics_process(delta):
@@ -210,6 +158,7 @@ func spawn_coin():
 	
 	get_tree().current_scene.add_child(coin)
 
+
 func pulse_shader(sprite, param_name: String = "amplitude", peak_value: float = 0.03, duration: float = 0.3):
 	# garante que o material não é compartilhado
 	var mat = sprite.material as ShaderMaterial
@@ -239,4 +188,60 @@ func pulse_shader(sprite, param_name: String = "amplitude", peak_value: float = 
 		peak_value,
 		0.0,
 		duration * 0.2
+	)
+
+
+
+func chest_feedback():
+	var treasure_mat = treasure_sprite.material as ShaderMaterial
+	treasure_mat.set_shader_parameter("amplitude", 0.03)
+	var bait_mat = bait_sprite.material as ShaderMaterial
+	bait_mat.set_shader_parameter("amplitude", 0.03)
+	
+	# inicializa scale base se necessário
+	if treasure_scale == null or treasure_scale.length() == 0:
+		treasure_scale = treasure_sprite.scale
+	
+	# mata tween anterior
+	if feedback_tween and feedback_tween.is_running():
+		feedback_tween.kill()
+	
+	# garante estado limpo
+	treasure_sprite.scale = treasure_scale
+	
+	feedback_tween = create_tween()
+	
+	
+	var target_x
+	var target_y
+	if randi_range(0, 1) == 1:
+		print("é 1")
+		target_x = randf_range(1.1, 1.3)
+		target_y = randf_range(0.7, 0.9)
+	else:
+		print("é 0")
+		target_x = randf_range(0.7, 0.9)
+		target_y = randf_range(1.1, 1.3)
+	
+	# 🔥 squash mais forte e rápido
+	feedback_tween.tween_property(
+		treasure_sprite,
+		"scale",
+		Vector2(treasure_scale.x * target_x, treasure_scale.y * target_y),
+		0.1
+	)
+	
+	# volta mais rápido também
+	feedback_tween.tween_property(
+		treasure_sprite,
+		"scale",
+		treasure_scale,
+		0.05
+	).set_trans(Tween.TRANS_BOUNCE)\
+	 .set_ease(Tween.EASE_OUT)
+	
+	# 👇 zera o shader no final
+	feedback_tween.tween_callback(func():
+		treasure_mat.set_shader_parameter("amplitude", 0.0)
+		bait_mat.set_shader_parameter("amplitude", 0.0)
 	)

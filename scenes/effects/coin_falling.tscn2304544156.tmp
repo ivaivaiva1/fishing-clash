@@ -1,14 +1,8 @@
 [gd_scene format=3 uid="uid://c7qt0ej6xtmqc"]
 
 [ext_resource type="Script" uid="uid://cvdrx3lifgqm0" path="res://scripts/Effects/vertical_basic_movement.gd" id="1_keamy"]
-[ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://shaders/blink.gdshader" id="2_214xw"]
 [ext_resource type="Texture2D" uid="uid://cvlfr0qfhfltf" path="res://SpearFishing Assets Pack/Sprites/Coin Small - 16x16.png" id="2_tq4xt"]
 [ext_resource type="Script" uid="uid://0t372l32f4di" path="res://scripts/Misc/coin_behaviour.gd" id="3_tq4xt"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4njp1"]
-shader = ExtResource("2_214xw")
-shader_parameter/flash_color = Color(1, 1, 1, 1)
-shader_parameter/flash_pct = 0.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_keamy"]
 radius = 5.083135
@@ -23,7 +17,6 @@ max_speed = 50.0
 [node name="Sprite" type="Sprite2D" parent="." unique_id=402700216]
 unique_name_in_owner = true
 z_index = 86
-material = SubResource("ShaderMaterial_4njp1")
 texture = ExtResource("2_tq4xt")
 hframes = 6
 
