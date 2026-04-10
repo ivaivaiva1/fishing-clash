@@ -13,7 +13,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		is_alive = false
 		bait.player.add_points(10)
 		EffectSpawner.collect_coin_effect(bait.bait_sprite.global_position - Vector2(0, 15))
-		collect_coin()
+		vertical_movement.auto_destroy()
+		#collect_coin()
 
 
 
@@ -34,4 +35,4 @@ func collect_coin() -> void:
 	
 	#await get_tree().create_timer(0.5).timeout
 	#tween.finished.connect(func(): vertical_movement.auto_destroy())
-	tween.tween_callback(queue_free)
+	tween.tween_callback(vertical_movement.auto_destroy)

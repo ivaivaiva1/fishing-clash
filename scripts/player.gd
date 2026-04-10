@@ -4,6 +4,7 @@ class_name Player
 
 @onready var character_body: CharacterBody2D = self
 @onready var player_movement: PlayerMovement = %PlayerMovement
+@onready var collision_effect: Collision_Effect = %collision_effect
 var player_name: String 
 var current_money: int
 var current_player: int = 0
@@ -75,3 +76,5 @@ func _physics_process(delta: float) -> void:
 				player2_mass = mass
 				player2_velocity = player_movement.last_velocity
 			KnockbackManager.do_collision(player1_mass, player2_mass, player1_velocity, player2_velocity)
+			collision_effect.get_collision()
+			other_player.collision_effect.get_collision()
