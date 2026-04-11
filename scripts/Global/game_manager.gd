@@ -21,6 +21,7 @@ var player2: Player
 var round_duration: float = 180
 var game_timer: float = 0
 var _time_accumulator: float = 0.0
+@onready var treasure_scene: PackedScene = load("res://scenes/treasure.tscn")
 
 
 func _ready() -> void:
@@ -52,6 +53,9 @@ func _process(delta: float) -> void:
 		else:
 			GlobalVars.player2_score += 1
 		get_tree().reload_current_scene()
+	
+	if Input.is_action_just_pressed("treasure"):
+		spawn_treasure()
 
 
 
@@ -109,3 +113,8 @@ func att_money():
 
 func att_score():
 	placar.text = str(GlobalVars.player1_score , "           " , GlobalVars.player2_score)
+
+
+func spawn_treasure():
+	var treasure = treasure_scene.instantiate()
+	FishSpawner_intance.add_child(treasure)

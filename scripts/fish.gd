@@ -15,8 +15,11 @@ var move_right: bool = true
 var red_rain = false
 
 
-@onready var time_to_bubble: float = randf_range(0, 50)
+var min_bubble_time: float = 0.1
+var max_bubble_time: float = 50
+@onready var time_to_bubble: float = randf_range(min_bubble_time, max_bubble_time)
 @onready var bubble_timer: float = time_to_bubble
+
 
 func _ready():
 	if(!move_right):
@@ -39,7 +42,6 @@ func _ready():
 
 
 
-
 func _process(delta):
 	if bubble_timer > 0:
 		bubble_timer -= delta
@@ -48,8 +50,8 @@ func _process(delta):
 		if sprite.flip_h: bubble_pos = bubble_rightPos.global_position
 		else: bubble_pos = bubble_leftPos.global_position
 		
-		EffectSpawner.spawn_bubble(bubble_pos, effect_size, (sprite.z_index + 2))
-		bubble_timer = randf_range(0, 50)
+		EffectSpawner.spawn_bubble(bubble_pos, (effect_size * scale.x), (sprite.z_index + 1))
+		bubble_timer = randf_range(min_bubble_time, max_bubble_time)
 	
 	
 	auto_destruction_timer -= delta

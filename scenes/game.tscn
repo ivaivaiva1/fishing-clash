@@ -20,7 +20,6 @@
 [ext_resource type="Texture2D" uid="uid://d2ajmhqbplr30" path="res://sky_test/8.png" id="14_trtic"]
 [ext_resource type="Texture2D" uid="uid://gd022ulvec03" path="res://artes joao/price placa.png" id="16_ca42v"]
 [ext_resource type="Script" uid="uid://bv08l4gt2jmvq" path="res://scripts/clone_boats.gd" id="21_5newe"]
-[ext_resource type="PackedScene" uid="uid://cel27empameku" path="res://scenes/treasure.tscn" id="22_37s47"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtaks"]
 texture = ExtResource("7_0tnpc")
@@ -574,6 +573,7 @@ position = Vector2(-14, -28)
 position = Vector2(-1, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="limits/StaticBody2D" unique_id=1412709921]
+visible = false
 position = Vector2(274, 121)
 shape = SubResource("RectangleShape2D_264po")
 
@@ -926,6 +926,3 @@ script = ExtResource("11_rysoc")
 [node name="CloneBoats" type="Node2D" parent="." unique_id=352021503]
 unique_name_in_owner = true
 script = ExtResource("21_5newe")
-
-[node name="Treasure" parent="." unique_id=1190474615 instance=ExtResource("22_37s47")]
-position = Vector2(275.7981, 513.55774)

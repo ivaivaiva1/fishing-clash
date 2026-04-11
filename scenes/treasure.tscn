@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dgnevgrmkxvmr" path="res://scripts/Events/treasure.gd" id="1_0g4qu"]
 [ext_resource type="Texture2D" uid="uid://d4nuiuhkb4a3y" path="res://Bubbles/Greyscale/64x64/bubble_3.png" id="2_0g4qu"]
 [ext_resource type="Texture2D" uid="uid://dluvb4po015j2" path="res://SpearFishing Assets Pack/Sprites/Chests-16x32.png" id="2_it12x"]
+[ext_resource type="Texture2D" uid="uid://cw54xs24pb6u0" path="res://artes joao/bau_contorno_preto.png" id="4_wqbho"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0g4qu"]
 size = Vector2(36.14309, 34.112587)
@@ -31,7 +32,16 @@ script = ExtResource("1_0g4qu")
 position = Vector2(-0.122862816, 1.0311065)
 shape = SubResource("RectangleShape2D_0g4qu")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1668223515]
+z_index = 20
+position = Vector2(0, -2.394)
+scale = Vector2(2.27, 2.27)
+texture = ExtResource("4_wqbho")
+hframes = 3
+vframes = 2
+
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=739201083]
+visible = false
 z_index = 20
 position = Vector2(0, -2.393921)
 scale = Vector2(2.27, 2.27)

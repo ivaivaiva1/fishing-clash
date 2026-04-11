@@ -13,6 +13,7 @@ var mass: float = 10
 var collision_timer: float 
 var boat_size: float
 @onready var sprite: Sprite2D = %Sprite2
+var texture_boat2: Texture2D = load("res://artes joao/barco_nana_motor.png")
 @onready var col: CollisionShape2D = %CollisionShape2D
 
 
@@ -20,8 +21,7 @@ func _ready() -> void:
 	if current_player == 1: game_manager.player1 = self
 	if current_player == 2: game_manager.player2 = self
 	if current_player == 2: 
-		sprite.modulate = Color("#efff96")
-		sprite.modulate.a = 100
+		sprite.texture = texture_boat2
 	boat_size = col.shape.size.x
 
 
