@@ -13,7 +13,7 @@ var mass: float = 10
 var collision_timer: float 
 var boat_size: float
 @onready var sprite: Sprite2D = %Sprite2
-var texture_boat2: Texture2D = load("res://artes joao/barco_nana_motor.png")
+var texture_boat2: Texture2D = load("res://artes joao/13-04-2026/barco_nana_motor_purpledress.png")
 @onready var col: CollisionShape2D = %CollisionShape2D
 
 

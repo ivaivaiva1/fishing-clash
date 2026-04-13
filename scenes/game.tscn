@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dpxa08h6rwtoh" path="res://SpearFishing Assets Pack/Sprites/Corals - 16x16/Corals.png" id="9_vtaks"]
 [ext_resource type="Texture2D" uid="uid://dkvcby5ccnqaj" path="res://sky_test/Clouds.png" id="10_dinhu"]
 [ext_resource type="Script" uid="uid://bi06wla0inb6j" path="res://scripts/Global/price_flutuation.gd" id="11_rysoc"]
+[ext_resource type="Texture2D" uid="uid://dfrqtdtraoj7h" path="res://artes joao/13-04-2026/icon_girl.png" id="13_5newe"]
 [ext_resource type="Texture2D" uid="uid://d2ajmhqbplr30" path="res://sky_test/8.png" id="14_trtic"]
 [ext_resource type="Texture2D" uid="uid://gd022ulvec03" path="res://artes joao/price placa.png" id="16_ca42v"]
 [ext_resource type="Script" uid="uid://bv08l4gt2jmvq" path="res://scripts/clone_boats.gd" id="21_5newe"]
@@ -678,7 +679,14 @@ offset_bottom = 79.44644
 rotation = 3.1415927
 color = Color(0, 0, 0, 1)
 
+[node name="PlayerIconPng2" type="Sprite2D" parent="UI/BOT UI/PLAYER INFO2" unique_id=418760793]
+position = Vector2(56.09909, 20.038666)
+rotation = -3.1415925
+scale = Vector2(0.966, 0.966)
+texture = ExtResource("13_5newe")
+
 [node name="PlayerIconPng" type="Sprite2D" parent="UI/BOT UI/PLAYER INFO2" unique_id=1948669754]
+visible = false
 position = Vector2(57.045, 18.282)
 rotation = 3.1415927
 scale = Vector2(0.966, 0.966)

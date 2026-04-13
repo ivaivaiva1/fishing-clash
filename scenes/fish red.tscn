@@ -2,70 +2,70 @@
 
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_wamdd"]
 [ext_resource type="PackedScene" uid="uid://dymjc3rwm5np6" path="res://scenes/effects/fish_collect_effect.tscn" id="2_q6l0k"]
-[ext_resource type="Texture2D" uid="uid://dsctslp8amwa2" path="res://artes joao/yellow fish.png" id="3_q6l0k"]
+[ext_resource type="Texture2D" uid="uid://cm1v1eckelor1" path="res://artes joao/13-04-2026/peixe_laranja_detahesAmarelos.png" id="3_q6l0k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cg8j"]
+atlas = ExtResource("3_q6l0k")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsat7"]
+atlas = ExtResource("3_q6l0k")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8j3p"]
+atlas = ExtResource("3_q6l0k")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djkdd"]
+atlas = ExtResource("3_q6l0k")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vu7ub"]
+atlas = ExtResource("3_q6l0k")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rg8r"]
+atlas = ExtResource("3_q6l0k")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fy07s"]
+atlas = ExtResource("3_q6l0k")
+region = Rect2(64, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b4kpj"]
 atlas = ExtResource("3_q6l0k")
-region = Rect2(0, 0, 1024, 1024)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_72vi5"]
-atlas = ExtResource("3_q6l0k")
-region = Rect2(1024, 0, 1024, 1024)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3fnc4"]
-atlas = ExtResource("3_q6l0k")
-region = Rect2(2048, 0, 1024, 1024)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y4uj0"]
-atlas = ExtResource("3_q6l0k")
-region = Rect2(3072, 0, 1024, 1024)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iq5yf"]
-atlas = ExtResource("3_q6l0k")
-region = Rect2(0, 1024, 1024, 1024)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pudsf"]
-atlas = ExtResource("3_q6l0k")
-region = Rect2(1024, 1024, 1024, 1024)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nnqo8"]
-atlas = ExtResource("3_q6l0k")
-region = Rect2(2048, 1024, 1024, 1024)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fxaow"]
-atlas = ExtResource("3_q6l0k")
-region = Rect2(3072, 1024, 1024, 1024)
+region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4gy1e"]
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_5cg8j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsat7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8j3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djkdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vu7ub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rg8r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fy07s")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_b4kpj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_72vi5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3fnc4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y4uj0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iq5yf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pudsf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nnqo8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fxaow")
 }],
 "loop": true,
 "name": &"default",
-"speed": 15.0
+"speed": 12.0
 }]
 
 [node name="fish red" type="CharacterBody2D" unique_id=1611043718]
@@ -87,9 +87,10 @@ scale = Vector2(0.754, 0.754)
 unique_name_in_owner = true
 z_as_relative = false
 position = Vector2(-5.684342e-14, -2.842171e-14)
-scale = Vector2(0.04, 0.04)
+scale = Vector2(1.345, 1.345)
 sprite_frames = SubResource("SpriteFrames_4gy1e")
 autoplay = "default"
+frame_progress = 0.6115139
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=654270335]

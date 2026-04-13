@@ -4,12 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://c7qt0ej6xtmqc" path="res://scenes/effects/coin_falling.tscn" id="3_jej6c"]
 [ext_resource type="Script" uid="uid://dn2m2bg4gmlh8" path="res://scripts/bait.gd" id="3_smehm"]
 [ext_resource type="Texture2D" uid="uid://bfknudkvo2ya4" path="res://artes joao/isca 2.png" id="3_y4r1p"]
-[ext_resource type="Texture2D" uid="uid://duad37itfruxt" path="res://Stella Fishs/pixil-frame-0 (7).png" id="4_tuyoq"]
-[ext_resource type="Texture2D" uid="uid://f82kynkrhuah" path="res://Stella Fishs/pixil-frame-0 (6).png" id="5_fjrip"]
-[ext_resource type="Texture2D" uid="uid://dpc2ttsjuuj82" path="res://Stella Fishs/pixil-frame-0 (5).png" id="5_tuyoq"]
 [ext_resource type="Script" uid="uid://b1y7jwgfvfrda" path="res://scripts/boost_controller.gd" id="6_fjrip"]
+[ext_resource type="Texture2D" uid="uid://dsctslp8amwa2" path="res://artes joao/yellow fish.png" id="6_oprun"]
+[ext_resource type="Texture2D" uid="uid://cxp8gjpeue570" path="res://artes joao/blue fish.png" id="7_a8ls1"]
 [ext_resource type="Script" uid="uid://bkawldx4t15f6" path="res://scripts/Player/bait_rotation.gd" id="8_d2wvv"]
 [ext_resource type="Shader" uid="uid://dltsjnvd5v5sk" path="res://shaders/shake.gdshader" id="8_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://hfnspc7q7u8g" path="res://artes joao/peixe_grande meio termo.png" id="8_oprun"]
 [ext_resource type="Texture2D" uid="uid://10x3sdxnhmp1" path="res://artes joao/barco joao.png" id="8_smehm"]
 [ext_resource type="Texture2D" uid="uid://cw54xs24pb6u0" path="res://artes joao/bau_contorno_preto.png" id="9_oprun"]
 [ext_resource type="Script" uid="uid://bgh28c2s6hwh3" path="res://scripts/Player/player_movement.gd" id="9_ur7pv"]
@@ -36,103 +36,23 @@ size = Vector2(14, 25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bt5mj"]
 size = Vector2(43, 54)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
-atlas = ExtResource("4_tuyoq")
-region = Rect2(0, 32, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
-atlas = ExtResource("4_tuyoq")
-region = Rect2(32, 32, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
-atlas = ExtResource("4_tuyoq")
-region = Rect2(64, 32, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
-atlas = ExtResource("4_tuyoq")
-region = Rect2(96, 32, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
-atlas = ExtResource("4_tuyoq")
-region = Rect2(128, 32, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
-atlas = ExtResource("4_tuyoq")
-region = Rect2(160, 32, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jej6c"]
-atlas = ExtResource("4_tuyoq")
-region = Rect2(192, 32, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f1ej7"]
-atlas = ExtResource("4_tuyoq")
-region = Rect2(224, 32, 32, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_v2yb1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fjrip")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_smehm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ur7pv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y4r1p")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d2wvv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3v2ag")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jej6c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f1ej7")
-}],
-"loop": true,
-"name": &"default",
-"speed": 20.0
-}]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_oprun"]
-atlas = ExtResource("5_tuyoq")
-region = Rect2(0, 32, 32, 16)
+atlas = ExtResource("6_oprun")
+region = Rect2(0, 0, 1024, 1024)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a8ls1"]
-atlas = ExtResource("5_tuyoq")
-region = Rect2(32, 32, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qfm1y"]
-atlas = ExtResource("5_tuyoq")
-region = Rect2(64, 32, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fulsm"]
-atlas = ExtResource("5_tuyoq")
-region = Rect2(96, 32, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4r5pv"]
-atlas = ExtResource("5_tuyoq")
-region = Rect2(128, 32, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_60mlk"]
-atlas = ExtResource("5_tuyoq")
-region = Rect2(160, 32, 32, 16)
+atlas = ExtResource("6_oprun")
+region = Rect2(1024, 0, 1024, 1024)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i4ail"]
-atlas = ExtResource("5_tuyoq")
-region = Rect2(192, 32, 32, 16)
+atlas = ExtResource("6_oprun")
+region = Rect2(2048, 0, 1024, 1024)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a38lo"]
-atlas = ExtResource("5_tuyoq")
-region = Rect2(224, 32, 32, 16)
+atlas = ExtResource("6_oprun")
+region = Rect2(3072, 0, 1024, 1024)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_pl11u"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_v2yb1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -140,18 +60,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_a8ls1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qfm1y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fulsm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4r5pv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_60mlk")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_i4ail")
@@ -164,37 +72,57 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfm1y"]
+atlas = ExtResource("7_a8ls1")
+region = Rect2(0, 1024, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fulsm"]
+atlas = ExtResource("7_a8ls1")
+region = Rect2(1024, 1024, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4r5pv"]
+atlas = ExtResource("7_a8ls1")
+region = Rect2(2048, 1024, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60mlk"]
+atlas = ExtResource("7_a8ls1")
+region = Rect2(3072, 1024, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pl11u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfm1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fulsm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4r5pv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60mlk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ni07"]
-atlas = ExtResource("5_fjrip")
-region = Rect2(0, 48, 32, 16)
+atlas = ExtResource("8_oprun")
+region = Rect2(0, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l71n6"]
-atlas = ExtResource("5_fjrip")
-region = Rect2(32, 48, 32, 16)
+atlas = ExtResource("8_oprun")
+region = Rect2(64, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ke2ow"]
-atlas = ExtResource("5_fjrip")
-region = Rect2(64, 48, 32, 16)
+atlas = ExtResource("8_oprun")
+region = Rect2(128, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ujl30"]
-atlas = ExtResource("5_fjrip")
-region = Rect2(96, 48, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_31cv2"]
-atlas = ExtResource("5_fjrip")
-region = Rect2(128, 48, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pf23h"]
-atlas = ExtResource("5_fjrip")
-region = Rect2(160, 48, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dt7fs"]
-atlas = ExtResource("5_fjrip")
-region = Rect2(192, 48, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wqfne"]
-atlas = ExtResource("5_fjrip")
-region = Rect2(224, 48, 32, 16)
+atlas = ExtResource("8_oprun")
+region = Rect2(192, 128, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ool0"]
 animations = [{
@@ -210,18 +138,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ujl30")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_31cv2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pf23h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dt7fs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wqfne")
 }],
 "loop": true,
 "name": &"default",
@@ -373,7 +289,7 @@ coin_scene = ExtResource("3_jej6c")
 
 [node name="BaitSprite" type="Sprite2D" parent="bait" unique_id=902352250]
 unique_name_in_owner = true
-z_index = 90
+z_index = -10
 texture_filter = 1
 material = SubResource("ShaderMaterial_f1ej7")
 position = Vector2(7.3990955, 8.591688)
@@ -420,51 +336,61 @@ shape = SubResource("RectangleShape2D_bt5mj")
 unique_name_in_owner = true
 visible = false
 z_index = 103
-position = Vector2(1.54356, 23.1896)
+position = Vector2(2.6908493, 20.375563)
 rotation = -1.44862
+scale = Vector2(0.04, 0.04)
 sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
 frame_progress = 0.765977
+flip_h = true
 
 [node name="red_fish 1" type="AnimatedSprite2D" parent="bait/red fishs" unique_id=253089831]
 unique_name_in_owner = true
 visible = false
 z_index = 103
-position = Vector2(3.54356, 23.1896)
+position = Vector2(4.6908493, 20.375563)
 rotation = -1.51844
+scale = Vector2(0.04, 0.04)
 sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
 frame_progress = 0.765977
+flip_h = true
 
 [node name="red_fish 0" type="AnimatedSprite2D" parent="bait/red fishs" unique_id=165153854]
 unique_name_in_owner = true
 visible = false
 z_index = 103
-position = Vector2(6.54356, 23.1896)
+position = Vector2(7.6908493, 20.375563)
 rotation = -1.5708
+scale = Vector2(0.04, 0.04)
 sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
 frame_progress = 0.0951693
+flip_h = true
 
 [node name="red_fish 2" type="AnimatedSprite2D" parent="bait/red fishs" unique_id=126465221]
 unique_name_in_owner = true
 visible = false
 z_index = 103
-position = Vector2(9.54356, 23.1896)
+position = Vector2(10.690849, 20.375563)
 rotation = -1.62316
+scale = Vector2(0.04, 0.04)
 sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
 frame_progress = 0.716382
+flip_h = true
 
 [node name="red_fish 4" type="AnimatedSprite2D" parent="bait/red fishs" unique_id=1761894238]
 unique_name_in_owner = true
 visible = false
 z_index = 103
-position = Vector2(12.5436, 23.1896)
+position = Vector2(13.690889, 20.375563)
 rotation = -1.69297
+scale = Vector2(0.04, 0.04)
 sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
 frame_progress = 0.716382
+flip_h = true
 
 [node name="blue fishs" type="Node2D" parent="bait" unique_id=60148122]
 
@@ -472,56 +398,62 @@ frame_progress = 0.716382
 unique_name_in_owner = true
 visible = false
 z_index = 102
-position = Vector2(-0.274046, 30.2495)
+position = Vector2(-0.6801472, 25.477802)
 rotation = -1.44862
-scale = Vector2(1.531, 1.531)
+scale = Vector2(0.041, 0.041)
 sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.0103795
+flip_h = true
 
 [node name="blue_fish 2" type="AnimatedSprite2D" parent="bait/blue fishs" unique_id=794034973]
 unique_name_in_owner = true
 visible = false
 z_index = 102
-position = Vector2(2.72595, 30.2495)
+position = Vector2(2.3198488, 25.477802)
 rotation = -1.51844
-scale = Vector2(1.531, 1.531)
+scale = Vector2(0.041, 0.041)
 sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
-frame_progress = 0.0103795
+frame = 2
+frame_progress = 0.8017927
+flip_h = true
 
 [node name="blue_fish 1" type="AnimatedSprite2D" parent="bait/blue fishs" unique_id=1539631134]
 unique_name_in_owner = true
 visible = false
 z_index = 102
-position = Vector2(6.72595, 30.2495)
+position = Vector2(6.3198485, 25.477802)
 rotation = -1.5708
-scale = Vector2(1.531, 1.531)
+scale = Vector2(0.041, 0.041)
 sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.39534628
+flip_h = true
 
 [node name="blue_fish 3" type="AnimatedSprite2D" parent="bait/blue fishs" unique_id=214574894]
 unique_name_in_owner = true
 visible = false
 z_index = 102
-position = Vector2(9.72595, 30.2495)
+position = Vector2(9.319849, 25.477802)
 rotation = -1.62316
-scale = Vector2(1.531, 1.531)
+scale = Vector2(0.041, 0.041)
 sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.0103795
+flip_h = true
 
 [node name="blue_fish 5" type="AnimatedSprite2D" parent="bait/blue fishs" unique_id=1886833701]
 unique_name_in_owner = true
 visible = false
 z_index = 102
-position = Vector2(13.726, 30.2495)
+position = Vector2(13.319899, 25.477802)
 rotation = -1.69297
-scale = Vector2(1.531, 1.531)
+scale = Vector2(0.041, 0.041)
 sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.0103795
+flip_h = true
 
 [node name="golden fish" type="Node2D" parent="bait" unique_id=1998195511]
 
@@ -529,28 +461,29 @@ frame_progress = 0.0103795
 unique_name_in_owner = true
 visible = false
 z_index = 101
-position = Vector2(0, 37)
+position = Vector2(1.0789454, 34.531082)
 rotation = -1.5708
-scale = Vector2(3, 3)
+scale = Vector2(1.7, 1.7)
 sprite_frames = SubResource("SpriteFrames_8ool0")
 autoplay = "default"
-frame_progress = 0.05751223
+frame_progress = 0.048093878
+flip_h = true
 
 [node name="golden_fish 2" type="AnimatedSprite2D" parent="bait/golden fish" unique_id=920252643]
 unique_name_in_owner = true
 visible = false
 z_index = 101
-position = Vector2(8, 37.75)
+position = Vector2(9.078945, 35.281082)
 rotation = -1.5708
-scale = Vector2(3, 3)
+scale = Vector2(1.7, 1.7)
 sprite_frames = SubResource("SpriteFrames_8ool0")
 autoplay = "default"
 frame_progress = 0.474755
+flip_h = true
 
 [node name="treasure_sprite" type="AnimatedSprite2D" parent="bait" unique_id=1030464131]
 unique_name_in_owner = true
-visible = false
-z_index = 85
+z_index = -15
 material = SubResource("ShaderMaterial_oprun")
 position = Vector2(4.154724, 18.775444)
 rotation = -0.007167816

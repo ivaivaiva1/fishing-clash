@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cvdrx3lifgqm0" path="res://scripts/Effects/vertical_basic_movement.gd" id="1_keamy"]
 [ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://shaders/blink.gdshader" id="2_214xw"]
-[ext_resource type="Texture2D" uid="uid://cvlfr0qfhfltf" path="res://SpearFishing Assets Pack/Sprites/Coin Small - 16x16.png" id="2_tq4xt"]
+[ext_resource type="Texture2D" uid="uid://n5geboojawut" path="res://artes joao/13-04-2026/moeda_contorno_preto.png" id="3_214xw"]
 [ext_resource type="Script" uid="uid://0t372l32f4di" path="res://scripts/Misc/coin_behaviour.gd" id="3_tq4xt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4njp1"]
@@ -21,10 +21,10 @@ max_speed = 50.0
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=402700216]
 unique_name_in_owner = true
-z_index = 86
+z_index = -13
 material = SubResource("ShaderMaterial_4njp1")
 scale = Vector2(1.3, 1.3)
-texture = ExtResource("2_tq4xt")
+texture = ExtResource("3_214xw")
 hframes = 6
 
 [node name="Area2D" type="Area2D" parent="." unique_id=948127719]
