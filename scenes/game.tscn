@@ -14,8 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://dy5jp3gig3bp8" path="res://scenes/fish red.tscn" id="7_ir15t"]
 [ext_resource type="Texture2D" uid="uid://dkvcby5ccnqaj" path="res://sky_test/Clouds.png" id="10_dinhu"]
 [ext_resource type="Script" uid="uid://bi06wla0inb6j" path="res://scripts/Global/price_flutuation.gd" id="11_rysoc"]
-[ext_resource type="Texture2D" uid="uid://dfrqtdtraoj7h" path="res://artes joao/13-04-2026/icon_girl.png" id="13_5newe"]
-[ext_resource type="Texture2D" uid="uid://gd022ulvec03" path="res://artes joao/price placa.png" id="16_ca42v"]
 [ext_resource type="Script" uid="uid://bv08l4gt2jmvq" path="res://scripts/clone_boats.gd" id="21_5newe"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gee14"]
@@ -39,32 +37,13 @@ size = Vector2(49, 64)
 [sub_resource type="LabelSettings" id="LabelSettings_trtic"]
 font_size = 21
 
-[sub_resource type="SystemFont" id="SystemFont_264po"]
-font_names = PackedStringArray("Cambria")
-font_italic = true
-oversampling = 10.0
-
-[sub_resource type="LabelSettings" id="LabelSettings_ir15t"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir15t"]
-bg_color = Color(0, 0, 0, 1)
-corner_detail = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ca42v"]
-bg_color = Color(1, 0.90700006, 0.06999999, 1)
-corner_detail = 1
-
-[sub_resource type="LabelSettings" id="LabelSettings_ca42v"]
-font_size = 25
-font_color = Color(0, 0, 0, 1)
-
 [node name="game" type="Node2D" unique_id=760273511]
 
 [node name="Game_Manager" type="Node2D" parent="." unique_id=75664626 node_paths=PackedStringArray("peso_1", "peso_2")]
 script = ExtResource("2_ir15t")
 player_scene = ExtResource("2_trtic")
-peso_1 = NodePath("../UI/peso_player_1")
-peso_2 = NodePath("../UI/peso_player_2")
+peso_1 = NodePath("")
+peso_2 = NodePath("")
 
 [node name="Fish_Spawner" type="Node2D" parent="." unique_id=167932852]
 unique_name_in_owner = true
@@ -294,36 +273,28 @@ texture_filter = 1
 position = Vector2(978, 92.90082)
 texture = ExtResource("4_lbhrr")
 
-[node name="UI" type="Control" parent="." unique_id=110094207]
-visible = false
-z_index = 4096
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="BOT UI" type="ColorRect" parent="UI" unique_id=559487292]
-layout_mode = 0
-offset_left = -0.046138763
-offset_top = 473.88525
-offset_right = 540.0063
-offset_bottom = 513.57745
-
-[node name="PLAYER INFO" type="ColorRect" parent="UI/BOT UI" unique_id=1381161313]
-layout_mode = 0
-offset_top = 0.018249512
-offset_right = 270.0
-offset_bottom = 39.72824
+[node name="BLACK COLOR RECTS" type="ColorRect" parent="." unique_id=1340791473]
+z_index = 2000
+offset_left = -174.7245
+offset_top = -15.046787
+offset_right = 0.10499573
+offset_bottom = 499.91812
 color = Color(0, 0, 0, 1)
 
-[node name="PlayerIconPng" type="Sprite2D" parent="UI/BOT UI/PLAYER INFO" unique_id=1992720018]
+[node name="PLAYER INFO" type="ColorRect" parent="BLACK COLOR RECTS" unique_id=664119518]
+layout_mode = 0
+offset_left = -0.728302
+offset_top = 38.441254
+offset_right = 173.64981
+offset_bottom = 78.151245
+color = Color(0, 0, 0, 1)
+
+[node name="PlayerIconPng" type="Sprite2D" parent="BLACK COLOR RECTS/PLAYER INFO" unique_id=246572327]
 position = Vector2(57.045, 21.592)
 scale = Vector2(0.966, 0.966)
 texture = ExtResource("3_ssvqc")
 
-[node name="player1_money" type="Label" parent="UI/BOT UI/PLAYER INFO" unique_id=213890332]
+[node name="player1_money" type="Label" parent="BLACK COLOR RECTS/PLAYER INFO" unique_id=890581008]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 76.63989
@@ -335,237 +306,69 @@ label_settings = SubResource("LabelSettings_trtic")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PLAYER INFO2" type="ColorRect" parent="UI/BOT UI" unique_id=309551813]
+[node name="player1_rounds" type="Label" parent="BLACK COLOR RECTS/PLAYER INFO" unique_id=378935352]
+unique_name_in_owner = true
 layout_mode = 0
-offset_left = 540.0505
-offset_top = 39.736446
-offset_right = 810.0505
-offset_bottom = 79.44644
-rotation = 3.1415927
+offset_left = 76.63989
+offset_top = 48.88817
+offset_right = 145.66362
+offset_bottom = 78.88817
+text = "0"
+label_settings = SubResource("LabelSettings_trtic")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Trophy" type="Sprite2D" parent="BLACK COLOR RECTS/PLAYER INFO" unique_id=1182390879]
+position = Vector2(56.285904, 64.22458)
+scale = Vector2(0.10549085, 0.10549084)
+texture = ExtResource("4_264po")
+
+[node name="BLACK COLOR RECTS2" type="ColorRect" parent="." unique_id=1627553549]
+z_index = 2000
+offset_left = 540.3882
+offset_top = -14.966049
+offset_right = 715.52576
+offset_bottom = 501.51514
 color = Color(0, 0, 0, 1)
 
-[node name="PlayerIconPng2" type="Sprite2D" parent="UI/BOT UI/PLAYER INFO2" unique_id=418760793]
-position = Vector2(56.09909, 20.038666)
-rotation = -3.1415925
-scale = Vector2(0.966, 0.966)
-texture = ExtResource("13_5newe")
+[node name="PLAYER INFO2" type="ColorRect" parent="BLACK COLOR RECTS2" unique_id=595410992]
+layout_mode = 0
+offset_left = 0.4790039
+offset_top = 38.360516
+offset_right = 174.85712
+offset_bottom = 78.07051
+color = Color(0, 0, 0, 1)
 
-[node name="PlayerIconPng" type="Sprite2D" parent="UI/BOT UI/PLAYER INFO2" unique_id=1948669754]
-visible = false
-position = Vector2(57.045, 18.282)
-rotation = 3.1415927
+[node name="PlayerIconPng" type="Sprite2D" parent="BLACK COLOR RECTS2/PLAYER INFO2" unique_id=2665651]
+position = Vector2(57.045, 21.592)
 scale = Vector2(0.966, 0.966)
 texture = ExtResource("3_ssvqc")
 
-[node name="player2_money" type="Label" parent="UI/BOT UI/PLAYER INFO2" unique_id=319002129]
+[node name="player2_money" type="Label" parent="BLACK COLOR RECTS2/PLAYER INFO2" unique_id=165597416]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 145.2941
-offset_top = 34.694176
-offset_right = 214.31783
-offset_bottom = 64.69418
-rotation = 3.1415927
+offset_left = 76.63989
+offset_top = 4.779175
+offset_right = 145.66362
+offset_bottom = 34.779175
 text = "$ 0"
 label_settings = SubResource("LabelSettings_trtic")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PLACAR" type="Label" parent="UI/BOT UI" unique_id=1495240121]
+[node name="player2_rounds" type="Label" parent="BLACK COLOR RECTS2/PLAYER INFO2" unique_id=723098183]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 0.055541992
-offset_top = 0.28164673
-offset_right = 539.286
-offset_bottom = 39.313232
-text = "0           2"
-label_settings = SubResource("LabelSettings_trtic")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Trophy" type="Sprite2D" parent="UI/BOT UI" unique_id=1472501646]
-position = Vector2(210.13852, 19.874302)
-scale = Vector2(0.10549085, 0.10549084)
-texture = ExtResource("4_264po")
-
-[node name="Trophy2" type="Sprite2D" parent="UI/BOT UI" unique_id=425045269]
-position = Vector2(277.4052, 19.652714)
-scale = Vector2(0.10549085, 0.10549084)
-texture = ExtResource("4_264po")
-
-[node name="press_to_play" type="Label" parent="UI" unique_id=192793228]
-unique_name_in_owner = true
-z_index = 150
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 1.0
-offset_top = 211.0
-offset_right = 541.0
-offset_bottom = 379.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0.93, 0, 0, 1)
-theme_override_constants/outline_size = 3
-theme_override_fonts/font = SubResource("SystemFont_264po")
-theme_override_font_sizes/font_size = 25
-text = "PRESS  ENTER  TO  PLAY"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer" type="MarginContainer" parent="UI" unique_id=1719982392]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="player1_moneyafdsdf" type="Label" parent="UI" unique_id=2147357386]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 24.0578
-offset_top = 557.8294
-offset_right = 64.0578
-offset_bottom = 607.8294
+offset_left = 76.63989
+offset_top = 48.88817
+offset_right = 145.66362
+offset_bottom = 78.88817
 text = "0"
 label_settings = SubResource("LabelSettings_trtic")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="player2_moneyasdfsdf" type="Label" parent="UI" unique_id=1546357248]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 102.881744
-offset_top = 561.5721
-offset_right = 142.88174
-offset_bottom = 611.5721
-text = "0"
-label_settings = SubResource("LabelSettings_trtic")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="peso_player_1" type="Label" parent="UI" unique_id=1391421069]
-unique_name_in_owner = true
-visible = false
-layout_mode = 0
-offset_left = 37.0
-offset_top = -18.0
-offset_right = 160.0
-offset_bottom = 32.0
-text = "peso: 8"
-label_settings = SubResource("LabelSettings_ir15t")
-vertical_alignment = 1
-
-[node name="peso_player_2" type="Label" parent="UI" unique_id=2114457178]
-unique_name_in_owner = true
-visible = false
-layout_mode = 0
-offset_left = 442.0
-offset_top = -18.0
-offset_right = 565.0
-offset_bottom = 32.0
-text = "peso: 8"
-label_settings = SubResource("LabelSettings_ir15t")
-vertical_alignment = 1
-
-[node name="ProgressBar" type="ProgressBar" parent="UI" unique_id=1153696002]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 0.10152578
-offset_top = 13.371106
-offset_right = 540.1015
-offset_bottom = 25.273422
-theme_override_styles/background = SubResource("StyleBoxFlat_ir15t")
-theme_override_styles/fill = SubResource("StyleBoxFlat_ca42v")
-value = 62.44
-show_percentage = false
-
-[node name="Placa" type="TextureRect" parent="UI" unique_id=686671489]
-visible = false
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 203.38687
-offset_top = 6.413
-offset_right = 313.42532
-offset_bottom = 43.092445
-grow_horizontal = 2
-scale = Vector2(0.76, 0.76)
-texture = ExtResource("16_ca42v")
-expand_mode = 1
-
-[node name="price label" type="Label" parent="UI/Placa" unique_id=1100059709]
-unique_name_in_owner = true
-layout_mode = 0
-offset_right = 70.99408
-offset_bottom = 35.1659
-text = "$1.0X"
-label_settings = SubResource("LabelSettings_ca42v")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Pontuacao" type="Control" parent="UI" unique_id=1708710490]
-visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="ColorRect" type="ColorRect" parent="UI/Pontuacao" unique_id=437466694]
-layout_mode = 0
-offset_left = -0.4905243
-offset_top = -37.453842
-offset_right = 39.509476
-offset_bottom = 2.5461578
-rotation = 0.7853982
-scale = Vector2(1.8, 1.8)
-color = Color(0.6175, 0.49, 1, 1)
-
-[node name="Label" type="Label" parent="UI/Pontuacao/ColorRect" unique_id=354075316]
-layout_mode = 0
-offset_left = 20.48236
-offset_top = 17.296213
-offset_right = 60.48236
-offset_bottom = 40.29621
-rotation = -0.7853982
-text = "7"
-
-[node name="ColorRect2" type="ColorRect" parent="UI/Pontuacao" unique_id=1672878786]
-layout_mode = 0
-offset_left = 539.50946
-offset_top = -37.453842
-offset_right = 579.50946
-offset_bottom = 2.5461578
-rotation = 0.7853982
-scale = Vector2(1.8, 1.8)
-color = Color(1, 0, 0, 1)
-
-[node name="Label2" type="Label" parent="UI/Pontuacao/ColorRect2" unique_id=19792197]
-layout_mode = 0
-offset_left = 11.469879
-offset_top = 26.308685
-offset_right = 51.46988
-offset_bottom = 49.308685
-rotation = -0.7853982
-text = "5
-"
-
-[node name="BLACK COLOR RECTS" type="ColorRect" parent="." unique_id=1340791473]
-z_index = 2000
-offset_left = -193.81541
-offset_top = -15.249149
-offset_right = 0.10499573
-offset_bottom = 551.8283
-color = Color(0, 0, 0, 1)
-
-[node name="BLACK COLOR RECTS2" type="ColorRect" parent="." unique_id=1627553549]
-z_index = 2000
-offset_left = 540.3882
-offset_top = -42.764694
-offset_right = 734.3086
-offset_bottom = 566.1283
-color = Color(0, 0, 0, 1)
+[node name="Trophy" type="Sprite2D" parent="BLACK COLOR RECTS2/PLAYER INFO2" unique_id=1215334482]
+position = Vector2(56.285904, 64.22458)
+scale = Vector2(0.10549085, 0.10549084)
+texture = ExtResource("4_264po")
