@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c7qt0ej6xtmqc" path="res://scenes/effects/coin_falling.tscn" id="3_jej6c"]
 [ext_resource type="Script" uid="uid://dn2m2bg4gmlh8" path="res://scripts/bait.gd" id="3_smehm"]
 [ext_resource type="Texture2D" uid="uid://bfknudkvo2ya4" path="res://artes joao/14.04.26/isca/isca 2.png" id="3_y4r1p"]
+[ext_resource type="Script" uid="uid://g51artpoga0q" path="res://scripts/Player/skin_handler.gd" id="4_qfm1y"]
 [ext_resource type="Script" uid="uid://b1y7jwgfvfrda" path="res://scripts/boost_controller.gd" id="6_fjrip"]
 [ext_resource type="Texture2D" uid="uid://dsctslp8amwa2" path="res://artes joao/yellow fish.png" id="6_oprun"]
 [ext_resource type="Texture2D" uid="uid://cxp8gjpeue570" path="res://artes joao/blue fish.png" id="7_a8ls1"]
@@ -15,10 +16,110 @@
 [ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://shaders/blink.gdshader" id="12_f1ej7"]
 [ext_resource type="Texture2D" uid="uid://bam6fe1y8chk2" path="res://artes joao/13-04-2026/barco_goth.png" id="13_a8ls1"]
 [ext_resource type="Script" uid="uid://33iignvffuty" path="res://scripts/Effects/collision_effect.gd" id="15_oprun"]
-[ext_resource type="Texture2D" uid="uid://5jfkg661h7te" path="res://artes joao/player_arrows/seta_bege.png" id="16_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://dj24xdkgncopb" path="res://artes joao/player_arrows/seta cinza azul.png" id="16_a8ls1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
 size = Vector2(20, 9.1726265)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyoq"]
+size = Vector2(89.44316, 10.4589615)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a8ls1"]
+shader = ExtResource("12_f1ej7")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_pct = 0.0
+
+[sub_resource type="Animation" id="Animation_a8ls1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite_Container:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite_Container:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_oprun"]
+resource_name = "pump_1"
+length = 0.8
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite_Container:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.14999999, 0.5, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 0.6), Vector2(0.7, 1.2), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite_Container:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.049999997, 0.099999994, 0.14999999, 0.19999999, 0.25, 0.29999998, 0.32999998, 0.42999998, 0.53, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0.69343185), Vector2(0, 1.260788), Vector2(0, 1.9542198), Vector2(0, 1.494), Vector2(0, 1.1157632), Vector2(0, 0.7375283), Vector2(0, 0.448), Vector2(0, -10.857), Vector2(0, -0.8235059), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qfm1y"]
+resource_name = "pump_2"
+length = 0.8
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite_Container:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.14999999, 0.5, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 0.6), Vector2(0.7, 1.2), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite_Container:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.049999997, 0.099999994, 0.14999999, 0.19999999, 0.25, 0.29999998, 0.32999998, 0.42999998, 0.53, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0.69343185), Vector2(0, 1.260788), Vector2(0, 1.9542198), Vector2(0, 1.494), Vector2(0, 1.1157632), Vector2(0, 0.7375283), Vector2(0, 0.448), Vector2(0, -8.519), Vector2(0, -0.8235059), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a8ls1"]
+_data = {
+&"RESET": SubResource("Animation_a8ls1"),
+&"pump_1": SubResource("Animation_oprun"),
+&"pump_2": SubResource("Animation_qfm1y")
+}
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f1ej7"]
 shader = ExtResource("8_f1ej7")
@@ -168,109 +269,21 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3v2ag"]
 size = Vector2(10.912278, 2.0125682)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyoq"]
-size = Vector2(89.44316, 10.4589615)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_a8ls1"]
-shader = ExtResource("12_f1ej7")
-shader_parameter/flash_color = Color(1, 1, 1, 1)
-shader_parameter/flash_pct = 0.0
-
-[sub_resource type="Animation" id="Animation_a8ls1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite_Container:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite_Container:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_oprun"]
-resource_name = "pump_1"
-length = 0.8
-step = 0.01
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite_Container:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.14999999, 0.5, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1.2, 0.6), Vector2(0.7, 1.2), Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite_Container:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.049999997, 0.099999994, 0.14999999, 0.19999999, 0.25, 0.29999998, 0.32999998, 0.42999998, 0.53, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 0.69343185), Vector2(0, 1.260788), Vector2(0, 1.9542198), Vector2(0, 1.494), Vector2(0, 1.1157632), Vector2(0, 0.7375283), Vector2(0, 0.448), Vector2(0, -10.857), Vector2(0, -0.8235059), Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_qfm1y"]
-resource_name = "pump_2"
-length = 0.8
-step = 0.01
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite_Container:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.14999999, 0.5, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1.2, 0.6), Vector2(0.7, 1.2), Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite_Container:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.049999997, 0.099999994, 0.14999999, 0.19999999, 0.25, 0.29999998, 0.32999998, 0.42999998, 0.53, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 0.69343185), Vector2(0, 1.260788), Vector2(0, 1.9542198), Vector2(0, 1.494), Vector2(0, 1.1157632), Vector2(0, 0.7375283), Vector2(0, 0.448), Vector2(0, -8.519), Vector2(0, -0.8235059), Vector2(0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_a8ls1"]
-_data = {
-&"RESET": SubResource("Animation_a8ls1"),
-&"pump_1": SubResource("Animation_oprun"),
-&"pump_2": SubResource("Animation_qfm1y")
-}
-
 [node name="player" type="CharacterBody2D" unique_id=1921051687 groups=["player"]]
 position = Vector2(0, -4.905239)
 script = ExtResource("1_tuyoq")
+
+[node name="PlayerMovement" type="Node2D" parent="." unique_id=1392657911]
+unique_name_in_owner = true
+script = ExtResource("9_ur7pv")
+
+[node name="collision_effect" type="Node2D" parent="." unique_id=181386071]
+unique_name_in_owner = true
+script = ExtResource("15_oprun")
+
+[node name="skin_handler" type="Node" parent="." unique_id=295997333]
+unique_name_in_owner = true
+script = ExtResource("4_qfm1y")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1660507717]
 position = Vector2(-0.12500381, -0.7496753)
@@ -278,6 +291,32 @@ position = Vector2(-0.12500381, -0.7496753)
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1227957482]
 position = Vector2(0.0031776428, 1.0859885)
 shape = SubResource("RectangleShape2D_1kice")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127423675]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-0.06036949, -48.452816)
+shape = SubResource("RectangleShape2D_tuyoq")
+
+[node name="Sprite_Container" type="Node2D" parent="." unique_id=1050047663]
+
+[node name="Sprite" type="Sprite2D" parent="Sprite_Container" unique_id=1452784344]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_a8ls1")
+position = Vector2(-0.39568335, -24.937)
+scale = Vector2(1.865, 1.865)
+texture = ExtResource("13_a8ls1")
+
+[node name="PumpAnimation" type="AnimationPlayer" parent="." unique_id=331040727]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_a8ls1")
+speed_scale = 1.2
+
+[node name="arrow_sprite" type="Sprite2D" parent="." unique_id=1485137710]
+unique_name_in_owner = true
+position = Vector2(0, -67.708)
+scale = Vector2(1.2962475, 1)
+texture = ExtResource("16_a8ls1")
 
 [node name="bait" type="CharacterBody2D" parent="." unique_id=120479355 node_paths=PackedStringArray("blue_fish_list", "red_fish_list", "golden_fish_list")]
 unique_name_in_owner = true
@@ -336,7 +375,7 @@ shape = SubResource("RectangleShape2D_bt5mj")
 [node name="red_fish 3" type="AnimatedSprite2D" parent="bait/red fishs" unique_id=152600394]
 unique_name_in_owner = true
 visible = false
-z_index = 103
+z_index = -5
 position = Vector2(2.6908493, 20.375563)
 rotation = -1.44862
 scale = Vector2(0.04, 0.04)
@@ -348,7 +387,7 @@ flip_h = true
 [node name="red_fish 1" type="AnimatedSprite2D" parent="bait/red fishs" unique_id=253089831]
 unique_name_in_owner = true
 visible = false
-z_index = 103
+z_index = -5
 position = Vector2(4.6908493, 20.375563)
 rotation = -1.51844
 scale = Vector2(0.04, 0.04)
@@ -360,7 +399,7 @@ flip_h = true
 [node name="red_fish 0" type="AnimatedSprite2D" parent="bait/red fishs" unique_id=165153854]
 unique_name_in_owner = true
 visible = false
-z_index = 103
+z_index = -5
 position = Vector2(7.6908493, 20.375563)
 rotation = -1.5708
 scale = Vector2(0.04, 0.04)
@@ -372,7 +411,7 @@ flip_h = true
 [node name="red_fish 2" type="AnimatedSprite2D" parent="bait/red fishs" unique_id=126465221]
 unique_name_in_owner = true
 visible = false
-z_index = 103
+z_index = -5
 position = Vector2(10.690849, 20.375563)
 rotation = -1.62316
 scale = Vector2(0.04, 0.04)
@@ -384,7 +423,7 @@ flip_h = true
 [node name="red_fish 4" type="AnimatedSprite2D" parent="bait/red fishs" unique_id=1761894238]
 unique_name_in_owner = true
 visible = false
-z_index = 103
+z_index = -5
 position = Vector2(13.690889, 20.375563)
 rotation = -1.69297
 scale = Vector2(0.04, 0.04)
@@ -398,7 +437,7 @@ flip_h = true
 [node name="blue_fish 4" type="AnimatedSprite2D" parent="bait/blue fishs" unique_id=1471294785]
 unique_name_in_owner = true
 visible = false
-z_index = 102
+z_index = -6
 position = Vector2(-0.6801472, 25.477802)
 rotation = -1.44862
 scale = Vector2(0.041, 0.041)
@@ -410,7 +449,7 @@ flip_h = true
 [node name="blue_fish 2" type="AnimatedSprite2D" parent="bait/blue fishs" unique_id=794034973]
 unique_name_in_owner = true
 visible = false
-z_index = 102
+z_index = -6
 position = Vector2(2.3198488, 25.477802)
 rotation = -1.51844
 scale = Vector2(0.041, 0.041)
@@ -423,7 +462,7 @@ flip_h = true
 [node name="blue_fish 1" type="AnimatedSprite2D" parent="bait/blue fishs" unique_id=1539631134]
 unique_name_in_owner = true
 visible = false
-z_index = 102
+z_index = -6
 position = Vector2(6.3198485, 25.477802)
 rotation = -1.5708
 scale = Vector2(0.041, 0.041)
@@ -435,7 +474,7 @@ flip_h = true
 [node name="blue_fish 3" type="AnimatedSprite2D" parent="bait/blue fishs" unique_id=214574894]
 unique_name_in_owner = true
 visible = false
-z_index = 102
+z_index = -6
 position = Vector2(9.319849, 25.477802)
 rotation = -1.62316
 scale = Vector2(0.041, 0.041)
@@ -447,7 +486,7 @@ flip_h = true
 [node name="blue_fish 5" type="AnimatedSprite2D" parent="bait/blue fishs" unique_id=1886833701]
 unique_name_in_owner = true
 visible = false
-z_index = 102
+z_index = -6
 position = Vector2(13.319899, 25.477802)
 rotation = -1.69297
 scale = Vector2(0.041, 0.041)
@@ -461,7 +500,7 @@ flip_h = true
 [node name="golden_fish 1" type="AnimatedSprite2D" parent="bait/golden fish" unique_id=1648564733]
 unique_name_in_owner = true
 visible = false
-z_index = 101
+z_index = -7
 position = Vector2(1.0789454, 34.531082)
 rotation = -1.5708
 scale = Vector2(1.7, 1.7)
@@ -473,7 +512,7 @@ flip_h = true
 [node name="golden_fish 2" type="AnimatedSprite2D" parent="bait/golden fish" unique_id=920252643]
 unique_name_in_owner = true
 visible = false
-z_index = 101
+z_index = -7
 position = Vector2(9.078945, 35.281082)
 rotation = -1.5708
 scale = Vector2(1.7, 1.7)
@@ -506,39 +545,5 @@ script = ExtResource("6_fjrip")
 
 [node name="bait_rotation" type="Node" parent="bait" unique_id=1262276398]
 script = ExtResource("8_d2wvv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127423675]
-unique_name_in_owner = true
-visible = false
-position = Vector2(-0.06036949, -48.452816)
-shape = SubResource("RectangleShape2D_tuyoq")
-
-[node name="Sprite_Container" type="Node2D" parent="." unique_id=1050047663]
-
-[node name="Sprite2" type="Sprite2D" parent="Sprite_Container" unique_id=1452784344]
-unique_name_in_owner = true
-material = SubResource("ShaderMaterial_a8ls1")
-position = Vector2(-0.39568335, -24.937)
-scale = Vector2(1.865, 1.865)
-texture = ExtResource("13_a8ls1")
-
-[node name="PlayerMovement" type="Node2D" parent="." unique_id=1392657911]
-unique_name_in_owner = true
-script = ExtResource("9_ur7pv")
-
-[node name="collision_effect" type="Node2D" parent="." unique_id=181386071]
-unique_name_in_owner = true
-script = ExtResource("15_oprun")
-
-[node name="PumpAnimation" type="AnimationPlayer" parent="." unique_id=331040727]
-unique_name_in_owner = true
-libraries/ = SubResource("AnimationLibrary_a8ls1")
-speed_scale = 1.2
-
-[node name="arrow" type="Sprite2D" parent="." unique_id=1485137710]
-unique_name_in_owner = true
-position = Vector2(0, -67.708)
-scale = Vector2(1.2962475, 1)
-texture = ExtResource("16_a8ls1")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -2,7 +2,7 @@ extends Node2D
 class_name PlayerMovement
 
 @onready var player: Player = get_parent()
-@onready var sprite: Sprite2D = %Sprite2
+@onready var sprite: Sprite2D = %Sprite
 @export var speed: float = 150
 @export var acceleration: float = 100.0
 @export var friction: float = 200.0

@@ -5,15 +5,16 @@ class_name Player
 @onready var character_body: CharacterBody2D = self
 @onready var player_movement: PlayerMovement = %PlayerMovement
 @onready var collision_effect: Collision_Effect = %collision_effect
+@onready var skin_handler: SkinHandler = %skin_handler
 var player_name: String 
 var current_money: int
-var current_player: int = 0
+var current_player: int
 var game_manager: GameManager
 var mass: float = 10
 var collision_timer: float 
 var boat_size: float
-@onready var sprite: Sprite2D = %Sprite2
-@onready var sprite_arrow: Sprite2D = %arrow
+@onready var sprite: Sprite2D = %Sprite
+@onready var sprite_arrow: Sprite2D = %arrow_sprite
 @onready var sprite_bait: Sprite2D = %BaitSprite
 var texture_boat2: Texture2D = load("res://artes joao/13-04-2026/barco_nana_motor_purpledress.png")
 var texture_arrow2: Texture2D = load("res://artes joao/player_arrows/seta roxa.png")
@@ -24,11 +25,8 @@ var texture_bait2: Texture2D = load("res://artes joao/14.04.26/isca/isca 2 cinza
 func _ready() -> void:
 	if current_player == 1: game_manager.player1 = self
 	if current_player == 2: game_manager.player2 = self
-	if current_player == 2: 
-		sprite.texture = texture_boat2
-		sprite_arrow.texture = texture_arrow2 
-		sprite_bait.texture = texture_bait2
 	boat_size = col.shape.size.x
+	skin_handler.set_skins(current_player)
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

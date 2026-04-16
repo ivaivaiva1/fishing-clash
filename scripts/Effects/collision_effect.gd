@@ -1,7 +1,7 @@
 extends Node2D
 class_name Collision_Effect
 
-@onready var sprite: Sprite2D = %Sprite2
+@onready var sprite: Sprite2D = %Sprite
 @onready var pump_animation: AnimationPlayer = %PumpAnimation
 var blink_duration: float = 0.8
 var blink_tween: Tween

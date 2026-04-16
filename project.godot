@@ -25,6 +25,7 @@ GlobalVars="*res://scripts/global_vars.gd"
 KnockbackManager="*uid://cbijb0v76rskn"
 EffectSpawner="*uid://ds657i2tqfihg"
 ScreenShake="*uid://cxfq71k3sqrym"
+PlayersSkins="*uid://b645bxtawrgou"
 
 [display]
 
