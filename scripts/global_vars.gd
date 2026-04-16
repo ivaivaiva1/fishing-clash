@@ -17,11 +17,18 @@ var red_fish_rate_game: int = 5
 var GameManager_intance: GameManager
 
 
-
-
 var player1_money: int = 0
-var player2_money: int = 0
 var player1_score: int = 0
-var player2_score: int = 0
 var player1_peso: float = 0
+
+var player2_money: int = 0
+var player2_score: int = 0
 var player2_peso: float = 0
+
+var player3_money: int = 0
+var player3_score: int = 0
+var player3_peso: float = 0
+
+var player4_money: int = 0
+var player4_score: int = 0
+var player4_peso: float = 0

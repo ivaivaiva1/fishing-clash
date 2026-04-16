@@ -20,8 +20,12 @@ func _physics_process(delta):
 	
 	if player.current_player == 1:
 		direction = Input.get_axis("move_left1", "move_right1")
-	else:
+	elif player.current_player == 2:
 		direction = Input.get_axis("move_left2", "move_right2")
+	elif player.current_player == 3:
+		direction = Input.get_axis("move_left3", "move_right3")
+	elif player.current_player == 4:
+		direction = Input.get_axis("move_left4", "move_right4")
 	
 	if direction != 0:
 		sprite.flip_h = direction < 0

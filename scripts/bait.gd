@@ -76,10 +76,14 @@ func get_fish(fish_name: String, fish_peso: float, fish_points: int) -> void:
 	bait_state = "catch"
 	peso += fish_peso 
 	points += fish_points
-	if(player_name == "player1"):
+	if player_name == "player1":
 		GlobalVars.player1_peso = peso
-	else:
+	elif player_name == "player2":
 		GlobalVars.player2_peso = peso
+	elif player_name == "player3":
+		GlobalVars.player3_peso = peso
+	elif player_name == "player4":
+		GlobalVars.player4_peso = peso
 	
 	update_fishs(fish_name)
 

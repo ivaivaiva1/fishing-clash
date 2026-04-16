@@ -23,8 +23,6 @@ var texture_bait2: Texture2D = load("res://artes joao/14.04.26/isca/isca 2 cinza
 
 
 func _ready() -> void:
-	if current_player == 1: game_manager.player1 = self
-	if current_player == 2: game_manager.player2 = self
 	boat_size = col.shape.size.x
 	skin_handler.set_skins(current_player)
 
@@ -39,10 +37,16 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 func add_points(value: int):
 	current_money += value
-	if(player_name == "player1"):
+	
+	if player_name == "player1":
 		GlobalVars.player1_money = current_money
-	else:
+	elif player_name == "player2":
 		GlobalVars.player2_money = current_money
+	elif player_name == "player3":
+		GlobalVars.player3_money = current_money
+	elif player_name == "player4":
+		GlobalVars.player4_money = current_money
+	
 	GlobalVars.GameManager_intance.att_money()
 
 
