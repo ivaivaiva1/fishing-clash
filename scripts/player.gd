@@ -55,34 +55,35 @@ func _process(delta: float) -> void:
 		collision_timer -= delta
 
 
+func send_collision_data(other_player: Player):
+	var other_mass: float = other_player.mass
+	var other_velocity: Vector2 = other_player.player_movement.last_velocity
+	if other_player == null || other_mass == null || other_velocity == null: return
+	KnockbackManager.do_collision(self, mass, player_movement.last_velocity, other_player, other_player.mass, other_player.player_movement.last_velocity)
+	collision_effect.get_collision()
+	other_player.collision_effect.get_collision()
+
 
 func _physics_process(delta: float) -> void:
 	if collision_timer > 0: return
 	
-	for i in get_slide_collision_count():
+	for i in range(get_slide_collision_count()):
 		var collision = get_slide_collision(i)
 		var other = collision.get_collider()
 		
 		if other.is_in_group("player"):
-			print("colidiu")
-			var other_player: Player
-			var player1_mass: float
-			var player2_mass: float
-			var player1_velocity: Vector2
-			var player2_velocity: Vector2
 			
-			if current_player == 1:
-				other_player = game_manager.player2
-				player1_mass = mass
-				player1_velocity = player_movement.last_velocity
-				player2_mass = other_player.mass
-				player2_velocity = other_player.player_movement.last_velocity
+			var other_clone: BoatClone = null
+			
+			for child in other.get_children():
+				if child is BoatClone:
+					other_clone = child
+					break
+			
+			if other_clone != null:
+				print("é clone")
+				send_collision_data(other_clone.clone_father)
 			else:
-				other_player = game_manager.player1
-				player1_mass = other_player.mass
-				player1_velocity = other_player.player_movement.last_velocity
-				player2_mass = mass
-				player2_velocity = player_movement.last_velocity
-			KnockbackManager.do_collision(player1_mass, player2_mass, player1_velocity, player2_velocity)
-			collision_effect.get_collision()
-			other_player.collision_effect.get_collision()
+				print("é player")
+				var other_player: Player = other as Player
+				send_collision_data(other_player)

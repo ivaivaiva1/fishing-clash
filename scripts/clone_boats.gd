@@ -2,115 +2,103 @@ extends Node2D
 class_name CloneBoats
 
 var game_manager: GameManager
-var player1: Player
-var player2: Player
-@onready var clone1: Node2D = %BOAT1_CLONE
-@onready var clone2: Node2D = %BOAT2_CLONE
+
+var players: Array = []
+var clones: Array = []
+var boat_sizes: Array = []
 
 var screen_size: float = 540
-var boat1_size: float
-var boat2_size: float
+
+@onready var clone1: BoatClone = %BOAT1_CLONE
+@onready var clone2: BoatClone = %BOAT2_CLONE
+@onready var clone3: BoatClone = %BOAT3_CLONE
+@onready var clone4: BoatClone = %BOAT4_CLONE
 
 
+func _ready():
+	clones = [clone1, clone2, clone3, clone4]
+	populate_scripts()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+func populate_scripts():
+	clone1.clone_father = game_manager.player1
+	clone2.clone_father = game_manager.player2
+	clone3.clone_father = game_manager.player3
+	clone4.clone_father = game_manager.player4
+
+
 func _process(delta: float) -> void:
-	if player1 == null || player2 == null:
+	if players.size() < 4:
 		get_player_data()
 		return
 	
-	check_player1()
-	check_player2()
-	player1_warp()
-	player2_warp()
+	for i in range(players.size()):
+		check_player(i)
+		player_warp(i)
 
-func player1_warp():
-	var half_boatSize = boat1_size / 2
-	if player1.global_position.x < -half_boatSize:
-		clone1.global_position.x = -1000
-		player1.global_position.x = 540 + half_boatSize
-	elif player1.global_position.x > screen_size + half_boatSize:
-		clone1.global_position.x = -1000
-		player1.global_position.x = -half_boatSize
 
-func player2_warp():
-	var half_boatSize = boat2_size / 2
-	if player2.global_position.x < -half_boatSize:
-		clone2.global_position.x = -1000
-		player2.global_position.x = 540 + half_boatSize
-	elif player2.global_position.x > screen_size + half_boatSize:
-		clone2.global_position.x = -1000
-		player2.global_position.x = -half_boatSize
-
-func check_player1():
-	var out_pixels: float
-	var out_side: String
-	var half_boatSize = boat1_size / 2
+func player_warp(i: int):
+	var player = players[i]
+	var clone = clones[i]
+	var boat_size = boat_sizes[i]
 	
-	# saiu pela esquerda
-	if player1.global_position.x - half_boatSize < 0:
+	var half_boatSize = boat_size / 2
+	
+	if player.global_position.x < -half_boatSize:
+		clone.global_position.x = -1000
+		player.global_position.x = screen_size + half_boatSize
+	
+	elif player.global_position.x > screen_size + half_boatSize:
+		clone.global_position.x = -1000
+		player.global_position.x = -half_boatSize
+
+
+func check_player(i: int):
+	var player = players[i]
+	var clone = clones[i]
+	var boat_size = boat_sizes[i]
+	
+	var out_pixels: float = 0
+	var out_side: String = ""
+	var half_boatSize = boat_size / 2
+	
+	if player.global_position.x - half_boatSize < 0:
 		out_side = "Left"
-		out_pixels = abs(player1.global_position.x - half_boatSize)
-		#print("Player 1 saiu", out_pixels, "pixels pela esquerda")
-	# saiu pela direita
-	elif player1.global_position.x + half_boatSize > screen_size:
+		out_pixels = abs(player.global_position.x - half_boatSize)
+	
+	elif player.global_position.x + half_boatSize > screen_size:
 		out_side = "Right"
-		out_pixels = (player1.global_position.x + half_boatSize) - screen_size
-		#print("Player 1 saiu", out_pixels, "pixels pela direita")
+		out_pixels = (player.global_position.x + half_boatSize) - screen_size
 	
 	if out_side != "":
-		move_clone1(out_side, out_pixels)
+		move_clone(i, out_side, out_pixels)
 	else:
-		clone1.global_position.x = -1000
+		clone.global_position.x = -1000 * ((i + 1) * 5)
 
 
-func move_clone1(out_side: String, out_pixels: float):
-	var half_boatSize = boat1_size / 2
+func move_clone(i: int, out_side: String, out_pixels: float):
+	var clone = clones[i]
+	var boat_size = boat_sizes[i]
+	var half_boatSize = boat_size / 2
 	
 	if out_side == "Left":
-		clone1.global_position.x = screen_size - half_boatSize - out_pixels + (boat1_size * 2)
+		clone.global_position.x = screen_size - half_boatSize - out_pixels + (boat_size * 2)
 	
 	elif out_side == "Right":
-		clone1.global_position.x = half_boatSize + out_pixels - (boat1_size * 2)
-
-
-func check_player2():
-	var out_pixels: float
-	var out_side: String
-	var half_boatSize = boat2_size / 2
-	
-	# saiu pela esquerda
-	if player2.global_position.x - half_boatSize < 0:
-		out_side = "Left"
-		out_pixels = abs(player2.global_position.x - half_boatSize)
-		#print("Player 2 saiu", out_pixels, "pixels pela esquerda")
-	# saiu pela direita
-	elif player2.global_position.x + half_boatSize > screen_size:
-		out_side = "Right"
-		out_pixels = (player2.global_position.x + half_boatSize) - screen_size
-		#print("Player 2 saiu", out_pixels, "pixels pela direita")
-	
-	if out_side != "":
-		move_clone2(out_side, out_pixels)
-	else:
-		clone2.global_position.x = -2000
-
-
-func move_clone2(out_side: String, out_pixels: float):
-	var half_boatSize = boat2_size / 2
-	
-	if out_side == "Left":
-		clone2.global_position.x = screen_size - half_boatSize - out_pixels + (boat2_size * 2)
-	
-	elif out_side == "Right":
-		clone2.global_position.x = half_boatSize + out_pixels - (boat2_size * 2)
-
+		clone.global_position.x = half_boatSize + out_pixels - (boat_size * 2)
 
 
 func get_player_data():
-	player1 = game_manager.player1
-	player2 = game_manager.player2
-	if player1 != null && player2 != null:
-		boat1_size = player1.boat_size
-		boat2_size = player2.boat_size
+	var p1 = game_manager.player1
+	var p2 = game_manager.player2
+	var p3 = game_manager.player3
+	var p4 = game_manager.player4
+	
+	if p1 != null and p2 != null and p3 != null and p4 != null:
+		players = [p1, p2, p3, p4]
+		boat_sizes = [
+			p1.boat_size,
+			p2.boat_size,
+			p3.boat_size,
+			p4.boat_size
+		]

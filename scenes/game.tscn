@@ -13,7 +13,7 @@
 [ext_resource type="Shader" uid="uid://dftd0pk6ql231" path="res://shaders/water_distortion.gdshader" id="7_gee14"]
 [ext_resource type="PackedScene" uid="uid://dy5jp3gig3bp8" path="res://scenes/fish red.tscn" id="7_ir15t"]
 [ext_resource type="Texture2D" uid="uid://dkvcby5ccnqaj" path="res://sky_test/Clouds.png" id="10_dinhu"]
-[ext_resource type="Script" uid="uid://bi06wla0inb6j" path="res://scripts/Global/price_flutuation.gd" id="11_rysoc"]
+[ext_resource type="Script" uid="uid://2yj540ysy547" path="res://scripts/Player/boat_clone.gd" id="11_ca42v"]
 [ext_resource type="Texture2D" uid="uid://dfrqtdtraoj7h" path="res://artes joao/13-04-2026/icon_girl.png" id="13_5newe"]
 [ext_resource type="Script" uid="uid://bv08l4gt2jmvq" path="res://scripts/clone_boats.gd" id="21_5newe"]
 
@@ -58,11 +58,6 @@ script = ExtResource("3_lnu2h")
 blue_fish = ExtResource("1_uwrxv")
 red_fish = ExtResource("7_ir15t")
 big_fish = ExtResource("2_yqjtg")
-
-[node name="PriceFlutuation" type="Node2D" parent="." unique_id=1768685234]
-unique_name_in_owner = true
-position = Vector2(0, -28.099174)
-script = ExtResource("11_rysoc")
 
 [node name="CloneBoats" type="Node2D" parent="." unique_id=352021503]
 unique_name_in_owner = true
@@ -224,33 +219,72 @@ shape = SubResource("RectangleShape2D_264po")
 position = Vector2(315.27295, 551.2051)
 shape = SubResource("RectangleShape2D_264po")
 
-[node name="BOAT_CLONES" type="StaticBody2D" parent="limits" unique_id=1406970048 groups=["player"]]
+[node name="BOAT_CLONE1" type="StaticBody2D" parent="limits" unique_id=1406970048 groups=["player"]]
 position = Vector2(-1, -1)
 
-[node name="BOAT1_CLONE" type="CollisionShape2D" parent="limits/BOAT_CLONES" unique_id=1562343741]
+[node name="BOAT1_CLONE" type="CollisionShape2D" parent="limits/BOAT_CLONE1" unique_id=1562343741]
 unique_name_in_owner = true
 position = Vector2(-462.47012, 83.09421)
 shape = SubResource("RectangleShape2D_ir15t")
+script = ExtResource("11_ca42v")
 
-[node name="ColorRect" type="ColorRect" parent="limits/BOAT_CLONES/BOAT1_CLONE" unique_id=829575885]
+[node name="ColorRect" type="ColorRect" parent="limits/BOAT_CLONE1/BOAT1_CLONE" unique_id=829575885]
 offset_left = -44.559555
 offset_top = -20.282948
 offset_right = 44.883446
 offset_bottom = 20.343052
 color = Color(0.19166654, 0.04600001, 0.92, 1)
 
-[node name="BOAT2_CLONE" type="CollisionShape2D" parent="limits/BOAT_CLONES" unique_id=600542857]
+[node name="BOAT_CLONE2" type="StaticBody2D" parent="limits" unique_id=2065052030 groups=["player"]]
+position = Vector2(-1, -1)
+
+[node name="BOAT2_CLONE" type="CollisionShape2D" parent="limits/BOAT_CLONE2" unique_id=68244066]
 unique_name_in_owner = true
 position = Vector2(1259.7488, 92.93303)
 shape = SubResource("RectangleShape2D_1kice")
 debug_color = Color(0, 0.5950001, 0.7, 0.85490197)
+script = ExtResource("11_ca42v")
 
-[node name="ColorRect" type="ColorRect" parent="limits/BOAT_CLONES/BOAT2_CLONE" unique_id=881367099]
+[node name="ColorRect" type="ColorRect" parent="limits/BOAT_CLONE2/BOAT2_CLONE" unique_id=954553213]
 offset_left = -44.877197
 offset_top = -19.053402
 offset_right = 44.565804
 offset_bottom = 19.460598
 color = Color(0.93, 0, 0, 1)
+
+[node name="BOAT_CLONE3" type="StaticBody2D" parent="limits" unique_id=1974979866 groups=["player"]]
+position = Vector2(139.1145, -210.3663)
+
+[node name="BOAT3_CLONE" type="CollisionShape2D" parent="limits/BOAT_CLONE3" unique_id=642539977]
+unique_name_in_owner = true
+position = Vector2(1226.0745, 303.76343)
+shape = SubResource("RectangleShape2D_1kice")
+debug_color = Color(0, 0.5950001, 0.7, 0.85490197)
+script = ExtResource("11_ca42v")
+
+[node name="ColorRect" type="ColorRect" parent="limits/BOAT_CLONE3/BOAT3_CLONE" unique_id=586392674]
+offset_left = -44.877197
+offset_top = -19.053402
+offset_right = 44.565804
+offset_bottom = 19.460598
+color = Color(0.8091787, 0.8464265, 0, 1)
+
+[node name="BOAT_CLONE4" type="StaticBody2D" parent="limits" unique_id=156030304 groups=["player"]]
+position = Vector2(438.66934, 314.66003)
+
+[node name="BOAT4_CLONE" type="CollisionShape2D" parent="limits/BOAT_CLONE4" unique_id=977358717]
+unique_name_in_owner = true
+position = Vector2(1037.2053, -221.84851)
+shape = SubResource("RectangleShape2D_1kice")
+debug_color = Color(0, 0.5950001, 0.7, 0.85490197)
+script = ExtResource("11_ca42v")
+
+[node name="ColorRect" type="ColorRect" parent="limits/BOAT_CLONE4/BOAT4_CLONE" unique_id=385644271]
+offset_left = -44.877197
+offset_top = -19.053402
+offset_right = 44.565804
+offset_bottom = 19.460598
+color = Color(0, 0, 0, 1)
 
 [node name="SHARK_LIMITS" type="Node2D" parent="limits" unique_id=1937436028]
 
@@ -279,6 +313,7 @@ position = Vector2(978, 92.90082)
 texture = ExtResource("4_lbhrr")
 
 [node name="BLACK COLOR RECTS" type="ColorRect" parent="." unique_id=1340791473]
+visible = false
 z_index = 2000
 offset_left = -174.7245
 offset_top = -15.046787
@@ -371,6 +406,7 @@ scale = Vector2(0.10549085, 0.10549084)
 texture = ExtResource("4_264po")
 
 [node name="BLACK COLOR RECTS2" type="ColorRect" parent="." unique_id=1627553549]
+visible = false
 z_index = 2000
 offset_left = 540.3882
 offset_top = -14.966049

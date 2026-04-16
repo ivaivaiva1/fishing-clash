@@ -23,7 +23,6 @@ var player4: Player
 @onready var game_countdown_label: Label = %game_countdown
 @export var peso_1: Label 
 @export var peso_2: Label 
-@onready var price_flutuation: PriceFlutuation = %PriceFlutuation
 @onready var clone_boats: CloneBoats = %CloneBoats
 #var round_duration: float = 240
 var round_duration: float = 240

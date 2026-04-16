@@ -3,6 +3,8 @@ extends Node
 var game_manager: GameManager
 var player1: Player
 var player2: Player
+var player3: Player
+var player4: Player
 var timer: float 
 
 func _process(delta: float) -> void:
@@ -13,19 +15,13 @@ func _process(delta: float) -> void:
 var knockback_impact: float = 1.0
 
 
-func do_collision(player1_mass: float, player2_mass: float, player1_velocity: Vector2, player2_velocity: Vector2):
+func do_collision(col1_player: Player, col1_mass: float, col1_velocity: Vector2, col2_player: Player ,col2_mass: float, col2_velocity: Vector2):
 	if timer > 0: return
 	timer = 0.3
 	print("PROCESS COLISION")
-	if player1 == null || player2 == null:
-		get_player_data()
 	
-	
-	var v1 = player1_velocity
-	var v2 = player2_velocity
-	
-	var collision_normal = (player2.global_position - player1.global_position).normalized()
-	var relative_velocity = v1 - v2
+	var collision_normal = (col2_player.global_position - col1_player.global_position).normalized()
+	var relative_velocity = col1_velocity - col2_velocity
 	
 	var impact_strength = relative_velocity.dot(collision_normal)
 	
@@ -34,11 +30,11 @@ func do_collision(player1_mass: float, player2_mass: float, player1_velocity: Ve
 		#actual_collision = CollisionData.new()
 		#return
 	
-	var impulse = collision_normal * impact_strength * knockback_impact
+	var impulse = collision_normal * (impact_strength + 20) * knockback_impact
 	
 	
-	player1.velocity -= impulse
-	player2.velocity += impulse
+	col1_player.velocity -= impulse
+	col2_player.velocity += impulse
 	
 	
 	print("Impact strength:", impact_strength)
@@ -48,3 +44,5 @@ func do_collision(player1_mass: float, player2_mass: float, player1_velocity: Ve
 func get_player_data():
 	player1 = game_manager.player1
 	player2 = game_manager.player2
+	player3 = game_manager.player3
+	player4 = game_manager.player4
