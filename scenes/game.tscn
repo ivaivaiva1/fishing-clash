@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://ebbi0lca86e4"]
+[gd_scene format=3 uid="uid://ebbi0lca86e4"]
 
 [ext_resource type="PackedScene" uid="uid://c1fnyt64wu0b1" path="res://scenes/shark.tscn" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://cpddqal215nxs" path="res://scenes/fish blue.tscn" id="1_uwrxv"]
@@ -10,125 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://cpjcbme3mfnnl" path="res://artes joao/mar fundo 2.png" id="4_1kice"]
 [ext_resource type="Texture2D" uid="uid://b2f2rmiut0qmt" path="res://artes joao/trophy.png" id="4_264po"]
 [ext_resource type="Texture2D" uid="uid://bjgivjbi6ryan" path="res://SpearFishing Assets Pack/Sprite names.png" id="4_lbhrr"]
-[ext_resource type="Texture2D" uid="uid://dvf5ckm05munx" path="res://SpearFishing Assets Pack/Sprites/Tiles - 16x16/Sand.png" id="7_0tnpc"]
 [ext_resource type="Shader" uid="uid://dftd0pk6ql231" path="res://shaders/water_distortion.gdshader" id="7_gee14"]
 [ext_resource type="PackedScene" uid="uid://dy5jp3gig3bp8" path="res://scenes/fish red.tscn" id="7_ir15t"]
-[ext_resource type="Texture2D" uid="uid://bm1sf3k08up8e" path="res://SpearFishing Assets Pack/Sprites/SeaWeed - 16x32/Light.png" id="8_0tnpc"]
-[ext_resource type="Texture2D" uid="uid://dpxa08h6rwtoh" path="res://SpearFishing Assets Pack/Sprites/Corals - 16x16/Corals.png" id="9_vtaks"]
 [ext_resource type="Texture2D" uid="uid://dkvcby5ccnqaj" path="res://sky_test/Clouds.png" id="10_dinhu"]
 [ext_resource type="Script" uid="uid://bi06wla0inb6j" path="res://scripts/Global/price_flutuation.gd" id="11_rysoc"]
 [ext_resource type="Texture2D" uid="uid://dfrqtdtraoj7h" path="res://artes joao/13-04-2026/icon_girl.png" id="13_5newe"]
-[ext_resource type="Texture2D" uid="uid://d2ajmhqbplr30" path="res://sky_test/8.png" id="14_trtic"]
 [ext_resource type="Texture2D" uid="uid://gd022ulvec03" path="res://artes joao/price placa.png" id="16_ca42v"]
 [ext_resource type="Script" uid="uid://bv08l4gt2jmvq" path="res://scripts/clone_boats.gd" id="21_5newe"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtaks"]
-texture = ExtResource("7_0tnpc")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-8:0/0 = 0
-9:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-8:1/0 = 0
-9:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-8:2/0 = 0
-9:2/0 = 0
-10:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-8:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-8:4/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-6:6/0 = 0
-7:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-7:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-5:8/0 = 0
-6:8/0 = 0
-7:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-6:9/0 = 0
-7:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-4:10/0 = 0
-5:10/0 = 0
-6:10/0 = 0
-7:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-6:11/0 = 0
-7:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-3:12/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_kvpfn"]
-sources/1 = SubResource("TileSetAtlasSource_vtaks")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gee14"]
 shader = ExtResource("7_gee14")
@@ -178,261 +66,40 @@ player_scene = ExtResource("2_trtic")
 peso_1 = NodePath("../UI/peso_player_1")
 peso_2 = NodePath("../UI/peso_player_2")
 
+[node name="Fish_Spawner" type="Node2D" parent="." unique_id=167932852]
+unique_name_in_owner = true
+z_as_relative = false
+position = Vector2(0, -28.099174)
+script = ExtResource("3_lnu2h")
+blue_fish = ExtResource("1_uwrxv")
+red_fish = ExtResource("7_ir15t")
+big_fish = ExtResource("2_yqjtg")
+
+[node name="PriceFlutuation" type="Node2D" parent="." unique_id=1768685234]
+unique_name_in_owner = true
+position = Vector2(0, -28.099174)
+script = ExtResource("11_rysoc")
+
+[node name="CloneBoats" type="Node2D" parent="." unique_id=352021503]
+unique_name_in_owner = true
+position = Vector2(0, -28.099174)
+script = ExtResource("21_5newe")
+
 [node name="decoration" type="Node2D" parent="." unique_id=851591682]
-
-[node name="sky" type="ColorRect" parent="decoration" unique_id=1143323747]
-visible = false
-z_index = -4096
-offset_right = 540.0
-offset_bottom = 481.0
-color = Color(0.1674, 0.43430996, 0.93, 1)
-
-[node name="8" type="Sprite2D" parent="decoration" unique_id=832242535]
-visible = false
-z_index = -4000
-position = Vector2(237, 157)
-scale = Vector2(2.67, 2.67)
-texture = ExtResource("14_trtic")
+position = Vector2(0, -28.099174)
 
 [node name="mar fundo" type="Sprite2D" parent="decoration" unique_id=1899638409]
 z_index = -4000
-position = Vector2(269.2535, 292.98428)
-scale = Vector2(0.8446089, 0.5694278)
+position = Vector2(305.57584, 319.86685)
+scale = Vector2(1.097579, 0.6534357)
 texture = ExtResource("4_1kice")
 
-[node name="sea" type="ColorRect" parent="decoration" unique_id=399443375]
-visible = false
-z_index = -4000
-offset_top = 115.0
-offset_right = 540.0
-offset_bottom = 480.0
-color = Color(0.207843, 0.290196, 0.698039, 1)
-
-[node name="sea_carol" type="ColorRect" parent="decoration" unique_id=747428303]
-visible = false
-z_index = -4000
-offset_top = 115.0
-offset_right = 540.0
-offset_bottom = 480.0
-color = Color(0.07, 0.116667, 0.35, 1)
-
-[node name="ground" type="TileMapLayer" parent="decoration" unique_id=1489007828]
-visible = false
-z_index = -1000
-scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AAAAAA4AAQABAAAAAAABAA4AAQABAAAAAAACAA4AAQABAAAAAAADAA4AAQABAAAAAAAEAA4AAQABAAAAAAAFAA4AAQABAAAAAAAGAA4AAQABAAAAAAAHAA4AAQABAAAAAAAIAA4AAQABAAAAAAAJAA4AAQABAAAAAAAKAA4AAQABAAAAAAALAA4AAQABAAAAAAAMAA4AAQABAAAAAAANAA4AAQABAAAAAAAOAA4AAQABAAAAAAAPAA4AAQABAAAAAAAQAA4AAQABAAAAAAA=")
-tile_set = SubResource("TileSet_kvpfn")
-
-[node name="AlgasTras" type="Node2D" parent="decoration" unique_id=1205373241]
-visible = false
-
-[node name="Alga" type="Sprite2D" parent="decoration/AlgasTras" unique_id=833121527]
-z_index = -6
-position = Vector2(35, 391)
-scale = Vector2(3.7, 3.7)
-texture = ExtResource("8_0tnpc")
-hframes = 12
-vframes = 8
-frame = 48
-
-[node name="Alga2" type="Sprite2D" parent="decoration/AlgasTras" unique_id=1937307186]
-z_index = -6
-position = Vector2(102, 387)
-scale = Vector2(3.9, 3.9)
-texture = ExtResource("8_0tnpc")
-hframes = 12
-vframes = 8
-frame = 72
-
-[node name="Alga3" type="Sprite2D" parent="decoration/AlgasTras" unique_id=634318285]
-z_index = -6
-position = Vector2(203, 384)
-scale = Vector2(4.1, 4.1)
-texture = ExtResource("8_0tnpc")
-hframes = 12
-vframes = 8
-frame = 55
-
-[node name="Alga4" type="Sprite2D" parent="decoration/AlgasTras" unique_id=104414689]
-z_index = -6
-position = Vector2(283, 395)
-scale = Vector2(3.4, 3.4)
-texture = ExtResource("8_0tnpc")
-hframes = 12
-vframes = 8
-frame = 84
-
-[node name="Alga5" type="Sprite2D" parent="decoration/AlgasTras" unique_id=372601788]
-z_index = -6
-position = Vector2(350, 394)
-scale = Vector2(3.5, 3.5)
-texture = ExtResource("8_0tnpc")
-hframes = 12
-vframes = 8
-frame = 60
-
-[node name="Alga6" type="Sprite2D" parent="decoration/AlgasTras" unique_id=1150231449]
-z_index = -6
-position = Vector2(456, 388)
-scale = Vector2(3.9, 3.9)
-texture = ExtResource("8_0tnpc")
-hframes = 12
-vframes = 8
-frame = 66
-
-[node name="AlgasFrente" type="Node2D" parent="decoration" unique_id=1502884955]
-visible = false
-
-[node name="Alga" type="Sprite2D" parent="decoration/AlgasFrente" unique_id=919308698]
-z_index = 11
-position = Vector2(52, 399)
-scale = Vector2(3.9, 3.9)
-texture = ExtResource("8_0tnpc")
-hframes = 12
-vframes = 8
-
-[node name="Alga2" type="Sprite2D" parent="decoration/AlgasFrente" unique_id=1444900134]
-z_index = 11
-position = Vector2(116, 398)
-scale = Vector2(4, 4)
-texture = ExtResource("8_0tnpc")
-hframes = 12
-vframes = 8
-frame = 12
-
-[node name="Alga3" type="Sprite2D" parent="decoration/AlgasFrente" unique_id=1364973569]
-z_index = 11
-position = Vector2(133, 403)
-scale = Vector2(3.7, 3.7)
-texture = ExtResource("8_0tnpc")
-hframes = 12
-vframes = 8
-frame = 24
-
-[node name="Alga4" type="Sprite2D" parent="decoration/AlgasFrente" unique_id=909265806]
-z_index = 11
-position = Vector2(171, 414)
-scale = Vector2(3, 3)
-texture = ExtResource("8_0tnpc")
-hframes = 12
-vframes = 8
-frame = 36
-
-[node name="Alga5" type="Sprite2D" parent="decoration/AlgasFrente" unique_id=1591633698]
-z_index = 11
-position = Vector2(252, 398)
-scale = Vector2(4, 4)
-texture = ExtResource("8_0tnpc")
-hframes = 12
-vframes = 8
-frame = 15
-
-[node name="Alga6" type="Sprite2D" parent="decoration/AlgasFrente" unique_id=1194572743]
-z_index = 11
-position = Vector2(298, 403)
-scale = Vector2(3.7, 3.7)
-texture = ExtResource("8_0tnpc")
-hframes = 12
-vframes = 8
-frame = 7
-
-[node name="Alga7" type="Sprite2D" parent="decoration/AlgasFrente" unique_id=752328090]
-z_index = 11
-position = Vector2(317, 407)
-scale = Vector2(3.4, 3.4)
-texture = ExtResource("8_0tnpc")
-hframes = 12
-vframes = 8
-frame = 38
-
-[node name="Alga8" type="Sprite2D" parent="decoration/AlgasFrente" unique_id=643084705]
-z_index = 11
-position = Vector2(401, 403)
-scale = Vector2(3.7, 3.7)
-texture = ExtResource("8_0tnpc")
-hframes = 12
-vframes = 8
-frame = 2
-
-[node name="Alga9" type="Sprite2D" parent="decoration/AlgasFrente" unique_id=1090728862]
-z_index = 11
-position = Vector2(438, 399)
-scale = Vector2(3.9, 3.9)
-texture = ExtResource("8_0tnpc")
-hframes = 12
-vframes = 8
-frame = 29
-
-[node name="Alga10" type="Sprite2D" parent="decoration/AlgasFrente" unique_id=1167201591]
-z_index = 11
-position = Vector2(487, 419)
-scale = Vector2(2.7, 2.7)
-texture = ExtResource("8_0tnpc")
-hframes = 12
-vframes = 8
-frame = 32
-
-[node name="Alga11" type="Sprite2D" parent="decoration/AlgasFrente" unique_id=1910683082]
-z_index = 11
-position = Vector2(528, 402)
-scale = Vector2(3.7, 3.7)
-texture = ExtResource("8_0tnpc")
-hframes = 12
-vframes = 8
-frame = 21
-
-[node name="Corals" type="Node2D" parent="decoration" unique_id=1071316832]
-visible = false
-scale = Vector2(1.00291, 0.997358)
-
-[node name="Corals1" type="Sprite2D" parent="decoration/Corals" unique_id=1181417124]
-position = Vector2(55, 437)
-scale = Vector2(3, 3)
-texture = ExtResource("9_vtaks")
-hframes = 4
-vframes = 7
-frame = 20
-
-[node name="Corals2" type="Sprite2D" parent="decoration/Corals" unique_id=1580301715]
-z_index = 10
-position = Vector2(186.458, 438.158)
-scale = Vector2(3.2, 3.2)
-texture = ExtResource("9_vtaks")
-hframes = 4
-vframes = 7
-frame = 5
-
-[node name="Corals3" type="Sprite2D" parent="decoration/Corals" unique_id=1002953053]
-z_index = -5
-position = Vector2(235.316, 432.142)
-scale = Vector2(2.7, 2.7)
-texture = ExtResource("9_vtaks")
-hframes = 4
-vframes = 7
-
-[node name="Corals4" type="Sprite2D" parent="decoration/Corals" unique_id=1047274006]
-position = Vector2(348.985, 435.15)
-scale = Vector2(3, 3)
-texture = ExtResource("9_vtaks")
-hframes = 4
-vframes = 7
-frame = 11
-
-[node name="Corals5" type="Sprite2D" parent="decoration/Corals" unique_id=684083307]
-z_index = -5
-position = Vector2(411.802, 430.137)
-scale = Vector2(2.7, 2.7)
-texture = ExtResource("9_vtaks")
-hframes = 4
-vframes = 7
-frame = 6
-
-[node name="Corals6" type="Sprite2D" parent="decoration/Corals" unique_id=1123032660]
-position = Vector2(492.567, 434.147)
-scale = Vector2(3.1, 3.1)
-texture = ExtResource("9_vtaks")
-hframes = 4
-vframes = 7
+[node name="sky" type="Sprite2D" parent="decoration" unique_id=1468820924]
+z_index = -4096
+position = Vector2(381.35583, -47.316612)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_dinhu")
+flip_v = true
 
 [node name="Whiteblocks" type="Node2D" parent="decoration" unique_id=474212957]
 visible = false
@@ -549,88 +216,86 @@ offset_right = 407.0
 offset_bottom = 359.0
 scale = Vector2(0.045, 0.045)
 
-[node name="Clouds" type="Sprite2D" parent="decoration" unique_id=1468820924]
-z_index = -4096
-position = Vector2(381.35583, -47.316612)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("10_dinhu")
-flip_v = true
+[node name="water_shader" type="Node2D" parent="." unique_id=1224380565]
 
-[node name="WaterDistortion2" type="ColorRect" parent="." unique_id=781337332]
+[node name="WaterDistortion2" type="ColorRect" parent="water_shader" unique_id=781337332]
 z_index = 1000
 material = SubResource("ShaderMaterial_gee14")
-offset_top = 110.09091
-offset_right = 540.0
-offset_bottom = 474.0202
-
-[node name="shark" parent="." unique_id=2121875249 instance=ExtResource("1_gee14")]
-unique_name_in_owner = true
-position = Vector2(-66, 167)
+offset_left = -44.76999
+offset_top = 81.99173
+offset_right = 583.56006
+offset_bottom = 555.9211
 
 [node name="limits" type="Node2D" parent="." unique_id=1792116995]
-position = Vector2(-14, -28)
+position = Vector2(-14, -56.099174)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="limits" unique_id=1351911903]
+[node name="BAIT_LIMITS" type="StaticBody2D" parent="limits" unique_id=1351911903]
 position = Vector2(-1, -1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="limits/StaticBody2D" unique_id=1412709921]
-visible = false
+[node name="CollisionShape2D" type="CollisionShape2D" parent="limits/BAIT_LIMITS" unique_id=1412709921]
 position = Vector2(274, 121)
 shape = SubResource("RectangleShape2D_264po")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="limits/StaticBody2D" unique_id=939987592]
-position = Vector2(315.27295, 509.64352)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="limits/BAIT_LIMITS" unique_id=939987592]
+position = Vector2(315.27295, 551.2051)
 shape = SubResource("RectangleShape2D_264po")
 
-[node name="WARP COLLISION" type="StaticBody2D" parent="limits" unique_id=1406970048 groups=["player"]]
+[node name="BOAT_CLONES" type="StaticBody2D" parent="limits" unique_id=1406970048 groups=["player"]]
 position = Vector2(-1, -1)
 
-[node name="BOAT1_CLONE" type="CollisionShape2D" parent="limits/WARP COLLISION" unique_id=1562343741]
+[node name="BOAT1_CLONE" type="CollisionShape2D" parent="limits/BOAT_CLONES" unique_id=1562343741]
 unique_name_in_owner = true
 position = Vector2(-462.47012, 83.09421)
 shape = SubResource("RectangleShape2D_ir15t")
 
-[node name="ColorRect" type="ColorRect" parent="limits/WARP COLLISION/BOAT1_CLONE" unique_id=829575885]
+[node name="ColorRect" type="ColorRect" parent="limits/BOAT_CLONES/BOAT1_CLONE" unique_id=829575885]
 offset_left = -44.559555
 offset_top = -20.282948
 offset_right = 44.883446
 offset_bottom = 20.343052
 color = Color(0.19166654, 0.04600001, 0.92, 1)
 
-[node name="BOAT2_CLONE" type="CollisionShape2D" parent="limits/WARP COLLISION" unique_id=600542857]
+[node name="BOAT2_CLONE" type="CollisionShape2D" parent="limits/BOAT_CLONES" unique_id=600542857]
 unique_name_in_owner = true
 position = Vector2(1259.7488, 92.93303)
 shape = SubResource("RectangleShape2D_1kice")
 debug_color = Color(0, 0.5950001, 0.7, 0.85490197)
 
-[node name="ColorRect" type="ColorRect" parent="limits/WARP COLLISION/BOAT2_CLONE" unique_id=881367099]
+[node name="ColorRect" type="ColorRect" parent="limits/BOAT_CLONES/BOAT2_CLONE" unique_id=881367099]
 offset_left = -44.877197
 offset_top = -19.053402
 offset_right = 44.565804
 offset_bottom = 19.460598
 color = Color(0.93, 0, 0, 1)
 
-[node name="shark_limit_left" type="Area2D" parent="limits" unique_id=2041098511 groups=["shark_limit_left"]]
+[node name="SHARK_LIMITS" type="Node2D" parent="limits" unique_id=1937436028]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="limits/shark_limit_left" unique_id=2055380176]
+[node name="shark_limits_left" type="Area2D" parent="limits/SHARK_LIMITS" unique_id=2041098511 groups=["shark_limit_left"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="limits/SHARK_LIMITS/shark_limits_left" unique_id=2055380176]
 position = Vector2(-127, 197)
 shape = SubResource("RectangleShape2D_e1j6l")
 
-[node name="shark_limite_right" type="Area2D" parent="limits" unique_id=44177726 groups=["shark_limit_right"]]
+[node name="shark_limits_right" type="Area2D" parent="limits/SHARK_LIMITS" unique_id=44177726 groups=["shark_limit_right"]]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="limits/shark_limite_right" unique_id=255024537]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="limits/SHARK_LIMITS/shark_limits_right" unique_id=255024537]
 position = Vector2(686, 197)
 shape = SubResource("RectangleShape2D_e1j6l")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=937120604]
-position = Vector2(270, 263.698)
+position = Vector2(270, 235.59882)
 
-[node name="SpriteNames" type="Sprite2D" parent="." unique_id=1356140479]
+[node name="shark" parent="." unique_id=2121875249 instance=ExtResource("1_gee14")]
+unique_name_in_owner = true
+position = Vector2(-66, 138.90082)
+
+[node name="spearFishing_package" type="Sprite2D" parent="." unique_id=1356140479]
 texture_filter = 1
-position = Vector2(978, 121)
+position = Vector2(978, 92.90082)
 texture = ExtResource("4_lbhrr")
 
 [node name="UI" type="Control" parent="." unique_id=110094207]
+visible = false
 z_index = 4096
 layout_mode = 3
 anchors_preset = 15
@@ -889,48 +554,18 @@ rotation = -0.7853982
 text = "5
 "
 
-[node name="teste warp" type="Node2D" parent="." unique_id=2143096924]
+[node name="BLACK COLOR RECTS" type="ColorRect" parent="." unique_id=1340791473]
+z_index = 2000
+offset_left = -193.81541
+offset_top = -15.249149
+offset_right = 0.10499573
+offset_bottom = 551.8283
+color = Color(0, 0, 0, 1)
 
-[node name="ColorRect" type="ColorRect" parent="teste warp" unique_id=1953971665]
-offset_left = -2.7663345
-offset_top = 0.30742645
-offset_right = -0.09799194
-offset_bottom = 531.41315
-color = Color(1, 0.04000002, 0.04000002, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="teste warp" unique_id=69003189]
-offset_left = -115.98945
-offset_top = 0.30742645
-offset_right = -113.321106
-offset_bottom = 531.41315
-color = Color(1, 0.04000002, 0.04000002, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="teste warp" unique_id=517972368]
-offset_left = 540.3775
-offset_top = 0.30742645
-offset_right = 543.04584
-offset_bottom = 531.41315
-color = Color(1, 0.04000002, 0.04000002, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="teste warp" unique_id=274518137]
-offset_left = 645.3775
-offset_top = 0.30742645
-offset_right = 648.04584
-offset_bottom = 531.41315
-color = Color(1, 0.04000002, 0.04000002, 1)
-
-[node name="Fish_Spawner" type="Node2D" parent="." unique_id=167932852]
-unique_name_in_owner = true
-z_as_relative = false
-script = ExtResource("3_lnu2h")
-blue_fish = ExtResource("1_uwrxv")
-red_fish = ExtResource("7_ir15t")
-big_fish = ExtResource("2_yqjtg")
-
-[node name="PriceFlutuation" type="Node2D" parent="." unique_id=1768685234]
-unique_name_in_owner = true
-script = ExtResource("11_rysoc")
-
-[node name="CloneBoats" type="Node2D" parent="." unique_id=352021503]
-unique_name_in_owner = true
-script = ExtResource("21_5newe")
+[node name="BLACK COLOR RECTS2" type="ColorRect" parent="." unique_id=1627553549]
+z_index = 2000
+offset_left = 540.3882
+offset_top = -42.764694
+offset_right = 734.3086
+offset_bottom = 566.1283
+color = Color(0, 0, 0, 1)

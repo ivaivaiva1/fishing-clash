@@ -3,18 +3,19 @@
 [ext_resource type="Script" uid="uid://c7qfstejcicpp" path="res://scripts/player.gd" id="1_tuyoq"]
 [ext_resource type="PackedScene" uid="uid://c7qt0ej6xtmqc" path="res://scenes/effects/coin_falling.tscn" id="3_jej6c"]
 [ext_resource type="Script" uid="uid://dn2m2bg4gmlh8" path="res://scripts/bait.gd" id="3_smehm"]
-[ext_resource type="Texture2D" uid="uid://bfknudkvo2ya4" path="res://artes joao/isca 2.png" id="3_y4r1p"]
+[ext_resource type="Texture2D" uid="uid://bfknudkvo2ya4" path="res://artes joao/14.04.26/isca/isca 2.png" id="3_y4r1p"]
 [ext_resource type="Script" uid="uid://b1y7jwgfvfrda" path="res://scripts/boost_controller.gd" id="6_fjrip"]
 [ext_resource type="Texture2D" uid="uid://dsctslp8amwa2" path="res://artes joao/yellow fish.png" id="6_oprun"]
 [ext_resource type="Texture2D" uid="uid://cxp8gjpeue570" path="res://artes joao/blue fish.png" id="7_a8ls1"]
 [ext_resource type="Script" uid="uid://bkawldx4t15f6" path="res://scripts/Player/bait_rotation.gd" id="8_d2wvv"]
 [ext_resource type="Shader" uid="uid://dltsjnvd5v5sk" path="res://shaders/shake.gdshader" id="8_f1ej7"]
 [ext_resource type="Texture2D" uid="uid://hfnspc7q7u8g" path="res://artes joao/peixe_grande meio termo.png" id="8_oprun"]
-[ext_resource type="Texture2D" uid="uid://10x3sdxnhmp1" path="res://artes joao/barco joao.png" id="8_smehm"]
 [ext_resource type="Texture2D" uid="uid://cw54xs24pb6u0" path="res://artes joao/bau_contorno_preto.png" id="9_oprun"]
 [ext_resource type="Script" uid="uid://bgh28c2s6hwh3" path="res://scripts/Player/player_movement.gd" id="9_ur7pv"]
 [ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://shaders/blink.gdshader" id="12_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://bam6fe1y8chk2" path="res://artes joao/13-04-2026/barco_goth.png" id="13_a8ls1"]
 [ext_resource type="Script" uid="uid://33iignvffuty" path="res://scripts/Effects/collision_effect.gd" id="15_oprun"]
+[ext_resource type="Texture2D" uid="uid://5jfkg661h7te" path="res://artes joao/player_arrows/seta_bege.png" id="16_a8ls1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
 size = Vector2(20, 9.1726265)
@@ -483,6 +484,7 @@ flip_h = true
 
 [node name="treasure_sprite" type="AnimatedSprite2D" parent="bait" unique_id=1030464131]
 unique_name_in_owner = true
+visible = false
 z_index = -15
 material = SubResource("ShaderMaterial_oprun")
 position = Vector2(4.154724, 18.775444)
@@ -518,7 +520,7 @@ unique_name_in_owner = true
 material = SubResource("ShaderMaterial_a8ls1")
 position = Vector2(-0.39568335, -24.937)
 scale = Vector2(1.865, 1.865)
-texture = ExtResource("8_smehm")
+texture = ExtResource("13_a8ls1")
 
 [node name="PlayerMovement" type="Node2D" parent="." unique_id=1392657911]
 unique_name_in_owner = true
@@ -532,5 +534,11 @@ script = ExtResource("15_oprun")
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_a8ls1")
 speed_scale = 1.2
+
+[node name="arrow" type="Sprite2D" parent="." unique_id=1485137710]
+unique_name_in_owner = true
+position = Vector2(0, -67.708)
+scale = Vector2(1.2962475, 1)
+texture = ExtResource("16_a8ls1")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

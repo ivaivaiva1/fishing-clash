@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var sprite: AnimatedSprite2D = %Sprite
-@onready var auto_destruction_position: float = randf_range(145, 150)
+@onready var auto_destruction_position: float = randf_range(120, 130)
 var is_alive: bool = true
 
 

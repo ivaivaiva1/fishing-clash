@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4nq1b1gu7xk0"
-path="res://.godot/imported/isca 1.png-8dd3fa46273a739723ef8d753a4bd4dc.ctex"
+uid="uid://bfknudkvo2ya4"
+path="res://.godot/imported/isca 2.png-ca4e4d8eafb4b5fd51be9366a3522c16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://artes joao/isca 1.png"
-dest_files=["res://.godot/imported/isca 1.png-8dd3fa46273a739723ef8d753a4bd4dc.ctex"]
+source_file="res://artes joao/14.04.26/isca/isca 2.png"
+dest_files=["res://.godot/imported/isca 2.png-ca4e4d8eafb4b5fd51be9366a3522c16.ctex"]
 
 [params]
 

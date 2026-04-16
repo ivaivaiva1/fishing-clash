@@ -8,7 +8,7 @@ var spawned_fish: Array[Node2D] = []
 @export var big_fish: PackedScene
 var big_fish_rate: int
 var red_fish_rate: int
-var spawn_pos_y: Array[float] = [210.0, 466.0]
+var spawn_pos_y: Array[float] = [205.0, 500.0]
 var spawn_cooldown: float
 @onready var spawn_timer: float
 

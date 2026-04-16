@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfknudkvo2ya4"
-path="res://.godot/imported/isca 2.png-9065da87a22035aa82bcf7dbd8b38a66.ctex"
+uid="uid://gok3wms5rh5r"
+path="res://.godot/imported/Coin dark brown.png-8b6f6fa10cab5941b8db8ca956fc69d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://artes joao/isca 2.png"
-dest_files=["res://.godot/imported/isca 2.png-9065da87a22035aa82bcf7dbd8b38a66.ctex"]
+source_file="res://artes joao/14.04.26/coin/Coin dark brown.png"
+dest_files=["res://.godot/imported/Coin dark brown.png-8b6f6fa10cab5941b8db8ca956fc69d6.ctex"]
 
 [params]
 

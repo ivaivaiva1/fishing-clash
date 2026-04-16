@@ -28,10 +28,9 @@ ScreenShake="*uid://cxfq71k3sqrym"
 
 [display]
 
-window/size/viewport_width=540
+window/size/viewport_width=889
 window/size/viewport_height=500
-window/size/window_width_override=997
-window/size/window_height_override=923
+window/size/mode=2
 window/stretch/mode="canvas_items"
 
 [global_group]

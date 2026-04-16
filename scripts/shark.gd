@@ -45,7 +45,7 @@ func stop_attack():
 
 
 func re_start():
-	global_position = Vector2(-66, 168)
+	global_position = Vector2(-66, 138.901)
 
 
 func _on_vision_area_area_entered(area: Area2D) -> void:

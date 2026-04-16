@@ -13,7 +13,11 @@ var mass: float = 10
 var collision_timer: float 
 var boat_size: float
 @onready var sprite: Sprite2D = %Sprite2
+@onready var sprite_arrow: Sprite2D = %arrow
+@onready var sprite_bait: Sprite2D = %BaitSprite
 var texture_boat2: Texture2D = load("res://artes joao/13-04-2026/barco_nana_motor_purpledress.png")
+var texture_arrow2: Texture2D = load("res://artes joao/player_arrows/seta roxa.png")
+var texture_bait2: Texture2D = load("res://artes joao/14.04.26/isca/isca 2 cinza rosa.png")
 @onready var col: CollisionShape2D = %CollisionShape2D
 
 
@@ -22,6 +26,8 @@ func _ready() -> void:
 	if current_player == 2: game_manager.player2 = self
 	if current_player == 2: 
 		sprite.texture = texture_boat2
+		sprite_arrow.texture = texture_arrow2 
+		sprite_bait.texture = texture_bait2
 	boat_size = col.shape.size.x
 
 
