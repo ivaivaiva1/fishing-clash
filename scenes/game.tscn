@@ -40,15 +40,12 @@ font_size = 21
 
 [sub_resource type="LabelSettings" id="LabelSettings_ca42v"]
 font_size = 20
-font_color = Color(0, 0, 0, 1)
 
 [node name="game" type="Node2D" unique_id=760273511]
 
-[node name="Game_Manager" type="Node2D" parent="." unique_id=75664626 node_paths=PackedStringArray("peso_1", "peso_2")]
+[node name="Game_Manager" type="Node2D" parent="." unique_id=75664626]
 script = ExtResource("2_ir15t")
 player_scene = ExtResource("2_trtic")
-peso_1 = NodePath("")
-peso_2 = NodePath("")
 
 [node name="Fish_Spawner" type="Node2D" parent="." unique_id=167932852]
 unique_name_in_owner = true

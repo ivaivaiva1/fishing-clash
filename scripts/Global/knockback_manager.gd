@@ -35,6 +35,8 @@ func do_collision(col1_player: Player, col1_mass: float, col1_velocity: Vector2,
 	
 	col1_player.velocity -= impulse
 	col2_player.velocity += impulse
+	col1_player.player_movement.last_velocity -= impulse
+	col2_player.player_movement.last_velocity += impulse
 	
 	
 	print("Impact strength:", impact_strength)

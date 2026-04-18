@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://c3f5y7yjwasc6"]
+
+[ext_resource type="Script" uid="uid://hn8x8dbnwpi3" path="res://scripts/Global/mouse_controller.gd" id="1_k3gg1"]
+[ext_resource type="Script" uid="uid://dbxajgbjg8f34" path="res://scripts/Misc/mouse_object.gd" id="2_pwyfd"]
+[ext_resource type="Texture2D" uid="uid://dj24xdkgncopb" path="res://artes joao/player_arrows/seta cinza azul.png" id="2_wk6yc"]
+[ext_resource type="Texture2D" uid="uid://dkv4yd0b4av11" path="res://artes joao/player_arrows/seta azul.png" id="4_pwyfd"]
+[ext_resource type="Texture2D" uid="uid://c4ghpc7851ycl" path="res://artes joao/player_arrows/seta vermelha.png" id="5_rqxi1"]
+[ext_resource type="Texture2D" uid="uid://ce1djpj0mqeag" path="res://artes joao/player_arrows/seta verde.png" id="6_8lnyk"]
+[ext_resource type="Texture2D" uid="uid://d3kxnevu3hyxy" path="res://artes joao/player_arrows/seta rosa.png" id="7_43nyw"]
+
+[node name="MouseController" type="Node2D" unique_id=722373602]
+script = ExtResource("1_k3gg1")
+
+[node name="mouse_global" type="CharacterBody2D" parent="." unique_id=1568752480]
+unique_name_in_owner = true
+position = Vector2(483.8445, 263.3704)
+motion_mode = 1
+script = ExtResource("2_pwyfd")
+
+[node name="Sprite" type="Sprite2D" parent="mouse_global" unique_id=234442124]
+unique_name_in_owner = true
+position = Vector2(0, -6.4886475)
+scale = Vector2(1.296, 1)
+texture = ExtResource("2_wk6yc")
+
+[node name="mouse_player1" type="CharacterBody2D" parent="." unique_id=1519014540]
+unique_name_in_owner = true
+position = Vector2(221.63565, 212.28098)
+motion_mode = 1
+script = ExtResource("2_pwyfd")
+playerID = 1
+
+[node name="Sprite" type="Sprite2D" parent="mouse_player1" unique_id=2000843942]
+position = Vector2(0, -6.4886475)
+scale = Vector2(1.296, 1)
+texture = ExtResource("4_pwyfd")
+
+[node name="mouse_player2" type="CharacterBody2D" parent="." unique_id=1865690954]
+unique_name_in_owner = true
+position = Vector2(256.19614, 213.03232)
+motion_mode = 1
+script = ExtResource("2_pwyfd")
+playerID = 2
+
+[node name="Sprite" type="Sprite2D" parent="mouse_player2" unique_id=1450759481]
+position = Vector2(0, -6.4886475)
+scale = Vector2(1.296, 1)
+texture = ExtResource("5_rqxi1")
+
+[node name="mouse_player3" type="CharacterBody2D" parent="." unique_id=1466795454]
+unique_name_in_owner = true
+position = Vector2(288.5027, 212.28098)
+motion_mode = 1
+script = ExtResource("2_pwyfd")
+playerID = 3
+
+[node name="Sprite" type="Sprite2D" parent="mouse_player3" unique_id=1114994718]
+position = Vector2(0, -6.4886475)
+scale = Vector2(1.296, 1)
+texture = ExtResource("6_8lnyk")
+
+[node name="mouse_player4" type="CharacterBody2D" parent="." unique_id=484777919]
+unique_name_in_owner = true
+position = Vector2(319.30658, 213.03232)
+motion_mode = 1
+script = ExtResource("2_pwyfd")
+playerID = 4
+
+[node name="Sprite" type="Sprite2D" parent="mouse_player4" unique_id=470961062]
+position = Vector2(0, -6.4886475)
+scale = Vector2(1.296, 1)
+texture = ExtResource("7_43nyw")

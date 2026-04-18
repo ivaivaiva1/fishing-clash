@@ -25,7 +25,7 @@ var player4: Player
 @export var peso_2: Label 
 @onready var clone_boats: CloneBoats = %CloneBoats
 #var round_duration: float = 240
-var round_duration: float = 240
+var round_duration: float = 180
 var game_timer: float = 0
 var _time_accumulator: float = 0.0
 @onready var treasure_scene: PackedScene = load("res://scenes/treasure.tscn")

@@ -6,6 +6,7 @@ var game_manager: GameManager
 var players: Array = []
 var clones: Array = []
 var boat_sizes: Array = []
+var number_of_players: int = 4
 
 var screen_size: float = 540
 
@@ -21,18 +22,25 @@ func _ready():
 
 
 func populate_scripts():
-	clone1.clone_father = game_manager.player1
-	clone2.clone_father = game_manager.player2
-	clone3.clone_father = game_manager.player3
-	clone4.clone_father = game_manager.player4
+	var possible_players = [
+		game_manager.player1,
+		game_manager.player2,
+		game_manager.player3,
+		game_manager.player4
+	]
+	
+	for i in range(clones.size()):
+		if i < number_of_players and possible_players[i] != null:
+			clones[i].clone_father = possible_players[i]
+		else:
+			clones[i].clone_father = null
+			clones[i].global_position.x = -1000
 
 
 func _process(delta: float) -> void:
-	if players.size() < 4:
-		get_player_data()
-		return
+	get_player_data()
 	
-	for i in range(players.size()):
+	for i in range(min(number_of_players, players.size(), clones.size())):
 		check_player(i)
 		player_warp(i)
 
@@ -89,16 +97,19 @@ func move_clone(i: int, out_side: String, out_pixels: float):
 
 
 func get_player_data():
-	var p1 = game_manager.player1
-	var p2 = game_manager.player2
-	var p3 = game_manager.player3
-	var p4 = game_manager.player4
+	players.clear()
+	boat_sizes.clear()
 	
-	if p1 != null and p2 != null and p3 != null and p4 != null:
-		players = [p1, p2, p3, p4]
-		boat_sizes = [
-			p1.boat_size,
-			p2.boat_size,
-			p3.boat_size,
-			p4.boat_size
-		]
+	var possible_players = [
+		game_manager.player1,
+		game_manager.player2,
+		game_manager.player3,
+		game_manager.player4
+	]
+	
+	for i in range(number_of_players):
+		var p = possible_players[i]
+		
+		if p != null:
+			players.append(p)
+			boat_sizes.append(p.boat_size)
