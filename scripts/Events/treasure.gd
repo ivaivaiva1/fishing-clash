@@ -6,7 +6,7 @@ var treasure_points: float = 500
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	global_position.x = get_viewport().get_visible_rect().size.x * 0.5
+	global_position.x = get_viewport().get_camera_2d().get_screen_center_position().x
 	global_position.y = 513
 	treasure_appear()
 

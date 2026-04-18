@@ -6,7 +6,7 @@ var game_manager: GameManager
 var players: Array = []
 var clones: Array = []
 var boat_sizes: Array = []
-var number_of_players: int = 4
+var number_of_players: int = 2
 
 var screen_size: float = 540
 

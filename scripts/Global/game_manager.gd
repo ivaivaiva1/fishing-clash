@@ -138,22 +138,22 @@ func start_game():
 	add_child(player_instance_2)
 	player_instance_2.global_position = Vector2(353.0, 79)
 	
-	var player_instance_3 = player_scene.instantiate()
-	player3 = player_instance_3
-	player3.player_name = "player3"
-	player3.current_player = 3
-	player3.game_manager = self
-	add_child(player_instance_3)
-	player_instance_3.global_position = Vector2(180, 79)
-	
-	var player_instance_4 = player_scene.instantiate()
-	player4 = player_instance_4
-	player4.player_name = "player4"
-	player4.current_player = 4
-	player4.game_manager = self
-	add_child(player_instance_4)
-	player_instance_4.global_position = Vector2(450, 79)
-	
+	#var player_instance_3 = player_scene.instantiate()
+	#player3 = player_instance_3
+	#player3.player_name = "player3"
+	#player3.current_player = 3
+	#player3.game_manager = self
+	#add_child(player_instance_3)
+	#player_instance_3.global_position = Vector2(180, 79)
+	#
+	#var player_instance_4 = player_scene.instantiate()
+	#player4 = player_instance_4
+	#player4.player_name = "player4"
+	#player4.current_player = 4
+	#player4.game_manager = self
+	#add_child(player_instance_4)
+	#player_instance_4.global_position = Vector2(450, 79)
+	#
 	
 	
 	FishSpawner_intance.spawn_cooldown = GlobalVars.spawn_cooldown_game
