@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ciu4i4wmw23k7"]
+
+[ext_resource type="Script" uid="uid://dbxajgbjg8f34" path="res://scripts/Misc/mouse_object.gd" id="1_hioms"]
+[ext_resource type="Texture2D" uid="uid://dj24xdkgncopb" path="res://artes joao/player_arrows/seta cinza azul.png" id="2_k4l1c"]
+
+[node name="mouse_global" type="CharacterBody2D" unique_id=59590614]
+motion_mode = 1
+script = ExtResource("1_hioms")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=261636699]
+unique_name_in_owner = true
+z_index = 4096
+position = Vector2(0, -6.4886475)
+scale = Vector2(1.296, 1)
+texture = ExtResource("2_k4l1c")

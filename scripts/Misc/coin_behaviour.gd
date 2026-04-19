@@ -8,11 +8,14 @@ var is_alive: bool = true
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if !is_alive: return
 	if(area.is_in_group("bait")):
+		print("encostou na moeda")
 		var bait: Bait = area.get_parent()
+		print("state: ", bait.bait_state)
 		if(bait.bait_state == "treasure"): return
+		print("state ta certo")
 		is_alive = false
 		bait.player.add_points(10)
-		EffectSpawner.collect_coin_effect(bait.bait_sprite.global_position - Vector2(0, 15))
+		EffectSpawner.collect_coin_effect(bait.bait_sprite.global_position + Vector2(0, 15))
 		vertical_movement.auto_destroy()
 		#collect_coin()
 

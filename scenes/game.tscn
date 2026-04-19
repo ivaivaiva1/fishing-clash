@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://2yj540ysy547" path="res://scripts/Player/boat_clone.gd" id="11_ca42v"]
 [ext_resource type="Texture2D" uid="uid://dfrqtdtraoj7h" path="res://artes joao/13-04-2026/icon_girl.png" id="13_5newe"]
 [ext_resource type="PackedScene" uid="uid://cel27empameku" path="res://scenes/treasure.tscn" id="17_rysoc"]
+[ext_resource type="Texture2D" uid="uid://ciqfy2c46yt0y" path="res://SpearFishing Assets Pack/Sprites/SawShark - 48x32/SawShark.png" id="18_ssvqc"]
 [ext_resource type="Script" uid="uid://bv08l4gt2jmvq" path="res://scripts/clone_boats.gd" id="21_5newe"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gee14"]
@@ -311,7 +312,6 @@ position = Vector2(978, 92.90082)
 texture = ExtResource("4_lbhrr")
 
 [node name="BLACK COLOR RECTS" type="ColorRect" parent="." unique_id=1340791473]
-visible = false
 z_index = 2000
 offset_left = -174.7245
 offset_top = -15.046787
@@ -404,7 +404,6 @@ scale = Vector2(0.10549085, 0.10549084)
 texture = ExtResource("4_264po")
 
 [node name="BLACK COLOR RECTS2" type="ColorRect" parent="." unique_id=1627553549]
-visible = false
 z_index = 2000
 offset_left = 540.3882
 offset_top = -14.966049
@@ -507,3 +506,7 @@ label_settings = SubResource("LabelSettings_ca42v")
 
 [node name="Treasure" parent="." unique_id=1190474615 instance=ExtResource("17_rysoc")]
 position = Vector2(444, 501)
+
+[node name="SawShark" type="Sprite2D" parent="." unique_id=1554914359]
+position = Vector2(972.45215, 259.3752)
+texture = ExtResource("18_ssvqc")

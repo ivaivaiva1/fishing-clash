@@ -13,9 +13,9 @@ var game_manager: GameManager
 var mass: float = 10
 var collision_timer: float 
 var boat_size: float
-@onready var sprite: Sprite2D = %Sprite
-@onready var sprite_arrow: Sprite2D = %arrow_sprite
-@onready var sprite_bait: Sprite2D = %BaitSprite
+#@onready var sprite: Sprite2D = %Sprite
+#@onready var sprite_arrow: Sprite2D = %arrow_sprite
+#@onready var sprite_bait: Sprite2D = %BaitSprite
 var texture_boat2: Texture2D = load("res://artes joao/13-04-2026/barco_nana_motor_purpledress.png")
 var texture_arrow2: Texture2D = load("res://artes joao/player_arrows/seta roxa.png")
 var texture_bait2: Texture2D = load("res://artes joao/14.04.26/isca/isca 2 cinza rosa.png")

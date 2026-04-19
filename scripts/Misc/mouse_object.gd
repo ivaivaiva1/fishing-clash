@@ -2,7 +2,8 @@ extends CharacterBody2D
 class_name MouseObject
 
 @export var playerID: int
-@onready var sprite: Sprite2D = %Sprite
+var is_active: bool = false
+#@onready var sprite: Sprite2D = %Sprite
 var move_left: String
 var move_right: String
 var move_up: String
@@ -14,8 +15,9 @@ var acceleration : float = 1200
 var friction : float = 800
 
 func _physics_process(delta):
+	if !is_active: return
 	move_mouse(delta)
-	rotate_mouse()
+	#rotate_mouse()
 
 func move_mouse(delta):
 	var x := Input.get_axis(move_left, move_right)
@@ -44,15 +46,15 @@ func move_mouse(delta):
 	
 	move_and_slide()
 
-func rotate_mouse():
-	var tilt_strength := 0.006
-	var max_rotation := deg_to_rad(100)
-	
-	var target_rotation := 0.0
-	
-	# se estiver se movendo, calcula inclinação
-	if abs(velocity.x) > 1:
-		target_rotation = clamp(velocity.x * tilt_strength, -max_rotation, max_rotation)
-	
-	# suaviza sempre (inclusive voltando pra 0)
-	sprite.rotation = lerp(sprite.rotation, target_rotation, 0.1)
+#func rotate_mouse():
+	#var tilt_strength := 0.006
+	#var max_rotation := deg_to_rad(100)
+	#
+	#var target_rotation := 0.0
+	#
+	## se estiver se movendo, calcula inclinação
+	#if abs(velocity.x) > 1:
+		#target_rotation = clamp(velocity.x * tilt_strength, -max_rotation, max_rotation)
+	#
+	## suaviza sempre (inclusive voltando pra 0)
+	#sprite.rotation = lerp(sprite.rotation, target_rotation, 0.1)

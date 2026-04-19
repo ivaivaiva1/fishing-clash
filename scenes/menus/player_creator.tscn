@@ -1,0 +1,283 @@
+[gd_scene format=3 uid="uid://vrilx056bv7u"]
+
+[ext_resource type="Script" uid="uid://d08l7pv88n7sk" path="res://scripts/Menus/player_creator.gd" id="1_nq5mh"]
+[ext_resource type="Texture2D" uid="uid://dkv4yd0b4av11" path="res://artes joao/player_arrows/seta azul.png" id="2_vt4t4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3qlj"]
+bg_color = Color(1.2742168, 1.2742168, 1.2742168, 0.2509804)
+
+[sub_resource type="SystemFont" id="SystemFont_iwt2o"]
+font_names = PackedStringArray("Comic Sans MS")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6qfb"]
+bg_color = Color(0.6, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ot5a1"]
+bg_color = Color(0.7372549, 0.50980395, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p10e2"]
+bg_color = Color(0.568, 0.19, 1, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_p10e2"]
+font_names = PackedStringArray("Comic Sans MS")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_p3qlj"]
+font = SubResource("SystemFont_p10e2")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_41llg"]
+bg_color = Color(0.7372549, 0.50980395, 1, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_41llg"]
+font_names = PackedStringArray("Comic Sans MS")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_neygs"]
+bg_color = Color(0.6, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_p3qlj"]
+font_names = PackedStringArray("Comic Sans MS")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iwt2o"]
+bg_color = Color(0.6, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qn422"]
+bg_color = Color(0.696, 0.43, 1, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_neygs"]
+font_names = PackedStringArray("Comic Sans MS")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_iwt2o"]
+font = SubResource("SystemFont_neygs")
+font_size = 8
+
+[node name="PlayerCreator" type="Control" unique_id=1338901768]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -156.0
+offset_bottom = -156.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nq5mh")
+ID = 1
+
+[node name="PlayerPin" type="Panel" parent="." unique_id=1586685152]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -251.68645
+offset_top = -20.0
+offset_right = -211.68645
+offset_bottom = 20.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_p3qlj")
+
+[node name="mouse_texture" type="TextureRect" parent="PlayerPin" unique_id=51827816]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -10.368
+offset_top = -19.534103
+offset_right = 10.368
+offset_bottom = -3.5341034
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_vt4t4")
+
+[node name="Label" type="Label" parent="PlayerPin" unique_id=1863102481]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "P1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cancel_button" type="Button" parent="PlayerPin" unique_id=723859112]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 444.45868
+offset_top = -15.5
+offset_right = 480.42114
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_iwt2o")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j6qfb")
+text = "X"
+
+[node name="join_progress_bar" type="ProgressBar" parent="." unique_id=582553401]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.18472
+offset_top = -48.256577
+offset_right = 212.18472
+offset_bottom = 48.256577
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ot5a1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_p10e2")
+show_percentage = false
+
+[node name="Label" type="Label" parent="join_progress_bar" unique_id=752733766]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -99.0
+offset_right = 99.0
+offset_bottom = 29.010513
+grow_horizontal = 2
+text = "HOLD ANY KEY TO JOIN"
+label_settings = SubResource("LabelSettings_p3qlj")
+vertical_alignment = 1
+
+[node name="joined_panel" type="Panel" parent="." unique_id=1919924361]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.1845
+offset_top = -48.2565
+offset_right = 212.1845
+offset_bottom = 48.2565
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_41llg")
+
+[node name="ready_button" type="Button" parent="joined_panel" unique_id=2107876288]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -67.0
+offset_top = -63.70462
+offset_bottom = -32.70462
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = SubResource("SystemFont_41llg")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_neygs")
+text = "READY?"
+
+[node name="rebind_button" type="Button" parent="joined_panel" unique_id=156951766]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -67.0
+offset_top = -31.319
+offset_bottom = -0.31900024
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = SubResource("SystemFont_p3qlj")
+theme_override_font_sizes/font_size = 7
+theme_override_styles/normal = SubResource("StyleBoxFlat_iwt2o")
+text = "rebind
+controls"
+
+[node name="input_preview" type="Panel" parent="joined_panel" unique_id=760376582]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.18448
+offset_top = -48.2565
+offset_right = 106.474014
+offset_bottom = 48.2565
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qn422")
+
+[node name="title" type="Label" parent="joined_panel/input_preview" unique_id=570385646]
+layout_mode = 0
+offset_left = 7.9719696
+offset_top = 7.356575
+offset_right = 246.22186
+offset_bottom = 21.450523
+text = "CONTROLS - keyboard 1"
+label_settings = SubResource("LabelSettings_iwt2o")
+
+[node name="left_input" type="Label" parent="joined_panel/input_preview" unique_id=1939846607]
+layout_mode = 0
+offset_left = 7.9719696
+offset_top = 19.30841
+offset_right = 246.22186
+offset_bottom = 33.40236
+text = "LEFT - A"
+label_settings = SubResource("LabelSettings_iwt2o")
+
+[node name="right_input" type="Label" parent="joined_panel/input_preview" unique_id=1107021304]
+layout_mode = 0
+offset_left = 7.9719696
+offset_top = 29.536987
+offset_right = 246.22186
+offset_bottom = 43.630936
+text = "RIGHT - D"
+label_settings = SubResource("LabelSettings_iwt2o")
+
+[node name="down_input" type="Label" parent="joined_panel/input_preview" unique_id=1760971126]
+layout_mode = 0
+offset_left = 7.7543335
+offset_top = 40.636078
+offset_right = 246.00423
+offset_bottom = 54.730026
+text = "DOWN - S"
+label_settings = SubResource("LabelSettings_iwt2o")
+
+[node name="up_input" type="Label" parent="joined_panel/input_preview" unique_id=352681763]
+layout_mode = 0
+offset_left = 7.5367126
+offset_top = 51.735153
+offset_right = 245.7866
+offset_bottom = 65.8291
+text = "UP - W"
+label_settings = SubResource("LabelSettings_iwt2o")
+
+[node name="action_input" type="Label" parent="joined_panel/input_preview" unique_id=917749207]
+layout_mode = 0
+offset_left = 8.407227
+offset_top = 62.616608
+offset_right = 246.65712
+offset_bottom = 76.710556
+text = "ACTION - SPACE"
+label_settings = SubResource("LabelSettings_iwt2o")
+
+[connection signal="pressed" from="PlayerPin/cancel_button" to="." method="_on_cancel_button_pressed"]

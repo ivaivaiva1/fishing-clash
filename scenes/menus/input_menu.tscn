@@ -1,11 +1,21 @@
 [gd_scene format=3 uid="uid://bknv18ju232se"]
 
 [ext_resource type="PackedScene" uid="uid://c3f5y7yjwasc6" path="res://scenes/globals/mouse_controller.tscn" id="1_ot5a1"]
+[ext_resource type="PackedScene" uid="uid://vrilx056bv7u" path="res://scenes/menus/player_creator.tscn" id="2_p10e2"]
+
+[sub_resource type="SystemFont" id="SystemFont_ot5a1"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[sub_resource type="LabelSettings" id="LabelSettings_p10e2"]
+font = SubResource("SystemFont_ot5a1")
+font_size = 20
 
 [node name="InputMenu" type="ColorRect" unique_id=1701158441]
 offset_right = 889.0
 offset_bottom = 500.0
 color = Color(0, 0, 0, 1)
+
+[node name="MouseController" parent="." unique_id=722373602 instance=ExtResource("1_ot5a1")]
 
 [node name="menu_world" type="ColorRect" parent="." unique_id=365901378]
 layout_mode = 0
@@ -14,4 +24,19 @@ offset_right = 714.5
 offset_bottom = 500.0
 color = Color(0.013599997, 0.018813327, 0.17, 1)
 
-[node name="MouseController" parent="." unique_id=722373602 instance=ExtResource("1_ot5a1")]
+[node name="BIND PLAYERS" type="Label" parent="menu_world" unique_id=1074202152]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -74.0
+offset_right = 74.0
+offset_bottom = 35.847473
+grow_horizontal = 2
+text = "BIND PLAYERS"
+label_settings = SubResource("LabelSettings_p10e2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerCreator" parent="menu_world" unique_id=1338901768 instance=ExtResource("2_p10e2")]
+layout_mode = 1

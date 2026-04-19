@@ -29,7 +29,6 @@ func _ready() -> void:
 
 
 
-
 const SWIM_FORCE = 500.0
 const MAX_SPEED = 100
 const ACCELERATION = 300
@@ -39,6 +38,7 @@ const boost_time = 0.2
 var peso = 1
 @onready var boost_controller: BoostController = %boost_controller
 var feedback_tween: Tween
+
 
 
 func _physics_process(delta):

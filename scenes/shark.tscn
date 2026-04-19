@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c1fnyt64wu0b1"]
 
 [ext_resource type="Script" uid="uid://dl88lkm71e8x" path="res://scripts/shark.gd" id="2_v5iaq"]
+[ext_resource type="Texture2D" uid="uid://d2nnl1tor6c33" path="res://artes joao/13-04-2026/sawshark_joao2.png" id="3_inbs7"]
 [ext_resource type="Texture2D" uid="uid://dfuk1krwt6ibj" path="res://Stella Fishs/pixil-frame-0 (4).png" id="3_po4rd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v5iaq"]
@@ -136,13 +137,13 @@ script = ExtResource("2_v5iaq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1489043711]
 unique_name_in_owner = true
+visible = false
 scale = Vector2(2.6, 2.6)
 sprite_frames = SubResource("SpriteFrames_irb4t")
-animation = &"attack"
 autoplay = "default"
-frame_progress = 0.367218
 
 [node name="body_area" type="Area2D" parent="." unique_id=1632854817 groups=["shark"]]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="body_area" unique_id=1429452857]
 polygon = PackedVector2Array(-10, -23, 0, -14, 34, -1, 52, 0, 52, 5, 31, 5, 26, 13, 18, 13, 18, 16, -5, 16, -5, 13, -13, 13, -18, 18, -26, 18, -26, 16, -20, 13, -28, 8, -38, 8, -42, 13, -49, 13, -49, 10, -43, 5, -52, -9, -52, -11, -46, -11, -46, -11, -38, -1, -32, -1, -11, -13)
@@ -153,6 +154,11 @@ visible = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="vision_area" unique_id=1470311632]
 position = Vector2(336, 2)
 shape = SubResource("RectangleShape2D_po4rd")
+
+[node name="SawsharkJoao" type="Sprite2D" parent="." unique_id=147630218]
+position = Vector2(1.5000012, 1.5000012)
+scale = Vector2(1.9531252, 1.9531252)
+texture = ExtResource("3_inbs7")
 
 [connection signal="area_entered" from="body_area" to="." method="_on_body_area_area_entered"]
 [connection signal="area_entered" from="vision_area" to="." method="_on_vision_area_area_entered"]
