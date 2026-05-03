@@ -4,11 +4,11 @@ class_name MouseObject
 @export var playerID: int
 var is_active: bool = false
 #@onready var sprite: Sprite2D = %Sprite
-var move_left: String
-var move_right: String
-var move_up: String
-var move_down: String
-var action: String
+@export var move_left: String
+@export var move_right: String
+@export var move_up: String
+@export var move_down: String
+@export var action: String
 
 var max_velocity : float = 1000
 var acceleration : float = 1200

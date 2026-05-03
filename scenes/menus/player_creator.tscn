@@ -43,16 +43,17 @@ subpixel_positioning = 0
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iwt2o"]
 bg_color = Color(0.6, 0, 0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qn422"]
-bg_color = Color(0.696, 0.43, 1, 1)
-
 [sub_resource type="SystemFont" id="SystemFont_neygs"]
 font_names = PackedStringArray("Comic Sans MS")
 subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_iwt2o"]
+line_spacing = -0.18
 font = SubResource("SystemFont_neygs")
 font_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qn422"]
+bg_color = Color(0.696, 0.43, 1, 0)
 
 [node name="PlayerCreator" type="Control" unique_id=1338901768]
 layout_mode = 3
@@ -67,6 +68,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nq5mh")
 ID = 1
+input_event_names = Array[String](["move_left1", "move_up1", "move_right1", "move_down1", "player1"])
 
 [node name="PlayerPin" type="Panel" parent="." unique_id=1586685152]
 unique_name_in_owner = true
@@ -211,7 +213,17 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_iwt2o")
 text = "rebind
 controls"
 
+[node name="title" type="Label" parent="joined_panel" unique_id=570385646]
+layout_mode = 0
+offset_left = 7.971985
+offset_top = 7.356575
+offset_right = 246.22188
+offset_bottom = 21.450523
+text = "Keyboard 1"
+label_settings = SubResource("LabelSettings_iwt2o")
+
 [node name="input_preview" type="Panel" parent="joined_panel" unique_id=760376582]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -225,15 +237,6 @@ offset_bottom = 48.2565
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qn422")
-
-[node name="title" type="Label" parent="joined_panel/input_preview" unique_id=570385646]
-layout_mode = 0
-offset_left = 7.9719696
-offset_top = 7.356575
-offset_right = 246.22186
-offset_bottom = 21.450523
-text = "CONTROLS - keyboard 1"
-label_settings = SubResource("LabelSettings_iwt2o")
 
 [node name="left_input" type="Label" parent="joined_panel/input_preview" unique_id=1939846607]
 layout_mode = 0
@@ -280,4 +283,109 @@ offset_bottom = 76.710556
 text = "ACTION - SPACE"
 label_settings = SubResource("LabelSettings_iwt2o")
 
+[node name="key_names" type="Label" parent="joined_panel" unique_id=398056907]
+layout_mode = 0
+offset_left = 8.411484
+offset_top = 23.926155
+offset_right = 246.66138
+offset_bottom = 83.926155
+text = "LEFT
+UP 
+RIGHT
+DOWN 
+ACTION "
+label_settings = SubResource("LabelSettings_iwt2o")
+
+[node name="text_input_keys_joinedPB" type="Label" parent="joined_panel" unique_id=237890901]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 48.99347
+offset_top = 24.189491
+offset_right = 287.24338
+offset_bottom = 84.18949
+text = "-      A
+-      W
+-      D
+-      S
+-      SPACE"
+label_settings = SubResource("LabelSettings_iwt2o")
+
+[node name="rebind_panel" type="ProgressBar" parent="." unique_id=1937405949]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.18472
+offset_top = -48.256577
+offset_right = 212.18472
+offset_bottom = 48.256577
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ot5a1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_p10e2")
+show_percentage = false
+
+[node name="text_rebind_current_key" type="Label" parent="rebind_panel" unique_id=1908681854]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -99.0
+offset_right = 99.0
+offset_bottom = 29.010513
+grow_horizontal = 2
+text = "HOLD TO BIND - LEFT"
+label_settings = SubResource("LabelSettings_p3qlj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="input_preview" type="Panel" parent="rebind_panel" unique_id=549669741]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.18448
+offset_top = -48.2565
+offset_right = 106.474014
+offset_bottom = 48.2565
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qn422")
+
+[node name="key_names" type="Label" parent="rebind_panel/input_preview" unique_id=200791517]
+layout_mode = 0
+offset_left = 8.411484
+offset_top = 23.926155
+offset_right = 246.66138
+offset_bottom = 83.926155
+text = "LEFT
+UP
+RIGHT
+DOWN
+ACTION "
+label_settings = SubResource("LabelSettings_iwt2o")
+
+[node name="text_input_keys" type="Label" parent="rebind_panel/input_preview" unique_id=1164214826]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 48.99347
+offset_top = 24.189491
+offset_right = 287.24338
+offset_bottom = 84.18949
+text = "-      A
+-      W
+-      D
+-      S
+-      SPACE"
+label_settings = SubResource("LabelSettings_iwt2o")
+
 [connection signal="pressed" from="PlayerPin/cancel_button" to="." method="_on_cancel_button_pressed"]
+[connection signal="button_down" from="joined_panel/ready_button" to="." method="_on_ready_button_button_down"]
+[connection signal="button_down" from="joined_panel/rebind_button" to="." method="_on_rebind_button_button_down"]

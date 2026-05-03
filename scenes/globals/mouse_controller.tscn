@@ -23,6 +23,11 @@ position = Vector2(221.63565, 212.28098)
 motion_mode = 1
 script = ExtResource("2_pwyfd")
 playerID = 1
+move_left = "move_left1"
+move_right = "move_right1"
+move_up = "move_up1"
+move_down = "move_down1"
+action = "player1"
 
 [node name="Sprite" type="Sprite2D" parent="mouse_player1" unique_id=2000843942]
 z_index = 4096

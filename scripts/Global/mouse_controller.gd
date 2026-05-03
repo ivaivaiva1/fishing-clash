@@ -10,12 +10,7 @@ func _ready() -> void:
 	mouse_global.move_up = "main_mouse_up"
 	mouse_global.move_down = "main_mouse_down"
 	mouse_global.action = "main_mouse_action"
-	
-	mouse1.move_left = "main_mouse_left"
-	mouse1.move_right = "main_mouse_right"
-	mouse1.move_up = "main_mouse_up"
-	mouse1.move_down = "main_mouse_down"
-	mouse1.action = "main_mouse_action"
+
 
 
 
