@@ -15,8 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://dkvcby5ccnqaj" path="res://sky_test/Clouds.png" id="10_dinhu"]
 [ext_resource type="Script" uid="uid://2yj540ysy547" path="res://scripts/Player/boat_clone.gd" id="11_ca42v"]
 [ext_resource type="Texture2D" uid="uid://dfrqtdtraoj7h" path="res://artes joao/13-04-2026/icon_girl.png" id="13_5newe"]
-[ext_resource type="PackedScene" uid="uid://cel27empameku" path="res://scenes/treasure.tscn" id="17_rysoc"]
+[ext_resource type="FontFile" uid="uid://jftlu6i4v8kh" path="res://fonts/madspixel/madspixel.ttf" id="17_1kice"]
+[ext_resource type="LabelSettings" uid="uid://uqdlbglqj00m" path="res://fonts/label_settings/time_labell.tres" id="18_1kice"]
 [ext_resource type="Texture2D" uid="uid://ciqfy2c46yt0y" path="res://SpearFishing Assets Pack/Sprites/SawShark - 48x32/SawShark.png" id="18_ssvqc"]
+[ext_resource type="Material" uid="uid://bwut1xhhmnakq" path="res://addons/flowerwall_crt/shaders/crt_shader.material" id="19_264po"]
 [ext_resource type="Script" uid="uid://bv08l4gt2jmvq" path="res://scripts/clone_boats.gd" id="21_5newe"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gee14"]
@@ -39,9 +41,6 @@ size = Vector2(49, 64)
 
 [sub_resource type="LabelSettings" id="LabelSettings_trtic"]
 font_size = 21
-
-[sub_resource type="LabelSettings" id="LabelSettings_ca42v"]
-font_size = 20
 
 [node name="game" type="Node2D" unique_id=760273511]
 
@@ -68,15 +67,16 @@ position = Vector2(0, -28.099174)
 
 [node name="mar fundo" type="Sprite2D" parent="decoration" unique_id=1899638409]
 z_index = -4000
-position = Vector2(305.57584, 319.86685)
-scale = Vector2(1.097579, 0.6534357)
+position = Vector2(305.57584, 327.13956)
+scale = Vector2(1.097579, 0.6761629)
 texture = ExtResource("4_1kice")
 
 [node name="sky" type="Sprite2D" parent="decoration" unique_id=1468820924]
 z_index = -4096
-position = Vector2(381.35583, -47.316612)
+position = Vector2(185.12051, -57.740135)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("10_dinhu")
+flip_h = true
 flip_v = true
 
 [node name="Whiteblocks" type="Node2D" parent="decoration" unique_id=474212957]
@@ -199,10 +199,10 @@ scale = Vector2(0.045, 0.045)
 [node name="WaterDistortion2" type="ColorRect" parent="water_shader" unique_id=781337332]
 z_index = 1000
 material = SubResource("ShaderMaterial_gee14")
-offset_left = -44.76999
-offset_top = 81.99173
-offset_right = 583.56006
-offset_bottom = 555.9211
+offset_left = -29.130035
+offset_top = 85.71173
+offset_right = 599.2001
+offset_bottom = 559.6411
 
 [node name="limits" type="Node2D" parent="." unique_id=1792116995]
 position = Vector2(-14, -56.099174)
@@ -312,14 +312,15 @@ position = Vector2(978, 92.90082)
 texture = ExtResource("4_lbhrr")
 
 [node name="BLACK COLOR RECTS" type="ColorRect" parent="." unique_id=1340791473]
-z_index = 2000
-offset_left = -174.7245
-offset_top = -15.046787
+z_index = 4000
+offset_left = -227.52449
+offset_top = -23.84679
 offset_right = 0.10499573
-offset_bottom = 499.91812
+offset_bottom = 518.61804
 color = Color(0, 0, 0, 1)
 
 [node name="PLAYER1INFO" type="ColorRect" parent="BLACK COLOR RECTS" unique_id=664119518]
+visible = false
 layout_mode = 0
 offset_left = -0.728302
 offset_top = 38.441254
@@ -362,6 +363,7 @@ scale = Vector2(0.10549085, 0.10549084)
 texture = ExtResource("4_264po")
 
 [node name="PLAYER3INFO" type="ColorRect" parent="BLACK COLOR RECTS" unique_id=1991480297]
+visible = false
 layout_mode = 0
 offset_left = -0.728302
 offset_top = 343.39993
@@ -404,14 +406,15 @@ scale = Vector2(0.10549085, 0.10549084)
 texture = ExtResource("4_264po")
 
 [node name="BLACK COLOR RECTS2" type="ColorRect" parent="." unique_id=1627553549]
-z_index = 2000
+z_index = 4000
 offset_left = 540.3882
-offset_top = -14.966049
-offset_right = 715.52576
-offset_bottom = 501.51514
+offset_top = -38.06604
+offset_right = 750.7257
+offset_bottom = 518.01514
 color = Color(0, 0, 0, 1)
 
 [node name="PLAYER2INFO" type="ColorRect" parent="BLACK COLOR RECTS2" unique_id=595410992]
+visible = false
 layout_mode = 0
 offset_left = 0.4790039
 offset_top = 38.360516
@@ -454,6 +457,7 @@ scale = Vector2(0.10549085, 0.10549084)
 texture = ExtResource("4_264po")
 
 [node name="PLAYER4INFO" type="ColorRect" parent="BLACK COLOR RECTS2" unique_id=1648810501]
+visible = false
 layout_mode = 0
 offset_left = 0.4790039
 offset_top = 346.62497
@@ -497,16 +501,25 @@ texture = ExtResource("4_264po")
 
 [node name="game_countdown" type="Label" parent="." unique_id=1392337292]
 unique_name_in_owner = true
-offset_left = 496.69427
-offset_top = -18.181824
-offset_right = 542.6943
-offset_bottom = 13.818176
+offset_left = 488.47546
+offset_top = -10.612228
+offset_right = 534.47546
+offset_bottom = 21.387772
+theme_override_fonts/font = ExtResource("17_1kice")
 text = "2:30"
-label_settings = SubResource("LabelSettings_ca42v")
-
-[node name="Treasure" parent="." unique_id=1190474615 instance=ExtResource("17_rysoc")]
-position = Vector2(444, 501)
+label_settings = ExtResource("18_1kice")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="SawShark" type="Sprite2D" parent="." unique_id=1554914359]
 position = Vector2(972.45215, 259.3752)
 texture = ExtResource("18_ssvqc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=874511029]
+visible = false
+z_index = 3500
+material = ExtResource("19_264po")
+offset_left = -0.60257244
+offset_top = -16.1617
+offset_right = 540.5069
+offset_bottom = 501.2938

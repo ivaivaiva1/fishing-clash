@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://uqdlbglqj00m"]
+
+[ext_resource type="FontFile" uid="uid://jftlu6i4v8kh" path="res://fonts/madspixel/madspixel.ttf" id="1_6c2jb"]
+
+[resource]
+font = ExtResource("1_6c2jb")
+font_size = 23
+outline_size = 4
+outline_color = Color(0.7, 0, 0, 0.5882353)

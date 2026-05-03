@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Fishing Clash"
-run/main_scene="uid://bknv18ju232se"
+run/main_scene="uid://ebbi0lca86e4"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -35,6 +35,10 @@ window/size/viewport_width=889
 window/size/viewport_height=500
 window/size/mode=3
 window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/flowerwall_crt/plugin.cfg")
 
 [global_group]
 
