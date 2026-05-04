@@ -16,7 +16,7 @@ var red_rain = false
 
 
 var min_bubble_time: float = 0.1
-var max_bubble_time: float = 50
+var max_bubble_time: float = 25
 @onready var time_to_bubble: float = randf_range(min_bubble_time, max_bubble_time)
 @onready var bubble_timer: float = time_to_bubble
 

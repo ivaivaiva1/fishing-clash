@@ -2,6 +2,9 @@ extends Node2D
 
 @onready var mouse_global: MouseObject = %mouse_global
 @onready var mouse1: MouseObject = %mouse_player1
+@onready var mouse2: MouseObject = %mouse_player2
+@onready var mouse3: MouseObject = %mouse_player3
+@onready var mouse4: MouseObject = %mouse_player4
 
 
 func _ready() -> void:
@@ -21,6 +24,12 @@ func set_mouse_visible(mouseID: int, pos: Vector2 = Vector2.ZERO):
 			setup_mouse = mouse_global
 		1:
 			setup_mouse = mouse1
+		2:
+			setup_mouse = mouse2
+		3:
+			setup_mouse = mouse3
+		4:
+			setup_mouse = mouse4
 	setup_mouse.visible = true
 	setup_mouse.is_active = true
 	if pos != Vector2.ZERO:
@@ -33,3 +42,9 @@ func set_mouse_invisible(mouseID: int):
 			mouse_global.visible = false
 		1:
 			mouse1.visible = false
+		2:
+			mouse2.visible = false
+		3:
+			mouse3.visible = false
+		4:
+			mouse4.visible = false

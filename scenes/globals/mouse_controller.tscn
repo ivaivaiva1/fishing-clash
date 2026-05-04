@@ -42,6 +42,11 @@ position = Vector2(256.19614, 213.03232)
 motion_mode = 1
 script = ExtResource("2_pwyfd")
 playerID = 2
+move_left = "move_left2"
+move_right = "move_right2"
+move_up = "move_up2"
+move_down = "move_down2"
+action = "player2"
 
 [node name="Sprite" type="Sprite2D" parent="mouse_player2" unique_id=1450759481]
 z_index = 4096
@@ -56,6 +61,11 @@ position = Vector2(288.5027, 212.28098)
 motion_mode = 1
 script = ExtResource("2_pwyfd")
 playerID = 3
+move_left = "move_left3"
+move_right = "move_right3"
+move_up = "move_up3"
+move_down = "move_down3"
+action = "player3"
 
 [node name="Sprite" type="Sprite2D" parent="mouse_player3" unique_id=1114994718]
 z_index = 4096
@@ -70,6 +80,11 @@ position = Vector2(319.30658, 213.03232)
 motion_mode = 1
 script = ExtResource("2_pwyfd")
 playerID = 4
+move_left = "move_left4"
+move_right = "move_right4"
+move_up = "move_up4"
+move_down = "move_down4"
+action = "player4"
 
 [node name="Sprite" type="Sprite2D" parent="mouse_player4" unique_id=470961062]
 z_index = 4096

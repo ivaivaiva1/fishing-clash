@@ -30,7 +30,7 @@ speed = 8.0
 auto_destruction_timer = 100.0
 peso = 0.267
 points = 100.0
-effect_size = 2.0
+effect_size = 1.8
 
 [node name="AnimatedSprite2DCERTA" type="AnimatedSprite2D" parent="." unique_id=2119729240]
 unique_name_in_owner = true

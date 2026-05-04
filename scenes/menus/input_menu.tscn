@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bknv18ju232se"]
 
 [ext_resource type="PackedScene" uid="uid://c3f5y7yjwasc6" path="res://scenes/globals/mouse_controller.tscn" id="1_ot5a1"]
+[ext_resource type="Script" uid="uid://dptqo30hj8o5j" path="res://scripts/Menus/input_menu.gd" id="1_p3qlj"]
 [ext_resource type="PackedScene" uid="uid://vrilx056bv7u" path="res://scenes/menus/player_creator.tscn" id="2_p10e2"]
 
 [sub_resource type="SystemFont" id="SystemFont_ot5a1"]
@@ -14,6 +15,7 @@ font_size = 20
 offset_right = 889.0
 offset_bottom = 500.0
 color = Color(0, 0, 0, 1)
+script = ExtResource("1_p3qlj")
 
 [node name="MouseController" parent="." unique_id=722373602 instance=ExtResource("1_ot5a1")]
 
@@ -40,3 +42,26 @@ vertical_alignment = 1
 
 [node name="PlayerCreator" parent="menu_world" unique_id=1338901768 instance=ExtResource("2_p10e2")]
 layout_mode = 1
+
+[node name="PlayerCreator2" parent="menu_world" unique_id=83461649 instance=ExtResource("2_p10e2")]
+layout_mode = 1
+offset_left = -1.3309937
+offset_top = -46.858063
+offset_right = -1.3309937
+offset_bottom = -46.858063
+ID = 2
+input_event_names = Array[String](["move_left2", "move_up2", "move_right2", "move_down2", "player2"])
+
+[node name="PlayerCreator3" parent="menu_world" unique_id=1012119075 instance=ExtResource("2_p10e2")]
+layout_mode = 1
+offset_top = 63.61502
+offset_bottom = 63.61502
+ID = 3
+input_event_names = Array[String](["move_left3", "move_up3", "move_right3", "move_down3", "player3"])
+
+[node name="PlayerCreator4" parent="menu_world" unique_id=348050458 instance=ExtResource("2_p10e2")]
+layout_mode = 1
+offset_top = 176.75003
+offset_bottom = 176.75003
+ID = 4
+input_event_names = Array[String](["move_left4", "move_up4", "move_right4", "move_down4", "player4"])

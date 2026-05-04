@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://ciqfy2c46yt0y" path="res://SpearFishing Assets Pack/Sprites/SawShark - 48x32/SawShark.png" id="18_ssvqc"]
 [ext_resource type="Material" uid="uid://bwut1xhhmnakq" path="res://addons/flowerwall_crt/shaders/crt_shader.material" id="19_264po"]
 [ext_resource type="Script" uid="uid://bv08l4gt2jmvq" path="res://scripts/clone_boats.gd" id="21_5newe"]
+[ext_resource type="Shader" uid="uid://c0idmiaxt0rmg" path="res://shaders/crt_joao.gdshader" id="21_37s47"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gee14"]
 shader = ExtResource("7_gee14")
@@ -41,6 +42,23 @@ size = Vector2(49, 64)
 
 [sub_resource type="LabelSettings" id="LabelSettings_trtic"]
 font_size = 21
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bt5mj"]
+shader = ExtResource("21_37s47")
+shader_parameter/resolution = Vector2(270, 250)
+shader_parameter/scan_line_amount = 1.0
+shader_parameter/warp_amount = 0.10000000475
+shader_parameter/noise_amount = 0.03
+shader_parameter/interference_amount = 0.2
+shader_parameter/grille_amount = 0.0
+shader_parameter/grille_size = 1.0
+shader_parameter/vignette_amount = 0.0
+shader_parameter/vignette_intensity = 0.0
+shader_parameter/aberation_amount = 0.5
+shader_parameter/roll_line_amount = 0.0250000011875
+shader_parameter/roll_speed = 1.0
+shader_parameter/scan_line_strength = -8.0
+shader_parameter/pixel_strength = -2.0
 
 [node name="game" type="Node2D" unique_id=760273511]
 
@@ -197,7 +215,7 @@ scale = Vector2(0.045, 0.045)
 [node name="water_shader" type="Node2D" parent="." unique_id=1224380565]
 
 [node name="WaterDistortion2" type="ColorRect" parent="water_shader" unique_id=781337332]
-z_index = 1000
+z_index = 3700
 material = SubResource("ShaderMaterial_gee14")
 offset_left = -29.130035
 offset_top = 85.71173
@@ -517,9 +535,18 @@ texture = ExtResource("18_ssvqc")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=874511029]
 visible = false
-z_index = 3500
+z_index = 3800
 material = ExtResource("19_264po")
 offset_left = -0.60257244
 offset_top = -16.1617
 offset_right = 540.5069
 offset_bottom = 501.2938
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1326496909]
+visible = false
+z_index = 3500
+material = SubResource("ShaderMaterial_bt5mj")
+offset_left = -0.60257244
+offset_top = -15.252604
+offset_right = 540.5069
+offset_bottom = 485.58066

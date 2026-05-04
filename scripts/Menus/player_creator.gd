@@ -1,4 +1,5 @@
 extends Control
+class_name PlayerCreator
 
 var device_id: int = 0
 @export var ID: int
@@ -127,12 +128,12 @@ func set_notJoin_state():
 	rebind_panel.visible = false
 	MouseController.set_mouse_invisible(ID)
 
-
+ 
 func set_rebind_state():
 	status = State.BINDING
 	actual_rebind_key = 0
 	text_rebind_current_key.text = "HOLD TO BIND - LEFT"
-	MouseController.set_mouse_invisible(1)
+	MouseController.set_mouse_invisible(ID)
 	joined_panel.visible = false
 	rebind_panel.visible = true
 
