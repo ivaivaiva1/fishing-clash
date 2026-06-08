@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c3f5y7yjwasc6"]
 
 [ext_resource type="Script" uid="uid://hn8x8dbnwpi3" path="res://scripts/Global/mouse_controller.gd" id="1_k3gg1"]
-[ext_resource type="PackedScene" uid="uid://ciu4i4wmw23k7" path="res://scenes/misc/mouse.tscn" id="2_43nyw"]
+[ext_resource type="PackedScene" uid="uid://ciu4i4wmw23k7" path="res://_scenes/misc/mouse.tscn" id="2_43nyw"]
 [ext_resource type="Script" uid="uid://dbxajgbjg8f34" path="res://scripts/Misc/mouse_object.gd" id="2_pwyfd"]
 [ext_resource type="Texture2D" uid="uid://dkv4yd0b4av11" path="res://artes joao/player_arrows/seta azul.png" id="4_pwyfd"]
 [ext_resource type="Texture2D" uid="uid://c4ghpc7851ycl" path="res://artes joao/player_arrows/seta vermelha.png" id="5_rqxi1"]

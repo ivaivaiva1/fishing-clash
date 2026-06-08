@@ -1,4 +1,5 @@
 extends Node2D
+class_name Bubble
 
 @onready var sprite: AnimatedSprite2D = %Sprite
 @onready var auto_destruction_position: float = randf_range(120, 130)
@@ -10,15 +11,8 @@ func _process(delta: float) -> void:
 	if global_position.y < auto_destruction_position:
 		destroy_bubble()
 
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	if !is_alive: return
-	if(area.is_in_group("bait")):
-		destroy_bubble()
-	
-	if(area.is_in_group("shark")):
-		destroy_bubble()
-
 
 func destroy_bubble():
+	if !is_alive: return
 	is_alive = false
 	sprite.play("kabum")

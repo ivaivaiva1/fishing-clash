@@ -1,55 +1,51 @@
 [gd_scene format=3 uid="uid://dyruejh301o1y"]
 
-[ext_resource type="Script" uid="uid://cvdrx3lifgqm0" path="res://scripts/Effects/vertical_basic_movement.gd" id="1_rp7jw"]
-[ext_resource type="Texture2D" uid="uid://qb5owawq05gt" path="res://SpearFishing Assets Pack/Sprites/Bubble - 8x8.png" id="1_ul437"]
-[ext_resource type="Script" uid="uid://btqnq0i37wfd6" path="res://scripts/Effects/bubble.gd" id="3_h2k0n"]
-[ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://scripts/Effects/sea_zigzag.gd" id="4_3q6iy"]
+[ext_resource type="Script" uid="uid://cvdrx3lifgqm0" path="res://scripts/Effects/vertical_basic_movement.gd" id="1_bk5m0"]
+[ext_resource type="Texture2D" uid="uid://qb5owawq05gt" path="res://SpearFishing Assets Pack/Sprites/Bubble - 8x8.png" id="2_6h5b0"]
+[ext_resource type="Script" uid="uid://btqnq0i37wfd6" path="res://scripts/Effects/bubble.gd" id="3_3jkn6"]
+[ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://scripts/Effects/sea_zigzag.gd" id="4_crspo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h2k0n"]
 radius = 3.0621638
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_37s47"]
-atlas = ExtResource("1_ul437")
+atlas = ExtResource("2_6h5b0")
 region = Rect2(0, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bt5mj"]
-atlas = ExtResource("1_ul437")
+atlas = ExtResource("2_6h5b0")
 region = Rect2(8, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e1j6l"]
-atlas = ExtResource("1_ul437")
+atlas = ExtResource("2_6h5b0")
 region = Rect2(16, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pl11u"]
-atlas = ExtResource("1_ul437")
+atlas = ExtResource("2_6h5b0")
 region = Rect2(24, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bhx41"]
-atlas = ExtResource("1_ul437")
-region = Rect2(32, 0, 8, 8)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h2k0n"]
-atlas = ExtResource("1_ul437")
+atlas = ExtResource("2_6h5b0")
 region = Rect2(32, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3q6iy"]
-atlas = ExtResource("1_ul437")
+atlas = ExtResource("2_6h5b0")
 region = Rect2(40, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pr0sg"]
-atlas = ExtResource("1_ul437")
+atlas = ExtResource("2_6h5b0")
 region = Rect2(48, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1a1bq"]
-atlas = ExtResource("1_ul437")
+atlas = ExtResource("2_6h5b0")
 region = Rect2(56, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hfcrw"]
-atlas = ExtResource("1_ul437")
+atlas = ExtResource("2_6h5b0")
 region = Rect2(64, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6etcm"]
-atlas = ExtResource("1_ul437")
+atlas = ExtResource("2_6h5b0")
 region = Rect2(72, 0, 8, 8)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qnb83"]
@@ -76,9 +72,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h2k0n")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_3q6iy")
 }, {
 "duration": 1.0,
@@ -99,26 +92,27 @@ animations = [{
 }]
 
 [node name="Bubble" type="CharacterBody2D" unique_id=165428783]
-script = ExtResource("1_rp7jw")
+script = ExtResource("1_bk5m0")
 min_speed = -31.111
 max_speed = -70.0
 is_up = true
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1649370032]
+[node name="Area2D" type="Area2D" parent="." unique_id=1649370032 groups=["bubble"]]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1059167146]
 shape = SubResource("CircleShape2D_h2k0n")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1735948944]
 unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.6666667)
 z_as_relative = false
 sprite_frames = SubResource("SpriteFrames_qnb83")
 autoplay = "default"
 
-[node name="bubble_script" type="Node2D" parent="." unique_id=1367413273]
-script = ExtResource("3_h2k0n")
+[node name="bubble_behaviour" type="Node2D" parent="." unique_id=1367413273]
+script = ExtResource("3_3jkn6")
 
 [node name="sea_zigzag" type="Node2D" parent="." unique_id=1542819117]
-script = ExtResource("4_3q6iy")
-
-[connection signal="area_entered" from="Area2D" to="bubble_script" method="_on_area_2d_area_entered"]
+script = ExtResource("4_crspo")
+zigzag_distance = 3.0

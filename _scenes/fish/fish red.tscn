@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dy5jp3gig3bp8"]
 
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_wamdd"]
-[ext_resource type="PackedScene" uid="uid://dymjc3rwm5np6" path="res://scenes/effects/fish_collect_effect.tscn" id="2_q6l0k"]
+[ext_resource type="PackedScene" uid="uid://dymjc3rwm5np6" path="res://_scenes/effects/fish_collect_effect.tscn" id="2_q6l0k"]
 [ext_resource type="Texture2D" uid="uid://oxc2xlbgd8xw" path="res://artes joao/07-06-2026/peixe_dorado_v2.png" id="3_q6l0k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5cg8j"]
@@ -93,7 +93,7 @@ autoplay = "default"
 frame_progress = 0.23528624
 flip_h = true
 
-[node name="Area2D" type="Area2D" parent="." unique_id=654270335]
+[node name="Area2D" type="Area2D" parent="." unique_id=654270335 groups=["fish"]]
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1010580157]
@@ -120,7 +120,5 @@ position = Vector2(14, 3)
 unique_name_in_owner = true
 visible = false
 position = Vector2(-14, 3)
-
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 
 [editable path="fish_collect_effect"]

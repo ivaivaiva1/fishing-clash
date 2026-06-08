@@ -1,8 +1,8 @@
 extends Node
 
-var effect_scene: PackedScene = preload("res://scenes/effects/fish_collect_effect.tscn")
-var bubble_scene: PackedScene = preload("res://scenes/effects/bubble.tscn")
-var collected_coin_scene: PackedScene = preload("res://scenes/effects/collected_coin.tscn")
+var effect_scene: PackedScene = preload("res://_scenes/effects/fish_collect_effect.tscn")
+var bubble_scene: PackedScene = preload("res://_scenes/effects/bubble.tscn")
+var collected_coin_scene: PackedScene = preload("res://_scenes/effects/collected_coin.tscn")
 var fish_spawner: Node2D
 
 func spawn_effect(target_pos: Vector2, target_scale: float):

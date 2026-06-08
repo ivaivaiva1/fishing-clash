@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cfndbycwksrlk"]
 
-[ext_resource type="PackedScene" uid="uid://cpddqal215nxs" path="res://scenes/fish blue.tscn" id="1_kta4m"]
+[ext_resource type="PackedScene" uid="uid://cpddqal215nxs" path="res://_scenes/fish/fish blue.tscn" id="1_kta4m"]
 
 [node name="Node2D" type="Node2D" unique_id=885637917]
 

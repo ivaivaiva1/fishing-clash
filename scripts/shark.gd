@@ -70,6 +70,14 @@ func _on_body_area_area_entered(area: Area2D) -> void:
 		if(bait.points != 0):
 			bait.reset()
 	
+	if area.is_in_group("bubble"):
+		var bubble: Bubble
+		for child in area.get_parent().get_children():
+			if child is Bubble:
+				bubble = child as Bubble
+				break
+		bubble.destroy_bubble()
+	
 	if(area.is_in_group("shark_limit_left")):
 		if(!moving_right):
 			moving_right = true

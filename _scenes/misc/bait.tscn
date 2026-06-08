@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3t4xw41cxb2n"]
 
 [ext_resource type="Script" uid="uid://dn2m2bg4gmlh8" path="res://scripts/bait.gd" id="1_er5pq"]
-[ext_resource type="PackedScene" uid="uid://c7qt0ej6xtmqc" path="res://scenes/effects/coin_falling.tscn" id="2_5nkbj"]
+[ext_resource type="PackedScene" uid="uid://c7qt0ej6xtmqc" path="res://_scenes/effects/coin_falling.tscn" id="2_5nkbj"]
 [ext_resource type="Shader" uid="uid://dltsjnvd5v5sk" path="res://shaders/shake.gdshader" id="3_yu7fc"]
 [ext_resource type="Texture2D" uid="uid://bfknudkvo2ya4" path="res://artes joao/14.04.26/isca/isca 2.png" id="4_xr7ih"]
 [ext_resource type="Texture2D" uid="uid://dsctslp8amwa2" path="res://artes joao/yellow fish.png" id="5_ra083"]
@@ -391,6 +391,7 @@ unique_name_in_owner = true
 script = ExtResource("10_7j41f")
 
 [node name="magnetic_behaviour" type="Node2D" parent="." unique_id=295445068]
+visible = false
 script = ExtResource("11_5nkbj")
 
 [node name="magnetic_area" type="Area2D" parent="magnetic_behaviour" unique_id=135874261]
@@ -400,4 +401,5 @@ position = Vector2(7.9215126, -2.786106)
 position = Vector2(0, 11.9061775)
 shape = SubResource("CircleShape2D_er5pq")
 
+[connection signal="area_entered" from="BaitArea" to="." method="_on_bait_area_area_entered"]
 [connection signal="area_entered" from="magnetic_behaviour/magnetic_area" to="magnetic_behaviour" method="_on_magnetic_area_area_entered"]

@@ -171,4 +171,4 @@ func update_keys_preview():
 
 
 func _on_ready_button_button_down() -> void:
-	get_tree().change_scene_to_file("res://scenes/game.tscn")
+	get_tree().change_scene_to_file("res://_scenes/game.tscn")

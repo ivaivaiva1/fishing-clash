@@ -43,6 +43,8 @@ window/stretch/mode="canvas_items"
 player=""
 shark=""
 coin=""
+fish=""
+bubble=""
 
 [input]
 

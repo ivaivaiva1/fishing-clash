@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_n6yr6"]
 [ext_resource type="Texture2D" uid="uid://bsw56ryji4eos" path="res://artes joao/13-04-2026/peixe_contorno_azul.png" id="3_ggbtn"]
-[ext_resource type="PackedScene" uid="uid://dymjc3rwm5np6" path="res://scenes/effects/fish_collect_effect.tscn" id="3_vviqw"]
+[ext_resource type="PackedScene" uid="uid://dymjc3rwm5np6" path="res://_scenes/effects/fish_collect_effect.tscn" id="3_vviqw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mfa2l"]
 atlas = ExtResource("3_ggbtn")
@@ -92,7 +92,7 @@ autoplay = "default"
 frame_progress = 0.064137176
 flip_h = true
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1835001192]
+[node name="Area2D" type="Area2D" parent="." unique_id=1835001192 groups=["fish"]]
 visible = false
 position = Vector2(0.5, 10.25)
 
@@ -116,7 +116,5 @@ position = Vector2(16, 4)
 [node name="bubble_leftPos" type="Marker2D" parent="." unique_id=954388905]
 unique_name_in_owner = true
 position = Vector2(-16, 4)
-
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 
 [editable path="fish_collect_effect"]

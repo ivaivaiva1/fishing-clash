@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://c7qt0ej6xtmqc"]
+
+[ext_resource type="Script" uid="uid://cvdrx3lifgqm0" path="res://scripts/Effects/vertical_basic_movement.gd" id="1_r7d8p"]
+[ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://shaders/blink.gdshader" id="2_nmbro"]
+[ext_resource type="Texture2D" uid="uid://b2x6im0m3h30j" path="res://artes joao/14.04.26/coin/Coin brown.png" id="3_nmbro"]
+[ext_resource type="Script" uid="uid://0t372l32f4di" path="res://scripts/Misc/coin_behaviour.gd" id="4_h1iv5"]
+[ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://scripts/Effects/sea_zigzag.gd" id="5_dv2fo"]
+[ext_resource type="Texture2D" uid="uid://gok3wms5rh5r" path="res://artes joao/14.04.26/coin/Coin dark brown.png" id="6_psiw4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4njp1"]
+shader = ExtResource("2_nmbro")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_pct = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_keamy"]
+radius = 6.58933
+
+[node name="coin_falling" type="CharacterBody2D" unique_id=30085995]
+script = ExtResource("1_r7d8p")
+max_pos_y = 800.0
+min_speed = 20.0
+max_speed = 50.0
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=402700216]
+unique_name_in_owner = true
+z_index = -13
+material = SubResource("ShaderMaterial_4njp1")
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("6_psiw4")
+hframes = 6
+
+[node name="Area2D" type="Area2D" parent="." unique_id=948127719 groups=["coin"]]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1063616410]
+shape = SubResource("CircleShape2D_keamy")
+
+[node name="coin_behaviour" type="Node2D" parent="." unique_id=433791429]
+script = ExtResource("4_h1iv5")
+
+[node name="sea_zigzag" type="Node2D" parent="." unique_id=1168285474]
+script = ExtResource("5_dv2fo")
+zigzag_distance = 3.0
+zigzag_time = 1.0
+
+[node name="CoinBrown" type="Sprite2D" parent="." unique_id=1233432916]
+visible = false
+position = Vector2(20.622185, 7.280754)
+texture = ExtResource("3_nmbro")
+
+[node name="CoinDarkBrown" type="Sprite2D" parent="." unique_id=591608420]
+visible = false
+position = Vector2(15.476543, 22.717224)
+texture = ExtResource("6_psiw4")

@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://ebbi0lca86e4"]
 
-[ext_resource type="PackedScene" uid="uid://c1fnyt64wu0b1" path="res://scenes/shark.tscn" id="1_gee14"]
-[ext_resource type="PackedScene" uid="uid://cpddqal215nxs" path="res://scenes/fish blue.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://c1fnyt64wu0b1" path="res://_scenes/shark.tscn" id="1_gee14"]
+[ext_resource type="PackedScene" uid="uid://cpddqal215nxs" path="res://_scenes/fish/fish blue.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://co4hvliqg3q3y" path="res://scripts/Global/game_manager.gd" id="2_ir15t"]
-[ext_resource type="PackedScene" uid="uid://bb6ifiejbxjb7" path="res://scenes/player.tscn" id="2_trtic"]
-[ext_resource type="PackedScene" uid="uid://by4oxgbthjk4u" path="res://scenes/big_fish.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://bb6ifiejbxjb7" path="res://_scenes/player.tscn" id="2_trtic"]
+[ext_resource type="PackedScene" uid="uid://by4oxgbthjk4u" path="res://_scenes/fish/big_fish.tscn" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://cr57ww4x28u4n" path="res://scripts/fish_spawner.gd" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cq4o85mwl4g24" path="res://artes joao/player_icon png.png" id="3_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://cpjcbme3mfnnl" path="res://artes joao/mar fundo 2.png" id="4_1kice"]
 [ext_resource type="Texture2D" uid="uid://b2f2rmiut0qmt" path="res://artes joao/trophy.png" id="4_264po"]
 [ext_resource type="Texture2D" uid="uid://bjgivjbi6ryan" path="res://SpearFishing Assets Pack/Sprite names.png" id="4_lbhrr"]
 [ext_resource type="Shader" uid="uid://dftd0pk6ql231" path="res://shaders/water_distortion.gdshader" id="7_gee14"]
-[ext_resource type="PackedScene" uid="uid://dy5jp3gig3bp8" path="res://scenes/fish red.tscn" id="7_ir15t"]
+[ext_resource type="PackedScene" uid="uid://dy5jp3gig3bp8" path="res://_scenes/fish/fish red.tscn" id="7_ir15t"]
 [ext_resource type="Texture2D" uid="uid://dkvcby5ccnqaj" path="res://sky_test/Clouds.png" id="10_dinhu"]
 [ext_resource type="Script" uid="uid://2yj540ysy547" path="res://scripts/Player/boat_clone.gd" id="11_ca42v"]
 [ext_resource type="Texture2D" uid="uid://dfrqtdtraoj7h" path="res://artes joao/13-04-2026/icon_girl.png" id="13_5newe"]
@@ -588,7 +588,9 @@ position = Vector2(686, 197)
 shape = SubResource("RectangleShape2D_e1j6l")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=937120604]
-position = Vector2(270, 235.59882)
+position = Vector2(270, 238)
+zoom = Vector2(0.9, 0.9)
+limit_enabled = false
 
 [node name="shark" parent="." unique_id=2121875249 instance=ExtResource("1_gee14")]
 unique_name_in_owner = true
@@ -601,18 +603,18 @@ texture = ExtResource("4_lbhrr")
 
 [node name="BLACK COLOR RECTS" type="ColorRect" parent="." unique_id=1340791473]
 z_index = 4000
-offset_left = -227.52449
-offset_top = -19.446796
-offset_right = 0.10499573
-offset_bottom = 523.01807
+offset_left = -352.52448
+offset_top = -192.14679
+offset_right = 0.10498047
+offset_bottom = 751.7105
 color = Color(0, 0, 0, 1)
 
 [node name="PLAYER1INFO" type="ColorRect" parent="BLACK COLOR RECTS" unique_id=664119518]
 layout_mode = 0
-offset_left = 52.546738
-offset_top = 38.441254
-offset_right = 226.92485
-offset_bottom = 78.151245
+offset_left = 147.04774
+offset_top = 231.43625
+offset_right = 321.42587
+offset_bottom = 271.14624
 color = Color(0, 0, 0, 1)
 
 [node name="PlayerIconPng" type="Sprite2D" parent="BLACK COLOR RECTS/PLAYER1INFO" unique_id=246572327]
@@ -695,17 +697,17 @@ texture = ExtResource("4_264po")
 [node name="BLACK COLOR RECTS2" type="ColorRect" parent="." unique_id=1627553549]
 z_index = 4000
 offset_left = 540.3882
-offset_top = -24.429672
-offset_right = 750.7257
-offset_bottom = 531.6515
+offset_top = -188.7017
+offset_right = 879.7257
+offset_bottom = 742.62836
 color = Color(0, 0, 0, 1)
 
 [node name="PLAYER2INFO" type="ColorRect" parent="BLACK COLOR RECTS2" unique_id=595410992]
 layout_mode = 0
-offset_left = 0.4790039
-offset_top = 38.360516
-offset_right = 174.85712
-offset_bottom = 78.07051
+offset_left = 19.113037
+offset_top = 239.34154
+offset_right = 193.49115
+offset_bottom = 279.05154
 color = Color(0, 0, 0, 1)
 
 [node name="PlayerIconPng" type="Sprite2D" parent="BLACK COLOR RECTS2/PLAYER2INFO" unique_id=2665651]

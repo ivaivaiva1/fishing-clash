@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Fish
 
 @export var fish_name: String
 @export var speed: float
@@ -16,7 +17,7 @@ var red_rain = false
 
 
 var min_bubble_time: float = 0.1
-var max_bubble_time: float = 40
+var max_bubble_time: float = 30
 @onready var time_to_bubble: float = randf_range(min_bubble_time, max_bubble_time)
 @onready var bubble_timer: float = time_to_bubble
 
@@ -66,17 +67,9 @@ func _physics_process(delta):
 
 
 
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	if(area.is_in_group("bait")):
-		var bait: Bait = area.get_parent()
-		if(bait.bait_state == "treasure"): return
-		bait.get_fish(fish_name, peso, points)
-		spawn_catch_effect()
-		queue_free()
-
-
 func spawn_catch_effect():
 	var spawn_pos: Vector2
 	if move_right: spawn_pos = right_effectPos.global_position
 	else: spawn_pos = left_effectPos.global_position
 	EffectSpawner.spawn_effect(spawn_pos, effect_size)
+	queue_free()

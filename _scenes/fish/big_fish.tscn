@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_5lic5"]
 [ext_resource type="Texture2D" uid="uid://cm3ncltwjl2k4" path="res://artes joao/07-06-2026/peixe_grande_v2.png" id="2_mc6go"]
-[ext_resource type="PackedScene" uid="uid://dymjc3rwm5np6" path="res://scenes/effects/fish_collect_effect.tscn" id="3_mc6go"]
+[ext_resource type="PackedScene" uid="uid://dymjc3rwm5np6" path="res://_scenes/effects/fish_collect_effect.tscn" id="3_mc6go"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1tbou"]
 atlas = ExtResource("2_mc6go")
@@ -88,7 +88,7 @@ autoplay = "default"
 frame_progress = 0.6152615
 flip_h = true
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1186832392]
+[node name="Area2D" type="Area2D" parent="." unique_id=1186832392 groups=["fish"]]
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=304766951]
@@ -116,7 +116,5 @@ position = Vector2(15, 9)
 unique_name_in_owner = true
 visible = false
 position = Vector2(-15, 9)
-
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 
 [editable path="right_effectPos/fish_collect_effect"]

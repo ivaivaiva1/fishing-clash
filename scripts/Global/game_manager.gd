@@ -28,7 +28,7 @@ var player4: Player
 var round_duration: float = 180
 var game_timer: float = 0
 var _time_accumulator: float = 0.0
-@onready var treasure_scene: PackedScene = load("res://scenes/treasure.tscn")
+@onready var treasure_scene: PackedScene = load("res://_scenes/treasure.tscn")
 
 
 func _ready() -> void:

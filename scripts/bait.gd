@@ -248,3 +248,29 @@ func chest_feedback():
 		treasure_mat.set_shader_parameter("amplitude", 0.0)
 		bait_mat.set_shader_parameter("amplitude", 0.0)
 	)
+
+
+func _on_bait_area_area_entered(area: Area2D) -> void:
+	if bait_state == "treasure": return
+	if area.is_in_group("fish"):
+		var fish: Fish = area.get_parent() as Fish 
+		get_fish(fish.fish_name, fish.peso, fish.points)
+		fish.spawn_catch_effect()
+	
+	if area.is_in_group("bubble"):
+		var bubble: Bubble
+		for child in area.get_parent().get_children():
+			if child is Bubble:
+				bubble = child as Bubble
+				break
+		bubble.destroy_bubble()
+	
+	if(area.is_in_group("coin")):
+		var coin: FallingCoin
+		for child in area.get_parent().get_children():
+			if child is FallingCoin:
+				coin = child as FallingCoin
+				break
+		if !coin.is_alive: return
+		player.add_points(coin.points)
+		coin.is_collected()
