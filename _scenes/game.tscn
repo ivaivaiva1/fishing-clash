@@ -19,7 +19,10 @@
 [ext_resource type="LabelSettings" uid="uid://uqdlbglqj00m" path="res://fonts/label_settings/time_labell.tres" id="18_1kice"]
 [ext_resource type="Texture2D" uid="uid://ciqfy2c46yt0y" path="res://SpearFishing Assets Pack/Sprites/SawShark - 48x32/SawShark.png" id="18_ssvqc"]
 [ext_resource type="Script" uid="uid://bv08l4gt2jmvq" path="res://scripts/clone_boats.gd" id="21_5newe"]
+[ext_resource type="Texture2D" uid="uid://c3h3qlpysqio8" path="res://Sprites/GRAFXKID/Tropics/_Complete_static_BG_(288 x 208).png" id="21_5rvci"]
 [ext_resource type="Shader" uid="uid://c0idmiaxt0rmg" path="res://shaders/crt_joao.gdshader" id="21_37s47"]
+[ext_resource type="Texture2D" uid="uid://x0glq3m2m7jv" path="res://Sprites/GRAFXKID/Tropics/4 - Background_clouds.png" id="22_aght6"]
+[ext_resource type="Texture2D" uid="uid://dkpesntnrp5ug" path="res://Sprites/GRAFXKID/Tropics/3 - Floating_clouds.png" id="23_w7lom"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gee14"]
 shader = ExtResource("7_gee14")
@@ -358,6 +361,7 @@ scale = Vector2(1.097579, 0.6761629)
 texture = ExtResource("4_1kice")
 
 [node name="sky" type="Sprite2D" parent="decoration" unique_id=1468820924]
+visible = false
 z_index = -4096
 position = Vector2(185.12051, -57.740135)
 scale = Vector2(0.2, 0.2)
@@ -603,10 +607,10 @@ texture = ExtResource("4_lbhrr")
 
 [node name="BLACK COLOR RECTS" type="ColorRect" parent="." unique_id=1340791473]
 z_index = 4000
-offset_left = -352.52448
-offset_top = -192.14679
+offset_left = -209.59259
+offset_top = -53.405777
 offset_right = 0.10498047
-offset_bottom = 751.7105
+offset_bottom = 492.78027
 color = Color(0.12225223, 0.12225223, 0.12225223, 1)
 
 [node name="PLAYER1INFO" type="ColorRect" parent="BLACK COLOR RECTS" unique_id=664119518]
@@ -698,9 +702,9 @@ texture = ExtResource("4_264po")
 [node name="BLACK COLOR RECTS2" type="ColorRect" parent="." unique_id=1627553549]
 z_index = 4000
 offset_left = 540.3882
-offset_top = -188.7017
-offset_right = 879.7257
-offset_bottom = 742.62836
+offset_top = -51.88469
+offset_right = 754.4785
+offset_bottom = 497.1761
 color = Color(0.12225223, 0.12225223, 0.12225223, 1)
 
 [node name="PLAYER2INFO" type="ColorRect" parent="BLACK COLOR RECTS2" unique_id=595410992]
@@ -795,7 +799,7 @@ offset_left = -95.86774
 offset_top = -46.280975
 offset_right = 554.876
 offset_bottom = 116.03305
-color = Color(0.6509804, 0.6117647, 0.5137255, 1)
+color = Color(0.18431373, 0.73333335, 1, 1)
 
 [node name="game_countdown" type="Label" parent="." unique_id=1392337292]
 unique_name_in_owner = true
@@ -830,3 +834,21 @@ offset_left = -0.60257244
 offset_top = -15.252604
 offset_right = 540.5069
 offset_bottom = 485.58066
+
+[node name="CompleteStaticBg(288X208)" type="Sprite2D" parent="." unique_id=1355908832]
+z_index = -4096
+position = Vector2(229.31232, -500.04037)
+scale = Vector2(2.2455661, 2.2455661)
+texture = ExtResource("21_5rvci")
+
+[node name="4BackgroundClouds" type="Sprite2D" parent="." unique_id=536658208]
+z_index = -4080
+position = Vector2(268.49268, 29.161354)
+rotation = 3.1415927
+scale = Vector2(1.8866041, 1.8866038)
+texture = ExtResource("22_aght6")
+
+[node name="3FloatingClouds" type="Sprite2D" parent="." unique_id=1137145952]
+position = Vector2(267.56274, -13.731842)
+scale = Vector2(2.040282, 2.0402818)
+texture = ExtResource("23_w7lom")

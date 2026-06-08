@@ -102,10 +102,44 @@ func _on_body_area_area_entered(area: Area2D) -> void:
 		sprite.flip_h = false
 		MEME_SHARK()
 	
+	if area.is_in_group("bubble"):
+		var bubble: Bubble
+		for child in area.get_parent().get_children():
+			if child is Bubble:
+				bubble = child as Bubble
+				break
+		bubble.destroy_bubble()
+	
+	
 	if(area.is_in_group("fish_on_bait")):
 		var bait: Bait = area.get_parent()
 		if(bait.points != 0):
 			bait.reset()
+			start_attack()
+			spawn_blood()
+
+
+@onready var mouth_right_top: Marker2D = %"mouth-right-top"
+@onready var mouth_right_bottom: Marker2D = %"mouth-right-bottom"
+@onready var mouth_left_top: Marker2D = %"mouth-left-top"
+@onready var mouth_left_bottom: Marker2D = %"mouth-left-bottom"
+func spawn_blood():
+	var blood_pos: Vector2
+	var need_flip: bool
+	if sprite.flip_h && sprite.flip_v:
+		blood_pos = mouth_left_top.global_position
+		need_flip = true
+	elif sprite.flip_h && !sprite.flip_v:
+		blood_pos = mouth_left_bottom.global_position
+		need_flip = false
+	elif !sprite.flip_h && sprite.flip_v:
+		blood_pos = mouth_right_top.global_position
+		need_flip = true
+	elif !sprite.flip_h && !sprite.flip_v:
+		blood_pos = mouth_right_bottom.global_position
+		need_flip = false
+	EffectSpawner.spawn_default_effect(EffectSpawner.DEFAULT_EFFECTS.BLOOD, blood_pos, need_flip)
+
 
 
 
@@ -126,10 +160,10 @@ func lerp_speed(delta: float) -> void:
 
 
 var was_flipedV: bool = false
-var chance_flipV: float = 10
+var chance_flipV: float = 5
 var chance_flipV_again: float = 50
 var was_flipedH: bool = false
-var chance_flipH: float = 10
+var chance_flipH: float = 5
 var chance_flipH_again: float = 50
 func MEME_SHARK():
 	var V_chance: float

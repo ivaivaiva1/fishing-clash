@@ -231,4 +231,20 @@ position = Vector2(1.5000012, 1.5000012)
 scale = Vector2(1.9531252, 1.9531252)
 texture = ExtResource("4_f40hg")
 
+[node name="mouth-right-bottom" type="Marker2D" parent="." unique_id=1726904531]
+unique_name_in_owner = true
+position = Vector2(23, 10)
+
+[node name="mouth-right-top" type="Marker2D" parent="." unique_id=1564150993]
+unique_name_in_owner = true
+position = Vector2(23, -10)
+
+[node name="mouth-left-top" type="Marker2D" parent="." unique_id=167728124]
+unique_name_in_owner = true
+position = Vector2(-23, -10)
+
+[node name="mouth-left-bottom" type="Marker2D" parent="." unique_id=371769003]
+unique_name_in_owner = true
+position = Vector2(-23, 10)
+
 [connection signal="area_entered" from="body_area" to="." method="_on_body_area_area_entered"]
