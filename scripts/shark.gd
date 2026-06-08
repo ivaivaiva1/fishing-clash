@@ -10,10 +10,11 @@ var attack_timer: float = 0
 var attack_duration: float = 5
 var moving_right: bool = true
 var is_resting_cooldown = 3
-var is_resting_timer = 0
+var is_resting_timer = -100
 
 
 func _process(delta):
+	anim_handler()
 	if(is_resting_timer > 0):
 		is_resting_timer -= delta
 	
@@ -39,7 +40,6 @@ func attack():
 
 func stop_attack():
 	is_resting_timer = is_resting_cooldown
-	sprite.play("default")
 	speed = 20
 	is_attack = false
 
@@ -48,11 +48,20 @@ func re_start():
 	global_position = Vector2(-66, 138.901)
 
 
-func _on_vision_area_area_entered(area: Area2D) -> void:
+func _on_vision_area_area_entered(area: Area2D) -> void:             
 	if(area.is_in_group("fish_on_bait")):
 		var bait: Bait = area.get_parent()
 		if(bait.points != 0):
 			attack()
+
+func anim_handler():
+	if is_attack == false:
+		if is_resting_timer < 0:
+			sprite.play("default")
+		else:
+			sprite.play("resting")
+	else:
+		sprite.play("attack")
 
 
 func _on_body_area_area_entered(area: Area2D) -> void:

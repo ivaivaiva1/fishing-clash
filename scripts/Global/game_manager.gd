@@ -3,7 +3,7 @@ class_name GameManager
 
 var game_state: String = "menu"
 @onready var FishSpawner_intance: FishSpawner = %Fish_Spawner
-@onready var Shark: Shark = %shark
+#@onready var Shark: Shark = %shark
 @export var player_scene: PackedScene
 var player1: Player
 var player2: Player
@@ -114,7 +114,7 @@ func start_game():
 	GlobalVars.player2_money = 0
 	
 	FishSpawner_intance.remove_all_fish()
-	Shark.re_start()
+	#Shark.re_start()
 	#press_to_play.visible = false
 	money_1_label.visible = true
 	money_2_label.visible = true

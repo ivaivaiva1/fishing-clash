@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_wamdd"]
 [ext_resource type="PackedScene" uid="uid://dymjc3rwm5np6" path="res://scenes/effects/fish_collect_effect.tscn" id="2_q6l0k"]
-[ext_resource type="Texture2D" uid="uid://cm1v1eckelor1" path="res://artes joao/13-04-2026/peixe_laranja_detahesAmarelos.png" id="3_q6l0k"]
+[ext_resource type="Texture2D" uid="uid://oxc2xlbgd8xw" path="res://artes joao/07-06-2026/peixe_dorado_v2.png" id="3_q6l0k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5cg8j"]
 atlas = ExtResource("3_q6l0k")
@@ -65,7 +65,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 12.0
+"speed": 15.0
 }]
 
 [node name="fish red" type="CharacterBody2D" unique_id=1611043718]
@@ -90,7 +90,7 @@ position = Vector2(-5.684342e-14, -2.842171e-14)
 scale = Vector2(1.345, 1.345)
 sprite_frames = SubResource("SpriteFrames_4gy1e")
 autoplay = "default"
-frame_progress = 0.6115139
+frame_progress = 0.23528624
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=654270335]

@@ -1,21 +1,67 @@
 [gd_scene format=3 uid="uid://by4oxgbthjk4u"]
 
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_5lic5"]
-[ext_resource type="Texture2D" uid="uid://ekb8e45huigt" path="res://artes joao/14.04.26/peixe_grande/peixe_grande cinza.png" id="2_vgydp"]
+[ext_resource type="Texture2D" uid="uid://cm3ncltwjl2k4" path="res://artes joao/07-06-2026/peixe_grande_v2.png" id="2_mc6go"]
 [ext_resource type="PackedScene" uid="uid://dymjc3rwm5np6" path="res://scenes/effects/fish_collect_effect.tscn" id="3_mc6go"]
-[ext_resource type="Texture2D" uid="uid://nx0qayphrr3f" path="res://artes joao/peixe grande amarelo.png" id="4_1tbou"]
-[ext_resource type="Texture2D" uid="uid://kyw0qpjw7nvc" path="res://artes joao/peixe grande cinza.png" id="5_yk56t"]
-[ext_resource type="Texture2D" uid="uid://d2bnhcej6b8fb" path="res://artes joao/peixe grande marrom.png" id="6_vgydp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tbou"]
+atlas = ExtResource("2_mc6go")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yk56t"]
+atlas = ExtResource("2_mc6go")
+region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgydp"]
-atlas = ExtResource("2_vgydp")
-region = Rect2(64, 0, 64, 64)
+atlas = ExtResource("2_mc6go")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afv3a"]
+atlas = ExtResource("2_mc6go")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5s586"]
+atlas = ExtResource("2_mc6go")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6irr0"]
+atlas = ExtResource("2_mc6go")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4prg2"]
+atlas = ExtResource("2_mc6go")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5if3"]
+atlas = ExtResource("2_mc6go")
+region = Rect2(192, 64, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jrlim"]
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_1tbou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yk56t")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_vgydp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afv3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5s586")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6irr0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4prg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5if3")
 }],
 "loop": true,
 "name": &"default",
@@ -31,17 +77,6 @@ auto_destruction_timer = 100.0
 peso = 0.267
 points = 100.0
 effect_size = 1.8
-
-[node name="AnimatedSprite2DCERTA" type="AnimatedSprite2D" parent="." unique_id=2119729240]
-unique_name_in_owner = true
-visible = false
-z_as_relative = false
-position = Vector2(1, 0)
-scale = Vector2(1.7, 1.7)
-sprite_frames = SubResource("SpriteFrames_jrlim")
-autoplay = "default"
-frame_progress = 0.6152615
-flip_h = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=720800471]
 unique_name_in_owner = true
@@ -81,33 +116,6 @@ position = Vector2(15, 9)
 unique_name_in_owner = true
 visible = false
 position = Vector2(-15, 9)
-
-[node name="PeixeGrandeAmarelo" type="Sprite2D" parent="." unique_id=771482798]
-visible = false
-position = Vector2(2, 1)
-scale = Vector2(1.785, 1.785)
-texture = ExtResource("4_1tbou")
-flip_h = true
-hframes = 4
-vframes = 3
-
-[node name="PeixeGrandeCinza" type="Sprite2D" parent="." unique_id=879112702]
-visible = false
-position = Vector2(2, 1)
-scale = Vector2(1.785, 1.785)
-texture = ExtResource("5_yk56t")
-flip_h = true
-hframes = 4
-vframes = 3
-
-[node name="PeixeGrandeMarrom" type="Sprite2D" parent="." unique_id=1846054439]
-visible = false
-position = Vector2(2, 1)
-scale = Vector2(1.785, 1.785)
-texture = ExtResource("6_vgydp")
-flip_h = true
-hframes = 4
-vframes = 3
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 
