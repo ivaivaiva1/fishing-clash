@@ -588,8 +588,8 @@ position = Vector2(686, 197)
 shape = SubResource("RectangleShape2D_e1j6l")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=937120604]
-position = Vector2(270, 238)
-zoom = Vector2(0.9, 0.9)
+position = Vector2(270, 220)
+zoom = Vector2(0.95, 0.95)
 limit_enabled = false
 
 [node name="shark" parent="." unique_id=2121875249 instance=ExtResource("1_gee14")]
@@ -607,9 +607,10 @@ offset_left = -352.52448
 offset_top = -192.14679
 offset_right = 0.10498047
 offset_bottom = 751.7105
-color = Color(0, 0, 0, 1)
+color = Color(0.12225223, 0.12225223, 0.12225223, 1)
 
 [node name="PLAYER1INFO" type="ColorRect" parent="BLACK COLOR RECTS" unique_id=664119518]
+visible = false
 layout_mode = 0
 offset_left = 147.04774
 offset_top = 231.43625
@@ -700,9 +701,10 @@ offset_left = 540.3882
 offset_top = -188.7017
 offset_right = 879.7257
 offset_bottom = 742.62836
-color = Color(0, 0, 0, 1)
+color = Color(0.12225223, 0.12225223, 0.12225223, 1)
 
 [node name="PLAYER2INFO" type="ColorRect" parent="BLACK COLOR RECTS2" unique_id=595410992]
+visible = false
 layout_mode = 0
 offset_left = 19.113037
 offset_top = 239.34154
@@ -787,12 +789,20 @@ position = Vector2(56.285904, 64.22458)
 scale = Vector2(0.10549085, 0.10549084)
 texture = ExtResource("4_264po")
 
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1347254917]
+z_index = -4090
+offset_left = -95.86774
+offset_top = -46.280975
+offset_right = 554.876
+offset_bottom = 116.03305
+color = Color(0.6509804, 0.6117647, 0.5137255, 1)
+
 [node name="game_countdown" type="Label" parent="." unique_id=1392337292]
 unique_name_in_owner = true
-offset_left = 488.47546
-offset_top = -10.612228
-offset_right = 534.47546
-offset_bottom = 21.387772
+offset_left = 489.78125
+offset_top = -41.515556
+offset_right = 535.78125
+offset_bottom = -9.515556
 theme_override_fonts/font = ExtResource("17_1kice")
 text = "2:30"
 label_settings = ExtResource("18_1kice")
@@ -803,7 +813,7 @@ vertical_alignment = 1
 position = Vector2(972.45215, 259.3752)
 texture = ExtResource("18_ssvqc")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=874511029]
+[node name="CRT 1" type="ColorRect" parent="." unique_id=874511029]
 visible = false
 z_index = 3800
 material = SubResource("ShaderMaterial_5newe")
@@ -812,7 +822,7 @@ offset_top = -16.1617
 offset_right = 540.5069
 offset_bottom = 501.2938
 
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=1326496909]
+[node name="CRT 2" type="ColorRect" parent="." unique_id=1326496909]
 visible = false
 z_index = 3500
 material = SubResource("ShaderMaterial_bt5mj")

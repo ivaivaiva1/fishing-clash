@@ -65,7 +65,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 10.0
+"speed": 8.0
 }]
 
 [node name="big_fish" type="CharacterBody2D" unique_id=759476320]

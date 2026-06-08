@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c7qt0ej6xtmqc" path="res://_scenes/effects/coin_falling.tscn" id="2_5nkbj"]
 [ext_resource type="Shader" uid="uid://dltsjnvd5v5sk" path="res://shaders/shake.gdshader" id="3_yu7fc"]
 [ext_resource type="Texture2D" uid="uid://bfknudkvo2ya4" path="res://artes joao/14.04.26/isca/isca 2.png" id="4_xr7ih"]
-[ext_resource type="Texture2D" uid="uid://dsctslp8amwa2" path="res://artes joao/yellow fish.png" id="5_ra083"]
+[ext_resource type="Texture2D" uid="uid://oxc2xlbgd8xw" path="res://artes joao/07-06-2026/peixe_dorado_v2.png" id="5_up2ac"]
 [ext_resource type="Texture2D" uid="uid://cxp8gjpeue570" path="res://artes joao/blue fish.png" id="6_psogv"]
 [ext_resource type="Texture2D" uid="uid://hfnspc7q7u8g" path="res://artes joao/peixe_grande meio termo.png" id="7_kjkng"]
 [ext_resource type="Texture2D" uid="uid://cw54xs24pb6u0" path="res://artes joao/bau_contorno_preto.png" id="8_chrn6"]
@@ -29,40 +29,68 @@ size = Vector2(14, 25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bt5mj"]
 size = Vector2(43, 54)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oprun"]
-atlas = ExtResource("5_ra083")
-region = Rect2(0, 0, 1024, 1024)
+[sub_resource type="AtlasTexture" id="AtlasTexture_up2ac"]
+atlas = ExtResource("5_up2ac")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a8ls1"]
-atlas = ExtResource("5_ra083")
-region = Rect2(1024, 0, 1024, 1024)
+[sub_resource type="AtlasTexture" id="AtlasTexture_xq470"]
+atlas = ExtResource("5_up2ac")
+region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i4ail"]
-atlas = ExtResource("5_ra083")
-region = Rect2(2048, 0, 1024, 1024)
+[sub_resource type="AtlasTexture" id="AtlasTexture_usgw0"]
+atlas = ExtResource("5_up2ac")
+region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a38lo"]
-atlas = ExtResource("5_ra083")
-region = Rect2(3072, 0, 1024, 1024)
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6hk6"]
+atlas = ExtResource("5_up2ac")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rhwt"]
+atlas = ExtResource("5_up2ac")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opc6d"]
+atlas = ExtResource("5_up2ac")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0aa1"]
+atlas = ExtResource("5_up2ac")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slnsi"]
+atlas = ExtResource("5_up2ac")
+region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v2yb1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oprun")
+"texture": SubResource("AtlasTexture_up2ac")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a8ls1")
+"texture": SubResource("AtlasTexture_xq470")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i4ail")
+"texture": SubResource("AtlasTexture_usgw0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a38lo")
+"texture": SubResource("AtlasTexture_o6hk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rhwt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opc6d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0aa1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slnsi")
 }],
 "loop": true,
 "name": &"default",
-"speed": 20.0
+"speed": 30.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qfm1y"]
@@ -98,7 +126,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 20.0
+"speed": 25.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ni07"]
@@ -165,9 +193,9 @@ radius = 49.839355
 
 [node name="bait" type="CharacterBody2D" unique_id=2134355700 node_paths=PackedStringArray("blue_fish_list", "red_fish_list", "golden_fish_list")]
 script = ExtResource("1_er5pq")
-blue_fish_list = [NodePath("blue fishs/blue_fish 1"), NodePath("blue fishs/blue_fish 2"), NodePath("blue fishs/blue_fish 3"), NodePath("blue fishs/blue_fish 4"), NodePath("blue fishs/blue_fish 5")]
-red_fish_list = [NodePath("red fishs/red_fish 0"), NodePath("red fishs/red_fish 1"), NodePath("red fishs/red_fish 2"), NodePath("red fishs/red_fish 3"), NodePath("red fishs/red_fish 4")]
-golden_fish_list = [NodePath("golden fish/golden_fish 1"), NodePath("golden fish/golden_fish 2")]
+blue_fish_list = [NodePath("blue fishs/blue_fish 1"), NodePath("blue fishs/blue_fish 2"), NodePath("blue fishs/blue_fish 3"), NodePath("blue fishs/blue_fish 4"), NodePath("blue fishs/blue_fish 5"), NodePath("blue fishs/blue_fish 6"), NodePath("blue fishs/blue_fish 7")]
+red_fish_list = [NodePath("red fishs/red_fish 0"), NodePath("red fishs/red_fish 1"), NodePath("red fishs/red_fish 2"), NodePath("red fishs/red_fish 3"), NodePath("red fishs/red_fish 4"), NodePath("red fishs/red_fish 5"), NodePath("red fishs/red_fish 6")]
+golden_fish_list = [NodePath("golden fish/golden_fish 1"), NodePath("golden fish/golden_fish 2"), NodePath("golden fish/golden_fish 3"), NodePath("golden fish/golden_fish 4"), NodePath("golden fish/golden_fish 5")]
 coin_scene = ExtResource("2_5nkbj")
 
 [node name="BaitSprite" type="Sprite2D" parent="." unique_id=1060581669]
@@ -215,13 +243,25 @@ shape = SubResource("RectangleShape2D_bt5mj")
 
 [node name="red fishs" type="Node2D" parent="." unique_id=965937025]
 
+[node name="red_fish 5" type="AnimatedSprite2D" parent="red fishs" unique_id=713090534]
+unique_name_in_owner = true
+visible = false
+z_index = -5
+position = Vector2(0.7741127, 17.74672)
+rotation = -1.44862
+scale = Vector2(1.345, 1.345)
+sprite_frames = SubResource("SpriteFrames_v2yb1")
+autoplay = "default"
+frame_progress = 0.765977
+flip_h = true
+
 [node name="red_fish 3" type="AnimatedSprite2D" parent="red fishs" unique_id=55660886]
 unique_name_in_owner = true
 visible = false
 z_index = -5
-position = Vector2(2.6908493, 20.375563)
+position = Vector2(3.4543877, 17.858397)
 rotation = -1.44862
-scale = Vector2(0.04, 0.04)
+scale = Vector2(1.345, 1.345)
 sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
 frame_progress = 0.765977
@@ -231,9 +271,9 @@ flip_h = true
 unique_name_in_owner = true
 visible = false
 z_index = -5
-position = Vector2(4.6908493, 20.375563)
+position = Vector2(6.041725, 17.858398)
 rotation = -1.51844
-scale = Vector2(0.04, 0.04)
+scale = Vector2(1.345, 1.345)
 sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
 frame_progress = 0.765977
@@ -243,9 +283,9 @@ flip_h = true
 unique_name_in_owner = true
 visible = false
 z_index = -5
-position = Vector2(7.6908493, 20.375563)
+position = Vector2(8.706104, 17.606682)
 rotation = -1.5708
-scale = Vector2(0.04, 0.04)
+scale = Vector2(1.345, 1.345)
 sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
 frame_progress = 0.0951693
@@ -255,9 +295,9 @@ flip_h = true
 unique_name_in_owner = true
 visible = false
 z_index = -5
-position = Vector2(10.690849, 20.375563)
+position = Vector2(11.370483, 17.606684)
 rotation = -1.62316
-scale = Vector2(0.04, 0.04)
+scale = Vector2(1.345, 1.345)
 sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
 frame_progress = 0.716382
@@ -267,9 +307,21 @@ flip_h = true
 unique_name_in_owner = true
 visible = false
 z_index = -5
-position = Vector2(13.690889, 20.375563)
+position = Vector2(14.202711, 17.606684)
 rotation = -1.69297
-scale = Vector2(0.04, 0.04)
+scale = Vector2(1.345, 1.345)
+sprite_frames = SubResource("SpriteFrames_v2yb1")
+autoplay = "default"
+frame_progress = 0.716382
+flip_h = true
+
+[node name="red_fish 6" type="AnimatedSprite2D" parent="red fishs" unique_id=1113077453]
+unique_name_in_owner = true
+visible = false
+z_index = -5
+position = Vector2(16.659636, 17.495005)
+rotation = -1.69297
+scale = Vector2(1.345, 1.345)
 sprite_frames = SubResource("SpriteFrames_v2yb1")
 autoplay = "default"
 frame_progress = 0.716382
@@ -277,11 +329,23 @@ flip_h = true
 
 [node name="blue fishs" type="Node2D" parent="." unique_id=1324939844]
 
+[node name="blue_fish 6" type="AnimatedSprite2D" parent="blue fishs" unique_id=2060143790]
+unique_name_in_owner = true
+visible = false
+z_index = -6
+position = Vector2(-0.27907753, 18.203793)
+rotation = -1.44862
+scale = Vector2(0.041, 0.041)
+sprite_frames = SubResource("SpriteFrames_pl11u")
+autoplay = "default"
+frame_progress = 0.0103795
+flip_h = true
+
 [node name="blue_fish 4" type="AnimatedSprite2D" parent="blue fishs" unique_id=2089138627]
 unique_name_in_owner = true
 visible = false
 z_index = -6
-position = Vector2(-0.6801472, 25.477802)
+position = Vector2(1.9544847, 18.538826)
 rotation = -1.44862
 scale = Vector2(0.041, 0.041)
 sprite_frames = SubResource("SpriteFrames_pl11u")
@@ -293,7 +357,7 @@ flip_h = true
 unique_name_in_owner = true
 visible = false
 z_index = -6
-position = Vector2(2.3198488, 25.477802)
+position = Vector2(4.7866726, 18.62273)
 rotation = -1.51844
 scale = Vector2(0.041, 0.041)
 sprite_frames = SubResource("SpriteFrames_pl11u")
@@ -306,7 +370,7 @@ flip_h = true
 unique_name_in_owner = true
 visible = false
 z_index = -6
-position = Vector2(6.3198485, 25.477802)
+position = Vector2(7.6119933, 18.371014)
 rotation = -1.5708
 scale = Vector2(0.041, 0.041)
 sprite_frames = SubResource("SpriteFrames_pl11u")
@@ -318,7 +382,7 @@ flip_h = true
 unique_name_in_owner = true
 visible = false
 z_index = -6
-position = Vector2(9.319849, 25.477802)
+position = Vector2(9.940748, 18.287107)
 rotation = -1.62316
 scale = Vector2(0.041, 0.041)
 sprite_frames = SubResource("SpriteFrames_pl11u")
@@ -330,7 +394,19 @@ flip_h = true
 unique_name_in_owner = true
 visible = false
 z_index = -6
-position = Vector2(13.319899, 25.477802)
+position = Vector2(12.850031, 18.454918)
+rotation = -1.69297
+scale = Vector2(0.041, 0.041)
+sprite_frames = SubResource("SpriteFrames_pl11u")
+autoplay = "default"
+frame_progress = 0.0103795
+flip_h = true
+
+[node name="blue_fish 7" type="AnimatedSprite2D" parent="blue fishs" unique_id=86682245]
+unique_name_in_owner = true
+visible = false
+z_index = -6
+position = Vector2(15.195276, 18.343239)
 rotation = -1.69297
 scale = Vector2(0.041, 0.041)
 sprite_frames = SubResource("SpriteFrames_pl11u")
@@ -340,13 +416,37 @@ flip_h = true
 
 [node name="golden fish" type="Node2D" parent="." unique_id=1293734848]
 
+[node name="golden_fish 5" type="AnimatedSprite2D" parent="golden fish" unique_id=329191062]
+unique_name_in_owner = true
+visible = false
+z_index = -7
+position = Vector2(4.3690147, 23.565866)
+rotation = -1.5184364
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_8ool0")
+autoplay = "default"
+frame_progress = 0.474755
+flip_h = true
+
+[node name="golden_fish 3" type="AnimatedSprite2D" parent="golden fish" unique_id=925077407]
+unique_name_in_owner = true
+visible = false
+z_index = -7
+position = Vector2(6.801373, 23.700998)
+rotation = -1.5358897
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_8ool0")
+autoplay = "default"
+frame_progress = 0.474755
+flip_h = true
+
 [node name="golden_fish 1" type="AnimatedSprite2D" parent="golden fish" unique_id=9614436]
 unique_name_in_owner = true
 visible = false
 z_index = -7
-position = Vector2(1.0789454, 34.531082)
+position = Vector2(8.585827, 23.701)
 rotation = -1.5708
-scale = Vector2(1.7, 1.7)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_8ool0")
 autoplay = "default"
 frame_progress = 0.048093878
@@ -356,9 +456,21 @@ flip_h = true
 unique_name_in_owner = true
 visible = false
 z_index = -7
-position = Vector2(9.078945, 35.281082)
-rotation = -1.5708
-scale = Vector2(1.7, 1.7)
+position = Vector2(10.37508, 23.701408)
+rotation = -1.6057029
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_8ool0")
+autoplay = "default"
+frame_progress = 0.474755
+flip_h = true
+
+[node name="golden_fish 4" type="AnimatedSprite2D" parent="golden fish" unique_id=874942851]
+unique_name_in_owner = true
+visible = false
+z_index = -7
+position = Vector2(12.309345, 23.566277)
+rotation = -1.6231562
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_8ool0")
 autoplay = "default"
 frame_progress = 0.474755
