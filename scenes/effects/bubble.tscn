@@ -72,7 +72,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -113,10 +113,7 @@ shape = SubResource("CircleShape2D_h2k0n")
 unique_name_in_owner = true
 z_as_relative = false
 sprite_frames = SubResource("SpriteFrames_qnb83")
-animation = &"kabum"
 autoplay = "default"
-frame = 5
-frame_progress = 1.0
 
 [node name="bubble_script" type="Node2D" parent="." unique_id=1367413273]
 script = ExtResource("3_h2k0n")
