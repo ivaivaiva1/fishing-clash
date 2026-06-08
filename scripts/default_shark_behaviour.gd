@@ -4,7 +4,7 @@ var shark_state: SHARK_STATE = SHARK_STATE.IDLE
 
 @onready var actual_speed: float = shark_speed
 @onready var target_speed: float = shark_speed
-var shark_speed: float = 150
+var shark_speed: float = 30
 var attack_speed: float = 150
 var rest_speed: float = 10
 var dir: int = 1

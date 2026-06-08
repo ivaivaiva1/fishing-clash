@@ -16,7 +16,7 @@ var red_rain = false
 
 
 var min_bubble_time: float = 0.1
-var max_bubble_time: float = 25
+var max_bubble_time: float = 40
 @onready var time_to_bubble: float = randf_range(min_bubble_time, max_bubble_time)
 @onready var bubble_timer: float = time_to_bubble
 
@@ -28,8 +28,8 @@ func _ready():
 		#sprite.flip_h = true
 	if(fish_name != "red"): 
 		speed = randf_range(speed * 0.8, speed * 1.2)
-	else:
-		if red_rain: speed *= 2
+	#else:
+		#if red_rain: speed *= 2
 	
 	sprite.z_index = randi_range(0, 10)
 	

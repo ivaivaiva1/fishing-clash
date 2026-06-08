@@ -33,6 +33,7 @@ MouseController="*uid://c3f5y7yjwasc6"
 
 window/size/viewport_width=889
 window/size/viewport_height=500
+window/size/mode=2
 window/size/window_width_override=1245
 window/size/window_height_override=700
 window/stretch/mode="canvas_items"

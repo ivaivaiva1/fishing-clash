@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cvdrx3lifgqm0" path="res://scripts/Effects/vertical_basic_movement.gd" id="1_rp7jw"]
 [ext_resource type="Texture2D" uid="uid://qb5owawq05gt" path="res://SpearFishing Assets Pack/Sprites/Bubble - 8x8.png" id="1_ul437"]
 [ext_resource type="Script" uid="uid://btqnq0i37wfd6" path="res://scripts/Effects/bubble.gd" id="3_h2k0n"]
+[ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://scripts/Effects/sea_zigzag.gd" id="4_3q6iy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h2k0n"]
 radius = 3.0621638
@@ -119,5 +120,8 @@ frame_progress = 1.0
 
 [node name="bubble_script" type="Node2D" parent="." unique_id=1367413273]
 script = ExtResource("3_h2k0n")
+
+[node name="sea_zigzag" type="Node2D" parent="." unique_id=1542819117]
+script = ExtResource("4_3q6iy")
 
 [connection signal="area_entered" from="Area2D" to="bubble_script" method="_on_area_2d_area_entered"]
