@@ -1,16 +1,3 @@
 [gd_scene format=3 uid="uid://rf525567qb5"]
 
-[ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://shaders/blink.gdshader" id="1_8063w"]
-[ext_resource type="Texture2D" uid="uid://er1gawmvh04k" path="res://artes joao/07-06-2026/star.png" id="1_sc2ho"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_cpoxr"]
-shader = ExtResource("1_8063w")
-shader_parameter/flash_color = Color(1, 1, 1, 1)
-shader_parameter/flash_pct = 1.0
-
 [node name="star_effect" type="Node2D" unique_id=844242831]
-
-[node name="Star" type="Sprite2D" parent="." unique_id=79930944]
-material = SubResource("ShaderMaterial_cpoxr")
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_sc2ho")

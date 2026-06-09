@@ -14,18 +14,17 @@
 [ext_resource type="PackedScene" uid="uid://dy5jp3gig3bp8" path="res://_scenes/fish/fish red.tscn" id="7_ir15t"]
 [ext_resource type="Texture2D" uid="uid://dkvcby5ccnqaj" path="res://sky_test/Clouds.png" id="10_dinhu"]
 [ext_resource type="Script" uid="uid://2yj540ysy547" path="res://scripts/Player/boat_clone.gd" id="11_ca42v"]
-[ext_resource type="PackedScene" uid="uid://rf525567qb5" path="res://_scenes/effects/star_effect.tscn" id="11_w7lom"]
 [ext_resource type="Texture2D" uid="uid://dfrqtdtraoj7h" path="res://artes joao/13-04-2026/icon_girl.png" id="13_5newe"]
 [ext_resource type="FontFile" uid="uid://jftlu6i4v8kh" path="res://fonts/madspixel/madspixel.ttf" id="17_1kice"]
 [ext_resource type="LabelSettings" uid="uid://uqdlbglqj00m" path="res://fonts/label_settings/time_labell.tres" id="18_1kice"]
 [ext_resource type="Texture2D" uid="uid://ciqfy2c46yt0y" path="res://SpearFishing Assets Pack/Sprites/SawShark - 48x32/SawShark.png" id="18_ssvqc"]
 [ext_resource type="Script" uid="uid://bv08l4gt2jmvq" path="res://scripts/clone_boats.gd" id="21_5newe"]
-[ext_resource type="Texture2D" uid="uid://c3h3qlpysqio8" path="res://Sprites/GRAFXKID/Tropics/_Complete_static_BG_(288 x 208).png" id="21_5rvci"]
 [ext_resource type="Shader" uid="uid://biug62tv1oe0q" path="res://shaders/color_limitation.gdshader" id="21_gkrq6"]
 [ext_resource type="Texture2D" uid="uid://x0glq3m2m7jv" path="res://Sprites/GRAFXKID/Tropics/4 - Background_clouds.png" id="22_aght6"]
+[ext_resource type="Shader" uid="uid://bimqhb28ph5g" path="res://shaders/quasepretoEbranco.gdshader" id="23_gkrq6"]
 [ext_resource type="Texture2D" uid="uid://dkpesntnrp5ug" path="res://Sprites/GRAFXKID/Tropics/3 - Floating_clouds.png" id="23_w7lom"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_gee14"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w7lom"]
 shader = ExtResource("7_gee14")
 shader_parameter/frequency = 8.0
 shader_parameter/intensity = 0.005
@@ -49,9 +48,12 @@ font_size = 21
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2lena"]
 shader = ExtResource("21_gkrq6")
 shader_parameter/red_levels = 5
-shader_parameter/green_levels = 10
+shader_parameter/green_levels = 12
 shader_parameter/blue_levels = 5
-shader_parameter/saturation = 1.0
+shader_parameter/saturation = 1.5000000712500001
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lx0f2"]
+shader = ExtResource("23_gkrq6")
 
 [node name="game" type="Node2D" unique_id=760273511]
 
@@ -210,44 +212,11 @@ scale = Vector2(0.045, 0.045)
 
 [node name="WaterDistortion2" type="ColorRect" parent="water_shader" unique_id=781337332]
 z_index = 3700
-material = SubResource("ShaderMaterial_gee14")
+material = SubResource("ShaderMaterial_w7lom")
 offset_left = -29.130035
 offset_top = 85.71173
 offset_right = 599.2001
 offset_bottom = 559.6411
-
-[node name="star_effect" parent="water_shader" unique_id=844242831 instance=ExtResource("11_w7lom")]
-position = Vector2(108.69557, 183.0287)
-
-[node name="star_effect2" parent="water_shader" unique_id=1802927673 instance=ExtResource("11_w7lom")]
-position = Vector2(239.42435, 151.4735)
-
-[node name="star_effect3" parent="water_shader" unique_id=1751046354 instance=ExtResource("11_w7lom")]
-position = Vector2(351.37027, 210.82736)
-
-[node name="star_effect4" parent="water_shader" unique_id=1503472801 instance=ExtResource("11_w7lom")]
-position = Vector2(193.5942, 284.45624)
-
-[node name="star_effect5" parent="water_shader" unique_id=722938704 instance=ExtResource("11_w7lom")]
-position = Vector2(62.865402, 332.54037)
-
-[node name="star_effect6" parent="water_shader" unique_id=681020147 instance=ExtResource("11_w7lom")]
-position = Vector2(183.07576, 393.39685)
-
-[node name="star_effect7" parent="water_shader" unique_id=2052556919 instance=ExtResource("11_w7lom")]
-position = Vector2(340.10052, 417.4389)
-
-[node name="star_effect8" parent="water_shader" unique_id=189670833 instance=ExtResource("11_w7lom")]
-position = Vector2(342.3545, 314.5088)
-
-[node name="star_effect9" parent="water_shader" unique_id=682466243 instance=ExtResource("11_w7lom")]
-position = Vector2(462.56482, 412.17972)
-
-[node name="star_effect10" parent="water_shader" unique_id=1229622956 instance=ExtResource("11_w7lom")]
-position = Vector2(471.58057, 168.00241)
-
-[node name="star_effect11" parent="water_shader" unique_id=176415172 instance=ExtResource("11_w7lom")]
-position = Vector2(43.331177, 237.12337)
 
 [node name="limits" type="Node2D" parent="." unique_id=1792116995]
 position = Vector2(-14, -56.099174)
@@ -572,20 +541,6 @@ vertical_alignment = 1
 position = Vector2(972.45215, 259.3752)
 texture = ExtResource("18_ssvqc")
 
-[node name="CRT 1" type="ColorRect" parent="." unique_id=874511029]
-z_index = 4096
-material = SubResource("ShaderMaterial_2lena")
-offset_left = -0.60257244
-offset_top = -43.582962
-offset_right = 540.5069
-offset_bottom = 501.29382
-
-[node name="CompleteStaticBg(288X208)" type="Sprite2D" parent="." unique_id=1355908832]
-z_index = -4096
-position = Vector2(229.31232, -500.04037)
-scale = Vector2(2.2455661, 2.2455661)
-texture = ExtResource("21_5rvci")
-
 [node name="4BackgroundClouds" type="Sprite2D" parent="." unique_id=536658208]
 z_index = -4080
 position = Vector2(268.49268, 29.161354)
@@ -597,3 +552,20 @@ texture = ExtResource("22_aght6")
 position = Vector2(267.56274, -13.731842)
 scale = Vector2(2.040282, 2.0402818)
 texture = ExtResource("23_w7lom")
+
+[node name="FOREST_DREAM" type="ColorRect" parent="." unique_id=874511029]
+visible = false
+z_index = 4096
+material = SubResource("ShaderMaterial_2lena")
+offset_left = -0.60257244
+offset_top = -43.582962
+offset_right = 540.5069
+offset_bottom = 501.29382
+
+[node name="EMERALD" type="ColorRect" parent="." unique_id=197930919]
+z_index = 4096
+material = SubResource("ShaderMaterial_lx0f2")
+offset_left = -0.60257244
+offset_top = -43.582962
+offset_right = 540.5069
+offset_bottom = 501.29382
