@@ -11,15 +11,8 @@ var move_right: bool = true
 @onready var sprite: AnimatedSprite2D = %AnimatedSprite2D
 @onready var right_effectPos: Marker2D = %right_effectPos
 @onready var left_effectPos: Marker2D = %left_effectPos
-@onready var bubble_rightPos: Marker2D = %bubble_rightPos
-@onready var bubble_leftPos: Marker2D = %bubble_leftPos
 var red_rain = false
-
-
-var min_bubble_time: float = 0.1
-var max_bubble_time: float = 30
-@onready var time_to_bubble: float = randf_range(min_bubble_time, max_bubble_time)
-@onready var bubble_timer: float = time_to_bubble
+@onready var fish_characterbody: CharacterBody2D = self
 
 
 func _ready():
@@ -40,6 +33,8 @@ func _ready():
 	
 	var final_scale = 1.0 - reduction_percent
 	scale *= final_scale
+	#if fish_name == "big_fish":
+		#big_fish_patrol()
 
 
 
@@ -47,12 +42,7 @@ func _process(delta):
 	if bubble_timer > 0:
 		bubble_timer -= delta
 	if  bubble_timer < 0:
-		var bubble_pos: Vector2
-		if sprite.flip_h: bubble_pos = bubble_rightPos.global_position
-		else: bubble_pos = bubble_leftPos.global_position
-		
-		EffectSpawner.spawn_bubble(bubble_pos, (effect_size * scale.x), (sprite.z_index + 1))
-		bubble_timer = randf_range(min_bubble_time, max_bubble_time)
+		spawn_bubble()
 	
 	
 	auto_destruction_timer -= delta
@@ -66,6 +56,26 @@ func _physics_process(delta):
 	move_and_slide()
 
 
+@onready var time_to_bubble: float = randf_range(min_bubble_time, max_bubble_time)
+@onready var bubble_timer: float = time_to_bubble
+@onready var bubble_rightPos: Marker2D = %bubble_rightPos
+@onready var bubble_leftPos: Marker2D = %bubble_leftPos
+var min_bubble_time: float = 0.1
+var max_bubble_time: float = 30
+var double_bouble_change: float = 10
+func spawn_bubble():
+	var bubble_pos: Vector2
+	if sprite.flip_h: bubble_pos = bubble_rightPos.global_position
+	else: bubble_pos = bubble_leftPos.global_position
+	
+	
+	EffectSpawner.spawn_bubble(bubble_pos, (effect_size * scale.x), (sprite.z_index + 1))
+	bubble_timer = randf_range(min_bubble_time, max_bubble_time)
+	var doubleB_rand: float = randf_range(0, 100)
+	if doubleB_rand < double_bouble_change:
+		spawn_bubble()
+
+
 
 func spawn_catch_effect():
 	var spawn_pos: Vector2
@@ -73,3 +83,27 @@ func spawn_catch_effect():
 	else: spawn_pos = left_effectPos.global_position
 	EffectSpawner.spawn_effect(spawn_pos, effect_size)
 	queue_free()
+
+
+var tween_distance: float = 20
+func big_fish_patrol():
+	var start_pos = global_position
+	var top_pos = start_pos + Vector2(0, -tween_distance)
+	var bottom_pos = start_pos + Vector2(0, tween_distance)
+	
+	var fish_tween = create_tween()
+	fish_tween.set_loops()
+	
+	fish_tween.tween_property(
+		self,
+		"global_position",
+		top_pos,
+		2
+	).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
+	
+	fish_tween.tween_property(
+		self,
+		"global_position",
+		bottom_pos,
+		2
+	).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)

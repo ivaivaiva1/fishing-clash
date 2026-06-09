@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_5lic5"]
 [ext_resource type="Texture2D" uid="uid://cm3ncltwjl2k4" path="res://artes joao/07-06-2026/peixe_grande_v2.png" id="2_mc6go"]
 [ext_resource type="PackedScene" uid="uid://dymjc3rwm5np6" path="res://_scenes/effects/fish_collect_effect.tscn" id="3_mc6go"]
+[ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://scripts/Effects/sea_zigzag.gd" id="4_c3pe1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1tbou"]
 atlas = ExtResource("2_mc6go")
@@ -116,5 +117,12 @@ position = Vector2(15, 9)
 unique_name_in_owner = true
 visible = false
 position = Vector2(-15, 9)
+
+[node name="sea_zigzag" type="Node2D" parent="." unique_id=586535858]
+script = ExtResource("4_c3pe1")
+zigzag_distance = 5.0
+zigzag_time = 1.0
+is_horizontal = false
+transition = 4
 
 [editable path="right_effectPos/fish_collect_effect"]
