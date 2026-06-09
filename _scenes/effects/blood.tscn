@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dptopl77wrss1"]
 
+[ext_resource type="Script" uid="uid://gdxtq5dyc423" path="res://scripts/Effects/blood_effect.gd" id="1_4i1ju"]
 [ext_resource type="Script" uid="uid://dclctq0phq8ub" path="res://scripts/Effects/animation_finish.gd" id="1_c2tvs"]
 [ext_resource type="Texture2D" uid="uid://bldguqsymk44x" path="res://Sprites/JasonTomLee Arts/VFX Blood Batch 1_SpriteSheetRows.png" id="1_pre54"]
 
@@ -20,7 +21,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_pre54"]
 resource_name = "blood_anim"
-length = 0.9
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -29,10 +29,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.90000004),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [98, 99, 100, 101, 102, 103, 104, 105, 106]
+"values": [70, 71, 72, 73, 74, 75, 76, 77, 78, 79]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -56,10 +56,10 @@ _data = {
 }
 
 [node name="blood_effect" type="Node2D" unique_id=1933759021]
+script = ExtResource("1_4i1ju")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=616546694]
-modulate = Color(1, 1, 1, 0.60784316)
-position = Vector2(-0.953, -30)
+unique_name_in_owner = true
 texture = ExtResource("1_pre54")
 hframes = 14
 vframes = 9
@@ -71,3 +71,4 @@ script = ExtResource("1_c2tvs")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=760019324]
 libraries/ = SubResource("AnimationLibrary_4i1ju")
 autoplay = &"blood_anim"
+speed_scale = 0.8

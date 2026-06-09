@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Shark
 
 var shark_state: SHARK_STATE = SHARK_STATE.IDLE
 
@@ -13,6 +14,8 @@ var dir: int = 1
 @onready var vision_area_right: Area2D = %vision_area_right
 @onready var vision_area_left: Area2D = %vision_area_left
 
+func _ready() -> void:
+	sprite.material = sprite.material.duplicate()
 
 
 func _process(delta: float) -> void:
@@ -27,7 +30,6 @@ func _process(delta: float) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	print(actual_speed)
 	velocity.x = (dir * actual_speed * 100) * delta
 	move_and_slide()
 
@@ -115,8 +117,15 @@ func _on_body_area_area_entered(area: Area2D) -> void:
 		var bait: Bait = area.get_parent()
 		if(bait.points != 0):
 			bait.reset()
-			start_attack()
-			spawn_blood()
+			eat_fish()
+
+
+func eat_fish():
+	start_attack()
+	spawn_blood()
+	pump_yuumy()
+	do_blink()
+	ScreenShake.do_screen_shake(3, 0.1)
 
 
 @onready var mouth_right_top: Marker2D = %"mouth-right-top"
@@ -125,20 +134,20 @@ func _on_body_area_area_entered(area: Area2D) -> void:
 @onready var mouth_left_bottom: Marker2D = %"mouth-left-bottom"
 func spawn_blood():
 	var blood_pos: Vector2
-	var need_flip: bool
+	#var need_flip: bool
 	if sprite.flip_h && sprite.flip_v:
 		blood_pos = mouth_left_top.global_position
-		need_flip = true
+		#need_flip = true
 	elif sprite.flip_h && !sprite.flip_v:
 		blood_pos = mouth_left_bottom.global_position
-		need_flip = false
+		#need_flip = false
 	elif !sprite.flip_h && sprite.flip_v:
 		blood_pos = mouth_right_top.global_position
-		need_flip = true
+		#need_flip = true
 	elif !sprite.flip_h && !sprite.flip_v:
 		blood_pos = mouth_right_bottom.global_position
-		need_flip = false
-	EffectSpawner.spawn_default_effect(EffectSpawner.DEFAULT_EFFECTS.BLOOD, blood_pos, need_flip)
+		#need_flip = false
+	EffectSpawner.spawn_blood(self, blood_pos, sprite.flip_h, sprite.flip_v)
 
 
 
@@ -192,6 +201,64 @@ func MEME_SHARK():
 		was_flipedH = true
 	else:
 		was_flipedH = false
+
+
+
+var pump_tween: Tween
+func pump_yuumy():
+	if pump_tween:
+		pump_tween.kill()
+	
+	var original_scale := sprite.scale
+	
+	pump_tween = create_tween()
+	
+	pump_tween.parallel().tween_property(
+		sprite,
+		"scale:x",
+		original_scale.x * 1.3,
+		0.2
+	)
+	
+	pump_tween.parallel().tween_property(
+		sprite,
+		"scale:y",
+		original_scale.y * 1.5,
+		0.2
+	)
+	
+	pump_tween.tween_property(
+		sprite,
+		"scale",
+		original_scale,
+		0.12
+	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+
+var blink_tween: Tween
+func do_blink():
+	if blink_tween:
+		blink_tween.kill()
+	
+	sprite.material.set_shader_parameter("flash_pct", 0.0)
+	
+	blink_tween = create_tween()
+	blink_tween.set_trans(Tween.TRANS_BACK)
+	blink_tween.set_ease(Tween.EASE_OUT)
+	
+	blink_tween.tween_property(
+		sprite.material,
+		"shader_parameter/flash_pct",
+		0.55,
+		0.3
+	)
+	
+	blink_tween.tween_property(
+		sprite.material,
+		"shader_parameter/flash_pct",
+		0.0,
+		0.08
+	)
 
 
 

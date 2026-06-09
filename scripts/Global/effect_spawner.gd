@@ -7,19 +7,15 @@ var blood_scene: PackedScene = preload("res://_scenes/effects/blood.tscn")
 var fish_spawner: Node2D
 
 
-func spawn_default_effect(default_effect: DEFAULT_EFFECTS, target_pos: Vector2, need_flip: bool = false):
-	var packed_effect
-	match default_effect:
-		DEFAULT_EFFECTS.BLOOD:
-			packed_effect = blood_scene
-	var effect_instance = blood_scene.instantiate()
-	get_tree().current_scene.add_child(effect_instance)
-	effect_instance.global_position = target_pos
-	if need_flip:
-		for child in effect_instance.get_children():
+func spawn_blood(shark: Shark, target_pos: Vector2, flip_h: bool, flip_v: bool):
+	var blood_instance = blood_scene.instantiate()
+	shark.add_child(blood_instance)
+	blood_instance.global_position = target_pos
+	if flip_v || flip_h:
+		for child in blood_instance.get_children():
 			if child is Sprite2D:
-				child.flip_v = true
-				effect_instance.global_position += Vector2(0, 63)
+				child.flip_h = flip_h
+				child.flip_v = flip_v
 				break
 
 

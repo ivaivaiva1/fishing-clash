@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://c1fnyt64wu0b1"]
 
 [ext_resource type="Script" uid="uid://cxgmfjf0icfrf" path="res://scripts/default_shark_behaviour.gd" id="1_po4rd"]
+[ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://shaders/blink.gdshader" id="2_d6m34"]
 [ext_resource type="Texture2D" uid="uid://ci6nr1yv30juf" path="res://artes joao/07-06-2026/TUBARAO CLARO 6.png" id="2_po4rd"]
 [ext_resource type="Texture2D" uid="uid://c5v4214osum3v" path="res://artes joao/07-06-2026/TUBARAO CLARO 4.png" id="4_f40hg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m5x1b"]
+shader = ExtResource("2_d6m34")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_pct = 0.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_inbs7"]
 atlas = ExtResource("2_po4rd")
@@ -199,6 +205,7 @@ script = ExtResource("1_po4rd")
 
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=1489043711]
 unique_name_in_owner = true
+material = SubResource("ShaderMaterial_m5x1b")
 scale = Vector2(1.953, 1.953)
 sprite_frames = SubResource("SpriteFrames_irb4t")
 animation = &"resting"
@@ -233,18 +240,18 @@ texture = ExtResource("4_f40hg")
 
 [node name="mouth-right-bottom" type="Marker2D" parent="." unique_id=1726904531]
 unique_name_in_owner = true
-position = Vector2(23, 10)
+position = Vector2(56, -19)
 
 [node name="mouth-right-top" type="Marker2D" parent="." unique_id=1564150993]
 unique_name_in_owner = true
-position = Vector2(23, -10)
+position = Vector2(56, 19)
 
 [node name="mouth-left-top" type="Marker2D" parent="." unique_id=167728124]
 unique_name_in_owner = true
-position = Vector2(-23, -10)
+position = Vector2(-56, 19)
 
 [node name="mouth-left-bottom" type="Marker2D" parent="." unique_id=371769003]
 unique_name_in_owner = true
-position = Vector2(-23, 10)
+position = Vector2(-56, -19)
 
 [connection signal="area_entered" from="body_area" to="." method="_on_body_area_area_entered"]

@@ -220,6 +220,7 @@ offset_right = 540.5069
 offset_bottom = 501.29382
 
 [node name="EMERALD" type="ColorRect" parent="water_shader" unique_id=197930919]
+visible = false
 z_index = 3700
 material = SubResource("ShaderMaterial_lx0f2")
 offset_left = -0.60257244
@@ -227,8 +228,7 @@ offset_top = -43.582962
 offset_right = 540.5069
 offset_bottom = 501.29382
 
-[node name="WaterDistortion2" type="ColorRect" parent="water_shader" unique_id=781337332]
-visible = false
+[node name="WATER_DISTORTION" type="ColorRect" parent="water_shader" unique_id=781337332]
 z_index = 4000
 material = SubResource("ShaderMaterial_w7lom")
 offset_left = -29.130035

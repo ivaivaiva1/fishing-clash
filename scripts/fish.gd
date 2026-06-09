@@ -83,27 +83,3 @@ func spawn_catch_effect():
 	else: spawn_pos = left_effectPos.global_position
 	EffectSpawner.spawn_effect(spawn_pos, effect_size)
 	queue_free()
-
-
-var tween_distance: float = 20
-func big_fish_patrol():
-	var start_pos = global_position
-	var top_pos = start_pos + Vector2(0, -tween_distance)
-	var bottom_pos = start_pos + Vector2(0, tween_distance)
-	
-	var fish_tween = create_tween()
-	fish_tween.set_loops()
-	
-	fish_tween.tween_property(
-		self,
-		"global_position",
-		top_pos,
-		2
-	).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
-	
-	fish_tween.tween_property(
-		self,
-		"global_position",
-		bottom_pos,
-		2
-	).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
