@@ -11,6 +11,8 @@ var max_treasure_time: float = 120
 @onready var time_to_spawn: float = randf_range(10, max_treasure_time)
 
 
+func _ready() -> void:
+	randomize()
 
 
 func _process(delta: float) -> void:

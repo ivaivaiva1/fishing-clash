@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b6vt7djfc3x8c"]
+
+[ext_resource type="Texture2D" uid="uid://b3hnv3cyyl0ck" path="res://Sprites/shine_nana.png" id="1_3rdtc"]
+[ext_resource type="Script" uid="uid://bwbc0dfpoqi22" path="res://scripts/Entitys/sea_shine.gd" id="1_pgu5b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgu5b"]
+atlas = ExtResource("1_3rdtc")
+region = Rect2(0, 0, 7, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c6l1"]
+atlas = ExtResource("1_3rdtc")
+region = Rect2(7, 0, 7, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhn5m"]
+atlas = ExtResource("1_3rdtc")
+region = Rect2(14, 0, 7, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wf6mt"]
+atlas = ExtResource("1_3rdtc")
+region = Rect2(21, 0, 7, 7)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_11t48"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgu5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c6l1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhn5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wf6mt")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="sea_shine" type="Node2D" unique_id=667055836]
+modulate = Color(1, 1, 1, 0.6666667)
+script = ExtResource("1_pgu5b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1386869748]
+z_index = -100
+sprite_frames = SubResource("SpriteFrames_11t48")
+autoplay = "default"

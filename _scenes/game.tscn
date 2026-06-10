@@ -13,6 +13,7 @@
 [ext_resource type="Shader" uid="uid://dftd0pk6ql231" path="res://shaders/water_distortion.gdshader" id="7_gee14"]
 [ext_resource type="PackedScene" uid="uid://dy5jp3gig3bp8" path="res://_scenes/fish/fish red.tscn" id="7_ir15t"]
 [ext_resource type="Script" uid="uid://b5r7kedlv3x68" path="res://scripts/Entitys/spawn_treasure.gd" id="8_w7lom"]
+[ext_resource type="Script" uid="uid://dlvbdjkojbuuw" path="res://scripts/Effects/spawn_shine.gd" id="9_gkrq6"]
 [ext_resource type="Script" uid="uid://2yj540ysy547" path="res://scripts/Player/boat_clone.gd" id="11_ca42v"]
 [ext_resource type="Texture2D" uid="uid://dfrqtdtraoj7h" path="res://artes joao/13-04-2026/icon_girl.png" id="13_5newe"]
 [ext_resource type="FontFile" uid="uid://jftlu6i4v8kh" path="res://fonts/madspixel/madspixel.ttf" id="17_1kice"]
@@ -77,6 +78,9 @@ script = ExtResource("21_5newe")
 
 [node name="SpawnTreasure" type="Node2D" parent="." unique_id=1565602299]
 script = ExtResource("8_w7lom")
+
+[node name="SpawnShine" type="Node2D" parent="." unique_id=495107154]
+script = ExtResource("9_gkrq6")
 
 [node name="decoration" type="Node2D" parent="." unique_id=851591682]
 position = Vector2(0, -28.099174)
