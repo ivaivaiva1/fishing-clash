@@ -6,8 +6,8 @@ var treasure_points: float = 500
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	global_position.x = get_viewport().get_camera_2d().get_screen_center_position().x
-	global_position.y = 513
+	#global_position.x = get_viewport().get_camera_2d().get_screen_center_position().x
+	#global_position.y = 800
 	treasure_appear()
 
 
@@ -15,8 +15,8 @@ func _ready() -> void:
 func treasure_appear():
 	var tween = create_tween()
 	
-	tween.tween_property(self, "global_position:y", 420, 10)\
-		.set_trans(Tween.TRANS_BACK)\
+	tween.tween_property(self, "global_position:y", 432, 20)\
+		.set_trans(Tween.TRANS_QUAD)\
 		.set_ease(Tween.EASE_OUT)
 
 

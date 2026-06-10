@@ -1,72 +1,71 @@
 [gd_scene format=3 uid="uid://by4oxgbthjk4u"]
 
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_5lic5"]
-[ext_resource type="Texture2D" uid="uid://cm3ncltwjl2k4" path="res://artes joao/07-06-2026/peixe_grande_v2.png" id="2_mc6go"]
-[ext_resource type="PackedScene" uid="uid://dymjc3rwm5np6" path="res://_scenes/effects/fish_collect_effect.tscn" id="3_mc6go"]
+[ext_resource type="Texture2D" uid="uid://bj7iplhc0ajfs" path="res://Sprites/Fish Sprites/peixe_grande_v2 verde.png" id="2_c3pe1"]
 [ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://scripts/Effects/sea_zigzag.gd" id="4_c3pe1"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1tbou"]
-atlas = ExtResource("2_mc6go")
+[sub_resource type="AtlasTexture" id="AtlasTexture_vu2ot"]
+atlas = ExtResource("2_c3pe1")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yk56t"]
-atlas = ExtResource("2_mc6go")
+[sub_resource type="AtlasTexture" id="AtlasTexture_354b3"]
+atlas = ExtResource("2_c3pe1")
 region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vgydp"]
-atlas = ExtResource("2_mc6go")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctx04"]
+atlas = ExtResource("2_c3pe1")
 region = Rect2(128, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_afv3a"]
-atlas = ExtResource("2_mc6go")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ncq5"]
+atlas = ExtResource("2_c3pe1")
 region = Rect2(192, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5s586"]
-atlas = ExtResource("2_mc6go")
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3gj1"]
+atlas = ExtResource("2_c3pe1")
 region = Rect2(0, 64, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6irr0"]
-atlas = ExtResource("2_mc6go")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ibrl"]
+atlas = ExtResource("2_c3pe1")
 region = Rect2(64, 64, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4prg2"]
-atlas = ExtResource("2_mc6go")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipliw"]
+atlas = ExtResource("2_c3pe1")
 region = Rect2(128, 64, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e5if3"]
-atlas = ExtResource("2_mc6go")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkk17"]
+atlas = ExtResource("2_c3pe1")
 region = Rect2(192, 64, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jrlim"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1tbou")
+"texture": SubResource("AtlasTexture_vu2ot")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yk56t")
+"texture": SubResource("AtlasTexture_354b3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vgydp")
+"texture": SubResource("AtlasTexture_ctx04")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_afv3a")
+"texture": SubResource("AtlasTexture_2ncq5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5s586")
+"texture": SubResource("AtlasTexture_a3gj1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6irr0")
+"texture": SubResource("AtlasTexture_4ibrl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4prg2")
+"texture": SubResource("AtlasTexture_ipliw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e5if3")
+"texture": SubResource("AtlasTexture_fkk17")
 }],
 "loop": true,
 "name": &"default",
-"speed": 8.0
+"speed": 10.0
 }]
 
 [node name="big_fish" type="CharacterBody2D" unique_id=759476320]
@@ -86,7 +85,7 @@ position = Vector2(1, 0)
 scale = Vector2(1.7, 1.7)
 sprite_frames = SubResource("SpriteFrames_jrlim")
 autoplay = "default"
-frame_progress = 0.6152615
+frame_progress = 0.7527813
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1186832392 groups=["fish"]]
@@ -99,9 +98,6 @@ polygon = PackedVector2Array(-14, -22, -14, -22, 8, -22, 18, -12, 20, -8, 21, -1
 unique_name_in_owner = true
 visible = false
 position = Vector2(3, 0)
-
-[node name="fish_collect_effect" parent="right_effectPos" unique_id=140967120 instance=ExtResource("3_mc6go")]
-scale = Vector2(2.215, 2.215)
 
 [node name="left_effectPos" type="Marker2D" parent="." unique_id=279669195]
 unique_name_in_owner = true
@@ -120,9 +116,6 @@ position = Vector2(-15, 9)
 
 [node name="sea_zigzag" type="Node2D" parent="." unique_id=586535858]
 script = ExtResource("4_c3pe1")
-zigzag_distance = 5.0
-zigzag_time = 1.0
+zigzag_distance = 3.0
+zigzag_time = 0.8
 is_horizontal = false
-transition = 4
-
-[editable path="right_effectPos/fish_collect_effect"]

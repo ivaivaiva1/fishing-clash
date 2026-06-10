@@ -8,6 +8,7 @@ class_name VerticalMovement
 @onready var actual_speed: float = randf_range(min_speed, max_speed)
 
 
+
 func _process(delta: float) -> void:
 	if is_up:
 		if global_position.y < max_pos_y: auto_destroy()

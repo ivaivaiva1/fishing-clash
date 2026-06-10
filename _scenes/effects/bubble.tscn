@@ -93,7 +93,7 @@ animations = [{
 
 [node name="Bubble" type="CharacterBody2D" unique_id=165428783]
 script = ExtResource("1_bk5m0")
-min_speed = -31.111
+min_speed = -31.0
 max_speed = -70.0
 is_up = true
 
@@ -109,6 +109,7 @@ modulate = Color(1, 1, 1, 0.6666667)
 z_as_relative = false
 sprite_frames = SubResource("SpriteFrames_qnb83")
 autoplay = "default"
+frame = 4
 
 [node name="bubble_behaviour" type="Node2D" parent="." unique_id=1367413273]
 script = ExtResource("3_3jkn6")

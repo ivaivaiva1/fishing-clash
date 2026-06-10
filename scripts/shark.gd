@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name Shark
+class_name SharkERRADO
 
 var speed: float = 20
 var speed_multiplier: float = 1

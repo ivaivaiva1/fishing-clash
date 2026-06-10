@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://ebbi0lca86e4"]
 
-[ext_resource type="PackedScene" uid="uid://c1fnyt64wu0b1" path="res://_scenes/shark.tscn" id="1_gee14"]
+[ext_resource type="PackedScene" uid="uid://c1fnyt64wu0b1" path="res://_scenes/entitys/shark.tscn" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://cpddqal215nxs" path="res://_scenes/fish/fish blue.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://co4hvliqg3q3y" path="res://scripts/Global/game_manager.gd" id="2_ir15t"]
-[ext_resource type="PackedScene" uid="uid://bb6ifiejbxjb7" path="res://_scenes/player.tscn" id="2_trtic"]
+[ext_resource type="PackedScene" uid="uid://bb6ifiejbxjb7" path="res://_scenes/entitys/player.tscn" id="2_trtic"]
 [ext_resource type="PackedScene" uid="uid://by4oxgbthjk4u" path="res://_scenes/fish/big_fish.tscn" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://cr57ww4x28u4n" path="res://scripts/fish_spawner.gd" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cq4o85mwl4g24" path="res://artes joao/player_icon png.png" id="3_ssvqc"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bjgivjbi6ryan" path="res://SpearFishing Assets Pack/Sprite names.png" id="4_lbhrr"]
 [ext_resource type="Shader" uid="uid://dftd0pk6ql231" path="res://shaders/water_distortion.gdshader" id="7_gee14"]
 [ext_resource type="PackedScene" uid="uid://dy5jp3gig3bp8" path="res://_scenes/fish/fish red.tscn" id="7_ir15t"]
-[ext_resource type="Texture2D" uid="uid://dkvcby5ccnqaj" path="res://sky_test/Clouds.png" id="10_dinhu"]
+[ext_resource type="Script" uid="uid://b5r7kedlv3x68" path="res://scripts/Entitys/spawn_treasure.gd" id="8_w7lom"]
 [ext_resource type="Script" uid="uid://2yj540ysy547" path="res://scripts/Player/boat_clone.gd" id="11_ca42v"]
 [ext_resource type="Texture2D" uid="uid://dfrqtdtraoj7h" path="res://artes joao/13-04-2026/icon_girl.png" id="13_5newe"]
 [ext_resource type="FontFile" uid="uid://jftlu6i4v8kh" path="res://fonts/madspixel/madspixel.ttf" id="17_1kice"]
@@ -75,6 +75,9 @@ unique_name_in_owner = true
 position = Vector2(0, -28.099174)
 script = ExtResource("21_5newe")
 
+[node name="SpawnTreasure" type="Node2D" parent="." unique_id=1565602299]
+script = ExtResource("8_w7lom")
+
 [node name="decoration" type="Node2D" parent="." unique_id=851591682]
 position = Vector2(0, -28.099174)
 
@@ -89,7 +92,6 @@ visible = false
 z_index = -4096
 position = Vector2(185.12051, -57.740135)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("10_dinhu")
 flip_h = true
 flip_v = true
 
@@ -229,7 +231,7 @@ offset_right = 540.5069
 offset_bottom = 501.29382
 
 [node name="WATER_DISTORTION" type="ColorRect" parent="water_shader" unique_id=781337332]
-z_index = 4000
+z_index = 2000
 material = SubResource("ShaderMaterial_w7lom")
 offset_left = -29.130035
 offset_top = 85.71173

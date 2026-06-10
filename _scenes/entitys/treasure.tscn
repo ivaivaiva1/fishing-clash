@@ -24,6 +24,7 @@ animations = [{
 }]
 
 [node name="Treasure" type="Node2D" unique_id=1190474615]
+position = Vector2(0, 14.295)
 script = ExtResource("1_0g4qu")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1929635131]

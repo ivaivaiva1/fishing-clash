@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://c7qt0ej6xtmqc" path="res://_scenes/effects/coin_falling.tscn" id="2_5nkbj"]
 [ext_resource type="Shader" uid="uid://dltsjnvd5v5sk" path="res://shaders/shake.gdshader" id="3_yu7fc"]
 [ext_resource type="Texture2D" uid="uid://bfknudkvo2ya4" path="res://artes joao/14.04.26/isca/isca 2.png" id="4_xr7ih"]
-[ext_resource type="Texture2D" uid="uid://oxc2xlbgd8xw" path="res://artes joao/07-06-2026/peixe_dorado_v2.png" id="5_up2ac"]
+[ext_resource type="Texture2D" uid="uid://oxc2xlbgd8xw" path="res://Sprites/Fish Sprites/peixe_dorado_v2.png" id="5_up2ac"]
 [ext_resource type="Texture2D" uid="uid://cxp8gjpeue570" path="res://artes joao/blue fish.png" id="6_psogv"]
-[ext_resource type="Texture2D" uid="uid://hfnspc7q7u8g" path="res://artes joao/peixe_grande meio termo.png" id="7_kjkng"]
+[ext_resource type="Texture2D" uid="uid://bj7iplhc0ajfs" path="res://Sprites/Fish Sprites/peixe_grande_v2 verde.png" id="7_up2ac"]
 [ext_resource type="Texture2D" uid="uid://cw54xs24pb6u0" path="res://artes joao/bau_contorno_preto.png" id="8_chrn6"]
 [ext_resource type="Script" uid="uid://b1y7jwgfvfrda" path="res://scripts/boost_controller.gd" id="9_16gtk"]
 [ext_resource type="Script" uid="uid://bkawldx4t15f6" path="res://scripts/Player/bait_rotation.gd" id="10_7j41f"]
@@ -129,36 +129,36 @@ animations = [{
 "speed": 25.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ni07"]
-atlas = ExtResource("7_kjkng")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbuyw"]
+atlas = ExtResource("7_up2ac")
 region = Rect2(0, 128, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l71n6"]
-atlas = ExtResource("7_kjkng")
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g1lc"]
+atlas = ExtResource("7_up2ac")
 region = Rect2(64, 128, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ke2ow"]
-atlas = ExtResource("7_kjkng")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpgou"]
+atlas = ExtResource("7_up2ac")
 region = Rect2(128, 128, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ujl30"]
-atlas = ExtResource("7_kjkng")
+[sub_resource type="AtlasTexture" id="AtlasTexture_7yk14"]
+atlas = ExtResource("7_up2ac")
 region = Rect2(192, 128, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ool0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4ni07")
+"texture": SubResource("AtlasTexture_fbuyw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l71n6")
+"texture": SubResource("AtlasTexture_6g1lc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ke2ow")
+"texture": SubResource("AtlasTexture_cpgou")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ujl30")
+"texture": SubResource("AtlasTexture_7yk14")
 }],
 "loop": true,
 "name": &"default",

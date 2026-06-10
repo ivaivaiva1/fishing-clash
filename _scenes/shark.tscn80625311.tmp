@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cxgmfjf0icfrf" path="res://scripts/default_shark_behaviour.gd" id="1_po4rd"]
 [ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://shaders/blink.gdshader" id="2_d6m34"]
-[ext_resource type="Texture2D" uid="uid://ci6nr1yv30juf" path="res://artes joao/07-06-2026/TUBARAO CLARO 6.png" id="2_po4rd"]
+[ext_resource type="Texture2D" uid="uid://ci6nr1yv30juf" path="res://Sprites/Fish Sprites/TUBARAO CLARO 6.png" id="2_po4rd"]
 [ext_resource type="Texture2D" uid="uid://c5v4214osum3v" path="res://artes joao/07-06-2026/TUBARAO CLARO 4.png" id="4_f40hg"]
+[ext_resource type="PackedScene" uid="uid://dptopl77wrss1" path="res://_scenes/effects/blood.tscn" id="5_m5x1b"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m5x1b"]
 shader = ExtResource("2_d6m34")
@@ -240,18 +241,21 @@ texture = ExtResource("4_f40hg")
 
 [node name="mouth-right-bottom" type="Marker2D" parent="." unique_id=1726904531]
 unique_name_in_owner = true
-position = Vector2(56, -19)
+position = Vector2(65, -15.223)
 
 [node name="mouth-right-top" type="Marker2D" parent="." unique_id=1564150993]
 unique_name_in_owner = true
-position = Vector2(56, 19)
+position = Vector2(65, 15.223)
 
 [node name="mouth-left-top" type="Marker2D" parent="." unique_id=167728124]
 unique_name_in_owner = true
-position = Vector2(-56, 19)
+position = Vector2(-65, 15.223)
 
 [node name="mouth-left-bottom" type="Marker2D" parent="." unique_id=371769003]
 unique_name_in_owner = true
-position = Vector2(-56, -19)
+position = Vector2(-65, -15.223)
+
+[node name="blood_effect" parent="." unique_id=1933759021 instance=ExtResource("5_m5x1b")]
+position = Vector2(67.28971, -15.222969)
 
 [connection signal="area_entered" from="body_area" to="." method="_on_body_area_area_entered"]

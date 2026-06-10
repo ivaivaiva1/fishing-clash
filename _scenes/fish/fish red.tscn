@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://dy5jp3gig3bp8"]
 
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_wamdd"]
-[ext_resource type="PackedScene" uid="uid://dymjc3rwm5np6" path="res://_scenes/effects/fish_collect_effect.tscn" id="2_q6l0k"]
-[ext_resource type="Texture2D" uid="uid://oxc2xlbgd8xw" path="res://artes joao/07-06-2026/peixe_dorado_v2.png" id="3_q6l0k"]
+[ext_resource type="Texture2D" uid="uid://oxc2xlbgd8xw" path="res://Sprites/Fish Sprites/peixe_dorado_v2.png" id="3_q6l0k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5cg8j"]
 atlas = ExtResource("3_q6l0k")
@@ -78,11 +77,6 @@ peso = 0.008
 points = 56.0
 effect_size = 1.176
 
-[node name="fish_collect_effect" parent="." unique_id=140967120 instance=ExtResource("2_q6l0k")]
-visible = false
-position = Vector2(1, -1)
-scale = Vector2(0.754, 0.754)
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1560367381]
 unique_name_in_owner = true
 z_as_relative = false
@@ -120,5 +114,3 @@ position = Vector2(14, 3)
 unique_name_in_owner = true
 visible = false
 position = Vector2(-14, 3)
-
-[editable path="fish_collect_effect"]

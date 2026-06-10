@@ -178,5 +178,6 @@ func att_score():
 
 
 func spawn_treasure():
+	return
 	var treasure = treasure_scene.instantiate()
 	FishSpawner_intance.add_child(treasure)
