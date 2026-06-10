@@ -96,8 +96,8 @@ func finish_round():
 					print("player 4 wins")
 	
 	# Se mais de um tiver o mesmo valor máximo, todos ganham (empate automático)
-	
-	get_tree().reload_current_scene()
+	get_tree().paused = true
+	#get_tree().reload_current_scene()
 
 
 

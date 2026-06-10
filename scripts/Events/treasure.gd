@@ -1,7 +1,9 @@
 extends Node2D
+class_name Treasure
 
 var treasure_peso: float = 3
 var treasure_points: float = 500
+var spawn_treasure: SpawnTreasure
 
 
 # Called when the node enters the scene tree for the first time.
@@ -24,5 +26,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if(area.is_in_group("bait")):
 		var bait: Bait = area.get_parent()
 		if bait.bait_state != "free": return
+		spawn_treasure.treasure_caught(self as Treasure)
 		bait.get_treasure(treasure_peso, treasure_points)
 		queue_free()
