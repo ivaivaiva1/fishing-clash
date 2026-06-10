@@ -15,6 +15,15 @@ var max_shine_time: float = 10
 
 func  _ready() -> void:
 	randomize()
+	spawn_shine()
+	await get_tree().create_timer(randf_range(0.1, 0.3)).timeout 
+	spawn_shine()
+	await get_tree().create_timer(randf_range(0.1, 0.3)).timeout 
+	spawn_shine()
+	await get_tree().create_timer(randf_range(0.1, 0.3)).timeout 
+	spawn_shine()
+
+
 
 
 func _process(delta: float) -> void:

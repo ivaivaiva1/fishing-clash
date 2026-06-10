@@ -5,8 +5,12 @@ uniform float flash_pct : hint_range(0.0, 1.0) = 0.0;
 
 void fragment() {
 	vec4 original_color = texture(TEXTURE, UV);
-	vec4 mixed_color = mix(original_color, flash_color, flash_pct);
 
-	COLOR = mixed_color;
-	COLOR.a = original_color.a;
+	COLOR.rgb = mix(original_color.rgb, flash_color.rgb, flash_pct);
+
+	if (original_color.a > 0.0) {
+		COLOR.a = mix(original_color.a, 1.0, flash_pct);
+	} else {
+		COLOR.a = 0.0;
+	}
 }

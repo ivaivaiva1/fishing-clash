@@ -6,6 +6,7 @@ class_name VerticalMovement
 @export var max_speed: float
 @export var is_up: bool
 @onready var actual_speed: float = randf_range(min_speed, max_speed)
+var is_paused: bool = false
 
 
 
@@ -17,9 +18,15 @@ func _process(delta: float) -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if is_paused: return
 	velocity.y = actual_speed
 	move_and_slide()
 
 
+func stop():
+	is_paused = true
+
+
 func auto_destroy():
+	print("to destroido :c")
 	queue_free()
