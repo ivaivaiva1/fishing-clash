@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq4dbu12ph04t"
-path="res://.godot/imported/VFX Blood Batch 1_SpriteSheetColumns.png-f6d8ca8c4b8093c7dcabf8f31fbf2774.ctex"
+uid="uid://b28ejchoxm30w"
+path="res://.godot/imported/VFX Blood Gold.png-923f13bcc59b5835de61293ae04a3c12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/JasonTomLee Arts/VFX Blood Batch 1_SpriteSheetColumns.png"
-dest_files=["res://.godot/imported/VFX Blood Batch 1_SpriteSheetColumns.png-f6d8ca8c4b8093c7dcabf8f31fbf2774.ctex"]
+source_file="res://Sprites/JasonTomLee Arts/VFX Blood Gold.png"
+dest_files=["res://.godot/imported/VFX Blood Gold.png-923f13bcc59b5835de61293ae04a3c12.ctex"]
 
 [params]
 

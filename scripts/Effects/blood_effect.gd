@@ -1,8 +1,19 @@
 extends Node2D
+class_name BloodEffect
 
 @onready var sprite_2d: Sprite2D = %Sprite2D
+@onready var animation_player: AnimationPlayer = %AnimationPlayer
+@onready var gold_texture: Texture = preload("uid://b28ejchoxm30w")
 
-func _ready() -> void:
+func start(IS_BLOOD: bool) -> void:
+	var target_modulate: float = 0.2
+	print(("is blood é: ") + str(IS_BLOOD))
+	if !IS_BLOOD:
+		sprite_2d.texture = gold_texture
+		target_modulate = 0.4
+		sprite_2d.modulate.a = 1.0
+	animation_player.play("blood_anim")
+	
 	var tween := create_tween()
 	
 	tween.set_trans(Tween.TRANS_SINE)
@@ -11,6 +22,6 @@ func _ready() -> void:
 	tween.tween_property(
 		sprite_2d,
 		"modulate:a",
-		0.2,
+		target_modulate,
 		1.0
 	)

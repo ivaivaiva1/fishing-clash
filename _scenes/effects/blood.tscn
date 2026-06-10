@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://gdxtq5dyc423" path="res://scripts/Effects/blood_effect.gd" id="1_4i1ju"]
 [ext_resource type="Script" uid="uid://dclctq0phq8ub" path="res://scripts/Effects/animation_finish.gd" id="1_c2tvs"]
-[ext_resource type="Texture2D" uid="uid://bldguqsymk44x" path="res://Sprites/JasonTomLee Arts/VFX Blood Batch 1_SpriteSheetRows.png" id="1_pre54"]
+[ext_resource type="Texture2D" uid="uid://bldguqsymk44x" path="res://Sprites/JasonTomLee Arts/VFX Blood.png" id="1_pre54"]
 
 [sub_resource type="Animation" id="Animation_4i1ju"]
 length = 0.001
@@ -13,10 +13,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 1,
-"values": [71]
+"values": []
 }
 
 [sub_resource type="Animation" id="Animation_pre54"]
@@ -49,10 +49,41 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_xifgu"]
+resource_name = "gold_anim"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.90000004),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [70, 71, 72, 73, 74, 75, 76, 77, 78, 79]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("animation_finish")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.9),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_finish_anim"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4i1ju"]
 _data = {
 &"RESET": SubResource("Animation_4i1ju"),
-&"blood_anim": SubResource("Animation_pre54")
+&"blood_anim": SubResource("Animation_pre54"),
+&"gold_anim": SubResource("Animation_xifgu")
 }
 
 [node name="blood_effect" type="Node2D" unique_id=1933759021]
@@ -64,12 +95,12 @@ rotation = 0.099483766
 texture = ExtResource("1_pre54")
 hframes = 14
 vframes = 9
-frame = 71
+frame = 70
 
 [node name="animation_finish" type="Node" parent="." unique_id=1272137611]
 script = ExtResource("1_c2tvs")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=760019324]
+unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_4i1ju")
-autoplay = &"blood_anim"
 speed_scale = 0.8

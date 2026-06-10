@@ -16,7 +16,6 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	print(time_to_spawn)
 	time_since_spawn += delta
 	time_to_spawn -= delta
 	if time_to_spawn < 0:

@@ -218,11 +218,9 @@ func chest_feedback():
 	var target_x
 	var target_y
 	if randi_range(0, 1) == 1:
-		print("é 1")
 		target_x = randf_range(1.1, 1.3)
 		target_y = randf_range(0.7, 0.9)
 	else:
-		print("é 0")
 		target_x = randf_range(0.7, 0.9)
 		target_y = randf_range(1.1, 1.3)
 	

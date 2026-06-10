@@ -116,13 +116,19 @@ func _on_body_area_area_entered(area: Area2D) -> void:
 	if(area.is_in_group("fish_on_bait")):
 		var bait: Bait = area.get_parent()
 		if(bait.points != 0):
+			var is_blood: bool
+			if bait.bait_state == "treasure":
+				is_blood = false
+			else:
+				is_blood = true
+			eat_fish(is_blood)
 			bait.reset()
-			eat_fish()
 
 
-func eat_fish():
+
+func eat_fish(is_blood: bool):
 	start_attack()
-	spawn_blood()
+	spawn_blood(is_blood)
 	pump_yuumy()
 	do_blink()
 	ScreenShake.do_screen_shake(3, 0.1)
@@ -132,7 +138,7 @@ func eat_fish():
 @onready var mouth_right_bottom: Marker2D = %"mouth-right-bottom"
 @onready var mouth_left_top: Marker2D = %"mouth-left-top"
 @onready var mouth_left_bottom: Marker2D = %"mouth-left-bottom"
-func spawn_blood():
+func spawn_blood(is_blood: bool):
 	var blood_pos: Vector2
 	#var need_flip: bool
 	if sprite.flip_h && sprite.flip_v:
@@ -147,7 +153,7 @@ func spawn_blood():
 	elif !sprite.flip_h && !sprite.flip_v:
 		blood_pos = mouth_right_bottom.global_position
 		#need_flip = false
-	EffectSpawner.spawn_blood(self, blood_pos, sprite.flip_h, sprite.flip_v)
+	EffectSpawner.spawn_blood(self, is_blood, blood_pos, sprite.flip_h, sprite.flip_v)
 
 
 
