@@ -6,1166 +6,346 @@
 [node name="treasure_container" type="Node2D" unique_id=1341208970]
 
 [node name="BubbleNORMAL21" parent="." unique_id=806134887 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-5.3824234, -199.65298)
+z_index = 101
+position = Vector2(-7.1204147, -202.25995)
 scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
 [node name="BubbleNORMAL22" parent="." unique_id=165428783 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-18.706985, -207.18427)
+z_index = 101
+position = Vector2(-19.231255, -219.77682)
 scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleNORMAL23" parent="." unique_id=1731203948 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-12.044708, -219.63983)
+[node name="BubbleNORMAL23" parent="." unique_id=1504471505 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(-5.3824234, -236.04056)
 scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleNORMAL24" parent="." unique_id=472609494 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(0.700531, -218.19151)
+[node name="BubbleNORMAL24" parent="." unique_id=938074932 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(11.619133, -231.72919)
 scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleNORMAL25" parent="." unique_id=685690057 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(12.287109, -212.10855)
+[node name="BubbleNORMAL25" parent="." unique_id=1630794122 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(12.344841, -215.51424)
 scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleNORMAL26" parent="." unique_id=1873458812 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(23.004684, -219.0605)
+[node name="BubbleNORMAL26" parent="." unique_id=924338538 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(20.495232, -208.25446)
 scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleNORMAL27" parent="." unique_id=258587809 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(23.873672, -206.8946)
+[node name="BubbleNORMAL27" parent="." unique_id=1479609057 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(2.8913498, -189.20863)
 scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleNORMAL28" parent="." unique_id=781894971 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(13.156097, -200.23232)
+[node name="BubbleNORMAL28" parent="." unique_id=192366751 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(-16.497643, -177.34161)
 scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleNORMAL29" parent="." unique_id=473088320 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(2.1488495, -206.60493)
+[node name="BubbleNORMAL29" parent="." unique_id=300316778 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(-18.039818, -201.51903)
 scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleNORMAL30" parent="." unique_id=1522955206 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-7.41008, -209.79124)
+[node name="BubbleNORMAL30" parent="." unique_id=1966891762 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(-3.7399979, -216.57063)
 scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleNORMAL31" parent="." unique_id=2100568019 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-17.837997, -193.28038)
+[node name="BubbleNORMAL31" parent="." unique_id=721644197 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(12.526054, -194.27853)
 scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL32" parent="." unique_id=1248308127 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-8.858398, -186.32843)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL33" parent="." unique_id=1087398945 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(4.755829, -185.45943)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL34" parent="." unique_id=376114428 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(12.866425, -179.66615)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL35" parent="." unique_id=167189653 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(19.528717, -190.38373)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL36" parent="." unique_id=2035259890 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(29.087631, -195.01834)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL37" parent="." unique_id=1245971992 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(26.770325, -178.50748)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL38" parent="." unique_id=1921674406 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(19.528702, -168.36922)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL39" parent="." unique_id=1939577799 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(9.390457, -162.86559)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL40" parent="." unique_id=639280273 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(1.569519, -171.84518)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL41" parent="." unique_id=167424382 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-6.8307495, -163.15526)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL42" parent="." unique_id=1130206255 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-12.624039, -172.71417)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL43" parent="." unique_id=315706501 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-19.865646, -162.86559)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL44" parent="." unique_id=804040224 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-20.444977, -180.53511)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL45" parent="." unique_id=2027767938 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-28.265915, -198.20464)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL46" parent="." unique_id=779158707 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-30.58323, -175.32117)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL47" parent="." unique_id=593905624 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-27.686584, -208.05324)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL48" parent="." unique_id=1036462034 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-23.341614, -221.08813)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL49" parent="." unique_id=401963591 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-27.396912, -153.59636)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL50" parent="." unique_id=1281730177 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-14.941353, -146.64441)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL51" parent="." unique_id=1853243984 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-8.858406, -154.75502)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL52" parent="." unique_id=741085287 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(2.1488266, -149.83072)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL53" parent="." unique_id=579044171 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(16.052711, -150.41003)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL54" parent="." unique_id=1074488740 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(24.45298, -157.65164)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL55" parent="." unique_id=334759272 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(31.694588, -166.34157)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL56" parent="." unique_id=1159686480 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(28.21862, -145.19608)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL57" parent="." unique_id=1564803095 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(8.231789, -138.82347)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL58" parent="." unique_id=1593097156 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-3.6444473, -136.21649)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL59" parent="." unique_id=1559841916 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-25.369263, -138.5338)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL60" parent="." unique_id=392288345 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(20.687363, -134.18884)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL61" parent="." unique_id=2017978357 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(20.687363, -134.18884)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
 [node name="BubbleMINI" parent="." unique_id=884649817 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(2.3368754, -197.89098)
+z_index = 101
+position = Vector2(3.4934916, -202.90303)
 scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleMINI2" parent="." unique_id=1186805951 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-11.856682, -192.67702)
+[node name="BubbleMINI2" parent="." unique_id=656842715 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(-4.8419266, -185.13335)
 scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleMINI3" parent="." unique_id=923666362 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-19.387947, -199.62897)
+[node name="BubbleMINI3" parent="." unique_id=1248733874 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(-16.64341, -189.75987)
 scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleMINI4" parent="." unique_id=1179405100 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-24.891563, -185.43541)
+[node name="BubbleMINI4" parent="." unique_id=283126836 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(-12.996192, -213.59029)
 scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleMINI5" parent="." unique_id=840671179 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-22.863914, -171.53154)
+[node name="BubbleMINI5" parent="." unique_id=1725534061 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(-14.272316, -229.18552)
 scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleMINI6" parent="." unique_id=2077967774 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-15.042976, -156.75865)
+[node name="BubbleMINI6" parent="." unique_id=1719008059 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(3.5937405, -225.96236)
 scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleMINI7" parent="." unique_id=2051850545 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(0.5988836, -156.469)
+[node name="BubbleMINI7" parent="." unique_id=1502010382 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(18.579807, -224.48187)
 scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleMINI8" parent="." unique_id=792974170 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-6.063393, -179.64214)
+[node name="BubbleMINI8" parent="." unique_id=1573518365 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(11.786549, -204.56471)
 scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleMINI9" parent="." unique_id=2113074155 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-0.2701044, -190.93906)
+[node name="BubbleMINI9" parent="." unique_id=628315409 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(13.73354, -182.94345)
 scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
-[node name="BubbleMINI10" parent="." unique_id=762780170 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(9.578482, -192.09772)
+[node name="BubbleMINI10" parent="." unique_id=260004011 instance=ExtResource("2_4b1xs")]
+z_index = 101
+position = Vector2(4.04128, -175.64502)
 scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI11" parent="." unique_id=1570246354 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(21.454716, -181.09048)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI12" parent="." unique_id=1312240991 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(10.737142, -169.5039)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI13" parent="." unique_id=1017314685 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(16.53043, -158.207)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI14" parent="." unique_id=1290161204 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(3.4955492, -161.97263)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI15" parent="." unique_id=651802740 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-5.484049, -142.56511)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI16" parent="." unique_id=460722429 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-25.181221, -148.64806)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI17" parent="." unique_id=1579231332 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-31.843498, -162.84161)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI18" parent="." unique_id=812226387 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-38.21611, -182.53879)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI19" parent="." unique_id=483141902 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-31.843506, -188.33208)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI20" parent="." unique_id=1373670624 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(37.386253, -183.69745)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI21" parent="." unique_id=889570824 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(21.114326, -198.20464)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI22" parent="." unique_id=1588245861 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(15.900368, -206.6049)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI23" parent="." unique_id=1774289734 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(32.12156, -127.236885)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI24" parent="." unique_id=1111911488 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(36.756187, -138.82344)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI25" parent="." unique_id=1947260176 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(40.521828, -148.38237)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI26" parent="." unique_id=152920913 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(42.83915, -161.12761)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI27" parent="." unique_id=367512373 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(44.287468, -172.13484)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI28" parent="." unique_id=306870852 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(45.44613, -182.56276)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI29" parent="." unique_id=1486045118 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(43.41848, -191.83202)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI30" parent="." unique_id=1887287814 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(43.128822, -203.4186)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI31" parent="." unique_id=1274768516 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(41.97016, -213.84651)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI32" parent="." unique_id=1994099536 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-35.370193, -128.97488)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI33" parent="." unique_id=1266367292 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-40.00482, -141.72012)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI34" parent="." unique_id=633417127 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-44.06012, -153.88603)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI35" parent="." unique_id=1062518960 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-43.770454, -164.6036)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI36" parent="." unique_id=1286807459 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-45.798103, -178.21782)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI37" parent="." unique_id=185938786 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-45.218773, -190.38373)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI38" parent="." unique_id=169279853 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-42.90146, -201.1013)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI39" parent="." unique_id=1552061599 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-41.742805, -212.97752)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI40" parent="." unique_id=823069120 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-43.191124, -223.69511)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
-
-[node name="BubbleMINI41" parent="." unique_id=1560275268 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-43.191124, -223.69511)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -80.0
+min_speed = -60.0
 
 [node name="BubbleMAIOR" parent="." unique_id=294081891 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-28.503258, 452.78674)
+visible = false
+z_index = 101
+position = Vector2(-2.3755264, 454.06128)
 scale = Vector2(1.8, 1.8)
 min_speed = -60.0
-max_speed = -80.0
+max_speed = -63.0
 
-[node name="BubbleMAIOR2" parent="." unique_id=3315532 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-9.863358, 448.04504)
+[node name="BubbleMAIOR2" parent="." unique_id=256901334 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(-7.1550064, 454.06125)
 scale = Vector2(1.8, 1.8)
 min_speed = -60.0
-max_speed = -80.0
+max_speed = -63.0
 
-[node name="BubbleMAIOR3" parent="." unique_id=408599292 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(9.103561, 441.17767)
+[node name="BubbleMAIOR3" parent="." unique_id=2101727902 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(2.403923, 455.01712)
 scale = Vector2(1.8, 1.8)
 min_speed = -60.0
-max_speed = -80.0
+max_speed = -63.0
 
-[node name="BubbleMAIOR4" parent="." unique_id=1836977584 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(24.473312, 449.18958)
+[node name="BubbleMAIOR4" parent="." unique_id=355554993 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(7.5020065, 454.69852)
 scale = Vector2(1.8, 1.8)
 min_speed = -60.0
-max_speed = -80.0
+max_speed = -63.0
 
-[node name="BubbleMAIOR5" parent="." unique_id=1708835614 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(3.5442963, 453.6043)
+[node name="BubbleMAIOR5" parent="." unique_id=487573291 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(0.4662857, 455.03357)
 scale = Vector2(1.8, 1.8)
 min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR6" parent="." unique_id=149145480 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-21.145401, 443.6303)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR7" parent="." unique_id=1923069533 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-3.4865494, 437.90753)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR8" parent="." unique_id=1421437781 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(21.693672, 439.70612)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR9" parent="." unique_id=1476658068 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-29.124168, 471.41443)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR10" parent="." unique_id=1112679724 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-10.484268, 466.67267)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR11" parent="." unique_id=209747919 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(8.482651, 459.80536)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR12" parent="." unique_id=1702946583 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(23.852402, 467.81726)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR13" parent="." unique_id=1102574996 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(2.9233856, 472.23193)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR14" parent="." unique_id=1906013468 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-21.766312, 462.25793)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR15" parent="." unique_id=1839498725 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-4.10746, 456.53516)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR16" parent="." unique_id=609022724 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(21.072762, 458.33374)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR17" parent="." unique_id=420867697 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-28.503258, 486.9375)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR18" parent="." unique_id=441128411 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-9.863358, 482.19568)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR19" parent="." unique_id=552458218 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(9.103561, 475.32837)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR20" parent="." unique_id=353012017 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(24.473312, 483.34027)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR21" parent="." unique_id=1837556928 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(3.5442963, 487.755)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR22" parent="." unique_id=539963668 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-21.145401, 477.781)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR23" parent="." unique_id=1832445791 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-3.4865494, 472.05823)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleMAIOR24" parent="." unique_id=1019217903 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(21.693672, 473.8568)
-scale = Vector2(1.8, 1.8)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE" parent="." unique_id=2069848077 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-32.40436, 464.45074)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE2" parent="." unique_id=1954825328 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-20.304783, 462.32513)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE3" parent="." unique_id=733003962 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-0.0297966, 456.60236)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE4" parent="." unique_id=1148104351 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(10.761738, 457.25635)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE5" parent="." unique_id=1375669310 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(28.09357, 462.97913)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE6" parent="." unique_id=654779570 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-32.40436, 458.24152)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE7" parent="." unique_id=1927486370 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-20.304783, 456.11597)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE8" parent="." unique_id=1256121140 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-0.0297966, 450.39316)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE9" parent="." unique_id=1892925651 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(10.761738, 451.04718)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE10" parent="." unique_id=1118527592 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(28.09357, 456.76996)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE11" parent="." unique_id=162846234 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-31.783451, 448.30676)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE12" parent="." unique_id=1076862091 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-19.683872, 446.18118)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE13" parent="." unique_id=463899471 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(0.59111404, 440.4584)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE14" parent="." unique_id=1702154973 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(11.382648, 441.11243)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE15" parent="." unique_id=675666726 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(28.714481, 446.8352)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE16" parent="." unique_id=1372297376 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-32.40436, 441.47662)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE17" parent="." unique_id=1934050511 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-20.304783, 439.35104)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE18" parent="." unique_id=258191052 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-0.0297966, 433.62827)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleGRANDE19" parent="." unique_id=1849370867 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(10.761738, 434.2823)
-scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
+max_speed = -63.0
 
 [node name="BubbleGRANDE20" parent="." unique_id=1492189072 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(28.09357, 440.00507)
+visible = false
+z_index = 101
+position = Vector2(6.2876167, 448.34735)
 scale = Vector2(1.414, 1.414)
-min_speed = -60.0
-max_speed = -80.0
+min_speed = -62.0
+max_speed = -65.0
+
+[node name="BubbleGRANDE21" parent="." unique_id=2052403916 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(3.8510017, 448.44888)
+scale = Vector2(1.414, 1.414)
+min_speed = -62.0
+max_speed = -65.0
+
+[node name="BubbleGRANDE22" parent="." unique_id=594234511 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(0.6021843, 448.75348)
+scale = Vector2(1.414, 1.414)
+min_speed = -62.0
+max_speed = -65.0
+
+[node name="BubbleGRANDE23" parent="." unique_id=1723763438 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(-2.5451088, 449.05804)
+scale = Vector2(1.414, 1.414)
+min_speed = -62.0
+max_speed = -65.0
+
+[node name="BubbleGRANDE24" parent="." unique_id=2094482481 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(-5.053816, 448.34738)
+scale = Vector2(1.414, 1.414)
+min_speed = -62.0
+max_speed = -65.0
+
+[node name="BubbleGRANDE25" parent="." unique_id=776853475 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(-0.68821526, 448.34738)
+scale = Vector2(1.414, 1.414)
+min_speed = -62.0
+max_speed = -65.0
+
+[node name="BubbleGRANDE26" parent="." unique_id=1825932521 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(2.6621265, 448.5504)
+scale = Vector2(1.414, 1.414)
+min_speed = -62.0
+max_speed = -65.0
+
+[node name="BubbleGRANDE27" parent="." unique_id=1788000013 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(-4.048712, 445.6671)
+scale = Vector2(1.414, 1.414)
+min_speed = -62.0
+max_speed = -65.0
+
+[node name="BubbleGRANDE28" parent="." unique_id=397569385 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(0.3168888, 445.6671)
+scale = Vector2(1.414, 1.414)
+min_speed = -62.0
+max_speed = -65.0
+
+[node name="BubbleGRANDE29" parent="." unique_id=2058210022 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(3.6672306, 445.87015)
+scale = Vector2(1.414, 1.414)
+min_speed = -62.0
+max_speed = -65.0
 
 [node name="BubbleNORMAL" parent="." unique_id=1296946388 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-10.499931, 456.11548)
+visible = false
+z_index = 101
+position = Vector2(-4.039849, 442.99463)
 scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
+min_speed = -64.0
+max_speed = -67.0
 
-[node name="BubbleNORMAL3" parent="." unique_id=168014271 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-20.31041, 453.98987)
+[node name="BubbleNORMAL2" parent="." unique_id=1612492638 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(-2.009339, 442.99463)
 scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
+min_speed = -64.0
+max_speed = -67.0
 
-[node name="BubbleNORMAL4" parent="." unique_id=294143183 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-30.774918, 457.0965)
+[node name="BubbleNORMAL3" parent="." unique_id=1644935057 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(1.1379538, 442.99463)
 scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
+min_speed = -64.0
+max_speed = -67.0
 
-[node name="BubbleNORMAL5" parent="." unique_id=96712150 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-28.322296, 449.90216)
+[node name="BubbleNORMAL4" parent="." unique_id=338488675 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(3.8791492, 442.99463)
 scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
+min_speed = -64.0
+max_speed = -67.0
 
-[node name="BubbleNORMAL6" parent="." unique_id=1025044736 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-15.241661, 448.4306)
+[node name="BubbleNORMAL5" parent="." unique_id=753811176 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(3.6760929, 439.84732)
 scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
+min_speed = -64.0
+max_speed = -67.0
 
-[node name="BubbleNORMAL7" parent="." unique_id=2138157448 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-5.4311824, 448.10358)
+[node name="BubbleNORMAL6" parent="." unique_id=489154472 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(1.3410101, 439.6443)
 scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
+min_speed = -64.0
+max_speed = -67.0
 
-[node name="BubbleNORMAL8" parent="." unique_id=54664303 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(3.0712285, 447.6131)
+[node name="BubbleNORMAL7" parent="." unique_id=1504560205 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(-1.7047584, 439.94885)
 scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
+min_speed = -64.0
+max_speed = -67.0
 
-[node name="BubbleNORMAL9" parent="." unique_id=2087161385 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(10.756096, 447.12256)
+[node name="BubbleNORMAL8" parent="." unique_id=2115713127 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(-3.8367925, 439.6443)
 scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
+min_speed = -64.0
+max_speed = -67.0
 
-[node name="BubbleNORMAL10" parent="." unique_id=958157072 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(16.642387, 448.4306)
+[node name="BubbleNORMAL9" parent="." unique_id=1446989421 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(3.4527423, 436.38528)
 scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
+min_speed = -64.0
+max_speed = -67.0
 
-[node name="BubbleNORMAL11" parent="." unique_id=2036613558 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(22.038147, 450.3927)
+[node name="BubbleNORMAL10" parent="." unique_id=1482614334 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(1.1176596, 436.18225)
 scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
+min_speed = -64.0
+max_speed = -67.0
 
-[node name="BubbleNORMAL12" parent="." unique_id=324211058 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(27.694149, 452.77856)
+[node name="BubbleNORMAL11" parent="." unique_id=824449167 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(-1.9281089, 436.48682)
 scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
+min_speed = -64.0
+max_speed = -67.0
 
-[node name="BubbleNORMAL13" parent="." unique_id=1215476594 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(4.4760175, 440.67896)
+[node name="BubbleNORMAL12" parent="." unique_id=1806828768 instance=ExtResource("2_4b1xs")]
+visible = false
+z_index = 101
+position = Vector2(-4.060143, 436.18225)
 scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL14" parent="." unique_id=1618288348 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-2.718326, 440.84247)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL15" parent="." unique_id=2114214005 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-10.239689, 441.1695)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL16" parent="." unique_id=139906348 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-19.723148, 440.84247)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL17" parent="." unique_id=2024936054 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-22.012257, 443.9491)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL18" parent="." unique_id=835103963 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(14.12299, 440.18842)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL19" parent="." unique_id=1176497282 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(25.078022, 443.2951)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL20" parent="." unique_id=583409079 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(25.078022, 443.2951)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL2" parent="." unique_id=861966246 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(18.440971, 457.42352)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL62" parent="." unique_id=2026484945 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-11.120842, 441.8343)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL63" parent="." unique_id=1114771009 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-20.93132, 439.70868)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL64" parent="." unique_id=1879502388 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-31.395828, 442.81534)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL65" parent="." unique_id=1872865471 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-28.943207, 435.62097)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL66" parent="." unique_id=1162666761 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-15.862572, 434.1494)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL67" parent="." unique_id=781736521 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-6.052093, 433.8224)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL68" parent="." unique_id=406707526 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(2.4503179, 433.3319)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL69" parent="." unique_id=1414869126 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(10.135185, 432.84137)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL70" parent="." unique_id=120397594 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(16.021477, 434.1494)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL71" parent="." unique_id=1784430821 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(21.417236, 436.1115)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL72" parent="." unique_id=417364695 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(27.073238, 438.49738)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL73" parent="." unique_id=290660788 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(3.8551068, 426.39777)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL74" parent="." unique_id=347881514 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-3.3392367, 426.56128)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL75" parent="." unique_id=1091244202 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-10.8605995, 426.8883)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL76" parent="." unique_id=112884001 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-20.344059, 426.56128)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL77" parent="." unique_id=1792960269 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(-22.633167, 429.6679)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL78" parent="." unique_id=1378797514 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(13.502079, 425.90723)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL79" parent="." unique_id=852405805 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(24.457111, 429.01392)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL80" parent="." unique_id=423869320 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(24.457111, 429.01392)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
-
-[node name="BubbleNORMAL81" parent="." unique_id=127549968 instance=ExtResource("2_4b1xs")]
-modulate = Color(1, 1, 1, 0.50980395)
-position = Vector2(17.82006, 443.14233)
-scale = Vector2(1.176, 1.176)
-min_speed = -60.0
-max_speed = -80.0
+min_speed = -64.0
+max_speed = -67.0
 
 [node name="Treasure" parent="." unique_id=1190474615 instance=ExtResource("1_b3v7a")]
 position = Vector2(0, 130.93097)

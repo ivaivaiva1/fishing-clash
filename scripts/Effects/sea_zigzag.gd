@@ -3,6 +3,7 @@ extends Node2D
 @export var zigzag_distance := 2.0
 @export var zigzag_time := 0.5
 @export var await_time := 0.1
+var changeDIR_chance: float 
 @export var is_horizontal := true
 @export var transition: Tween.TransitionType = Tween.TRANS_SINE
 @export var ease_type: Tween.EaseType = Tween.EASE_IN_OUT
@@ -17,9 +18,12 @@ var start_position: Vector2
 func _ready() -> void:
 	await get_tree().create_timer(await_time).timeout
 	if get_parent().get_parent().name == "treasure_container":
+		changeDIR_chance = 50
 		zig_zague2()
 	else:
-		zig_zague_tween()
+		#zig_zague_tween()
+		changeDIR_chance = 20
+		zig_zague2()
 
 
 
@@ -101,7 +105,7 @@ func zigzag2_step(direction: int):
 	await tween.finished
 	
 	var changeDir_rand: float = randf_range(0, 100)
-	if changeDir_rand >= 70:
+	if changeDir_rand >= 80:
 		direction *= -1
 	
 	
