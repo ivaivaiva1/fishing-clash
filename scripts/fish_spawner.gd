@@ -6,7 +6,6 @@ var spawned_fish: Array[Node2D] = []
 @export var blue_fish: PackedScene
 @export var red_fish: PackedScene
 @export var big_fish: PackedScene
-@export var shrimp: PackedScene
 var big_fish_rate: int
 var red_fish_rate: int
 var shrimp_fish_rate: int
@@ -47,22 +46,19 @@ func _process(delta):
 func spawn_fish():
 	# Decide qual peixe vai spawnar
 	var is_big_fish 
-	var _is_shrimp
 	if(randi() % big_fish_rate == 0):
 		is_big_fish = true
 	else:
 		is_big_fish = false
-		if randi() % shrimp_fish_rate == 0:
-			_is_shrimp = true
 	
 	
 	var posX
 	var move_right
 	if(randi() % 2 == 0):
-		posX = -50
+		posX = -100
 		move_right = true
 	else:
-		posX = 550
+		posX = 600
 		move_right = false
 	
 	
@@ -76,8 +72,6 @@ func spawn_fish():
 		fish_instance = red_fish.instantiate()
 	elif is_big_fish:
 		fish_instance = big_fish.instantiate()
-	#elif is_shrimp:
-		#fish_instance = shrimp.instantiate()
 	else:
 		if(randi() % red_fish_rate == 0):
 			fish_instance = red_fish.instantiate()

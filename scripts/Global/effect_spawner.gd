@@ -1,6 +1,6 @@
 extends Node
 
-var effect_scene: PackedScene = preload("uid://dj6607o3hu13s")
+var effect_scene: PackedScene = preload("uid://dymjc3rwm5np6")
 var collision_effect_scene: PackedScene = preload("uid://bg645xjsyvikf")
 var bubble_scene: PackedScene = preload("res://_scenes/effects/bubble.tscn")
 var collected_coin_scene: PackedScene = preload("res://_scenes/effects/collected_coin.tscn")

@@ -9,8 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cq4o85mwl4g24" path="res://artes joao/player_icon png.png" id="3_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://cpjcbme3mfnnl" path="res://artes joao/mar fundo 2.png" id="4_1kice"]
 [ext_resource type="Texture2D" uid="uid://b2f2rmiut0qmt" path="res://artes joao/trophy.png" id="4_264po"]
-[ext_resource type="Texture2D" uid="uid://bjgivjbi6ryan" path="res://SpearFishing Assets Pack/Sprite names.png" id="4_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://cf5pjbmd16w3f" path="res://_scenes/fish/shrimp.tscn" id="7_2lena"]
+[ext_resource type="Texture2D" uid="uid://bjgivjbi6ryan" path="res://Sprites/SpearFishing Assets Pack/Sprite names.png" id="4_lbhrr"]
 [ext_resource type="Shader" uid="uid://dftd0pk6ql231" path="res://shaders/water_distortion.gdshader" id="7_gee14"]
 [ext_resource type="PackedScene" uid="uid://dy5jp3gig3bp8" path="res://_scenes/fish/fish red.tscn" id="7_ir15t"]
 [ext_resource type="Script" uid="uid://b5r7kedlv3x68" path="res://scripts/Entitys/spawn_treasure.gd" id="8_w7lom"]
@@ -19,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dfrqtdtraoj7h" path="res://artes joao/13-04-2026/icon_girl.png" id="13_5newe"]
 [ext_resource type="FontFile" uid="uid://jftlu6i4v8kh" path="res://fonts/madspixel/madspixel.ttf" id="17_1kice"]
 [ext_resource type="LabelSettings" uid="uid://uqdlbglqj00m" path="res://fonts/label_settings/time_labell.tres" id="18_1kice"]
-[ext_resource type="Texture2D" uid="uid://ciqfy2c46yt0y" path="res://SpearFishing Assets Pack/Sprites/SawShark - 48x32/SawShark.png" id="18_ssvqc"]
+[ext_resource type="Texture2D" uid="uid://ciqfy2c46yt0y" path="res://Sprites/SpearFishing Assets Pack/Sprites/SawShark - 48x32/SawShark.png" id="18_ssvqc"]
 [ext_resource type="Script" uid="uid://bv08l4gt2jmvq" path="res://scripts/clone_boats.gd" id="21_5newe"]
 [ext_resource type="Shader" uid="uid://biug62tv1oe0q" path="res://shaders/color_limitation.gdshader" id="21_gkrq6"]
 [ext_resource type="Texture2D" uid="uid://x0glq3m2m7jv" path="res://Sprites/GRAFXKID/Tropics/4 - Background_clouds.png" id="22_aght6"]
@@ -71,7 +70,6 @@ script = ExtResource("3_lnu2h")
 blue_fish = ExtResource("1_uwrxv")
 red_fish = ExtResource("7_ir15t")
 big_fish = ExtResource("2_yqjtg")
-shrimp = ExtResource("7_2lena")
 
 [node name="CloneBoats" type="Node2D" parent="." unique_id=352021503]
 unique_name_in_owner = true

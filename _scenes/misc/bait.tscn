@@ -29,6 +29,42 @@ size = Vector2(14, 25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bt5mj"]
 size = Vector2(43, 54)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfm1y"]
+atlas = ExtResource("6_psogv")
+region = Rect2(0, 1024, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fulsm"]
+atlas = ExtResource("6_psogv")
+region = Rect2(1024, 1024, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4r5pv"]
+atlas = ExtResource("6_psogv")
+region = Rect2(2048, 1024, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60mlk"]
+atlas = ExtResource("6_psogv")
+region = Rect2(3072, 1024, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pl11u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfm1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fulsm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4r5pv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60mlk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 25.0
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_up2ac"]
 atlas = ExtResource("5_up2ac")
 region = Rect2(0, 0, 32, 32)
@@ -91,42 +127,6 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 30.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qfm1y"]
-atlas = ExtResource("6_psogv")
-region = Rect2(0, 1024, 1024, 1024)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fulsm"]
-atlas = ExtResource("6_psogv")
-region = Rect2(1024, 1024, 1024, 1024)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4r5pv"]
-atlas = ExtResource("6_psogv")
-region = Rect2(2048, 1024, 1024, 1024)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_60mlk"]
-atlas = ExtResource("6_psogv")
-region = Rect2(3072, 1024, 1024, 1024)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_pl11u"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qfm1y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fulsm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4r5pv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_60mlk")
-}],
-"loop": true,
-"name": &"default",
-"speed": 25.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fbuyw"]
@@ -193,8 +193,8 @@ radius = 49.839355
 
 [node name="bait" type="CharacterBody2D" unique_id=2134355700 node_paths=PackedStringArray("blue_fish_list", "red_fish_list", "golden_fish_list")]
 script = ExtResource("1_er5pq")
-blue_fish_list = [NodePath("blue fishs/blue_fish 1"), NodePath("blue fishs/blue_fish 2"), NodePath("blue fishs/blue_fish 3"), NodePath("blue fishs/blue_fish 4"), NodePath("blue fishs/blue_fish 5"), NodePath("blue fishs/blue_fish 6"), NodePath("blue fishs/blue_fish 7")]
-red_fish_list = [NodePath("red fishs/red_fish 0"), NodePath("red fishs/red_fish 1"), NodePath("red fishs/red_fish 2"), NodePath("red fishs/red_fish 3"), NodePath("red fishs/red_fish 4"), NodePath("red fishs/red_fish 5"), NodePath("red fishs/red_fish 6")]
+blue_fish_list = [NodePath("blue fishs/blue_fish 1"), NodePath("blue fishs/blue_fish 2"), NodePath("blue fishs/blue_fish 3"), NodePath("blue fishs/blue_fish 4"), NodePath("blue fishs/blue_fish 5"), NodePath("blue fishs/blue_fish 6"), NodePath("blue fishs/blue_fish 7"), NodePath("blue fishs/blue_fish 8"), NodePath("blue fishs/blue_fish 9"), NodePath("blue fishs/blue_fish 10")]
+red_fish_list = [NodePath("red fishs/red_fish 0"), NodePath("red fishs/red_fish 1"), NodePath("red fishs/red_fish 2"), NodePath("red fishs/red_fish 3"), NodePath("red fishs/red_fish 4"), NodePath("red fishs/red_fish 24"), NodePath("red fishs/red_fish 23"), NodePath("red fishs/red_fish 22"), NodePath("red fishs/red_fish 21"), NodePath("red fishs/red_fish 20")]
 golden_fish_list = [NodePath("golden fish/golden_fish 1"), NodePath("golden fish/golden_fish 2"), NodePath("golden fish/golden_fish 3"), NodePath("golden fish/golden_fish 4"), NodePath("golden fish/golden_fish 5")]
 coin_scene = ExtResource("2_5nkbj")
 
@@ -241,105 +241,7 @@ shape = SubResource("RectangleShape2D_37s47")
 position = Vector2(-0.5, 35)
 shape = SubResource("RectangleShape2D_bt5mj")
 
-[node name="red fishs" type="Node2D" parent="." unique_id=965937025]
-
-[node name="red_fish 5" type="AnimatedSprite2D" parent="red fishs" unique_id=713090534]
-unique_name_in_owner = true
-visible = false
-z_index = -5
-position = Vector2(0.7741127, 17.74672)
-rotation = -1.44862
-scale = Vector2(1.345, 1.345)
-sprite_frames = SubResource("SpriteFrames_v2yb1")
-autoplay = "default"
-frame_progress = 0.765977
-flip_h = true
-
-[node name="red_fish 3" type="AnimatedSprite2D" parent="red fishs" unique_id=55660886]
-unique_name_in_owner = true
-visible = false
-z_index = -5
-position = Vector2(3.4543877, 17.858397)
-rotation = -1.44862
-scale = Vector2(1.345, 1.345)
-sprite_frames = SubResource("SpriteFrames_v2yb1")
-autoplay = "default"
-frame_progress = 0.765977
-flip_h = true
-
-[node name="red_fish 1" type="AnimatedSprite2D" parent="red fishs" unique_id=2122762815]
-unique_name_in_owner = true
-visible = false
-z_index = -5
-position = Vector2(6.041725, 17.858398)
-rotation = -1.51844
-scale = Vector2(1.345, 1.345)
-sprite_frames = SubResource("SpriteFrames_v2yb1")
-autoplay = "default"
-frame_progress = 0.765977
-flip_h = true
-
-[node name="red_fish 0" type="AnimatedSprite2D" parent="red fishs" unique_id=1342477917]
-unique_name_in_owner = true
-visible = false
-z_index = -5
-position = Vector2(8.706104, 17.606682)
-rotation = -1.5708
-scale = Vector2(1.345, 1.345)
-sprite_frames = SubResource("SpriteFrames_v2yb1")
-autoplay = "default"
-frame_progress = 0.0951693
-flip_h = true
-
-[node name="red_fish 2" type="AnimatedSprite2D" parent="red fishs" unique_id=892253691]
-unique_name_in_owner = true
-visible = false
-z_index = -5
-position = Vector2(11.370483, 17.606684)
-rotation = -1.62316
-scale = Vector2(1.345, 1.345)
-sprite_frames = SubResource("SpriteFrames_v2yb1")
-autoplay = "default"
-frame_progress = 0.716382
-flip_h = true
-
-[node name="red_fish 4" type="AnimatedSprite2D" parent="red fishs" unique_id=657902441]
-unique_name_in_owner = true
-visible = false
-z_index = -5
-position = Vector2(14.202711, 17.606684)
-rotation = -1.69297
-scale = Vector2(1.345, 1.345)
-sprite_frames = SubResource("SpriteFrames_v2yb1")
-autoplay = "default"
-frame_progress = 0.716382
-flip_h = true
-
-[node name="red_fish 6" type="AnimatedSprite2D" parent="red fishs" unique_id=1113077453]
-unique_name_in_owner = true
-visible = false
-z_index = -5
-position = Vector2(16.659636, 17.495005)
-rotation = -1.69297
-scale = Vector2(1.345, 1.345)
-sprite_frames = SubResource("SpriteFrames_v2yb1")
-autoplay = "default"
-frame_progress = 0.716382
-flip_h = true
-
 [node name="blue fishs" type="Node2D" parent="." unique_id=1324939844]
-
-[node name="blue_fish 6" type="AnimatedSprite2D" parent="blue fishs" unique_id=2060143790]
-unique_name_in_owner = true
-visible = false
-z_index = -6
-position = Vector2(-0.27907753, 18.203793)
-rotation = -1.44862
-scale = Vector2(0.041, 0.041)
-sprite_frames = SubResource("SpriteFrames_pl11u")
-autoplay = "default"
-frame_progress = 0.0103795
-flip_h = true
 
 [node name="blue_fish 4" type="AnimatedSprite2D" parent="blue fishs" unique_id=2089138627]
 unique_name_in_owner = true
@@ -402,16 +304,187 @@ autoplay = "default"
 frame_progress = 0.0103795
 flip_h = true
 
-[node name="blue_fish 7" type="AnimatedSprite2D" parent="blue fishs" unique_id=86682245]
+[node name="blue_fish 6" type="AnimatedSprite2D" parent="blue fishs" unique_id=1404290910]
 unique_name_in_owner = true
 visible = false
 z_index = -6
-position = Vector2(15.195276, 18.343239)
+position = Vector2(2.1109524, 28.79523)
+rotation = -1.44862
+scale = Vector2(0.041, 0.041)
+sprite_frames = SubResource("SpriteFrames_pl11u")
+autoplay = "default"
+frame_progress = 0.0103795
+flip_h = true
+
+[node name="blue_fish 7" type="AnimatedSprite2D" parent="blue fishs" unique_id=2011868028]
+unique_name_in_owner = true
+visible = false
+z_index = -6
+position = Vector2(4.94314, 28.879135)
+rotation = -1.51844
+scale = Vector2(0.041, 0.041)
+sprite_frames = SubResource("SpriteFrames_pl11u")
+autoplay = "default"
+frame = 2
+frame_progress = 0.8017927
+flip_h = true
+
+[node name="blue_fish 8" type="AnimatedSprite2D" parent="blue fishs" unique_id=1431080734]
+unique_name_in_owner = true
+visible = false
+z_index = -6
+position = Vector2(7.768461, 28.627419)
+rotation = -1.5708
+scale = Vector2(0.041, 0.041)
+sprite_frames = SubResource("SpriteFrames_pl11u")
+autoplay = "default"
+frame_progress = 0.39534628
+flip_h = true
+
+[node name="blue_fish 9" type="AnimatedSprite2D" parent="blue fishs" unique_id=1900404416]
+unique_name_in_owner = true
+visible = false
+z_index = -6
+position = Vector2(10.097216, 28.543512)
+rotation = -1.62316
+scale = Vector2(0.041, 0.041)
+sprite_frames = SubResource("SpriteFrames_pl11u")
+autoplay = "default"
+frame_progress = 0.0103795
+flip_h = true
+
+[node name="blue_fish 10" type="AnimatedSprite2D" parent="blue fishs" unique_id=1864744024]
+unique_name_in_owner = true
+visible = false
+z_index = -6
+position = Vector2(13.006498, 28.711323)
 rotation = -1.69297
 scale = Vector2(0.041, 0.041)
 sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.0103795
+flip_h = true
+
+[node name="red fishs" type="Node2D" parent="." unique_id=965937025]
+
+[node name="red_fish 3" type="AnimatedSprite2D" parent="red fishs" unique_id=55660886]
+unique_name_in_owner = true
+visible = false
+z_index = -5
+position = Vector2(3.4543877, 17.858397)
+rotation = -1.44862
+scale = Vector2(1.345, 1.345)
+sprite_frames = SubResource("SpriteFrames_v2yb1")
+autoplay = "default"
+frame_progress = 0.765977
+flip_h = true
+
+[node name="red_fish 1" type="AnimatedSprite2D" parent="red fishs" unique_id=2122762815]
+unique_name_in_owner = true
+visible = false
+z_index = -5
+position = Vector2(6.041725, 17.858398)
+rotation = -1.51844
+scale = Vector2(1.345, 1.345)
+sprite_frames = SubResource("SpriteFrames_v2yb1")
+autoplay = "default"
+frame_progress = 0.765977
+flip_h = true
+
+[node name="red_fish 0" type="AnimatedSprite2D" parent="red fishs" unique_id=1342477917]
+unique_name_in_owner = true
+visible = false
+z_index = -5
+position = Vector2(8.706104, 17.606682)
+rotation = -1.5708
+scale = Vector2(1.345, 1.345)
+sprite_frames = SubResource("SpriteFrames_v2yb1")
+autoplay = "default"
+frame_progress = 0.0951693
+flip_h = true
+
+[node name="red_fish 2" type="AnimatedSprite2D" parent="red fishs" unique_id=892253691]
+unique_name_in_owner = true
+visible = false
+z_index = -5
+position = Vector2(11.370483, 17.606684)
+rotation = -1.62316
+scale = Vector2(1.345, 1.345)
+sprite_frames = SubResource("SpriteFrames_v2yb1")
+autoplay = "default"
+frame_progress = 0.716382
+flip_h = true
+
+[node name="red_fish 4" type="AnimatedSprite2D" parent="red fishs" unique_id=657902441]
+unique_name_in_owner = true
+visible = false
+z_index = -5
+position = Vector2(14.202711, 17.606684)
+rotation = -1.69297
+scale = Vector2(1.345, 1.345)
+sprite_frames = SubResource("SpriteFrames_v2yb1")
+autoplay = "default"
+frame_progress = 0.716382
+flip_h = true
+
+[node name="red_fish 24" type="AnimatedSprite2D" parent="red fishs" unique_id=157052520]
+unique_name_in_owner = true
+visible = false
+z_index = -5
+position = Vector2(1.1317835, 28.770758)
+rotation = -1.44862
+scale = Vector2(1.345, 1.345)
+sprite_frames = SubResource("SpriteFrames_v2yb1")
+autoplay = "default"
+frame_progress = 0.765977
+flip_h = true
+
+[node name="red_fish 23" type="AnimatedSprite2D" parent="red fishs" unique_id=576582253]
+unique_name_in_owner = true
+visible = false
+z_index = -5
+position = Vector2(4.9201307, 28.957403)
+rotation = -1.51844
+scale = Vector2(1.345, 1.345)
+sprite_frames = SubResource("SpriteFrames_v2yb1")
+autoplay = "default"
+frame_progress = 0.765977
+flip_h = true
+
+[node name="red_fish 22" type="AnimatedSprite2D" parent="red fishs" unique_id=1652036284]
+unique_name_in_owner = true
+visible = false
+z_index = -5
+position = Vector2(8.1956625, 28.744448)
+rotation = -1.5708
+scale = Vector2(1.345, 1.345)
+sprite_frames = SubResource("SpriteFrames_v2yb1")
+autoplay = "default"
+frame_progress = 0.0951693
+flip_h = true
+
+[node name="red_fish 21" type="AnimatedSprite2D" parent="red fishs" unique_id=1977731560]
+unique_name_in_owner = true
+visible = false
+z_index = -5
+position = Vector2(11.186903, 28.788235)
+rotation = -1.62316
+scale = Vector2(1.345, 1.345)
+sprite_frames = SubResource("SpriteFrames_v2yb1")
+autoplay = "default"
+frame_progress = 0.716382
+flip_h = true
+
+[node name="red_fish 20" type="AnimatedSprite2D" parent="red fishs" unique_id=423481929]
+unique_name_in_owner = true
+visible = false
+z_index = -5
+position = Vector2(14.485708, 28.60747)
+rotation = -1.69297
+scale = Vector2(1.345, 1.345)
+sprite_frames = SubResource("SpriteFrames_v2yb1")
+autoplay = "default"
+frame_progress = 0.716382
 flip_h = true
 
 [node name="golden fish" type="Node2D" parent="." unique_id=1293734848]

@@ -29,7 +29,6 @@ func _ready():
 	
 	sprite.z_index = randi_range(0, 10)
 	
-	# calcula redução de escala baseada no z_index
 	var reduction_percent = (10 - sprite.z_index) * 0.01
 	reduction_percent = clamp(reduction_percent, 0.0, 0.10)
 	
