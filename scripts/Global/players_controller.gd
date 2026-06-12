@@ -4,7 +4,7 @@ var joined_players: Array[JoinedPlayer] = []
  
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("backspace"):
 		print_players_data()
 
@@ -30,9 +30,9 @@ class JoinedPlayer:
 
 
 func new_player(player_id: int, left: String, right: String, up: String, down: String, act: String):
-	var new_player = JoinedPlayer.new()
-	new_player.setup(player_id, left, right, up, down, act)
-	joined_players.append(new_player)
+	var new_player_instance = JoinedPlayer.new()
+	new_player_instance.setup(player_id, left, right, up, down, act)
+	joined_players.append(new_player_instance)
 
 
 func remove_player(player_id: int):

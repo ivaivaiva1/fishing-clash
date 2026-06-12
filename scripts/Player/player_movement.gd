@@ -11,9 +11,6 @@ var last_velocity: Vector2 = Vector2.ZERO
 var knockback_force: float = 0.0
 var knockback_tween: Tween
 
-func _process(delta: float) -> void:
-	player_warp()
-
 
 func _physics_process(delta):
 	var direction
@@ -68,13 +65,3 @@ func get_knockback(force: float):
 
 func _on_knockback_finished():
 	knockback_tween = null
-
-
-
-
-func player_warp():
-	return
-	if player.global_position.x < -40.206:
-		player.global_position.x = 579
-	if player.global_position.x > 579.266:
-		player.global_position.x = -40

@@ -37,7 +37,7 @@ func populate_scripts():
 			clones[i].global_position.x = -1000
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	get_player_data()
 	
 	for i in range(min(number_of_players, players.size(), clones.size())):

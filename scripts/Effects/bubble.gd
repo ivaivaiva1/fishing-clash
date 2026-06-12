@@ -6,7 +6,7 @@ class_name Bubble
 var is_alive: bool = true
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if !is_alive: return
 	if global_position.y < auto_destruction_position:
 		destroy_bubble()

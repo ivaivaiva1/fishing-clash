@@ -67,7 +67,7 @@ func _process(delta: float) -> void:
 func spawn_shine():
 	var target_pos = get_pos()
 	var sea_shine_instance = sea_shine_scene.instantiate()
-	get_tree().current_scene.add_child(sea_shine_instance)
+	get_tree().current_scene.add_child.call_deferred(sea_shine_instance)
 	sea_shine_instance.global_position = target_pos
 	var sea_shine: SeaShine = sea_shine_instance as SeaShine
 	sea_shine.start()

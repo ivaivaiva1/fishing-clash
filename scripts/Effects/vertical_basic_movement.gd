@@ -10,14 +10,14 @@ var is_paused: bool = false
 
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if is_up:
 		if global_position.y < max_pos_y: auto_destroy()
 	else:
 		if global_position.y > 800: auto_destroy()
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if is_paused: return
 	velocity.y = actual_speed
 	move_and_slide()

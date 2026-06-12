@@ -5,7 +5,7 @@ class_name BoostController
 var actual_boosts: Array[boost_data] = []
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	update_boost_value()
 
 
@@ -41,6 +41,6 @@ func _on_boost_finished(boost_instance: boost_data):
 
 func update_boost_value():
 	var boost_sum: float = 0
-	for boost_data in actual_boosts:
-		boost_sum += boost_data.boost_force
+	for boost_info in actual_boosts:
+		boost_sum += boost_info.boost_force
 	bait.actual_boost = boost_sum

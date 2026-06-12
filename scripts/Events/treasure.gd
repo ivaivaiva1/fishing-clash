@@ -17,7 +17,7 @@ func _ready() -> void:
 func treasure_appear():
 	var tween = create_tween()
 	
-	tween.tween_property(self, "global_position:y", 432, 22)\
+	tween.tween_property(self, "global_position:y", 432, 14)\
 		.set_trans(Tween.TRANS_QUAD)\
 		.set_ease(Tween.EASE_OUT)
 

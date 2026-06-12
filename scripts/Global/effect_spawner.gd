@@ -1,6 +1,7 @@
 extends Node
 
-var effect_scene: PackedScene = preload("res://_scenes/effects/fish_collect_effect.tscn")
+var effect_scene: PackedScene = preload("uid://dj6607o3hu13s")
+var collision_effect_scene: PackedScene = preload("uid://bg645xjsyvikf")
 var bubble_scene: PackedScene = preload("res://_scenes/effects/bubble.tscn")
 var collected_coin_scene: PackedScene = preload("res://_scenes/effects/collected_coin.tscn")
 var blood_scene: PackedScene = preload("res://_scenes/effects/blood.tscn")
@@ -29,6 +30,14 @@ func spawn_effect(target_pos: Vector2, target_scale: float):
 	effect.scale = Vector2(target_scale, target_scale)
 	
 	# adiciona na cena (usa o root atual)
+
+
+func collision_effect(target_pos: Vector2):
+	var effect = collision_effect_scene.instantiate()
+	get_tree().current_scene.add_child(effect)
+	# define a posição
+	effect.global_position = target_pos
+
 
 
 func spawn_bubble(target_pos: Vector2, target_scale: float, target_ordering: int):

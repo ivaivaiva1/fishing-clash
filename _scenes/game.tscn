@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cpjcbme3mfnnl" path="res://artes joao/mar fundo 2.png" id="4_1kice"]
 [ext_resource type="Texture2D" uid="uid://b2f2rmiut0qmt" path="res://artes joao/trophy.png" id="4_264po"]
 [ext_resource type="Texture2D" uid="uid://bjgivjbi6ryan" path="res://SpearFishing Assets Pack/Sprite names.png" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://cf5pjbmd16w3f" path="res://_scenes/fish/shrimp.tscn" id="7_2lena"]
 [ext_resource type="Shader" uid="uid://dftd0pk6ql231" path="res://shaders/water_distortion.gdshader" id="7_gee14"]
 [ext_resource type="PackedScene" uid="uid://dy5jp3gig3bp8" path="res://_scenes/fish/fish red.tscn" id="7_ir15t"]
 [ext_resource type="Script" uid="uid://b5r7kedlv3x68" path="res://scripts/Entitys/spawn_treasure.gd" id="8_w7lom"]
@@ -70,6 +71,7 @@ script = ExtResource("3_lnu2h")
 blue_fish = ExtResource("1_uwrxv")
 red_fish = ExtResource("7_ir15t")
 big_fish = ExtResource("2_yqjtg")
+shrimp = ExtResource("7_2lena")
 
 [node name="CloneBoats" type="Node2D" parent="." unique_id=352021503]
 unique_name_in_owner = true

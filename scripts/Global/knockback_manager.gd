@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 var knockback_impact: float = 1.0
 
 
-func do_collision(col1_player: Player, col1_mass: float, col1_velocity: Vector2, col2_player: Player ,col2_mass: float, col2_velocity: Vector2):
+func do_collision(col1_player: Player, _col1_mass: float, col1_velocity: Vector2, col2_player: Player , _col2_mass: float, col2_velocity: Vector2):
 	if timer > 0: return
 	timer = 0.3
 	print("PROCESS COLISION")
@@ -38,7 +38,7 @@ func do_collision(col1_player: Player, col1_mass: float, col1_velocity: Vector2,
 	col1_player.player_movement.last_velocity -= impulse
 	col2_player.player_movement.last_velocity += impulse
 	
-	
+	EffectSpawner.collision_effect(col1_player.global_position)
 	print("Impact strength:", impact_strength)
 
 

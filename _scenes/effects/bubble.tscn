@@ -106,7 +106,7 @@ shape = SubResource("CircleShape2D_h2k0n")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1735948944]
 unique_name_in_owner = true
-z_as_relative = false
+z_index = 101
 sprite_frames = SubResource("SpriteFrames_qnb83")
 autoplay = "default"
 frame = 4

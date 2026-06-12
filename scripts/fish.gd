@@ -7,12 +7,14 @@ class_name Fish
 @export var peso: float
 @export var points: float
 @export var effect_size: float
+@export var do_bubble: bool = true
 var move_right: bool = true
 @onready var sprite: AnimatedSprite2D = %AnimatedSprite2D
 @onready var right_effectPos: Marker2D = %right_effectPos
 @onready var left_effectPos: Marker2D = %left_effectPos
 var red_rain = false
 @onready var fish_characterbody: CharacterBody2D = self
+
 
 
 func _ready():
@@ -39,19 +41,20 @@ func _ready():
 
 
 func _process(delta):
+	auto_destruction_timer -= delta
+	if(auto_destruction_timer < 0):
+		queue_free()
+	
+	if !do_bubble: return
 	if bubble_timer > 0:
 		bubble_timer -= delta
 	if  bubble_timer < 0:
 		spawn_bubble()
-	
-	
-	auto_destruction_timer -= delta
-	if(auto_destruction_timer < 0):
-		queue_free()
 
 
 
-func _physics_process(delta):
+
+func _physics_process(_delta):
 	velocity = Vector2(speed, 0)
 	move_and_slide()
 

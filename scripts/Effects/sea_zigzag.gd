@@ -22,7 +22,7 @@ func _ready() -> void:
 		zig_zague_tween()
 		return
 	if get_parent().get_parent().name == "treasure_container":
-		changeDIR_chance = 80
+		changeDIR_chance = 70
 		zig_zague2()
 	else:
 		#zig_zague_tween()
@@ -98,7 +98,8 @@ func zig_zague2():
 
 func zigzag2_step(direction: int):
 	var tween = create_tween()
-	
+	tween.set_trans(Tween.TRANS_SINE)
+	tween.set_ease(Tween.EASE_OUT)
 	tween.tween_property(
 		father,
 		"global_position:x",

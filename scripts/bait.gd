@@ -35,7 +35,7 @@ const ACCELERATION = 300
 var actual_boost: float
 const boost_force = 20
 const boost_time = 0.2
-var peso = 1
+var peso: float = 1
 @onready var boost_controller: BoostController = %boost_controller
 var feedback_tween: Tween
 
@@ -72,7 +72,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func get_fish(fish_name: String, fish_peso: float, fish_points: int) -> void:
+func get_fish(fish_name: String, fish_peso: float, fish_points: float) -> void:
 	bait_state = "catch"
 	peso += fish_peso 
 	points += fish_points
@@ -88,7 +88,7 @@ func get_fish(fish_name: String, fish_peso: float, fish_points: int) -> void:
 	update_fishs(fish_name)
 
 
-func get_treasure(treasure_peso: float, treasure_points: int) -> void:
+func get_treasure(treasure_peso: float, treasure_points: float) -> void:
 	bait_state = "treasure"
 	peso += treasure_peso
 	points += treasure_points

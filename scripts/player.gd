@@ -64,7 +64,7 @@ func send_collision_data(other_player: Player):
 	other_player.collision_effect.get_collision()
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if collision_timer > 0: return
 	
 	for i in range(get_slide_collision_count()):

@@ -27,8 +27,6 @@ var player4: Player
 #var round_duration: float = 240
 var round_duration: float = 180
 var game_timer: float = 0
-var _time_accumulator: float = 0.0
-@onready var treasure_scene: PackedScene = load("res://_scenes/treasure.tscn")
 
 
 func _ready() -> void:
@@ -46,25 +44,18 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	#peso_1.text = "peso: " + str(GlobalVars.player1_peso)
-	#peso_2.text = "peso: " + str(GlobalVars.player2_peso)
-	
 	if game_state == "game":
 		game_timer += delta
 	
-	var time_left = max(0, round_duration - game_timer)
-	var minutes = int(time_left) / 60
-	var seconds = int(time_left) % 60
+	var time_left: float = max(0.0, round_duration - game_timer)
 	
-	game_countdown_label.text = "%1d:%02d" % [minutes, seconds]
+	var minutes: int = floori(time_left / 60.0)
+	var seconds: int = int(time_left) % 60
 	
+	game_countdown_label.text = "%01d:%02d" % [minutes, seconds]
 	
-	if game_timer > round_duration: 
+	if game_timer > round_duration:
 		finish_round()
-	
-	if Input.is_action_just_pressed("treasure"):
-		spawn_treasure()
-
 
 
 func finish_round():
@@ -96,8 +87,8 @@ func finish_round():
 					print("player 4 wins")
 	
 	# Se mais de um tiver o mesmo valor máximo, todos ganham (empate automático)
-	get_tree().paused = true
-	#get_tree().reload_current_scene()
+	#get_tree().paused = true
+	get_tree().reload_current_scene()
 
 
 
@@ -159,6 +150,7 @@ func start_game():
 	FishSpawner_intance.spawn_cooldown = GlobalVars.spawn_cooldown_game
 	FishSpawner_intance.big_fish_rate = GlobalVars.big_fish_rate_game
 	FishSpawner_intance.red_fish_rate = GlobalVars.red_fish_rate_game
+	FishSpawner_intance.shrimp_fish_rate = GlobalVars.shrimp_fish_rate_game
 
 
 
@@ -174,10 +166,3 @@ func att_score():
 	rounds_player2_label.text = str(GlobalVars.player2_score)
 	rounds_player3_label.text = str(GlobalVars.player3_score)
 	rounds_player4_label.text = str(GlobalVars.player4_score)
-
-
-
-func spawn_treasure():
-	return
-	var treasure = treasure_scene.instantiate()
-	FishSpawner_intance.add_child(treasure)
