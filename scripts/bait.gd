@@ -18,6 +18,8 @@ var has_blue_fishs = 0
 var has_red_fishs = 0
 var has_golden_fishs = 0
 var treasure_scale: Vector2
+@onready var coin_pos: Marker2D = %coin_pos
+
 
 
 func _ready() -> void:
@@ -47,12 +49,15 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed(input_action):
 		boost_controller.do_boost()
 		#EffectSpawner.collect_coin_effect(global_position)
+		if player.game_manager.coin_madness_enabled:
+			spawn_coin()
 		if bait_state == "treasure":
 			spawn_coin()
 			chest_feedback()
 	
 	
 	if Input.is_action_pressed(input_action) || actual_boost > 0:
+		#if bait_state == "treasure": return
 		# Jogador segurando o botão: subir
 		target_velocity_y = -(MAX_SPEED * 1.3) / peso
 	else:
@@ -141,21 +146,19 @@ func reset():
 
 
 func spawn_coin():
-	var shape = coin_spawn_area.get_node("CollisionShape2D").shape
+	var spawn_pos: Vector2
+	if bait_state == "treasure":
+		var shape = coin_spawn_area.get_node("CollisionShape2D").shape
+		var extents = shape.extents
+		var random_pos = Vector2(
+			randf_range(-extents.x, extents.x),
+			randf_range(-extents.y, extents.y)
+		)
+		spawn_pos = coin_spawn_area.to_global(random_pos)
+	else:
+		spawn_pos = coin_pos.global_position
 	
-	# pega metade do tamanho da área (retângulo)
-	var extents = shape.extents
 	
-	# posição aleatória dentro da área
-	var random_pos = Vector2(
-		randf_range(-extents.x, extents.x),
-		randf_range(-extents.y, extents.y)
-	)
-	
-	# converte pra posição global (funciona mesmo com rotação/scale)
-	var spawn_pos = coin_spawn_area.to_global(random_pos)
-	
-	# instancia a moeda
 	var coin = coin_scene.instantiate()
 	coin.global_position = spawn_pos
 	
@@ -192,7 +195,6 @@ func pulse_shader(sprite, param_name: String = "amplitude", peak_value: float = 
 		0.0,
 		duration * 0.2
 	)
-
 
 
 func chest_feedback():

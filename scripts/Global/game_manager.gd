@@ -29,6 +29,12 @@ var round_duration: float = 180
 var game_timer: float = 0
 
 
+# Event Vars
+var coin_madness_enabled: bool = false
+
+# -----------------------------------
+
+
 func _ready() -> void:
 	GlobalVars.GameManager_intance = self
 	KnockbackManager.game_manager = self

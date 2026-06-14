@@ -1,7 +1,8 @@
 extends Node2D
 class_name Treasure
 
-var treasure_peso: float = 3
+#var treasure_peso: float = 3
+var treasure_peso: float = 1
 var treasure_points: float = 500
 var spawn_treasure: SpawnTreasure
 @onready var zig_zag: ZigZag = %zig_zag
