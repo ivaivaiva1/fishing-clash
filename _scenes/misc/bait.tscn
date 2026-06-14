@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dn2m2bg4gmlh8" path="res://scripts/bait.gd" id="1_er5pq"]
 [ext_resource type="PackedScene" uid="uid://c7qt0ej6xtmqc" path="res://_scenes/effects/coin_falling.tscn" id="2_5nkbj"]
-[ext_resource type="Shader" uid="uid://dltsjnvd5v5sk" path="res://shaders/shake.gdshader" id="3_yu7fc"]
+[ext_resource type="Shader" uid="uid://dltsjnvd5v5sk" path="res://Shaders/shake.gdshader" id="3_yu7fc"]
 [ext_resource type="Texture2D" uid="uid://bfknudkvo2ya4" path="res://artes joao/14.04.26/isca/isca 2.png" id="4_xr7ih"]
 [ext_resource type="Texture2D" uid="uid://oxc2xlbgd8xw" path="res://Sprites/Fish Sprites/peixe_dorado_v2.png" id="5_up2ac"]
 [ext_resource type="Texture2D" uid="uid://cxp8gjpeue570" path="res://artes joao/blue fish.png" id="6_psogv"]

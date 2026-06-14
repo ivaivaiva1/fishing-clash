@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cpjcbme3mfnnl" path="res://artes joao/mar fundo 2.png" id="4_1kice"]
 [ext_resource type="Texture2D" uid="uid://b2f2rmiut0qmt" path="res://artes joao/trophy.png" id="4_264po"]
 [ext_resource type="Texture2D" uid="uid://bjgivjbi6ryan" path="res://Sprites/SpearFishing Assets Pack/Sprite names.png" id="4_lbhrr"]
-[ext_resource type="Shader" uid="uid://dftd0pk6ql231" path="res://shaders/water_distortion.gdshader" id="7_gee14"]
+[ext_resource type="Shader" uid="uid://dftd0pk6ql231" path="res://Shaders/water_distortion.gdshader" id="7_gee14"]
 [ext_resource type="PackedScene" uid="uid://dy5jp3gig3bp8" path="res://_scenes/fish/fish red.tscn" id="7_ir15t"]
 [ext_resource type="Script" uid="uid://b5r7kedlv3x68" path="res://scripts/Entitys/spawn_treasure.gd" id="8_w7lom"]
 [ext_resource type="Script" uid="uid://dlvbdjkojbuuw" path="res://scripts/Effects/spawn_shine.gd" id="9_gkrq6"]
@@ -20,9 +20,9 @@
 [ext_resource type="LabelSettings" uid="uid://uqdlbglqj00m" path="res://fonts/label_settings/time_labell.tres" id="18_1kice"]
 [ext_resource type="Texture2D" uid="uid://ciqfy2c46yt0y" path="res://Sprites/SpearFishing Assets Pack/Sprites/SawShark - 48x32/SawShark.png" id="18_ssvqc"]
 [ext_resource type="Script" uid="uid://bv08l4gt2jmvq" path="res://scripts/clone_boats.gd" id="21_5newe"]
-[ext_resource type="Shader" uid="uid://biug62tv1oe0q" path="res://shaders/color_limitation.gdshader" id="21_gkrq6"]
+[ext_resource type="Shader" uid="uid://biug62tv1oe0q" path="res://Shaders/Post Processing/color_limitation.gdshader" id="21_gkrq6"]
 [ext_resource type="Texture2D" uid="uid://x0glq3m2m7jv" path="res://Sprites/GRAFXKID/Tropics/4 - Background_clouds.png" id="22_aght6"]
-[ext_resource type="Shader" uid="uid://bimqhb28ph5g" path="res://shaders/quasepretoEbranco.gdshader" id="23_gkrq6"]
+[ext_resource type="Shader" uid="uid://bimqhb28ph5g" path="res://Shaders/Post Processing/emerald_shader.gdshader" id="23_gkrq6"]
 [ext_resource type="Texture2D" uid="uid://dkpesntnrp5ug" path="res://Sprites/GRAFXKID/Tropics/3 - Floating_clouds.png" id="23_w7lom"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2lena"]
@@ -92,7 +92,6 @@ scale = Vector2(1.097579, 0.6761629)
 texture = ExtResource("4_1kice")
 
 [node name="sky" type="Sprite2D" parent="decoration" unique_id=1468820924]
-visible = false
 z_index = -4096
 position = Vector2(185.12051, -57.740135)
 scale = Vector2(0.2, 0.2)
@@ -214,9 +213,9 @@ offset_right = 407.0
 offset_bottom = 359.0
 scale = Vector2(0.045, 0.045)
 
-[node name="water_shader" type="Node2D" parent="." unique_id=1224380565]
+[node name="SHADERS" type="Node2D" parent="." unique_id=1224380565]
 
-[node name="FOREST_DREAM" type="ColorRect" parent="water_shader" unique_id=874511029]
+[node name="FOREST_DREAM" type="ColorRect" parent="SHADERS" unique_id=874511029]
 visible = false
 z_index = 4096
 material = SubResource("ShaderMaterial_2lena")
@@ -225,7 +224,7 @@ offset_top = -43.582962
 offset_right = 540.5069
 offset_bottom = 501.29382
 
-[node name="EMERALD" type="ColorRect" parent="water_shader" unique_id=197930919]
+[node name="EMERALD" type="ColorRect" parent="SHADERS" unique_id=197930919]
 visible = false
 z_index = 3700
 material = SubResource("ShaderMaterial_lx0f2")
@@ -234,13 +233,22 @@ offset_top = -43.582962
 offset_right = 540.5069
 offset_bottom = 501.29382
 
-[node name="WATER_DISTORTION" type="ColorRect" parent="water_shader" unique_id=781337332]
+[node name="WATER_DISTORTION" type="ColorRect" parent="SHADERS" unique_id=781337332]
+visible = false
 z_index = 2000
 material = SubResource("ShaderMaterial_w7lom")
 offset_left = -29.130035
 offset_top = 85.71173
 offset_right = 599.2001
 offset_bottom = 559.6411
+
+[node name="WATER_COLOR" type="ColorRect" parent="SHADERS" unique_id=266838565]
+z_index = 4000
+offset_left = -30.130035
+offset_top = 82.2857
+offset_right = 598.2001
+offset_bottom = 563.6592
+color = Color(0.495, 0.61875, 0.99, 0.039215688)
 
 [node name="limits" type="Node2D" parent="." unique_id=1792116995]
 position = Vector2(-14, -56.099174)
@@ -252,6 +260,10 @@ position = Vector2(-1, -1)
 position = Vector2(274, 121)
 shape = SubResource("RectangleShape2D_264po")
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="limits/BAIT_LIMITS" unique_id=1182121680]
+position = Vector2(274, 81.161804)
+shape = SubResource("RectangleShape2D_264po")
+
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="limits/BAIT_LIMITS" unique_id=939987592]
 position = Vector2(315.27295, 551.2051)
 shape = SubResource("RectangleShape2D_264po")
@@ -261,11 +273,13 @@ position = Vector2(-1, -1)
 
 [node name="BOAT1_CLONE" type="CollisionShape2D" parent="limits/BOAT_CLONE1" unique_id=1562343741]
 unique_name_in_owner = true
+z_index = 4096
 position = Vector2(-462.47012, 83.09421)
 shape = SubResource("RectangleShape2D_ir15t")
 script = ExtResource("11_ca42v")
 
 [node name="ColorRect" type="ColorRect" parent="limits/BOAT_CLONE1/BOAT1_CLONE" unique_id=829575885]
+visible = false
 offset_left = -44.559555
 offset_top = -20.282948
 offset_right = 44.883446
@@ -277,12 +291,14 @@ position = Vector2(-1, -1)
 
 [node name="BOAT2_CLONE" type="CollisionShape2D" parent="limits/BOAT_CLONE2" unique_id=68244066]
 unique_name_in_owner = true
+z_index = 4096
 position = Vector2(1259.7488, 92.93303)
 shape = SubResource("RectangleShape2D_1kice")
 debug_color = Color(0, 0.5950001, 0.7, 0.85490197)
 script = ExtResource("11_ca42v")
 
 [node name="ColorRect" type="ColorRect" parent="limits/BOAT_CLONE2/BOAT2_CLONE" unique_id=954553213]
+visible = false
 offset_left = -44.877197
 offset_top = -19.053402
 offset_right = 44.565804
@@ -294,12 +310,14 @@ position = Vector2(139.1145, -210.3663)
 
 [node name="BOAT3_CLONE" type="CollisionShape2D" parent="limits/BOAT_CLONE3" unique_id=642539977]
 unique_name_in_owner = true
+z_index = 4096
 position = Vector2(1226.0745, 303.76343)
 shape = SubResource("RectangleShape2D_1kice")
 debug_color = Color(0, 0.5950001, 0.7, 0.85490197)
 script = ExtResource("11_ca42v")
 
 [node name="ColorRect" type="ColorRect" parent="limits/BOAT_CLONE3/BOAT3_CLONE" unique_id=586392674]
+visible = false
 offset_left = -44.877197
 offset_top = -19.053402
 offset_right = 44.565804
@@ -311,12 +329,14 @@ position = Vector2(438.66934, 314.66003)
 
 [node name="BOAT4_CLONE" type="CollisionShape2D" parent="limits/BOAT_CLONE4" unique_id=977358717]
 unique_name_in_owner = true
+z_index = 4096
 position = Vector2(1037.2053, -221.84851)
 shape = SubResource("RectangleShape2D_1kice")
 debug_color = Color(0, 0.5950001, 0.7, 0.85490197)
 script = ExtResource("11_ca42v")
 
 [node name="ColorRect" type="ColorRect" parent="limits/BOAT_CLONE4/BOAT4_CLONE" unique_id=385644271]
+visible = false
 offset_left = -44.877197
 offset_top = -19.053402
 offset_right = 44.565804
@@ -346,7 +366,7 @@ limit_enabled = false
 
 [node name="shark" parent="." unique_id=2121875249 instance=ExtResource("1_gee14")]
 unique_name_in_owner = true
-position = Vector2(-66, 126.73491)
+position = Vector2(-98.28792, 139.1533)
 
 [node name="spearFishing_package" type="Sprite2D" parent="." unique_id=1356140479]
 texture_filter = 1
@@ -354,7 +374,7 @@ position = Vector2(978, 92.90082)
 texture = ExtResource("4_lbhrr")
 
 [node name="BLACK COLOR RECTS" type="ColorRect" parent="." unique_id=1340791473]
-z_index = 4000
+z_index = 4010
 offset_left = -209.59259
 offset_top = -53.405777
 offset_right = 0.10498047
@@ -448,7 +468,7 @@ scale = Vector2(0.10549085, 0.10549084)
 texture = ExtResource("4_264po")
 
 [node name="BLACK COLOR RECTS2" type="ColorRect" parent="." unique_id=1627553549]
-z_index = 4000
+z_index = 4010
 offset_left = 540.3882
 offset_top = -51.88469
 offset_right = 754.4785
@@ -541,12 +561,12 @@ position = Vector2(56.285904, 64.22458)
 scale = Vector2(0.10549085, 0.10549084)
 texture = ExtResource("4_264po")
 
-[node name="ColorRect3" type="ColorRect" parent="." unique_id=1347254917]
+[node name="sky color" type="ColorRect" parent="." unique_id=1347254917]
 z_index = -4090
-offset_left = -95.86774
-offset_top = -46.280975
-offset_right = 554.876
-offset_bottom = 116.03305
+offset_left = -6.4119034
+offset_top = -47.420273
+offset_right = 555.2409
+offset_bottom = 114.89375
 color = Color(0.18431373, 0.73333335, 1, 1)
 
 [node name="game_countdown" type="Label" parent="." unique_id=1392337292]

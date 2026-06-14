@@ -65,7 +65,11 @@ vframes = 6
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=900566221]
 libraries/ = SubResource("AnimationLibrary_3yy06")
 autoplay = &"idle"
-speed_scale = 1.5
+speed_scale = 0.3
 
 [node name="animation_finish" type="Node" parent="." unique_id=897507133]
 script = ExtResource("2_yuseo")
+
+[node name="EffectPuffAndStars1120x109" type="Sprite2D" parent="." unique_id=475397681]
+position = Vector2(-640.8302, 129.42032)
+texture = ExtResource("1_tt673")

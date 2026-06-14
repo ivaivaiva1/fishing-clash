@@ -1,4 +1,5 @@
 extends Node2D
+class_name ZigZag
 
 @export var zigzag_distance := 2.0
 @export var zigzag_time := 0.5
@@ -8,7 +9,7 @@ var changeDIR_chance: float
 @export var is_fish := false
 @export var transition: Tween.TransitionType = Tween.TRANS_SINE
 @export var ease_type: Tween.EaseType = Tween.EASE_IN_OUT
-
+@export var need_to_start: bool = false
 
 
 @onready var father: Node2D = get_parent()
@@ -17,6 +18,7 @@ var start_position: Vector2
 
 
 func _ready() -> void:
+	if need_to_start: return
 	await get_tree().create_timer(await_time).timeout
 	if is_fish:
 		zig_zague_tween()
@@ -29,6 +31,18 @@ func _ready() -> void:
 		changeDIR_chance = 20
 		zig_zague2()
 
+
+func start():
+	if is_fish:
+		zig_zague_tween()
+		return
+	if get_parent().get_parent().name == "treasure_container":
+		changeDIR_chance = 70
+		zig_zague2()
+	else:
+		#zig_zague_tween()
+		changeDIR_chance = 20
+		zig_zague2()
 
 
 func zig_zague_tween():

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c7qt0ej6xtmqc"]
 
 [ext_resource type="Script" uid="uid://cvdrx3lifgqm0" path="res://scripts/Effects/vertical_basic_movement.gd" id="1_r7d8p"]
-[ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://shaders/blink.gdshader" id="2_nmbro"]
+[ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://Shaders/blink.gdshader" id="2_nmbro"]
 [ext_resource type="Texture2D" uid="uid://b2x6im0m3h30j" path="res://artes joao/14.04.26/coin/Coin brown.png" id="3_nmbro"]
 [ext_resource type="Script" uid="uid://0t372l32f4di" path="res://scripts/Misc/coin_behaviour.gd" id="4_h1iv5"]
 [ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://scripts/Effects/sea_zigzag.gd" id="5_dv2fo"]

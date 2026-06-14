@@ -62,6 +62,7 @@ _data = {
 
 [node name="fish_collect_effect" type="Sprite2D" unique_id=140967120]
 z_index = 3500
+z_as_relative = false
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_3yy06")
 hframes = 6

@@ -4,6 +4,7 @@ class_name Treasure
 var treasure_peso: float = 3
 var treasure_points: float = 500
 var spawn_treasure: SpawnTreasure
+@onready var zig_zag: ZigZag = %zig_zag
 
 
 # Called when the node enters the scene tree for the first time.
@@ -20,6 +21,9 @@ func treasure_appear():
 	tween.tween_property(self, "global_position:y", 432, 14)\
 		.set_trans(Tween.TRANS_QUAD)\
 		.set_ease(Tween.EASE_OUT)
+	await tween.finished
+	zig_zag.start()
+
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
@@ -28,4 +32,5 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		if bait.bait_state != "free": return
 		spawn_treasure.treasure_caught(self as Treasure)
 		bait.get_treasure(treasure_peso, treasure_points)
+		ScreenShake.do_screen_shake(3, 0.1)
 		queue_free()

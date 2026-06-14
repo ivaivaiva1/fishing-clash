@@ -16,7 +16,7 @@ func is_collected():
 	is_alive = false
 	var tween = create_tween()
 	
-	tween.parallel().tween_property(sprite.material, "shader_parameter/flash_pct", 1, 0.7)\
+	tween.parallel().tween_property(sprite.material, "shader_parameter/flash_pct", 0.9, 0.7)\
 		.set_trans(Tween.TRANS_SINE)\
 		.set_ease(Tween.EASE_IN)
 	

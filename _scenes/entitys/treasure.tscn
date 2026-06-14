@@ -2,10 +2,27 @@
 
 [ext_resource type="Script" uid="uid://dgnevgrmkxvmr" path="res://scripts/Events/treasure.gd" id="1_0g4qu"]
 [ext_resource type="Texture2D" uid="uid://d4nuiuhkb4a3y" path="res://Bubbles/Greyscale/64x64/bubble_3.png" id="2_0g4qu"]
+[ext_resource type="Shader" uid="uid://cichbmwcxfbtl" path="res://Shaders/Squiggle/squiggle.gdshader" id="3_swg6f"]
+[ext_resource type="Texture2D" uid="uid://bhopsuvx1h5du" path="res://Shaders/Squiggle/1k_Dissolve_Noise_Texture.png" id="4_sm2ty"]
 [ext_resource type="Texture2D" uid="uid://cw54xs24pb6u0" path="res://artes joao/bau_contorno_preto.png" id="4_wqbho"]
+[ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://scripts/Effects/sea_zigzag.gd" id="6_sm2ty"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0g4qu"]
-size = Vector2(36.14309, 34.112587)
+[sub_resource type="CircleShape2D" id="CircleShape2D_sm2ty"]
+radius = 32.050472
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_swg6f"]
+shader = ExtResource("3_swg6f")
+shader_parameter/scale = Vector2(1, 15)
+shader_parameter/strength = 0.5
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("4_sm2ty")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s1fas"]
+shader = ExtResource("3_swg6f")
+shader_parameter/scale = Vector2(1, 15)
+shader_parameter/strength = 0.7
+shader_parameter/fps = 10.0
+shader_parameter/noise = ExtResource("4_sm2ty")
 
 [node name="Treasure" type="Node2D" unique_id=1190474615]
 position = Vector2(0, 14.295)
@@ -14,11 +31,13 @@ script = ExtResource("1_0g4qu")
 [node name="Area2D" type="Area2D" parent="." unique_id=1929635131]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1047955084]
-position = Vector2(-0.122862816, 1.0311065)
-shape = SubResource("RectangleShape2D_0g4qu")
+position = Vector2(-0.44988155, -0.113447666)
+shape = SubResource("CircleShape2D_sm2ty")
+debug_color = Color(0.697773, 0.49397373, 0, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1668223515]
 z_index = 99
+material = SubResource("ShaderMaterial_swg6f")
 position = Vector2(0, -2.394)
 scale = Vector2(2.27, 2.27)
 texture = ExtResource("4_wqbho")
@@ -26,7 +45,18 @@ hframes = 3
 vframes = 2
 
 [node name="Bubble4" type="Sprite2D" parent="." unique_id=1047352690]
+modulate = Color(1, 1, 1, 0.7058824)
 z_index = 100
+material = SubResource("ShaderMaterial_s1fas")
 texture = ExtResource("2_0g4qu")
+
+[node name="zig_zag" type="Node2D" parent="." unique_id=1424919162]
+unique_name_in_owner = true
+script = ExtResource("6_sm2ty")
+zigzag_distance = 2.5
+zigzag_time = 0.9
+is_horizontal = false
+is_fish = true
+need_to_start = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

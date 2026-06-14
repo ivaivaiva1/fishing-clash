@@ -30,7 +30,7 @@ func do_collision(col1_player: Player, _col1_mass: float, col1_velocity: Vector2
 		#actual_collision = CollisionData.new()
 		#return
 	
-	var impulse = collision_normal * (impact_strength + 20) * knockback_impact
+	var impulse = collision_normal * (impact_strength + 30) * knockback_impact
 	
 	
 	col1_player.velocity -= impulse
@@ -38,7 +38,7 @@ func do_collision(col1_player: Player, _col1_mass: float, col1_velocity: Vector2
 	col1_player.player_movement.last_velocity -= impulse
 	col2_player.player_movement.last_velocity += impulse
 	
-	EffectSpawner.collision_effect(col1_player.global_position)
+	#EffectSpawner.collision_effect(col1_player.global_position)
 	print("Impact strength:", impact_strength)
 
 

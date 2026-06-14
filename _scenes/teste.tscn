@@ -1,8 +1,31 @@
 [gd_scene format=3 uid="uid://cfndbycwksrlk"]
 
-[ext_resource type="PackedScene" uid="uid://cpddqal215nxs" path="res://_scenes/fish/fish blue.tscn" id="1_kta4m"]
+[ext_resource type="PackedScene" uid="uid://ebbi0lca86e4" path="res://_scenes/game.tscn" id="1_as1qg"]
+[ext_resource type="Shader" uid="uid://bimqhb28ph5g" path="res://Shaders/Post Processing/emerald_shader.gdshader" id="2_ll4he"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yp2pr"]
+shader = ExtResource("2_ll4he")
 
 [node name="Node2D" type="Node2D" unique_id=885637917]
 
-[node name="fish blue" parent="." unique_id=1961594136 instance=ExtResource("1_kta4m")]
-position = Vector2(19, 449)
+[node name="EMERALD" type="ColorRect" parent="." unique_id=764959093]
+z_index = 3700
+material = SubResource("ShaderMaterial_yp2pr")
+offset_left = -13.602573
+offset_top = -11.582962
+offset_right = 527.5069
+offset_bottom = 533.2938
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1615812773]
+offset_right = 512.0
+offset_bottom = 500.0
+pivot_offset = Vector2(256, 250)
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1548138746]
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(512, 500)
+render_target_update_mode = 4
+
+[node name="game" parent="SubViewportContainer/SubViewport" unique_id=760273511 instance=ExtResource("1_as1qg")]
