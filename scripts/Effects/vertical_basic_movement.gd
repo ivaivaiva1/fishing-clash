@@ -11,6 +11,7 @@ var is_paused: bool = false
 
 
 func _process(_delta: float) -> void:
+	if is_paused: return
 	if is_up:
 		if global_position.y < max_pos_y: auto_destroy()
 	else:

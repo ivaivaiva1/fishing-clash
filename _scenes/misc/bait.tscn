@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dn2m2bg4gmlh8" path="res://scripts/bait.gd" id="1_er5pq"]
 [ext_resource type="PackedScene" uid="uid://c7qt0ej6xtmqc" path="res://_scenes/effects/coin_falling.tscn" id="2_5nkbj"]
+[ext_resource type="PackedScene" uid="uid://b65gxg7dm233r" path="res://_scenes/effects/coin_jumping.tscn" id="3_xq470"]
 [ext_resource type="Shader" uid="uid://dltsjnvd5v5sk" path="res://Shaders/shake.gdshader" id="3_yu7fc"]
 [ext_resource type="Texture2D" uid="uid://bfknudkvo2ya4" path="res://artes joao/14.04.26/isca/isca 2.png" id="4_xr7ih"]
 [ext_resource type="Texture2D" uid="uid://oxc2xlbgd8xw" path="res://Sprites/Fish Sprites/peixe_dorado_v2.png" id="5_up2ac"]
@@ -197,6 +198,7 @@ blue_fish_list = [NodePath("blue fishs/blue_fish 1"), NodePath("blue fishs/blue_
 red_fish_list = [NodePath("red fishs/red_fish 0"), NodePath("red fishs/red_fish 1"), NodePath("red fishs/red_fish 2"), NodePath("red fishs/red_fish 3"), NodePath("red fishs/red_fish 4"), NodePath("red fishs/red_fish 24"), NodePath("red fishs/red_fish 23"), NodePath("red fishs/red_fish 22"), NodePath("red fishs/red_fish 21"), NodePath("red fishs/red_fish 20")]
 golden_fish_list = [NodePath("golden fish/golden_fish 1"), NodePath("golden fish/golden_fish 2"), NodePath("golden fish/golden_fish 3"), NodePath("golden fish/golden_fish 4"), NodePath("golden fish/golden_fish 5")]
 coin_scene = ExtResource("2_5nkbj")
+coin_jumping_scene = ExtResource("3_xq470")
 
 [node name="BaitSprite" type="Sprite2D" parent="." unique_id=1060581669]
 unique_name_in_owner = true
@@ -588,7 +590,7 @@ shape = SubResource("CircleShape2D_er5pq")
 
 [node name="coin_pos" type="Marker2D" parent="." unique_id=949209663]
 unique_name_in_owner = true
-position = Vector2(8.936768, 0)
+position = Vector2(8.936768, -5.5390196)
 
 [connection signal="area_entered" from="BaitArea" to="." method="_on_bait_area_area_entered"]
 [connection signal="area_entered" from="magnetic_behaviour/magnetic_area" to="magnetic_behaviour" method="_on_magnetic_area_area_entered"]

@@ -29,6 +29,7 @@ position = Vector2(0, 14.295)
 script = ExtResource("1_0g4qu")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1929635131]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1047955084]
 position = Vector2(-0.44988155, -0.113447666)

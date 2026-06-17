@@ -51,6 +51,8 @@ func add_points(value: int):
 
 
 func _process(delta: float) -> void:
+	if global_position.y != 90.849:
+		global_position.y = 90.849
 	if collision_timer > 0:
 		collision_timer -= delta
 

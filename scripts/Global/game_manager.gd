@@ -125,7 +125,7 @@ func start_game():
 	player1.current_player = 1
 	player1.game_manager = self
 	add_child(player_instance_1)
-	player_instance_1.global_position = Vector2(180, 100)
+	player_instance_1.global_position = Vector2(180, 90.849)
 	
 	var player_instance_2 = player_scene.instantiate()
 	player2 = player_instance_2
@@ -133,7 +133,7 @@ func start_game():
 	player2.current_player = 2
 	player2.game_manager = self
 	add_child(player_instance_2)
-	player_instance_2.global_position = Vector2(353.0, 100)
+	player_instance_2.global_position = Vector2(353.0, 90.849)
 	
 	#var player_instance_3 = player_scene.instantiate()
 	#player3 = player_instance_3

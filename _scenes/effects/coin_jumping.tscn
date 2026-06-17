@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://b65gxg7dm233r"]
+
+[ext_resource type="Script" uid="uid://b7jbhdejbjqmy" path="res://scripts/Effects/coin_jumping.gd" id="1_0m2je"]
+[ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://Shaders/blink.gdshader" id="2_6p50l"]
+[ext_resource type="Texture2D" uid="uid://gok3wms5rh5r" path="res://artes joao/14.04.26/coin/Coin dark brown.png" id="3_nrt1d"]
+[ext_resource type="Script" uid="uid://0t372l32f4di" path="res://scripts/Misc/coin_behaviour.gd" id="4_e3wer"]
+[ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://scripts/Effects/sea_zigzag.gd" id="5_liwj7"]
+[ext_resource type="Texture2D" uid="uid://b2x6im0m3h30j" path="res://artes joao/14.04.26/coin/Coin brown.png" id="6_i1cmw"]
+[ext_resource type="Texture2D" uid="uid://l85evopm8f7a" path="res://Sprites/Graksyn/24_Pixels.png" id="7_bh13c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4njp1"]
+shader = ExtResource("2_6p50l")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_pct = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_keamy"]
+radius = 6.58933
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_psiw4"]
+shader = ExtResource("2_6p50l")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_pct = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psiw4"]
+atlas = ExtResource("7_bh13c")
+region = Rect2(216, 192, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1iv5"]
+atlas = ExtResource("7_bh13c")
+region = Rect2(0, 216, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dv2fo"]
+atlas = ExtResource("7_bh13c")
+region = Rect2(24, 216, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0um2f"]
+atlas = ExtResource("7_bh13c")
+region = Rect2(48, 216, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbmg8"]
+atlas = ExtResource("7_bh13c")
+region = Rect2(72, 216, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb52q"]
+atlas = ExtResource("7_bh13c")
+region = Rect2(96, 216, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8bt66"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psiw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1iv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dv2fo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0um2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbmg8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb52q")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb52q")
+}],
+"loop": true,
+"name": &"reset",
+"speed": 10.0
+}]
+
+[node name="coin_jumping" type="CharacterBody2D" unique_id=30085995]
+script = ExtResource("1_0m2je")
+max_pos_y = 800.0
+min_speed = 20.0
+max_speed = 50.0
+is_paused = true
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=402700216]
+unique_name_in_owner = true
+z_index = 50
+material = SubResource("ShaderMaterial_4njp1")
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("3_nrt1d")
+hframes = 6
+
+[node name="Area2D" type="Area2D" parent="." unique_id=948127719 groups=["coin"]]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1063616410]
+shape = SubResource("CircleShape2D_keamy")
+
+[node name="coin_behaviour" type="Node2D" parent="." unique_id=433791429]
+script = ExtResource("4_e3wer")
+
+[node name="sea_zigzag" type="Node2D" parent="." unique_id=1168285474]
+unique_name_in_owner = true
+script = ExtResource("5_liwj7")
+zigzag_distance = 3.0
+zigzag_time = 1.0
+need_to_start = true
+
+[node name="CoinBrown" type="Sprite2D" parent="." unique_id=1233432916]
+visible = false
+position = Vector2(20.622185, 7.280754)
+texture = ExtResource("6_i1cmw")
+
+[node name="CoinDarkBrown" type="Sprite2D" parent="." unique_id=591608420]
+visible = false
+position = Vector2(15.476543, 22.717224)
+texture = ExtResource("3_nrt1d")
+
+[node name="destroy_anim" type="AnimatedSprite2D" parent="." unique_id=1670964309]
+unique_name_in_owner = true
+z_index = 51
+material = SubResource("ShaderMaterial_psiw4")
+position = Vector2(-0.43708038, -0.21717072)
+sprite_frames = SubResource("SpriteFrames_8bt66")
+animation = &"reset"
+autoplay = "reset"

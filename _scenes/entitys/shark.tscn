@@ -219,6 +219,7 @@ polygon = PackedVector2Array(-10, -23, 0, -14, 34, -1, 52, 0, 52, 5, 31, 5, 26, 
 
 [node name="vision_area_right" type="Area2D" parent="." unique_id=312031767]
 unique_name_in_owner = true
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="vision_area_right" unique_id=1470311632]
 position = Vector2(336, 2)
@@ -226,6 +227,7 @@ shape = SubResource("RectangleShape2D_po4rd")
 
 [node name="vision_area_left" type="Area2D" parent="." unique_id=941707376]
 unique_name_in_owner = true
+visible = false
 position = Vector2(-674, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="vision_area_left" unique_id=240240786]

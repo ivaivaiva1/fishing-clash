@@ -12,6 +12,7 @@ var player_name
 @onready var coin_spawn_area: Area2D = %coin_spawn_area
 @onready var bait_sprite: Sprite2D = %BaitSprite
 @export var coin_scene: PackedScene 
+@export var coin_jumping_scene: PackedScene 
 var bait_state: String = "free"
 var points = 0
 var has_blue_fishs = 0
@@ -50,9 +51,9 @@ func _physics_process(delta):
 		boost_controller.do_boost()
 		#EffectSpawner.collect_coin_effect(global_position)
 		if player.game_manager.coin_madness_enabled:
-			spawn_coin()
+			spawn_coin_jumping()
 		if bait_state == "treasure":
-			spawn_coin()
+			spawn_coin_falling()
 			chest_feedback()
 	
 	
@@ -145,7 +146,7 @@ func reset():
 	reset_fishs()
 
 
-func spawn_coin():
+func spawn_coin_falling():
 	var spawn_pos: Vector2
 	if bait_state == "treasure":
 		var shape = coin_spawn_area.get_node("CollisionShape2D").shape
@@ -161,6 +162,14 @@ func spawn_coin():
 	
 	var coin = coin_scene.instantiate()
 	coin.global_position = spawn_pos
+	
+	get_tree().current_scene.add_child(coin)
+
+
+func spawn_coin_jumping():
+	print("here")
+	var coin = coin_jumping_scene.instantiate()
+	coin.global_position = coin_pos.global_position
 	
 	get_tree().current_scene.add_child(coin)
 

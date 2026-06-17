@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://by4oxgbthjk4u" path="res://_scenes/fish/big_fish.tscn" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://cr57ww4x28u4n" path="res://scripts/fish_spawner.gd" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cq4o85mwl4g24" path="res://artes joao/player_icon png.png" id="3_ssvqc"]
-[ext_resource type="Texture2D" uid="uid://cpjcbme3mfnnl" path="res://artes joao/mar fundo 2.png" id="4_1kice"]
+[ext_resource type="Texture2D" uid="uid://cpjcbme3mfnnl" path="res://Sprites/mar 1.png" id="4_1kice"]
 [ext_resource type="Texture2D" uid="uid://b2f2rmiut0qmt" path="res://artes joao/trophy.png" id="4_264po"]
 [ext_resource type="Texture2D" uid="uid://bjgivjbi6ryan" path="res://Sprites/SpearFishing Assets Pack/Sprite names.png" id="4_lbhrr"]
 [ext_resource type="Shader" uid="uid://dftd0pk6ql231" path="res://Shaders/water_distortion.gdshader" id="7_gee14"]
@@ -17,19 +17,25 @@
 [ext_resource type="Script" uid="uid://dtlem1127x0m6" path="res://scripts/Events/events_timer.gd" id="10_2lena"]
 [ext_resource type="Script" uid="uid://2yj540ysy547" path="res://scripts/Player/boat_clone.gd" id="11_ca42v"]
 [ext_resource type="Texture2D" uid="uid://dfrqtdtraoj7h" path="res://artes joao/13-04-2026/icon_girl.png" id="13_5newe"]
+[ext_resource type="Texture2D" uid="uid://5qv7nmcjftw2" path="res://Sprites/mar 2.png" id="15_4suqf"]
+[ext_resource type="Texture2D" uid="uid://c3w6d0f0471i5" path="res://Sprites/mar 3.png" id="16_orwkc"]
 [ext_resource type="FontFile" uid="uid://jftlu6i4v8kh" path="res://fonts/madspixel/madspixel.ttf" id="17_1kice"]
+[ext_resource type="Texture2D" uid="uid://cyj8rt37sxm2f" path="res://Sprites/mar5.png" id="17_orwkc"]
 [ext_resource type="LabelSettings" uid="uid://uqdlbglqj00m" path="res://fonts/label_settings/time_labell.tres" id="18_1kice"]
 [ext_resource type="Texture2D" uid="uid://ciqfy2c46yt0y" path="res://Sprites/SpearFishing Assets Pack/Sprites/SawShark - 48x32/SawShark.png" id="18_ssvqc"]
+[ext_resource type="Texture2D" uid="uid://bbhh048s27tqx" path="res://Sprites/mar profundo 1.png" id="19_prxok"]
 [ext_resource type="Script" uid="uid://bv08l4gt2jmvq" path="res://scripts/clone_boats.gd" id="21_5newe"]
 [ext_resource type="Shader" uid="uid://biug62tv1oe0q" path="res://Shaders/Post Processing/color_limitation.gdshader" id="21_gkrq6"]
 [ext_resource type="Texture2D" uid="uid://x0glq3m2m7jv" path="res://Sprites/GRAFXKID/Tropics/4 - Background_clouds.png" id="22_aght6"]
 [ext_resource type="Shader" uid="uid://bimqhb28ph5g" path="res://Shaders/Post Processing/emerald_shader.gdshader" id="23_gkrq6"]
 [ext_resource type="Texture2D" uid="uid://dkpesntnrp5ug" path="res://Sprites/GRAFXKID/Tropics/3 - Floating_clouds.png" id="23_w7lom"]
+[ext_resource type="Texture2D" uid="uid://btyhn1ur144p6" path="res://Sprites/mar corpo 1.png" id="29_fdh18"]
+[ext_resource type="Texture2D" uid="uid://7t1e0od1dsbw" path="res://Sprites/Sea/Superficie.png" id="31_mj01u"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2lena"]
 shader = ExtResource("21_gkrq6")
 shader_parameter/red_levels = 5
-shader_parameter/green_levels = 12
+shader_parameter/green_levels = 5
 shader_parameter/blue_levels = 5
 shader_parameter/saturation = 1.50000007125
 
@@ -86,140 +92,32 @@ script = ExtResource("9_gkrq6")
 [node name="EventsTimer" type="Node2D" parent="." unique_id=651635868]
 script = ExtResource("10_2lena")
 
-[node name="decoration" type="Node2D" parent="." unique_id=851591682]
-position = Vector2(0, -28.099174)
+[node name="Mar" type="Node2D" parent="." unique_id=165544676]
 
-[node name="mar fundo" type="Sprite2D" parent="decoration" unique_id=1899638409]
-z_index = -100
-position = Vector2(305.57584, 327.13956)
-scale = Vector2(1.097579, 0.6761629)
-texture = ExtResource("4_1kice")
+[node name="Superficie" type="Sprite2D" parent="Mar" unique_id=1568365985]
+z_index = -200
+position = Vector2(282.3143, 402.70966)
+texture = ExtResource("31_mj01u")
 
-[node name="sky" type="Sprite2D" parent="decoration" unique_id=1468820924]
-z_index = -4096
-position = Vector2(185.12051, -57.740135)
-scale = Vector2(0.2, 0.2)
-flip_h = true
-flip_v = true
+[node name="SuperficieFrente" type="Sprite2D" parent="Mar" unique_id=1052953395]
+self_modulate = Color(1, 1, 1, 0.39215687)
+z_index = 100
+position = Vector2(282.3143, 402.70966)
+texture = ExtResource("31_mj01u")
 
-[node name="Whiteblocks" type="Node2D" parent="decoration" unique_id=474212957]
-visible = false
+[node name="MarProfundo" type="Sprite2D" parent="Mar" unique_id=659576819]
+z_index = -200
+position = Vector2(283.24484, 243.51984)
+texture = ExtResource("19_prxok")
 
-[node name="ColorRect" type="ColorRect" parent="decoration/Whiteblocks" unique_id=1595407752]
-z_index = -30
-offset_left = 70.0
-offset_top = 166.0
-offset_right = 110.0
-offset_bottom = 206.0
-scale = Vector2(0.045, 0.045)
-
-[node name="ColorRect2" type="ColorRect" parent="decoration/Whiteblocks" unique_id=768148549]
-z_index = -30
-offset_left = 139.0
-offset_top = 221.0
-offset_right = 179.0
-offset_bottom = 261.0
-scale = Vector2(0.045, 0.045)
-
-[node name="ColorRect3" type="ColorRect" parent="decoration/Whiteblocks" unique_id=737003010]
-z_index = -30
-offset_left = 40.0
-offset_top = 264.0
-offset_right = 80.0
-offset_bottom = 304.0
-scale = Vector2(0.045, 0.045)
-
-[node name="ColorRect4" type="ColorRect" parent="decoration/Whiteblocks" unique_id=1149211328]
-z_index = -30
-offset_left = 136.0
-offset_top = 329.0
-offset_right = 176.0
-offset_bottom = 369.0
-scale = Vector2(0.045, 0.045)
-
-[node name="ColorRect5" type="ColorRect" parent="decoration/Whiteblocks" unique_id=857181815]
-z_index = -30
-offset_left = 235.0
-offset_top = 196.0
-offset_right = 275.0
-offset_bottom = 236.0
-scale = Vector2(0.045, 0.045)
-
-[node name="ColorRect6" type="ColorRect" parent="decoration/Whiteblocks" unique_id=718170907]
-z_index = -30
-offset_left = 246.0
-offset_top = 286.0
-offset_right = 286.0
-offset_bottom = 326.0
-scale = Vector2(0.045, 0.045)
-
-[node name="ColorRect7" type="ColorRect" parent="decoration/Whiteblocks" unique_id=2100069116]
-z_index = -30
-offset_left = 367.0
-offset_top = 175.0
-offset_right = 407.0
-offset_bottom = 215.0
-scale = Vector2(0.045, 0.045)
-
-[node name="ColorRect8" type="ColorRect" parent="decoration/Whiteblocks" unique_id=720350114]
-z_index = -30
-offset_left = 397.0
-offset_top = 251.0
-offset_right = 437.0
-offset_bottom = 291.0
-scale = Vector2(0.045, 0.045)
-
-[node name="ColorRect9" type="ColorRect" parent="decoration/Whiteblocks" unique_id=63859300]
-z_index = -30
-offset_left = 474.0
-offset_top = 195.0
-offset_right = 514.0
-offset_bottom = 235.0
-scale = Vector2(0.045, 0.045)
-
-[node name="ColorRect10" type="ColorRect" parent="decoration/Whiteblocks" unique_id=969143580]
-z_index = -30
-offset_left = 467.0
-offset_top = 335.0
-offset_right = 507.0
-offset_bottom = 375.0
-scale = Vector2(0.045, 0.045)
-
-[node name="ColorRect11" type="ColorRect" parent="decoration/Whiteblocks" unique_id=1569169249]
-z_index = -30
-offset_left = 280.0
-offset_top = 359.0
-offset_right = 320.0
-offset_bottom = 399.0
-scale = Vector2(0.045, 0.045)
-
-[node name="ColorRect12" type="ColorRect" parent="decoration/Whiteblocks" unique_id=758280367]
-z_index = -30
-offset_left = 389.0
-offset_top = 397.0
-offset_right = 429.0
-offset_bottom = 437.0
-scale = Vector2(0.045, 0.045)
-
-[node name="ColorRect13" type="ColorRect" parent="decoration/Whiteblocks" unique_id=1602910517]
-z_index = -30
-offset_left = 66.0
-offset_top = 384.0
-offset_right = 106.0
-offset_bottom = 424.0
-scale = Vector2(0.045, 0.045)
-
-[node name="ColorRect14" type="ColorRect" parent="decoration/Whiteblocks" unique_id=1550052944]
-z_index = -30
-offset_left = 367.0
-offset_top = 319.0
-offset_right = 407.0
-offset_bottom = 359.0
-scale = Vector2(0.045, 0.045)
+[node name="MarCorpo" type="Sprite2D" parent="Mar" unique_id=1367007321]
+z_index = -1000
+position = Vector2(265.20328, 408.65707)
+texture = ExtResource("29_fdh18")
 
 [node name="SHADERS" type="Node2D" parent="." unique_id=1224380565]
 
-[node name="FOREST_DREAM" type="ColorRect" parent="SHADERS" unique_id=874511029]
+[node name="MASTER_SYSTEM" type="ColorRect" parent="SHADERS" unique_id=874511029]
 visible = false
 z_index = 4096
 material = SubResource("ShaderMaterial_2lena")
@@ -247,12 +145,62 @@ offset_right = 599.2001
 offset_bottom = 559.6411
 
 [node name="WATER_COLOR" type="ColorRect" parent="SHADERS" unique_id=266838565]
+visible = false
 z_index = 4000
 offset_left = -30.130035
 offset_top = 82.2857
 offset_right = 598.2001
 offset_bottom = 563.6592
-color = Color(0.495, 0.61875, 0.99, 0.039215688)
+color = Color(0.495, 0.61875, 0.99, 0.11764706)
+
+[node name="mar" type="Sprite2D" parent="SHADERS" unique_id=1899638409]
+visible = false
+z_index = -100
+position = Vector2(275.3258, 286.94034)
+scale = Vector2(0.8896102, 0.6383503)
+texture = ExtResource("4_1kice")
+
+[node name="mar 2" type="Sprite2D" parent="SHADERS" unique_id=2138885595]
+visible = false
+z_index = -500
+position = Vector2(275.3258, 286.94034)
+scale = Vector2(0.8896102, 0.6383503)
+texture = ExtResource("15_4suqf")
+
+[node name="mar 3" type="Sprite2D" parent="SHADERS" unique_id=462332272]
+visible = false
+z_index = -100
+position = Vector2(275.3258, 286.94034)
+scale = Vector2(0.8896102, 0.6383503)
+texture = ExtResource("16_orwkc")
+
+[node name="mar 4" type="Sprite2D" parent="SHADERS" unique_id=557390868]
+visible = false
+modulate = Color(1, 1, 1, 0.39215687)
+z_index = -100
+position = Vector2(275.3258, 286.94034)
+scale = Vector2(0.8896102, 0.6383503)
+texture = ExtResource("17_orwkc")
+
+[node name="mar 4 back" type="Sprite2D" parent="SHADERS" unique_id=17438873]
+visible = false
+z_index = -200
+position = Vector2(275.3258, 286.94034)
+scale = Vector2(0.8896102, 0.6383503)
+texture = ExtResource("17_orwkc")
+
+[node name="MarCorpo1" type="Sprite2D" parent="SHADERS" unique_id=274267960]
+visible = false
+z_index = -400
+position = Vector2(277.86548, 307.72757)
+scale = Vector2(1, 0.5992739)
+texture = ExtResource("29_fdh18")
+
+[node name="MarProfundoBack" type="Sprite2D" parent="SHADERS" unique_id=1790718723]
+visible = false
+z_index = -190
+position = Vector2(284.01764, 243.56773)
+texture = ExtResource("19_prxok")
 
 [node name="limits" type="Node2D" parent="." unique_id=1792116995]
 position = Vector2(-14, -56.099174)
@@ -370,7 +318,7 @@ limit_enabled = false
 
 [node name="shark" parent="." unique_id=2121875249 instance=ExtResource("1_gee14")]
 unique_name_in_owner = true
-position = Vector2(-98.28792, 139.1533)
+position = Vector2(-98.288, 130)
 
 [node name="spearFishing_package" type="Sprite2D" parent="." unique_id=1356140479]
 texture_filter = 1
@@ -386,13 +334,12 @@ offset_bottom = 492.78027
 color = Color(0.12225223, 0.12225223, 0.12225223, 1)
 
 [node name="PLAYER1INFO" type="ColorRect" parent="BLACK COLOR RECTS" unique_id=664119518]
-visible = false
 layout_mode = 0
-offset_left = 147.04774
-offset_top = 231.43625
-offset_right = 321.42587
-offset_bottom = 271.14624
-color = Color(0, 0, 0, 1)
+offset_left = 25.334763
+offset_top = 223.92313
+offset_right = 199.71289
+offset_bottom = 263.63312
+color = Color(0.12156863, 0.12156863, 0.12156863, 1)
 
 [node name="PlayerIconPng" type="Sprite2D" parent="BLACK COLOR RECTS/PLAYER1INFO" unique_id=246572327]
 position = Vector2(57.045, 21.592)
@@ -480,13 +427,12 @@ offset_bottom = 497.1761
 color = Color(0.12225223, 0.12225223, 0.12225223, 1)
 
 [node name="PLAYER2INFO" type="ColorRect" parent="BLACK COLOR RECTS2" unique_id=595410992]
-visible = false
 layout_mode = 0
-offset_left = 19.113037
-offset_top = 239.34154
-offset_right = 193.49115
-offset_bottom = 279.05154
-color = Color(0, 0, 0, 1)
+offset_left = 16.85913
+offset_top = 218.30469
+offset_right = 191.23724
+offset_bottom = 258.0147
+color = Color(0.12156863, 0.12156863, 0.12156863, 1)
 
 [node name="PlayerIconPng" type="Sprite2D" parent="BLACK COLOR RECTS2/PLAYER2INFO" unique_id=2665651]
 position = Vector2(57.045, 21.592)

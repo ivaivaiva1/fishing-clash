@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpjcbme3mfnnl"
-path="res://.godot/imported/mar fundo 2.png-21b4d6f87d6b2caa798d2595fe988f1d.ctex"
+uid="uid://c3w6d0f0471i5"
+path="res://.godot/imported/mar 3.png-f1b66b0d42dedef9e03f62da989f4fa0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://artes joao/mar fundo 2.png"
-dest_files=["res://.godot/imported/mar fundo 2.png-21b4d6f87d6b2caa798d2595fe988f1d.ctex"]
+source_file="res://Sprites/mar 3.png"
+dest_files=["res://.godot/imported/mar 3.png-f1b66b0d42dedef9e03f62da989f4fa0.ctex"]
 
 [params]
 

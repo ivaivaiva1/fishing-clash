@@ -20,16 +20,7 @@ var start_position: Vector2
 func _ready() -> void:
 	if need_to_start: return
 	await get_tree().create_timer(await_time).timeout
-	if is_fish:
-		zig_zague_tween()
-		return
-	if get_parent().get_parent().name == "treasure_container":
-		changeDIR_chance = 70
-		zig_zague2()
-	else:
-		#zig_zague_tween()
-		changeDIR_chance = 20
-		zig_zague2()
+	start()
 
 
 func start():
