@@ -47,10 +47,10 @@ func _process(_delta: float) -> void:
 func _physics_process(_delta: float) -> void:
 	if follow_player:
 		set_bait_direction()
-		velocity = move_direction * 70 * 2
-		if global_position.distance_to(target_bait.global_position) < 1:
-			follow_player = false
-			velocity = move_direction * 70 / 5
+		if global_position.distance_to(target_bait.global_position) < 5 || !coin_behaviour.is_alive:
+			velocity = move_direction * 20
+		else:
+			velocity = move_direction * 70 * 2
 	elif is_paused:
 		if global_position.y < 76.648:
 			velocity.y += gravity * _delta
