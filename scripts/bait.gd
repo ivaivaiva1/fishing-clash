@@ -20,6 +20,7 @@ var has_red_fishs = 0
 var has_golden_fishs = 0
 var treasure_scale: Vector2
 @onready var coin_pos: Marker2D = %coin_pos
+@onready var middle_pos: Marker2D = %middle_pos
 
 
 
@@ -51,7 +52,7 @@ func _physics_process(delta):
 		boost_controller.do_boost()
 		#EffectSpawner.collect_coin_effect(global_position)
 		if player.game_manager.coin_madness_enabled:
-			spawn_coin_jumping()
+			spawn_coin_falling()
 		if bait_state == "treasure":
 			spawn_coin_falling()
 			chest_feedback()
@@ -160,14 +161,13 @@ func spawn_coin_falling():
 		spawn_pos = coin_pos.global_position
 	
 	
-	var coin = coin_scene.instantiate()
+	var coin = coin_jumping_scene.instantiate()
 	coin.global_position = spawn_pos
 	
 	get_tree().current_scene.add_child(coin)
 
 
 func spawn_coin_jumping():
-	print("here")
 	var coin = coin_jumping_scene.instantiate()
 	coin.global_position = coin_pos.global_position
 	

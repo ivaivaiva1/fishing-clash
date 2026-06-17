@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://b5r7kedlv3x68" path="res://scripts/Entitys/spawn_treasure.gd" id="8_w7lom"]
 [ext_resource type="Script" uid="uid://dlvbdjkojbuuw" path="res://scripts/Effects/spawn_shine.gd" id="9_gkrq6"]
 [ext_resource type="Script" uid="uid://dtlem1127x0m6" path="res://scripts/Events/events_timer.gd" id="10_2lena"]
+[ext_resource type="Script" uid="uid://didkagiwa30s8" path="res://scripts/Events/cegonha_spawner.gd" id="11_3fbtg"]
 [ext_resource type="Script" uid="uid://2yj540ysy547" path="res://scripts/Player/boat_clone.gd" id="11_ca42v"]
 [ext_resource type="Texture2D" uid="uid://dfrqtdtraoj7h" path="res://artes joao/13-04-2026/icon_girl.png" id="13_5newe"]
 [ext_resource type="Texture2D" uid="uid://5qv7nmcjftw2" path="res://Sprites/mar 2.png" id="15_4suqf"]
@@ -66,6 +67,7 @@ font_size = 21
 [node name="game" type="Node2D" unique_id=760273511]
 
 [node name="Game_Manager" type="Node2D" parent="." unique_id=75664626]
+unique_name_in_owner = true
 script = ExtResource("2_ir15t")
 player_scene = ExtResource("2_trtic")
 
@@ -91,6 +93,31 @@ script = ExtResource("9_gkrq6")
 
 [node name="EventsTimer" type="Node2D" parent="." unique_id=651635868]
 script = ExtResource("10_2lena")
+
+[node name="CegonhaSpawner" type="Node2D" parent="." unique_id=1031139942]
+script = ExtResource("11_3fbtg")
+
+[node name="Céu" type="Node2D" parent="." unique_id=602447243]
+
+[node name="sky color" type="ColorRect" parent="Céu" unique_id=1347254917]
+z_index = -4090
+offset_left = -6.4119034
+offset_top = -47.420273
+offset_right = 555.2409
+offset_bottom = 114.89375
+color = Color(0.18431373, 0.73333335, 1, 1)
+
+[node name="4BackgroundClouds" type="Sprite2D" parent="Céu" unique_id=536658208]
+z_index = -4080
+position = Vector2(268.49268, 29.161354)
+rotation = -3.1415925
+scale = Vector2(1.8866041, 1.8866038)
+texture = ExtResource("22_aght6")
+
+[node name="3FloatingClouds" type="Sprite2D" parent="Céu" unique_id=1137145952]
+position = Vector2(267.56274, -13.731842)
+scale = Vector2(2.040282, 2.0402818)
+texture = ExtResource("23_w7lom")
 
 [node name="Mar" type="Node2D" parent="." unique_id=165544676]
 
@@ -320,11 +347,6 @@ limit_enabled = false
 unique_name_in_owner = true
 position = Vector2(-98.288, 130)
 
-[node name="spearFishing_package" type="Sprite2D" parent="." unique_id=1356140479]
-texture_filter = 1
-position = Vector2(978, 92.90082)
-texture = ExtResource("4_lbhrr")
-
 [node name="BLACK COLOR RECTS" type="ColorRect" parent="." unique_id=1340791473]
 z_index = 4010
 offset_left = -209.59259
@@ -511,14 +533,6 @@ position = Vector2(56.285904, 64.22458)
 scale = Vector2(0.10549085, 0.10549084)
 texture = ExtResource("4_264po")
 
-[node name="sky color" type="ColorRect" parent="." unique_id=1347254917]
-z_index = -4090
-offset_left = -6.4119034
-offset_top = -47.420273
-offset_right = 555.2409
-offset_bottom = 114.89375
-color = Color(0.18431373, 0.73333335, 1, 1)
-
 [node name="game_countdown" type="Label" parent="." unique_id=1392337292]
 unique_name_in_owner = true
 offset_left = 489.78125
@@ -531,18 +545,11 @@ label_settings = ExtResource("18_1kice")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="spearFishing_package" type="Sprite2D" parent="." unique_id=1356140479]
+texture_filter = 1
+position = Vector2(978, 92.90082)
+texture = ExtResource("4_lbhrr")
+
 [node name="SawShark" type="Sprite2D" parent="." unique_id=1554914359]
 position = Vector2(972.45215, 259.3752)
 texture = ExtResource("18_ssvqc")
-
-[node name="4BackgroundClouds" type="Sprite2D" parent="." unique_id=536658208]
-z_index = -4080
-position = Vector2(268.49268, 29.161354)
-rotation = 3.1415927
-scale = Vector2(1.8866041, 1.8866038)
-texture = ExtResource("22_aght6")
-
-[node name="3FloatingClouds" type="Sprite2D" parent="." unique_id=1137145952]
-position = Vector2(267.56274, -13.731842)
-scale = Vector2(2.040282, 2.0402818)
-texture = ExtResource("23_w7lom")

@@ -83,9 +83,7 @@ func _physics_process(_delta: float) -> void:
 					break
 			
 			if other_clone != null:
-				print("é clone")
 				send_collision_data(other_clone.clone_father)
 			else:
-				print("é player")
 				var other_player: Player = other as Player
 				send_collision_data(other_player)

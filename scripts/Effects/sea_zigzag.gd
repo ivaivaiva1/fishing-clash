@@ -10,7 +10,7 @@ var changeDIR_chance: float
 @export var transition: Tween.TransitionType = Tween.TRANS_SINE
 @export var ease_type: Tween.EaseType = Tween.EASE_IN_OUT
 @export var need_to_start: bool = false
-
+var cancel_tween: bool = false
 
 @onready var father: Node2D = get_parent()
 
@@ -97,11 +97,11 @@ func zig_zague_tween():
 
 
 func zig_zague2():
-	print("zigue_zaque")
 	zigzag2_step(1)
 
 
 func zigzag2_step(direction: int):
+	if cancel_tween: return
 	var tween = create_tween()
 	tween.set_trans(Tween.TRANS_SINE)
 	tween.set_ease(Tween.EASE_OUT)

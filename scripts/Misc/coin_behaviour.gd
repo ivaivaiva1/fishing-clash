@@ -14,7 +14,7 @@ func _ready() -> void:
 
 
 func is_collected():
-	if father_obj.is_paused: return
+	if father_obj.is_paused && !father_obj.can_be_picked: return
 	is_alive = false
 	var tween = create_tween()
 	

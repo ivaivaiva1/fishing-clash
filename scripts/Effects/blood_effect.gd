@@ -7,7 +7,6 @@ class_name BloodEffect
 
 func start(IS_BLOOD: bool) -> void:
 	var target_modulate: float = 0.2
-	print(("is blood é: ") + str(IS_BLOOD))
 	if !IS_BLOOD:
 		sprite_2d.texture = gold_texture
 		target_modulate = 0.4

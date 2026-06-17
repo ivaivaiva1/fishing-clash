@@ -18,7 +18,6 @@ var knockback_impact: float = 1.0
 func do_collision(col1_player: Player, _col1_mass: float, col1_velocity: Vector2, col2_player: Player , _col2_mass: float, col2_velocity: Vector2):
 	if timer > 0: return
 	timer = 0.3
-	print("PROCESS COLISION")
 	
 	var collision_normal = (col2_player.global_position - col1_player.global_position).normalized()
 	var relative_velocity = col1_velocity - col2_velocity
@@ -39,7 +38,6 @@ func do_collision(col1_player: Player, _col1_mass: float, col1_velocity: Vector2
 	col2_player.player_movement.last_velocity += impulse
 	
 	#EffectSpawner.collision_effect(col1_player.global_position)
-	print("Impact strength:", impact_strength)
 
 
 

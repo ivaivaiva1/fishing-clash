@@ -79,6 +79,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_0m2je"]
+radius = 39.802376
+
 [node name="coin_jumping" type="CharacterBody2D" unique_id=30085995]
 script = ExtResource("1_0m2je")
 max_pos_y = 800.0
@@ -95,12 +98,12 @@ texture = ExtResource("3_nrt1d")
 hframes = 6
 
 [node name="Area2D" type="Area2D" parent="." unique_id=948127719 groups=["coin"]]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1063616410]
 shape = SubResource("CircleShape2D_keamy")
 
 [node name="coin_behaviour" type="Node2D" parent="." unique_id=433791429]
+unique_name_in_owner = true
 script = ExtResource("4_e3wer")
 
 [node name="sea_zigzag" type="Node2D" parent="." unique_id=1168285474]
@@ -128,3 +131,10 @@ position = Vector2(-0.43708038, -0.21717072)
 sprite_frames = SubResource("SpriteFrames_8bt66")
 animation = &"reset"
 autoplay = "reset"
+
+[node name="BaitArea" type="Area2D" parent="." unique_id=359578615]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BaitArea" unique_id=771564962]
+shape = SubResource("CircleShape2D_0m2je")
+
+[connection signal="area_entered" from="BaitArea" to="." method="_on_bait_area_area_entered"]

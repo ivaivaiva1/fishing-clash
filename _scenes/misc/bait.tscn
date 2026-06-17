@@ -592,5 +592,9 @@ shape = SubResource("CircleShape2D_er5pq")
 unique_name_in_owner = true
 position = Vector2(8.936768, -5.5390196)
 
+[node name="middle_pos" type="Marker2D" parent="." unique_id=698584008]
+unique_name_in_owner = true
+position = Vector2(7.9215126, 9.993877)
+
 [connection signal="area_entered" from="BaitArea" to="." method="_on_bait_area_area_entered"]
 [connection signal="area_entered" from="magnetic_behaviour/magnetic_area" to="magnetic_behaviour" method="_on_magnetic_area_area_entered"]

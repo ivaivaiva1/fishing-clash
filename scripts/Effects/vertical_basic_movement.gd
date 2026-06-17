@@ -29,5 +29,4 @@ func stop():
 
 
 func auto_destroy():
-	print("to destroido :c")
 	queue_free()

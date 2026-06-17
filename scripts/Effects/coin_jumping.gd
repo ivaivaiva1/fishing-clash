@@ -11,15 +11,27 @@ var x_gravity: float
 var force_dir: int
 @export var is_paused: bool = false
 @onready var zig_zag: ZigZag = %sea_zigzag
+@export var min_jump_force_y: float = 130
+@export var max_jump_force_y: float = 200
+@export var min_jump_force_x: float = 50
+@export var max_jump_force_x: float = 160
+@onready var coin_behaviour: FallingCoin = %coin_behaviour
+@export var can_be_picked: bool = true
+
+
+var target_bait: Marker2D
+var follow_player: bool = false
+var move_direction
+
 
 func _ready() -> void:
 	do_jump()
 
 
 func do_jump():
-	velocity.y = -randf_range(130, 200)
+	velocity.y = -randf_range(min_jump_force_y, max_jump_force_y)
 	force_dir = [-1, 1].pick_random()
-	velocity.x = force_dir * randf_range(50, 160)
+	velocity.x = force_dir * randf_range(min_jump_force_x, max_jump_force_x)
 	x_gravity = 200
 
 
@@ -33,7 +45,13 @@ func _process(_delta: float) -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	if is_paused:
+	if follow_player:
+		set_bait_direction()
+		velocity = move_direction * 70 * 2
+		if global_position.distance_to(target_bait.global_position) < 1:
+			follow_player = false
+			velocity = move_direction * 70 / 5
+	elif is_paused:
 		if global_position.y < 76.648:
 			velocity.y += gravity * _delta
 		else:
@@ -43,6 +61,7 @@ func _physics_process(_delta: float) -> void:
 		if abs(velocity.x) < 5:
 			velocity.x = 0
 			is_paused = false
+			if zig_zag == null: return
 			zig_zag.start()
 	else:
 		if global_position.y < 76.648:
@@ -58,5 +77,23 @@ func stop():
 
 
 func auto_destroy():
-	print("to destroido :c")
 	queue_free()
+
+
+func set_bait_direction():
+	if !follow_player: return
+	if target_bait == null: return
+	var difference = target_bait.global_position - global_position
+	move_direction = difference.normalized()
+
+
+func _on_bait_area_area_entered(area: Area2D) -> void:
+	if !can_be_picked && is_paused: return
+	if follow_player: return
+	if zig_zag == null: return
+	if area.is_in_group("bait"):
+		var bait: Bait = area.get_parent() as Bait
+		if bait.bait_state == "treasure": return
+		zig_zag.queue_free()
+		target_bait = bait.middle_pos
+		follow_player = true

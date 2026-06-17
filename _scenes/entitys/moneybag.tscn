@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://mboxchoqsmho"]
+
+[ext_resource type="Script" uid="uid://cl7c051svx8hf" path="res://scripts/Entitys/moneybag.gd" id="1_iu0r5"]
+[ext_resource type="Texture2D" uid="uid://psac6qfkoh16" path="res://Sprites/moneybag.png" id="1_m4fer"]
+[ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://Shaders/blink.gdshader" id="2_l8wca"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4h2x1"]
+shader = ExtResource("2_l8wca")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_pct = 0.0
+
+[node name="moneybag" type="CharacterBody2D" unique_id=145409927]
+z_index = 49
+script = ExtResource("1_iu0r5")
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=2009384967]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_4h2x1")
+scale = Vector2(0.046674028, 0.04667403)
+texture = ExtResource("1_m4fer")
