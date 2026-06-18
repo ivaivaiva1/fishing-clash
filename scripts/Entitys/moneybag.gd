@@ -54,15 +54,41 @@ func blink_tween():
 		sprite.material,
 		"shader_parameter/flash_pct",
 		0.0,
-		10
+		3
 	)
 	
 	await tween.finished
 	sprite.material = null
-	get_tree().create_timer(3)
+	await get_tree().create_timer(randf_range(2, 4)).timeout
 	
-	var tween_a = create_tween()
-	tween_a.tween_property(self, "modulate:a", 0.0, 3)
+	modulate.a = 0.0
+	await get_tree().create_timer(0.2).timeout
 	
-	await tween_a.finished
+	modulate.a = 1.0
+	await get_tree().create_timer(0.2).timeout
+	
+	modulate.a = 0.0
+	await get_tree().create_timer(0.15).timeout
+	
+	modulate.a = 1.0
+	await get_tree().create_timer(0.15).timeout
+	
+	modulate.a = 0.0
+	await get_tree().create_timer(0.1).timeout
+	
+	modulate.a = 1.0
+	await get_tree().create_timer(0.1).timeout
+	
+	modulate.a = 0.0
+	await get_tree().create_timer(0.1).timeout
+	
+	modulate.a = 1.0
+	await get_tree().create_timer(0.1).timeout
+	
+	modulate.a = 0.0
+	await get_tree().create_timer(0.05).timeout
+	
+	modulate.a = 1.0
+	await get_tree().create_timer(0.05).timeout
+	
 	queue_free()

@@ -6,8 +6,10 @@ var spawned_treasures: int = 0
 var time_since_spawn: float
 var alive_treasures: Array[Treasure] 
 var treasure_container_scene: PackedScene = preload("uid://bdt27v65wmvui")
-var min_treasure_time: float = 45
-var max_treasure_time: float = 120
+#var min_treasure_time: float = 45
+#var max_treasure_time: float = 120
+var min_treasure_time: float = 500
+var max_treasure_time: float = 550
 @onready var time_to_spawn: float = randf_range(10, max_treasure_time)
 
 

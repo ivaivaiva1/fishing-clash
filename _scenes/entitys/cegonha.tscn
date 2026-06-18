@@ -19,7 +19,7 @@ position = Vector2(-5.062149, 12.403431)
 [node name="moneybag" type="Sprite2D" parent="." unique_id=1864782694]
 unique_name_in_owner = true
 position = Vector2(-3.4996247, 17.84227)
-scale = Vector2(0.046674028, 0.04667403)
+scale = Vector2(0.057, 0.047)
 texture = ExtResource("3_lwl5p")
 
 [node name="sprite" type="Sprite2D" parent="." unique_id=109564783]

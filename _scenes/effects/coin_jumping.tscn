@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b7jbhdejbjqmy" path="res://scripts/Effects/coin_jumping.gd" id="1_0m2je"]
 [ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://Shaders/blink.gdshader" id="2_6p50l"]
+[ext_resource type="Texture2D" uid="uid://cfmmwox84vcu3" path="res://Sprites/Entitys/Coins/yellow coin.png" id="3_6p50l"]
 [ext_resource type="Texture2D" uid="uid://gok3wms5rh5r" path="res://artes joao/14.04.26/coin/Coin dark brown.png" id="3_nrt1d"]
 [ext_resource type="Script" uid="uid://0t372l32f4di" path="res://scripts/Misc/coin_behaviour.gd" id="4_e3wer"]
 [ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://scripts/Effects/sea_zigzag.gd" id="5_liwj7"]
@@ -83,21 +84,28 @@ animations = [{
 radius = 39.802376
 
 [node name="coin_jumping" type="CharacterBody2D" unique_id=30085995]
+z_index = -50
+scale = Vector2(0.9, 0.9)
 script = ExtResource("1_0m2je")
 max_pos_y = 800.0
 min_speed = 20.0
 max_speed = 50.0
 is_paused = true
+purple_chance = 3.0
+red_chance = 10.0
+blue_chance = 50.0
+yellow_chance = 80.0
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=402700216]
 unique_name_in_owner = true
 z_index = 50
 material = SubResource("ShaderMaterial_4njp1")
 scale = Vector2(1.3, 1.3)
-texture = ExtResource("3_nrt1d")
+texture = ExtResource("3_6p50l")
 hframes = 6
 
 [node name="Area2D" type="Area2D" parent="." unique_id=948127719 groups=["coin"]]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1063616410]
 shape = SubResource("CircleShape2D_keamy")
@@ -133,6 +141,7 @@ animation = &"reset"
 autoplay = "reset"
 
 [node name="BaitArea" type="Area2D" parent="." unique_id=359578615]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BaitArea" unique_id=771564962]
 shape = SubResource("CircleShape2D_0m2je")

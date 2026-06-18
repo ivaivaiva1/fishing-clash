@@ -47,8 +47,9 @@ func spawn_bubble(target_pos: Vector2, target_scale: float, target_ordering: int
 	fish_spawner.add_child(effect)
 	effect.scale = Vector2(target_scale, target_scale)
 	effect.global_position = target_pos
-	var sprite = effect.get_node("Sprite")
-	sprite.z_index = target_ordering 
+	effect.z_index = target_ordering
+	#var sprite = effect.get_node("Sprite")
+	#sprite.z_index = target_ordering 
 
 
 func collect_coin_effect(target_pos: Vector2):

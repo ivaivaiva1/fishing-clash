@@ -200,6 +200,7 @@ animations = [{
 size = Vector2(562, 52)
 
 [node name="shark" type="CharacterBody2D" unique_id=1898177955 groups=["shark"]]
+z_index = -30
 motion_mode = 1
 script = ExtResource("1_po4rd")
 

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name CoinJumping
 
+@export_category("Movement Vars")
 @export var max_pos_y: float
 @export var min_speed: float
 @export var max_speed: float
@@ -17,11 +18,23 @@ var force_dir: int
 @export var max_jump_force_x: float = 160
 @onready var coin_behaviour: FallingCoin = %coin_behaviour
 @export var can_be_picked: bool = true
-
-
+var stop_all: bool = false
 var target_bait: Marker2D
 var follow_player: bool = false
 var move_direction
+
+@export_category("Rarity Vars")
+@export var purple_chance: float
+@export var red_chance: float
+@export var blue_chance: float
+@export var yellow_chance: float
+
+@export_category("Value Vars")
+@export var purple_value: float = 50
+@export var red_value: float = 20
+@export var blue_value: float = 10
+@export var yellow_value: float = 5
+@export var mini_value: float = 1
 
 
 func _ready() -> void:
@@ -45,12 +58,13 @@ func _process(_delta: float) -> void:
 
 
 func _physics_process(_delta: float) -> void:
+	if stop_all: return
 	if follow_player:
 		set_bait_direction()
 		if global_position.distance_to(target_bait.global_position) < 5 || !coin_behaviour.is_alive:
-			velocity = move_direction * 20
+			velocity = move_direction * 30
 		else:
-			velocity = move_direction * 70 * 2
+			velocity = move_direction * 100
 	elif is_paused:
 		if global_position.y < 76.648:
 			velocity.y += gravity * _delta
@@ -74,6 +88,7 @@ func _physics_process(_delta: float) -> void:
 
 func stop():
 	is_paused = true
+	stop_all = true
 
 
 func auto_destroy():

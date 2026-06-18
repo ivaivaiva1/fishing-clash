@@ -6,162 +6,198 @@
 
 [node name="coin_jumping" parent="." unique_id=30085995 instance=ExtResource("1_0vod5")]
 position = Vector2(-1.2026405, 6.396982)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
 
 [node name="coin_jumping2" parent="." unique_id=1749260036 instance=ExtResource("1_0vod5")]
 position = Vector2(2.3275642, 6.207863)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
 
 [node name="coin_jumping3" parent="." unique_id=824560720 instance=ExtResource("1_0vod5")]
 position = Vector2(4.596981, 2.8667755)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
 
 [node name="coin_jumping4" parent="." unique_id=1785464105 instance=ExtResource("1_0vod5")]
 position = Vector2(1.3819733, 1.5429497)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
 
 [node name="coin_jumping5" parent="." unique_id=1302321266 instance=ExtResource("1_0vod5")]
 position = Vector2(-1.1396027, 1.6690292)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
 
 [node name="coin_jumping6" parent="." unique_id=51892428 instance=ExtResource("1_0vod5")]
 position = Vector2(-2.5264702, 3.938446)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
 
 [node name="coin_jumping7" parent="." unique_id=773967136 instance=ExtResource("1_0vod5")]
 position = Vector2(1.8862839, 6.2709026)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
 
 [node name="coin_jumping8" parent="." unique_id=1600036305 instance=ExtResource("1_0vod5")]
 position = Vector2(5.038254, 4.1275635)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
 
 [node name="coin_jumping9" parent="." unique_id=2053345791 instance=ExtResource("1_0vod5")]
 position = Vector2(1.0037346, 2.7406979)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
 
 [node name="coin_jumping10" parent="." unique_id=258105483 instance=ExtResource("1_0vod5")]
 position = Vector2(-1.2656822, 5.7035484)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
 
 [node name="coin_jumping11" parent="." unique_id=446110105 instance=ExtResource("1_0vod5")]
 position = Vector2(3.5253105, 7.027376)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
 
 [node name="coin_jumping12" parent="." unique_id=1381199617 instance=ExtResource("1_0vod5")]
 position = Vector2(5.227371, 3.2450123)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
 
 [node name="coin_jumping13" parent="." unique_id=2144714892 instance=ExtResource("1_0vod5")]
 position = Vector2(0.9406967, 1.9842243)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
 
 [node name="coin_jumping14" parent="." unique_id=1244962843 instance=ExtResource("1_0vod5")]
 position = Vector2(-0.38313293, 5.262272)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
 
 [node name="coin_jumping15" parent="." unique_id=1016365697 instance=ExtResource("1_0vod5")]
 position = Vector2(-1.6439209, 2.8667755)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
 
 [node name="coin_jumping16" parent="." unique_id=98107425 instance=ExtResource("1_0vod5")]
 position = Vector2(0.9406929, 8.099041)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
 
 [node name="coin_jumping17" parent="." unique_id=1078734524 instance=ExtResource("1_0vod5")]
 position = Vector2(5.605606, 2.3624573)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
 
 [node name="coin_jumping18" parent="." unique_id=384672204 instance=ExtResource("1_0vod5")]
 position = Vector2(3.8405037, 3.4971657)
-is_up = null
 min_jump_force_y = 200.0
 max_jump_force_y = 350.0
 min_jump_force_x = 150.0
 max_jump_force_x = 300.0
-can_be_picked = true
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0

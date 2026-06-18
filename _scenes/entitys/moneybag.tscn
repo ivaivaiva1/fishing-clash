@@ -10,11 +10,11 @@ shader_parameter/flash_color = Color(1, 1, 1, 1)
 shader_parameter/flash_pct = 0.0
 
 [node name="moneybag" type="CharacterBody2D" unique_id=145409927]
-z_index = 49
+z_index = -51
 script = ExtResource("1_iu0r5")
 
 [node name="sprite" type="Sprite2D" parent="." unique_id=2009384967]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_4h2x1")
-scale = Vector2(0.046674028, 0.04667403)
+scale = Vector2(0.057, 0.047)
 texture = ExtResource("1_m4fer")
