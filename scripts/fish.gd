@@ -69,7 +69,7 @@ func _physics_process(_delta):
 @onready var bubble_rightPos: Marker2D = %bubble_rightPos
 @onready var bubble_leftPos: Marker2D = %bubble_leftPos
 var min_bubble_time: float = 0.5
-var max_bubble_time: float = 40
+var max_bubble_time: float = 10
 var double_bouble_change: float = 10
 func spawn_bubble():
 	var bubble_pos: Vector2

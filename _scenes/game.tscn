@@ -32,7 +32,6 @@
 [ext_resource type="Texture2D" uid="uid://dkpesntnrp5ug" path="res://Sprites/GRAFXKID/Tropics/3 - Floating_clouds.png" id="23_w7lom"]
 [ext_resource type="Texture2D" uid="uid://btyhn1ur144p6" path="res://Sprites/mar corpo 1.png" id="29_fdh18"]
 [ext_resource type="Texture2D" uid="uid://7t1e0od1dsbw" path="res://Sprites/Sea/Superficie.png" id="31_mj01u"]
-[ext_resource type="PackedScene" uid="uid://pj5f4o6fc50o" path="res://_scenes/fish/chest_fish.tscn" id="33_fodu2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2lena"]
 shader = ExtResource("21_gkrq6")
@@ -555,12 +554,3 @@ texture = ExtResource("4_lbhrr")
 [node name="SawShark" type="Sprite2D" parent="." unique_id=1554914359]
 position = Vector2(972.45215, 259.3752)
 texture = ExtResource("18_ssvqc")
-
-[node name="chest_fish" parent="." unique_id=759476320 instance=ExtResource("33_fodu2")]
-position = Vector2(501.36356, 277.03116)
-
-[node name="chest_fish2" parent="." unique_id=1643586809 instance=ExtResource("33_fodu2")]
-position = Vector2(584.9999, 250.66757)
-
-[node name="chest_fish3" parent="." unique_id=530626737 instance=ExtResource("33_fodu2")]
-position = Vector2(586.818, 351.57666)

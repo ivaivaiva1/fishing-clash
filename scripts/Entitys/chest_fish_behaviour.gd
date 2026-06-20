@@ -15,21 +15,31 @@ var acceleration: float = 400.0
 var deceleration: float = 50
 
 var is_turbo: bool = false
-var boost_duration: float = 0.5
 var turbo_timer: float
-
-var boost_cooldown: float = 1
 var boost_timer: float = 0
 
 var boost_multiplier: float = 5
+var boost_duration: float = 0.5
+var boost_cooldown: float = 1
 
+var default_boost_multiplier: float = 5
+var default_boost_duration: float = 0.5
+var default_boost_cooldown: float = 1.0
+
+var cagao_boost_multiplier: float = 10
+var cagao_boost_duration: float = 0.2
+var cagao_boost_cooldown: float = 0.4
+
+
+var has_coins: int = 25
+var is_cagao: bool = false
 @onready var coin_pos_left: Marker2D = %coin_pos_left
 @onready var coin_pos_right: Marker2D = %coin_pos_right
 var coin_scene: PackedScene = preload("uid://bgjkqcjdfprnn")
 
 
 func _ready() -> void:
-	#Engine.time_scale = 3.0
+	Engine.time_scale = 2.0
 	var spawn_side: int = [-1, 1].pick_random()
 	sprite = %AnimatedSprite2D
 	
@@ -57,19 +67,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if !is_started:
 		if !already_purge:
-			if move_right and global_position.x > 35:
+			if move_right and global_position.x > 25:
 				is_started = true
 			elif !move_right and global_position.x < 501:
 				is_started = true
 		else:
 			if move_right and global_position.x > 580:
-				turn_around()
-				change_y()
-				already_purge = false
+				do_change_direction()
 			elif !move_right and global_position.x <= -40:
-				turn_around()
-				change_y()
-				already_purge = false
+				do_change_direction()
 		return
 	
 	if already_purge:
@@ -82,6 +88,15 @@ func _process(delta: float) -> void:
 	_update_velocity(delta)
 	
 	chest_fish.speed = actual_velocity
+
+
+func do_change_direction():
+	already_purge = false
+	boost_timer = 0
+	turbo_timer = 0
+	turn_around()
+	change_y()
+	do_cagao()
 
 
 
@@ -99,6 +114,7 @@ func turn_around():
 
 func _update_boost(delta: float) -> void:
 	if !is_turbo:
+		if has_coins <= 0: return
 		if boost_timer > 0:
 			boost_timer -= delta
 		else:
@@ -108,7 +124,6 @@ func _update_boost(delta: float) -> void:
 				else
 				-initial_speed * boost_multiplier
 			)
-
 			turbo_timer = boost_duration
 			is_turbo = true
 			spurge_coins()
@@ -122,7 +137,6 @@ func _update_boost(delta: float) -> void:
 				else
 				-initial_speed
 			)
-
 			boost_timer = boost_cooldown
 			is_turbo = false
 
@@ -130,10 +144,10 @@ func _update_boost(delta: float) -> void:
 
 func _update_velocity(delta: float) -> void:
 	var accel := acceleration
-
+	
 	if abs(actual_velocity) > abs(target_velocity):
 		accel = deceleration
-
+	
 	actual_velocity = move_toward(
 		actual_velocity,
 		target_velocity,
@@ -142,24 +156,25 @@ func _update_velocity(delta: float) -> void:
 
 
 func spurge_coins():
+	has_coins -= 1
 	already_purge = true
 	chest_fish.scale *= 0.98
-
+	
 	var coin_dir
 	var coin_pos
-
+	
 	if move_right:
 		coin_dir = -1
 		coin_pos = coin_pos_right.global_position
 	else:
 		coin_dir = 1
 		coin_pos = coin_pos_left.global_position
-
+	
 	var coins := coin_scene.instantiate()
-
+	
 	for coin: CoinJumping in _get_all_coins(coins):
 		coin.jump_direction = coin_dir
-
+	
 	get_tree().current_scene.add_child(coins)
 	coins.global_position = coin_pos
 
@@ -180,11 +195,9 @@ func _get_all_coins(node: Node) -> Array[CoinJumping]:
 
 var y_offset: float = 50
 func change_y() -> void:
-	print("tamo aq guys")
 	var change := y_offset
 	var y := chest_fish.global_position.y
 	
-	# Se estiver muito embaixo, sempre sobe
 	if y < 200.0:
 		chest_fish.global_position.y += change
 		return
@@ -192,16 +205,29 @@ func change_y() -> void:
 		chest_fish.global_position.y -= change
 		return
 	
-	# Se estiver muito em cima, 70% chance de descer
 	if y > 325.0:
 		if randf() < 0.7:
 			chest_fish.global_position.y -= change
 		else:
 			chest_fish.global_position.y += change
 		return
-	
-	# Caso normal: +30 ou -30 aleatório
 	if randf() < 0.5:
 		chest_fish.global_position.y += change
 	else:
 		chest_fish.global_position.y -= change
+
+
+func do_cagao():
+	if is_cagao: 
+		is_cagao = false
+		boost_multiplier = default_boost_multiplier
+		boost_duration = default_boost_duration
+		boost_cooldown = default_boost_cooldown
+		return
+	
+	var cagao_chance: float = randf_range(0, 100)
+	if cagao_chance <= 20:
+		is_cagao = true
+		boost_multiplier = cagao_boost_multiplier
+		boost_duration = cagao_boost_duration
+		boost_cooldown = cagao_boost_cooldown
