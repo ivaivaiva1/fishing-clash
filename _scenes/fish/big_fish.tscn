@@ -146,8 +146,8 @@ z_as_relative = false
 position = Vector2(1, 0)
 scale = Vector2(1.7, 1.7)
 sprite_frames = SubResource("SpriteFrames_jrlim")
+animation = &"shiny"
 autoplay = "default"
-frame_progress = 0.5866917
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1186832392 groups=["fish"]]

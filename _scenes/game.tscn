@@ -116,6 +116,7 @@ scale = Vector2(1.8866041, 1.8866038)
 texture = ExtResource("22_aght6")
 
 [node name="3FloatingClouds" type="Sprite2D" parent="Céu" unique_id=1137145952]
+z_index = -1000
 position = Vector2(267.56274, -13.731842)
 scale = Vector2(2.040282, 2.0402818)
 texture = ExtResource("23_w7lom")
@@ -556,4 +557,10 @@ position = Vector2(972.45215, 259.3752)
 texture = ExtResource("18_ssvqc")
 
 [node name="chest_fish" parent="." unique_id=759476320 instance=ExtResource("33_fodu2")]
-position = Vector2(-39.545532, 211.57661)
+position = Vector2(501.36356, 277.03116)
+
+[node name="chest_fish2" parent="." unique_id=1643586809 instance=ExtResource("33_fodu2")]
+position = Vector2(584.9999, 250.66757)
+
+[node name="chest_fish3" parent="." unique_id=530626737 instance=ExtResource("33_fodu2")]
+position = Vector2(586.818, 351.57666)

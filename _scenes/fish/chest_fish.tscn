@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_kvppo"]
 [ext_resource type="Texture2D" uid="uid://rsejho4l2w80" path="res://Sprites/SpearFishing Assets Pack/Sprites/Fish1 - 16x16/Red.png" id="2_okpkt"]
 [ext_resource type="Script" uid="uid://c3pq7quoidk37" path="res://scripts/Entitys/chest_fish_behaviour.gd" id="4_kvppo"]
-[ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://scripts/Effects/sea_zigzag.gd" id="4_m6y1p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvppo"]
 atlas = ExtResource("2_okpkt")
@@ -73,8 +72,8 @@ animations = [{
 z_index = -60
 script = ExtResource("1_kvppo")
 fish_name = "golden"
-speed = 5.0
-auto_destruction_timer = 100.0
+speed = 20.0
+auto_destruction_timer = 5000.0
 peso = 0.267
 points = 100.0
 effect_size = 1.8
@@ -113,13 +112,6 @@ position = Vector2(15, 9)
 unique_name_in_owner = true
 visible = false
 position = Vector2(-15, 9)
-
-[node name="sea_zigzag" type="Node2D" parent="." unique_id=586535858]
-script = ExtResource("4_m6y1p")
-zigzag_distance = 3.0
-zigzag_time = 0.8
-is_horizontal = false
-is_fish = true
 
 [node name="coin_pos_right" type="Marker2D" parent="." unique_id=29409393]
 unique_name_in_owner = true
