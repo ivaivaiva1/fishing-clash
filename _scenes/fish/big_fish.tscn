@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://by4oxgbthjk4u"]
 
 [ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_5lic5"]
-[ext_resource type="Texture2D" uid="uid://bj7iplhc0ajfs" path="res://Sprites/Fish Sprites/peixe_grande_v2 verde.png" id="2_c3pe1"]
+[ext_resource type="Texture2D" uid="uid://bj7iplhc0ajfs" path="res://Sprites/Fish Sprites/big_fish.png" id="2_c3pe1"]
 [ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://scripts/Effects/sea_zigzag.gd" id="4_c3pe1"]
+[ext_resource type="Texture2D" uid="uid://k3vyhqbyr7oe" path="res://Sprites/Fish Sprites/big_fish_shiny.png" id="4_vu2ot"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vu2ot"]
 atlas = ExtResource("2_c3pe1")
@@ -36,6 +37,38 @@ region = Rect2(128, 64, 64, 64)
 atlas = ExtResource("2_c3pe1")
 region = Rect2(192, 64, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3pe1"]
+atlas = ExtResource("4_vu2ot")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqgw2"]
+atlas = ExtResource("4_vu2ot")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uo2st"]
+atlas = ExtResource("4_vu2ot")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cigoa"]
+atlas = ExtResource("4_vu2ot")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xiccc"]
+atlas = ExtResource("4_vu2ot")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hu7f4"]
+atlas = ExtResource("4_vu2ot")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7e1j"]
+atlas = ExtResource("4_vu2ot")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkmys"]
+atlas = ExtResource("4_vu2ot")
+region = Rect2(192, 64, 64, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_jrlim"]
 animations = [{
 "frames": [{
@@ -66,6 +99,35 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3pe1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqgw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uo2st")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cigoa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xiccc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hu7f4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7e1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkmys")
+}],
+"loop": true,
+"name": &"shiny",
+"speed": 10.0
 }]
 
 [node name="big_fish" type="CharacterBody2D" unique_id=759476320]
@@ -85,7 +147,7 @@ position = Vector2(1, 0)
 scale = Vector2(1.7, 1.7)
 sprite_frames = SubResource("SpriteFrames_jrlim")
 autoplay = "default"
-frame_progress = 0.7527813
+frame_progress = 0.5866917
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1186832392 groups=["fish"]]

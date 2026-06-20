@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch2l777aqagxs"
-path="res://.godot/imported/Shrimp Changed.png-c8228939391fb62879dcf3358526eed1.ctex"
+uid="uid://ci6nr1yv30juf"
+path="res://.godot/imported/shark.png-eae34eda01d50c04aa74dc93f943569d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Fish Sprites/Shrimp Changed.png"
-dest_files=["res://.godot/imported/Shrimp Changed.png-c8228939391fb62879dcf3358526eed1.ctex"]
+source_file="res://Sprites/Fish Sprites/shark.png"
+dest_files=["res://.godot/imported/shark.png-eae34eda01d50c04aa74dc93f943569d.ctex"]
 
 [params]
 

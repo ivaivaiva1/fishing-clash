@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://pj5f4o6fc50o"]
+
+[ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_kvppo"]
+[ext_resource type="Texture2D" uid="uid://rsejho4l2w80" path="res://Sprites/SpearFishing Assets Pack/Sprites/Fish1 - 16x16/Red.png" id="2_okpkt"]
+[ext_resource type="Script" uid="uid://c3pq7quoidk37" path="res://scripts/Entitys/chest_fish_behaviour.gd" id="4_kvppo"]
+[ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://scripts/Effects/sea_zigzag.gd" id="4_m6y1p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvppo"]
+atlas = ExtResource("2_okpkt")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebha6"]
+atlas = ExtResource("2_okpkt")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3qdt"]
+atlas = ExtResource("2_okpkt")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6y1p"]
+atlas = ExtResource("2_okpkt")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2mjp"]
+atlas = ExtResource("2_okpkt")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_doyfd"]
+atlas = ExtResource("2_okpkt")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fv8ts"]
+atlas = ExtResource("2_okpkt")
+region = Rect2(96, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cg7gm"]
+atlas = ExtResource("2_okpkt")
+region = Rect2(112, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jrlim"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvppo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebha6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3qdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6y1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2mjp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_doyfd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fv8ts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cg7gm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="chest_fish" type="CharacterBody2D" unique_id=759476320]
+z_index = -60
+script = ExtResource("1_kvppo")
+fish_name = "golden"
+speed = 5.0
+auto_destruction_timer = 100.0
+peso = 0.267
+points = 100.0
+effect_size = 1.8
+pescavel = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=720800471]
+unique_name_in_owner = true
+position = Vector2(1, 0)
+scale = Vector2(4.605, 4.605)
+sprite_frames = SubResource("SpriteFrames_jrlim")
+autoplay = "default"
+frame_progress = 0.44736078
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1186832392 groups=["fish"]]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=304766951]
+polygon = PackedVector2Array(-14, -22, -14, -22, 8, -22, 18, -12, 20, -8, 21, -1, 21, 8, 13, 14, -14, 14, -20, 7, -28, 10, -28, -7, -21, -3, -19, -12, -14, -16)
+
+[node name="right_effectPos" type="Marker2D" parent="." unique_id=681224076]
+unique_name_in_owner = true
+visible = false
+position = Vector2(3, 0)
+
+[node name="left_effectPos" type="Marker2D" parent="." unique_id=279669195]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-2, 0)
+
+[node name="bubble_rightPos" type="Marker2D" parent="." unique_id=259068415]
+unique_name_in_owner = true
+visible = false
+position = Vector2(15, 9)
+
+[node name="bubble_leftPos" type="Marker2D" parent="." unique_id=1701793375]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-15, 9)
+
+[node name="sea_zigzag" type="Node2D" parent="." unique_id=586535858]
+script = ExtResource("4_m6y1p")
+zigzag_distance = 3.0
+zigzag_time = 0.8
+is_horizontal = false
+is_fish = true
+
+[node name="coin_pos_right" type="Marker2D" parent="." unique_id=29409393]
+unique_name_in_owner = true
+position = Vector2(-22.921577, 23.080132)
+
+[node name="coin_pos_left" type="Marker2D" parent="." unique_id=1233909752]
+unique_name_in_owner = true
+position = Vector2(22.922, 23.08)
+
+[node name="chest_fish_behaviour" type="Node2D" parent="." unique_id=334047371]
+script = ExtResource("4_kvppo")

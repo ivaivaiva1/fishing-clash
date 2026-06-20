@@ -14,10 +14,17 @@ var move_right: bool = true
 @onready var left_effectPos: Marker2D = %left_effectPos
 var red_rain = false
 @onready var fish_characterbody: CharacterBody2D = self
+@export var pescavel: bool = true
 
 
 
 func _ready():
+	if !pescavel: return
+	var shiny_chance = randf_range(0, 100)
+	if shiny_chance < 3:
+		sprite.play("shiny")
+		points *= 5
+		peso *= 2
 	if(!move_right):
 		speed = speed * -1
 		scale.x = -1
@@ -34,8 +41,7 @@ func _ready():
 	
 	var final_scale = 1.0 - reduction_percent
 	scale *= final_scale
-	#if fish_name == "big_fish":
-		#big_fish_patrol()
+
 
 
 
@@ -67,9 +73,9 @@ var max_bubble_time: float = 40
 var double_bouble_change: float = 10
 func spawn_bubble():
 	var bubble_pos: Vector2
-	if sprite.flip_h: bubble_pos = bubble_rightPos.global_position
-	else: bubble_pos = bubble_leftPos.global_position
-	
+	#if sprite.flip_h: bubble_pos = bubble_rightPos.global_position
+	#else: bubble_pos = bubble_leftPos.global_position
+	bubble_pos = bubble_rightPos.global_position
 	
 	EffectSpawner.spawn_bubble(bubble_pos, (effect_size * scale.x), (sprite.z_index + 1))
 	bubble_timer = randf_range(min_bubble_time, max_bubble_time)
@@ -81,7 +87,8 @@ func spawn_bubble():
 
 func spawn_catch_effect():
 	var spawn_pos: Vector2
-	if move_right: spawn_pos = right_effectPos.global_position
-	else: spawn_pos = left_effectPos.global_position
+	#if move_right: spawn_pos = right_effectPos.global_position
+	#else: spawn_pos = left_effectPos.global_position
+	spawn_pos = right_effectPos.global_position
 	EffectSpawner.spawn_effect(spawn_pos, effect_size)
 	queue_free()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj7iplhc0ajfs"
-path="res://.godot/imported/peixe_grande_v2 verde.png-eabc56134cb5407b6e7bbcdfa79c44d4.ctex"
+uid="uid://dagphdpis438i"
+path="res://.godot/imported/gold_fish_shiny.png-2f5edc1b24bd00c58426a9aedd42d6b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Fish Sprites/peixe_grande_v2 verde.png"
-dest_files=["res://.godot/imported/peixe_grande_v2 verde.png-eabc56134cb5407b6e7bbcdfa79c44d4.ctex"]
+source_file="res://Sprites/Fish Sprites/gold_fish_shiny.png"
+dest_files=["res://.godot/imported/gold_fish_shiny.png-2f5edc1b24bd00c58426a9aedd42d6b0.ctex"]
 
 [params]
 

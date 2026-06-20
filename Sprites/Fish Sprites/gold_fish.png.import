@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsw56ryji4eos"
-path="res://.godot/imported/peixe_contorno_azul.png-be54c936bdce0db476e1d7b1bb3239d4.ctex"
+uid="uid://oxc2xlbgd8xw"
+path="res://.godot/imported/gold_fish.png-a7d8f7d93147e1b9bcce697276042ad4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Fish Sprites/peixe_contorno_azul.png"
-dest_files=["res://.godot/imported/peixe_contorno_azul.png-be54c936bdce0db476e1d7b1bb3239d4.ctex"]
+source_file="res://Sprites/Fish Sprites/gold_fish.png"
+dest_files=["res://.godot/imported/gold_fish.png-a7d8f7d93147e1b9bcce697276042ad4.ctex"]
 
 [params]
 

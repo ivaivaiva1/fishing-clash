@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci6nr1yv30juf"
-path="res://.godot/imported/TUBARAO CLARO 6.png-c26e38d1b2a9433496c09b0a8aac3851.ctex"
+uid="uid://bsw56ryji4eos"
+path="res://.godot/imported/blue_fish.png-ce4b43256539a072a96ac01dcaceddd7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Fish Sprites/TUBARAO CLARO 6.png"
-dest_files=["res://.godot/imported/TUBARAO CLARO 6.png-c26e38d1b2a9433496c09b0a8aac3851.ctex"]
+source_file="res://Sprites/Fish Sprites/blue_fish.png"
+dest_files=["res://.godot/imported/blue_fish.png-ce4b43256539a072a96ac01dcaceddd7.ctex"]
 
 [params]
 

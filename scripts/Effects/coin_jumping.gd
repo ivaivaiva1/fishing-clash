@@ -8,7 +8,6 @@ class_name CoinJumping
 @export var is_up: bool
 @onready var actual_speed: float = randf_range(min_speed, max_speed)
 var gravity: float = 400
-var x_gravity: float 
 var force_dir: int
 @export var is_paused: bool = false
 @onready var zig_zag: ZigZag = %sea_zigzag
@@ -16,6 +15,8 @@ var force_dir: int
 @export var max_jump_force_y: float = 200
 @export var min_jump_force_x: float = 50
 @export var max_jump_force_x: float = 160
+@export var x_gravity: float = 200
+@export var jump_direction: float 
 @onready var coin_behaviour: FallingCoin = %coin_behaviour
 @export var can_be_picked: bool = true
 var stop_all: bool = false
@@ -42,10 +43,14 @@ func _ready() -> void:
 
 
 func do_jump():
-	velocity.y = -randf_range(min_jump_force_y, max_jump_force_y)
-	force_dir = [-1, 1].pick_random()
+	if min_jump_force_y > 0:
+		velocity.y = -randf_range(min_jump_force_y, max_jump_force_y)
+	var force_dir
+	if jump_direction != 0:
+		force_dir = jump_direction
+	else:
+		force_dir = [-1, 1].pick_random()
 	velocity.x = force_dir * randf_range(min_jump_force_x, max_jump_force_x)
-	x_gravity = 200
 
 
 

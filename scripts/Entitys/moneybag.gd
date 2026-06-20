@@ -58,7 +58,7 @@ func blink_tween():
 	)
 	
 	await tween.finished
-	sprite.material = null
+	sprite.material = null 
 	await get_tree().create_timer(randf_range(2, 4)).timeout
 	
 	modulate.a = 0.0

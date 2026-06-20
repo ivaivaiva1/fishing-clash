@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://bgjkqcjdfprnn"]
+
+[ext_resource type="PackedScene" uid="uid://b65gxg7dm233r" path="res://_scenes/effects/coin_jumping.tscn" id="1_axtdt"]
+
+[node name="coin_container" type="Node2D" unique_id=1373108934]
+
+[node name="coin_jumping" parent="." unique_id=30085995 instance=ExtResource("1_axtdt")]
+position = Vector2(-1.2026405, 6.396982)
+min_jump_force_y = 0.0
+max_jump_force_y = 0.0
+min_jump_force_x = 100.0
+max_jump_force_x = 300.0
+x_gravity = 500.0
+jump_direction = 1.0
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
+
+[node name="coin_jumping2" parent="." unique_id=1749260036 instance=ExtResource("1_axtdt")]
+position = Vector2(2.3275642, 6.207863)
+min_jump_force_y = 0.0
+max_jump_force_y = 0.0
+min_jump_force_x = 100.0
+max_jump_force_x = 300.0
+x_gravity = 500.0
+jump_direction = 1.0
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
+
+[node name="coin_jumping3" parent="." unique_id=824560720 instance=ExtResource("1_axtdt")]
+position = Vector2(4.596981, 2.8667755)
+min_jump_force_y = 0.0
+max_jump_force_y = 0.0
+min_jump_force_x = 100.0
+max_jump_force_x = 300.0
+x_gravity = 500.0
+jump_direction = 1.0
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
+
+[node name="coin_jumping4" parent="." unique_id=1785464105 instance=ExtResource("1_axtdt")]
+position = Vector2(1.3819733, 1.5429497)
+min_jump_force_y = 0.0
+max_jump_force_y = 0.0
+min_jump_force_x = 100.0
+max_jump_force_x = 300.0
+x_gravity = 500.0
+jump_direction = 1.0
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0
+
+[node name="coin_jumping5" parent="." unique_id=1302321266 instance=ExtResource("1_axtdt")]
+position = Vector2(-1.1396027, 1.6690292)
+min_jump_force_y = 0.0
+max_jump_force_y = 0.0
+min_jump_force_x = 100.0
+max_jump_force_x = 300.0
+x_gravity = 500.0
+jump_direction = 1.0
+purple_chance = 2.0
+red_chance = 5.0
+blue_chance = 15.0
+yellow_chance = 60.0

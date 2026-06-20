@@ -263,6 +263,7 @@ func _on_bait_area_area_entered(area: Area2D) -> void:
 	if bait_state == "treasure": return
 	if area.is_in_group("fish"):
 		var fish: Fish = area.get_parent() as Fish 
+		if !fish.pescavel: return 
 		get_fish(fish.fish_name, fish.peso, fish.points)
 		fish.spawn_catch_effect()
 	
