@@ -39,7 +39,7 @@ var coin_scene: PackedScene = preload("uid://bgjkqcjdfprnn")
 
 
 func _ready() -> void:
-	Engine.time_scale = 2.0
+	Engine.time_scale = 1.5
 	var spawn_side: int = [-1, 1].pick_random()
 	sprite = %AnimatedSprite2D
 	
@@ -114,7 +114,10 @@ func turn_around():
 
 func _update_boost(delta: float) -> void:
 	if !is_turbo:
-		if has_coins <= 0: return
+		if has_coins <= 0: 
+			if !chest_fish.pescavel:
+				chest_fish.pescavel = true
+			return
 		if boost_timer > 0:
 			boost_timer -= delta
 		else:

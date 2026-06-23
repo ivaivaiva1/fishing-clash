@@ -6,7 +6,7 @@
 [ext_resource type="Shader" uid="uid://dltsjnvd5v5sk" path="res://Shaders/shake.gdshader" id="3_yu7fc"]
 [ext_resource type="Texture2D" uid="uid://bfknudkvo2ya4" path="res://artes joao/14.04.26/isca/isca 2.png" id="4_xr7ih"]
 [ext_resource type="Texture2D" uid="uid://oxc2xlbgd8xw" path="res://Sprites/Fish Sprites/gold_fish.png" id="5_up2ac"]
-[ext_resource type="Texture2D" uid="uid://cxp8gjpeue570" path="res://artes joao/blue fish.png" id="6_psogv"]
+[ext_resource type="Texture2D" uid="uid://bsw56ryji4eos" path="res://Sprites/Fish Sprites/blue_fish.png" id="6_xq470"]
 [ext_resource type="Texture2D" uid="uid://bj7iplhc0ajfs" path="res://Sprites/Fish Sprites/big_fish.png" id="7_up2ac"]
 [ext_resource type="Texture2D" uid="uid://cw54xs24pb6u0" path="res://artes joao/bau_contorno_preto.png" id="8_chrn6"]
 [ext_resource type="Script" uid="uid://b1y7jwgfvfrda" path="res://scripts/boost_controller.gd" id="9_16gtk"]
@@ -30,80 +30,105 @@ size = Vector2(14, 25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bt5mj"]
 size = Vector2(43, 54)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qfm1y"]
-atlas = ExtResource("6_psogv")
-region = Rect2(0, 1024, 1024, 1024)
+[sub_resource type="AtlasTexture" id="AtlasTexture_kp7mt"]
+atlas = ExtResource("6_xq470")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fulsm"]
-atlas = ExtResource("6_psogv")
-region = Rect2(1024, 1024, 1024, 1024)
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdl1i"]
+atlas = ExtResource("6_xq470")
+region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4r5pv"]
-atlas = ExtResource("6_psogv")
-region = Rect2(2048, 1024, 1024, 1024)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yqtn"]
+atlas = ExtResource("6_xq470")
+region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_60mlk"]
-atlas = ExtResource("6_psogv")
-region = Rect2(3072, 1024, 1024, 1024)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ev7ia"]
+atlas = ExtResource("6_xq470")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmxms"]
+atlas = ExtResource("6_xq470")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tflh"]
+atlas = ExtResource("6_xq470")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bq0c"]
+atlas = ExtResource("6_xq470")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_li37a"]
+atlas = ExtResource("6_xq470")
+region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pl11u"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qfm1y")
+"texture": SubResource("AtlasTexture_kp7mt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fulsm")
+"texture": SubResource("AtlasTexture_bdl1i")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4r5pv")
+"texture": SubResource("AtlasTexture_4yqtn")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_60mlk")
+"texture": SubResource("AtlasTexture_ev7ia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmxms")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tflh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5bq0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_li37a")
 }],
 "loop": true,
 "name": &"default",
 "speed": 25.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_up2ac"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xq470"]
 atlas = ExtResource("5_up2ac")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xq470"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_usgw0"]
 atlas = ExtResource("5_up2ac")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_usgw0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6hk6"]
 atlas = ExtResource("5_up2ac")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o6hk6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rhwt"]
 atlas = ExtResource("5_up2ac")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5rhwt"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_opc6d"]
 atlas = ExtResource("5_up2ac")
 region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_opc6d"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0aa1"]
 atlas = ExtResource("5_up2ac")
 region = Rect2(32, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f0aa1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_slnsi"]
 atlas = ExtResource("5_up2ac")
 region = Rect2(64, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_slnsi"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fs0km"]
 atlas = ExtResource("5_up2ac")
 region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v2yb1"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_up2ac")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xq470")
 }, {
@@ -124,6 +149,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_slnsi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs0km")
 }],
 "loop": true,
 "name": &"default",
@@ -251,7 +279,7 @@ visible = false
 z_index = -6
 position = Vector2(1.9544847, 18.538826)
 rotation = -1.44862
-scale = Vector2(0.041, 0.041)
+scale = Vector2(1.311, 1.311)
 sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.0103795
@@ -263,10 +291,9 @@ visible = false
 z_index = -6
 position = Vector2(4.7866726, 18.62273)
 rotation = -1.51844
-scale = Vector2(0.041, 0.041)
+scale = Vector2(1.311, 1.311)
 sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
-frame = 2
 frame_progress = 0.8017927
 flip_h = true
 
@@ -276,7 +303,7 @@ visible = false
 z_index = -6
 position = Vector2(7.6119933, 18.371014)
 rotation = -1.5708
-scale = Vector2(0.041, 0.041)
+scale = Vector2(1.311, 1.311)
 sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.39534628
@@ -288,7 +315,7 @@ visible = false
 z_index = -6
 position = Vector2(9.940748, 18.287107)
 rotation = -1.62316
-scale = Vector2(0.041, 0.041)
+scale = Vector2(1.311, 1.311)
 sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.0103795
@@ -300,7 +327,7 @@ visible = false
 z_index = -6
 position = Vector2(12.850031, 18.454918)
 rotation = -1.69297
-scale = Vector2(0.041, 0.041)
+scale = Vector2(1.311, 1.311)
 sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.0103795
@@ -312,7 +339,7 @@ visible = false
 z_index = -6
 position = Vector2(2.1109524, 28.79523)
 rotation = -1.44862
-scale = Vector2(0.041, 0.041)
+scale = Vector2(1.311, 1.311)
 sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.0103795
@@ -324,10 +351,9 @@ visible = false
 z_index = -6
 position = Vector2(4.94314, 28.879135)
 rotation = -1.51844
-scale = Vector2(0.041, 0.041)
+scale = Vector2(1.311, 1.311)
 sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
-frame = 2
 frame_progress = 0.8017927
 flip_h = true
 
@@ -337,7 +363,7 @@ visible = false
 z_index = -6
 position = Vector2(7.768461, 28.627419)
 rotation = -1.5708
-scale = Vector2(0.041, 0.041)
+scale = Vector2(1.311, 1.311)
 sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.39534628
@@ -349,7 +375,7 @@ visible = false
 z_index = -6
 position = Vector2(10.097216, 28.543512)
 rotation = -1.62316
-scale = Vector2(0.041, 0.041)
+scale = Vector2(1.311, 1.311)
 sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.0103795
@@ -361,7 +387,7 @@ visible = false
 z_index = -6
 position = Vector2(13.006498, 28.711323)
 rotation = -1.69297
-scale = Vector2(0.041, 0.041)
+scale = Vector2(1.311, 1.311)
 sprite_frames = SubResource("SpriteFrames_pl11u")
 autoplay = "default"
 frame_progress = 0.0103795

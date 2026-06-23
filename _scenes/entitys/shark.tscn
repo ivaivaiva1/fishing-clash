@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://cxgmfjf0icfrf" path="res://scripts/default_shark_behaviour.gd" id="1_po4rd"]
 [ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://Shaders/blink.gdshader" id="2_d6m34"]
 [ext_resource type="Texture2D" uid="uid://ci6nr1yv30juf" path="res://Sprites/Fish Sprites/shark.png" id="2_po4rd"]
-[ext_resource type="Texture2D" uid="uid://c5v4214osum3v" path="res://artes joao/07-06-2026/TUBARAO CLARO 4.png" id="4_f40hg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m5x1b"]
 shader = ExtResource("2_d6m34")
@@ -234,12 +233,6 @@ position = Vector2(-674, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="vision_area_left" unique_id=240240786]
 position = Vector2(336, 2)
 shape = SubResource("RectangleShape2D_po4rd")
-
-[node name="SawsharkJoao3" type="Sprite2D" parent="." unique_id=1260610100]
-visible = false
-position = Vector2(1.5000012, 1.5000012)
-scale = Vector2(1.9531252, 1.9531252)
-texture = ExtResource("4_f40hg")
 
 [node name="mouth-right-bottom" type="Marker2D" parent="." unique_id=1726904531]
 unique_name_in_owner = true
