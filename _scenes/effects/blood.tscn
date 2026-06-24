@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dptopl77wrss1"]
 
-[ext_resource type="Script" uid="uid://gdxtq5dyc423" path="res://scripts/Effects/blood_effect.gd" id="1_4i1ju"]
-[ext_resource type="Script" uid="uid://dclctq0phq8ub" path="res://scripts/Effects/animation_finish.gd" id="1_c2tvs"]
+[ext_resource type="Script" uid="uid://gdxtq5dyc423" path="res://Scripts/Effects/blood_effect.gd" id="1_4i1ju"]
+[ext_resource type="Script" uid="uid://dclctq0phq8ub" path="res://Scripts/Effects/animation_finish.gd" id="1_c2tvs"]
 [ext_resource type="Texture2D" uid="uid://bldguqsymk44x" path="res://Sprites/JasonTomLee Arts/VFX Blood.png" id="1_pre54"]
 
 [sub_resource type="Animation" id="Animation_4i1ju"]

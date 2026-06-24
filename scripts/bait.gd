@@ -266,6 +266,7 @@ func _on_bait_area_area_entered(area: Area2D) -> void:
 		if !fish.pescavel: return 
 		get_fish(fish.fish_name, fish.peso, fish.points)
 		fish.spawn_catch_effect()
+		SfxManager.play_sfx(SoundsList.FIGHTSTICK_CLICK)
 	
 	if area.is_in_group("bubble"):
 		var bubble: Bubble
@@ -274,6 +275,7 @@ func _on_bait_area_area_entered(area: Area2D) -> void:
 				bubble = child as Bubble
 				break
 		bubble.destroy_bubble()
+		SfxManager.play_sfx(SoundsList.get_random_bubble())
 	
 	if(area.is_in_group("coin")):
 		var coin: FallingCoin

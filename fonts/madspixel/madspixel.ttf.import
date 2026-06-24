@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://jftlu6i4v8kh"
-path="res://.godot/imported/madspixel.ttf-1c9354cbc01a2498a5540653a61ee66c.fontdata"
+path="res://.godot/imported/madspixel.ttf-714fc17fc2e5594df1e459038acafbed.fontdata"
 
 [deps]
 
-source_file="res://fonts/madspixel/madspixel.ttf"
-dest_files=["res://.godot/imported/madspixel.ttf-1c9354cbc01a2498a5540653a61ee66c.fontdata"]
+source_file="res://Fonts/madspixel/madspixel.ttf"
+dest_files=["res://.godot/imported/madspixel.ttf-714fc17fc2e5594df1e459038acafbed.fontdata"]
 
 [params]
 

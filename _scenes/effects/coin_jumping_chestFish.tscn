@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://1miqm4l33m54"]
 
-[ext_resource type="Script" uid="uid://b7jbhdejbjqmy" path="res://scripts/Effects/coin_jumping.gd" id="1_wkm1w"]
+[ext_resource type="Script" uid="uid://b7jbhdejbjqmy" path="res://Scripts/Effects/coin_jumping.gd" id="1_wkm1w"]
 [ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://Shaders/blink.gdshader" id="2_h5hao"]
 [ext_resource type="Texture2D" uid="uid://cfmmwox84vcu3" path="res://Sprites/Entitys/Coins/yellow coin.png" id="3_4h67v"]
-[ext_resource type="Script" uid="uid://0t372l32f4di" path="res://scripts/Misc/coin_behaviour.gd" id="4_ox1pd"]
-[ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://scripts/Effects/sea_zigzag.gd" id="5_qrw4q"]
+[ext_resource type="Script" uid="uid://0t372l32f4di" path="res://Scripts/Misc/coin_behaviour.gd" id="4_ox1pd"]
+[ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://Scripts/Effects/sea_zigzag.gd" id="5_qrw4q"]
 [ext_resource type="Texture2D" uid="uid://b2x6im0m3h30j" path="res://artes joao/14.04.26/coin/Coin brown.png" id="6_mxcnb"]
 [ext_resource type="Texture2D" uid="uid://gok3wms5rh5r" path="res://artes joao/14.04.26/coin/Coin dark brown.png" id="7_4yw8y"]
 [ext_resource type="Texture2D" uid="uid://l85evopm8f7a" path="res://Sprites/Graksyn/24_Pixels.png" id="8_wanqk"]

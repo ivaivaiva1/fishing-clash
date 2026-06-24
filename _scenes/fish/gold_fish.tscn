@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dy5jp3gig3bp8"]
 
-[ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_wamdd"]
+[ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://Scripts/fish.gd" id="1_wamdd"]
 [ext_resource type="Texture2D" uid="uid://oxc2xlbgd8xw" path="res://Sprites/Fish Sprites/gold_fish.png" id="3_q6l0k"]
 [ext_resource type="Texture2D" uid="uid://dgxpd2sca0c1o" path="res://Sprites/Fish Sprites/gold_fish_shiny2.png" id="3_wqbv3"]
 
@@ -95,7 +95,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_b4kpj")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 15.0
 }, {
@@ -124,7 +124,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_p04sm")
 }],
-"loop": true,
+"loop": 1,
 "name": &"shiny",
 "speed": 15.0
 }]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cye1ml400endv"
-path="res://.godot/imported/exampleText_light.png-76ade7ef0e960501ef94e60ce008ea89.ctex"
+path="res://.godot/imported/exampleText_light.png-ac276ad247a5702fad72107858ddb67c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fonts/madspixel/exampleText_light.png"
-dest_files=["res://.godot/imported/exampleText_light.png-76ade7ef0e960501ef94e60ce008ea89.ctex"]
+source_file="res://Fonts/madspixel/exampleText_light.png"
+dest_files=["res://.godot/imported/exampleText_light.png-ac276ad247a5702fad72107858ddb67c.ctex"]
 
 [params]
 

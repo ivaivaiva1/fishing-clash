@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cel27empameku"]
 
-[ext_resource type="Script" uid="uid://dgnevgrmkxvmr" path="res://scripts/Events/treasure.gd" id="1_0g4qu"]
+[ext_resource type="Script" uid="uid://dgnevgrmkxvmr" path="res://Scripts/Events/treasure.gd" id="1_0g4qu"]
 [ext_resource type="Texture2D" uid="uid://d4nuiuhkb4a3y" path="res://Sprites/Bubbles/Greyscale/64x64/bubble_3.png" id="2_0g4qu"]
 [ext_resource type="Texture2D" uid="uid://bxyjj7tsw64wx" path="res://Sprites/Entitys/treasure.png" id="2_rm3nu"]
-[ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://scripts/Effects/sea_zigzag.gd" id="6_sm2ty"]
+[ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://Scripts/Effects/sea_zigzag.gd" id="6_sm2ty"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sm2ty"]
 radius = 32.050472

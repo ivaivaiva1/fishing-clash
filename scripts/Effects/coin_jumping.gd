@@ -8,7 +8,7 @@ class_name CoinJumping
 @export var is_up: bool
 @onready var actual_speed: float = randf_range(min_speed, max_speed)
 var gravity: float = 400
-var force_dir: int
+var force_dir: float
 @export var is_paused: bool = false
 @onready var zig_zag: ZigZag = %sea_zigzag
 @export var min_jump_force_y: float = 130
@@ -45,7 +45,6 @@ func _ready() -> void:
 func do_jump():
 	if min_jump_force_y > 0:
 		velocity.y = -randf_range(min_jump_force_y, max_jump_force_y)
-	var force_dir
 	if jump_direction != 0:
 		force_dir = jump_direction
 	else:
@@ -117,3 +116,4 @@ func _on_bait_area_area_entered(area: Area2D) -> void:
 		zig_zag.queue_free()
 		target_bait = bait.middle_pos
 		follow_player = true
+		SfxManager.play_sfx(SoundsList.COIN_BRACKEYS)

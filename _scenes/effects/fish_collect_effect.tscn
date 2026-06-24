@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://dymjc3rwm5np6"]
 
-[ext_resource type="Texture2D" uid="uid://clhqq8caxstjv" path="res://effects/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 B.png" id="1_3yy06"]
-[ext_resource type="Texture2D" uid="uid://c42syxfudpkqx" path="res://effects/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 F.png" id="1_bq0vt"]
-[ext_resource type="Script" uid="uid://dclctq0phq8ub" path="res://scripts/Effects/animation_finish.gd" id="2_3yy06"]
-[ext_resource type="Texture2D" uid="uid://d1e5ytxo5wryh" path="res://effects/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 A.png" id="3_5x6cj"]
-[ext_resource type="Texture2D" uid="uid://nejkia4i3414" path="res://effects/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 C.png" id="4_ewx03"]
-[ext_resource type="Texture2D" uid="uid://eair1sb7vvat" path="res://effects/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 D.png" id="5_ruphl"]
-[ext_resource type="Texture2D" uid="uid://d1ee1ffje8nl6" path="res://effects/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 E.png" id="6_s6elp"]
+[ext_resource type="Texture2D" uid="uid://clhqq8caxstjv" path="res://Sprites/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 B.png" id="1_3yy06"]
+[ext_resource type="Texture2D" uid="uid://c42syxfudpkqx" path="res://Sprites/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 F.png" id="1_bq0vt"]
+[ext_resource type="Script" uid="uid://dclctq0phq8ub" path="res://Scripts/Effects/animation_finish.gd" id="2_3yy06"]
+[ext_resource type="Texture2D" uid="uid://d1e5ytxo5wryh" path="res://Sprites/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 A.png" id="3_5x6cj"]
+[ext_resource type="Texture2D" uid="uid://nejkia4i3414" path="res://Sprites/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 C.png" id="4_ewx03"]
+[ext_resource type="Texture2D" uid="uid://eair1sb7vvat" path="res://Sprites/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 D.png" id="5_ruphl"]
+[ext_resource type="Texture2D" uid="uid://d1ee1ffje8nl6" path="res://Sprites/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 E.png" id="6_s6elp"]
 
 [sub_resource type="Animation" id="Animation_3yy06"]
 length = 0.001

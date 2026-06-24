@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bg645xjsyvikf"]
 
 [ext_resource type="Texture2D" uid="uid://dnsbi7myuppqp" path="res://Sprites/CodeManu/30fps/Spritesheets/Effect_PuffAndStars_1_120x109.png" id="1_tt673"]
-[ext_resource type="Script" uid="uid://dclctq0phq8ub" path="res://scripts/Effects/animation_finish.gd" id="2_yuseo"]
+[ext_resource type="Script" uid="uid://dclctq0phq8ub" path="res://Scripts/Effects/animation_finish.gd" id="2_yuseo"]
 
 [sub_resource type="Animation" id="Animation_3yy06"]
 length = 0.001

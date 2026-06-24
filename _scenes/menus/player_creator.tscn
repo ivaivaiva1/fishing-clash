@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://vrilx056bv7u"]
 
-[ext_resource type="Script" uid="uid://d08l7pv88n7sk" path="res://scripts/Menus/player_creator.gd" id="1_nq5mh"]
+[ext_resource type="Script" uid="uid://d08l7pv88n7sk" path="res://Scripts/Menus/player_creator.gd" id="1_nq5mh"]
 [ext_resource type="Texture2D" uid="uid://dkv4yd0b4av11" path="res://artes joao/player_arrows/seta azul.png" id="2_vt4t4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3qlj"]

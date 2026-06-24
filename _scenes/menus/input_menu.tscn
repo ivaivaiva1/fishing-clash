@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bknv18ju232se"]
 
 [ext_resource type="PackedScene" uid="uid://c3f5y7yjwasc6" path="res://_scenes/globals/mouse_controller.tscn" id="1_ot5a1"]
-[ext_resource type="Script" uid="uid://dptqo30hj8o5j" path="res://scripts/Menus/input_menu.gd" id="1_p3qlj"]
+[ext_resource type="Script" uid="uid://dptqo30hj8o5j" path="res://Scripts/Menus/input_menu.gd" id="1_p3qlj"]
 [ext_resource type="PackedScene" uid="uid://vrilx056bv7u" path="res://_scenes/menus/player_creator.tscn" id="2_p10e2"]
 
 [sub_resource type="SystemFont" id="SystemFont_ot5a1"]

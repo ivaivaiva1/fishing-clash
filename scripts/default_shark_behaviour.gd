@@ -111,7 +111,7 @@ func _on_body_area_area_entered(area: Area2D) -> void:
 				bubble = child as Bubble
 				break
 		bubble.destroy_bubble()
-	
+		SfxManager.play_sfx(SoundsList.get_random_bubble())
 	
 	if(area.is_in_group("fish_on_bait")):
 		var bait: Bait = area.get_parent()

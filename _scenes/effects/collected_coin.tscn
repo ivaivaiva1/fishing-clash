@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddes6okevvdc2"]
 
-[ext_resource type="Script" uid="uid://lttdyvldf0j0" path="res://scripts/Effects/collected_coin.gd" id="1_jaaa0"]
+[ext_resource type="Script" uid="uid://lttdyvldf0j0" path="res://Scripts/Effects/collected_coin.gd" id="1_jaaa0"]
 [ext_resource type="Texture2D" uid="uid://n5geboojawut" path="res://artes joao/13-04-2026/moeda_contorno_preto.png" id="2_xkyp2"]
 
 [node name="collected_coin" type="Node2D" unique_id=1022592659]

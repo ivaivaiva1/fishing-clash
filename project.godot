@@ -16,18 +16,20 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Fishing Clash"
 run/main_scene="uid://ebbi0lca86e4"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalVars="*res://scripts/global_vars.gd"
+GlobalVars="*res://Scripts/global_vars.gd"
 KnockbackManager="*uid://cbijb0v76rskn"
 EffectSpawner="*uid://ds657i2tqfihg"
 ScreenShake="*uid://cxfq71k3sqrym"
 PlayersSkins="*uid://b645bxtawrgou"
 PlayersController="*uid://cppexr641cr8m"
 MouseController="*uid://c3f5y7yjwasc6"
+SfxManager="*uid://d260fbo54gicn"
+SoundsList="*uid://blxr6bsyjpv7k"
 
 [display]
 

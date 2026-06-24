@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://pj5f4o6fc50o"]
 
-[ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://scripts/fish.gd" id="1_kvppo"]
+[ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://Scripts/fish.gd" id="1_kvppo"]
 [ext_resource type="Texture2D" uid="uid://rsejho4l2w80" path="res://Sprites/SpearFishing Assets Pack/Sprites/Fish1 - 16x16/Red.png" id="2_okpkt"]
-[ext_resource type="Script" uid="uid://c3pq7quoidk37" path="res://scripts/Entitys/chest_fish_behaviour.gd" id="4_kvppo"]
+[ext_resource type="Script" uid="uid://c3pq7quoidk37" path="res://Scripts/Entitys/chest_fish_behaviour.gd" id="4_kvppo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvppo"]
 atlas = ExtResource("2_okpkt")
@@ -63,7 +63,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cg7gm")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 10.0
 }]

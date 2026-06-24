@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://mboxchoqsmho"]
 
-[ext_resource type="Script" uid="uid://cl7c051svx8hf" path="res://scripts/Entitys/moneybag.gd" id="1_iu0r5"]
+[ext_resource type="Script" uid="uid://cl7c051svx8hf" path="res://Scripts/Entitys/moneybag.gd" id="1_iu0r5"]
 [ext_resource type="Texture2D" uid="uid://psac6qfkoh16" path="res://Sprites/moneybag.png" id="1_m4fer"]
 [ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://Shaders/blink.gdshader" id="2_l8wca"]
 

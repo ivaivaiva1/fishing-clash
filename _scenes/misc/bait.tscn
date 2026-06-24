@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b3t4xw41cxb2n"]
 
-[ext_resource type="Script" uid="uid://dn2m2bg4gmlh8" path="res://scripts/bait.gd" id="1_er5pq"]
+[ext_resource type="Script" uid="uid://dn2m2bg4gmlh8" path="res://Scripts/bait.gd" id="1_er5pq"]
 [ext_resource type="PackedScene" uid="uid://c7qt0ej6xtmqc" path="res://_scenes/effects/coin_falling.tscn" id="2_5nkbj"]
 [ext_resource type="PackedScene" uid="uid://b65gxg7dm233r" path="res://_scenes/effects/coin_jumping.tscn" id="3_xq470"]
 [ext_resource type="Shader" uid="uid://dltsjnvd5v5sk" path="res://Shaders/shake.gdshader" id="3_yu7fc"]
@@ -9,9 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bsw56ryji4eos" path="res://Sprites/Fish Sprites/blue_fish.png" id="6_xq470"]
 [ext_resource type="Texture2D" uid="uid://bj7iplhc0ajfs" path="res://Sprites/Fish Sprites/big_fish.png" id="7_up2ac"]
 [ext_resource type="Texture2D" uid="uid://cw54xs24pb6u0" path="res://artes joao/bau_contorno_preto.png" id="8_chrn6"]
-[ext_resource type="Script" uid="uid://b1y7jwgfvfrda" path="res://scripts/boost_controller.gd" id="9_16gtk"]
-[ext_resource type="Script" uid="uid://bkawldx4t15f6" path="res://scripts/Player/bait_rotation.gd" id="10_7j41f"]
-[ext_resource type="Script" uid="uid://3fntxsuthvye" path="res://scripts/Player/magnetic_behaviour.gd" id="11_5nkbj"]
+[ext_resource type="Script" uid="uid://b1y7jwgfvfrda" path="res://Scripts/boost_controller.gd" id="9_16gtk"]
+[ext_resource type="Script" uid="uid://bkawldx4t15f6" path="res://Scripts/Player/bait_rotation.gd" id="10_7j41f"]
+[ext_resource type="Script" uid="uid://3fntxsuthvye" path="res://Scripts/Player/magnetic_behaviour.gd" id="11_5nkbj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f1ej7"]
 shader = ExtResource("3_yu7fc")
@@ -89,7 +89,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_li37a")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 25.0
 }]
@@ -153,7 +153,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fs0km")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 30.0
 }]
@@ -189,7 +189,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7yk14")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 20.0
 }]
@@ -209,7 +209,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wnwbv")
 }],
-"loop": false,
+"loop": 0,
 "name": &"default",
 "speed": 5.0
 }]
