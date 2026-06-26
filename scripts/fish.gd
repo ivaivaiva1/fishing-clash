@@ -12,27 +12,28 @@ var move_right: bool = true
 @onready var sprite: AnimatedSprite2D = %AnimatedSprite2D
 @onready var right_effectPos: Marker2D = %right_effectPos
 @onready var left_effectPos: Marker2D = %left_effectPos
-var red_rain = false
+var shiny_rain = false
 @onready var fish_characterbody: CharacterBody2D = self
 @export var pescavel: bool = true
+var is_shiny: bool = false
 
 
 
 func _ready():
 	if !pescavel: return
-	var shiny_chance = randf_range(0, 100)
-	if shiny_chance < 2:
-		sprite.play("shiny")
-		points *= 5
-		peso *= 2
+	
+	if shiny_rain:
+		make_shiny()
+	elif randf_range(0, 100) < 2:
+		make_shiny()
+	
+	
 	if(!move_right):
 		speed = speed * -1
 		scale.x = -1
 		#sprite.flip_h = true
 	if(fish_name != "red"): 
 		speed = randf_range(speed * 0.8, speed * 1.2)
-	#else:
-		#if red_rain: speed *= 2
 	
 	sprite.z_index = randi_range(0, 10)
 	
@@ -92,3 +93,11 @@ func spawn_catch_effect():
 	spawn_pos = right_effectPos.global_position
 	EffectSpawner.spawn_effect(spawn_pos, effect_size)
 	queue_free()
+
+
+func make_shiny():
+	if is_shiny: return
+	is_shiny = true
+	sprite.play("shiny")
+	points *= 5
+	peso *= 2

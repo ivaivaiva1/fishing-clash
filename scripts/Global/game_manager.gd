@@ -3,7 +3,6 @@ class_name GameManager
 
 var game_state: String = "menu"
 @onready var FishSpawner_intance: FishSpawner = %Fish_Spawner
-#@onready var Shark: Shark = %shark
 @export var player_scene: PackedScene
 var player1: Player
 var player2: Player
@@ -24,14 +23,12 @@ var player4: Player
 @export var peso_1: Label 
 @export var peso_2: Label 
 @onready var clone_boats: CloneBoats = %CloneBoats
-#var round_duration: float = 240
 var round_duration: float = 240
 var game_timer: float = 0
 
 
 # Event Vars
 var coin_madness_enabled: bool = false
-var cegonnhas_enabled: bool = false
 
 # -----------------------------------
 
@@ -43,8 +40,6 @@ func _ready() -> void:
 	FishSpawner_intance.spawn_cooldown = GlobalVars.spawn_cooldown_menu
 	FishSpawner_intance.big_fish_rate = GlobalVars.big_fish_rate_menu
 	FishSpawner_intance.red_fish_rate = GlobalVars.red_fish_rate_menu
-	#duration_bar.max_value = round_duration
-	#duration_bar.value = round_duration - game_timer
 	EffectSpawner.fish_spawner = FishSpawner_intance
 	att_score()
 	start_game()
@@ -93,15 +88,7 @@ func finish_round():
 					GlobalVars.player4_score += 1
 					print("player 4 wins")
 	
-	# Se mais de um tiver o mesmo valor máximo, todos ganham (empate automático)
-	#get_tree().paused = true
 	get_tree().reload_current_scene()
-
-
-
-func _input(event):
-	if event.is_action_pressed("ui_accept"): # "ui_accept" é a tecla espaço por padrão
-		start_game()
 
 
 
@@ -111,7 +98,6 @@ func start_game():
 	GlobalVars.player1_money = 0
 	GlobalVars.player2_money = 0
 	
-	FishSpawner_intance.remove_all_fish()
 	#Shark.re_start()
 	#press_to_play.visible = false
 	money_1_label.visible = true
@@ -157,7 +143,7 @@ func start_game():
 	FishSpawner_intance.spawn_cooldown = GlobalVars.spawn_cooldown_game
 	FishSpawner_intance.big_fish_rate = GlobalVars.big_fish_rate_game
 	FishSpawner_intance.red_fish_rate = GlobalVars.red_fish_rate_game
-	FishSpawner_intance.shrimp_fish_rate = GlobalVars.shrimp_fish_rate_game
+	#FishSpawner_intance.shrimp_fish_rate = GlobalVars.shrimp_fish_rate_game
 
 
 

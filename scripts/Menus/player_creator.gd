@@ -114,7 +114,7 @@ func set_playerJoined_state():
 	rebind_panel.visible = false
 	player_pin.visible = true
 	joined_panel.visible = true
-	MouseController.set_mouse_visible(ID, ready_button.global_position + Vector2(33, -10))
+	#MouseController.set_mouse_visible(ID, ready_button.global_position + Vector2(33, -10))
 
 
 
@@ -126,14 +126,14 @@ func set_notJoin_state():
 	player_pin.visible = false
 	joined_panel.visible = false
 	rebind_panel.visible = false
-	MouseController.set_mouse_invisible(ID)
+	#MouseController.set_mouse_invisible(ID)
 
  
 func set_rebind_state():
 	status = State.BINDING
 	actual_rebind_key = 0
 	text_rebind_current_key.text = "HOLD TO BIND - LEFT"
-	MouseController.set_mouse_invisible(ID)
+	#MouseController.set_mouse_invisible(ID)
 	joined_panel.visible = false
 	rebind_panel.visible = true
 

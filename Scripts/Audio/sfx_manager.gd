@@ -7,11 +7,12 @@ var sounds: Dictionary = {}
 
 func get_valid_bus() -> String:
 	if AudioServer.get_bus_index(base_bus) == -1:
-		push_warning("Audio bus '%s' does not exist. Falling back to Master." % base_bus)
+		#push_warning("Audio bus '%s' does not exist. Falling back to Master." % base_bus)
 		return "Master"
 	return base_bus
 
 func play_sfx(sound_data: Dictionary) -> void:
+	return
 	if not sound_data or not sound_data.has("stream"):
 		print("som inválido")
 		return

@@ -14,33 +14,24 @@ var spawn_cooldown: float
 @onready var spawn_timer: float
 
 
-var red_rain: bool = false
-var red_rain_duration: float = 30
-var red_rain_timer: float 
-
-
 func _ready():
 	randomize()
 	spawn_timer = spawn_cooldown
-	#spawn_fish()
 
 
 func _process(delta):
+	red_rain_counter(delta)
+	shiny_rain_counter(delta)
+	spawn_fish_counter(delta)
+
+
+func spawn_fish_counter(delta: float):
 	if(spawn_timer > 0):
 		spawn_timer -= delta
 	else:
 		if red_rain: spawn_timer = randf_range((spawn_cooldown/3.5) * 0.84, (spawn_cooldown/3.5) * 0.16)
 		else: spawn_timer = randf_range(spawn_cooldown * 0.84, spawn_cooldown * 0.16)
 		spawn_fish()
-	
-	# RED RAIN
-	if red_rain:
-		red_rain_timer -= delta
-		if red_rain_timer <= 0:
-			red_rain = false
-	if Input.is_action_just_pressed("red_rain"):
-		do_red_rain()
-
 
 
 func spawn_fish():
@@ -81,19 +72,43 @@ func spawn_fish():
 	
 	fish_instance.move_right = move_right
 	fish_instance.global_position = Vector2(posX, posY)
-	if red_rain: fish_instance.red_rain = true
+	if shiny_rain: fish_instance.shiny_rain = true
 	add_child(fish_instance)
 	spawned_fish.append(fish_instance)
 
 
 
-func remove_all_fish():
+func shiny_all_fish():
 	for fish in spawned_fish:
 		if is_instance_valid(fish):
-			fish.queue_free()
-	spawned_fish.clear()
+			fish.make_shiny()
 
 
+
+var red_rain: bool = false
+var red_rain_duration: float = 40
+var red_rain_timer: float 
 func do_red_rain():
+	if red_rain: return
 	red_rain = true
 	red_rain_timer = red_rain_duration
+func red_rain_counter(delta: float):
+	if red_rain:
+		red_rain_timer -= delta
+		if red_rain_timer <= 0:
+			red_rain = false
+
+
+var shiny_rain: bool = false
+var shiny_rain_duration: float = 50
+var shiny_rain_timer: float 
+func do_shiny_rain():
+	if shiny_rain: return 
+	shiny_rain = true
+	shiny_rain_timer = shiny_rain_duration
+	shiny_all_fish()
+func shiny_rain_counter(delta: float):
+	if shiny_rain:
+		shiny_rain_timer -= delta
+		if shiny_rain_timer <= 0:
+			shiny_rain = false

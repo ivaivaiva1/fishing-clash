@@ -13,27 +13,27 @@ var max_treasure_time: float = 550
 @onready var time_to_spawn: float = randf_range(10, max_treasure_time)
 
 
-func _ready() -> void:
-	randomize()
+#func _ready() -> void:
+	#randomize()
 
 
-func _process(delta: float) -> void:
-	time_since_spawn += delta
-	time_to_spawn -= delta
-	if time_to_spawn < 0:
-		spawn_treasure()
-		time_to_spawn = randf_range(min_treasure_time, max_treasure_time)
-	
-	if game_manager.round_duration - game_manager.game_timer < 30:
-		if spawned_treasures < 2:
-			spawn_treasure()
-			time_to_spawn = 1000
-			time_since_spawn = -1000
-		elif time_since_spawn > min_treasure_time:
-			spawn_treasure()
-		else:
-			time_to_spawn = 1000
-			time_since_spawn = -1000
+#func _process(delta: float) -> void:
+	#time_since_spawn += delta
+	#time_to_spawn -= delta
+	#if time_to_spawn < 0:
+		#spawn_treasure()
+		#time_to_spawn = randf_range(min_treasure_time, max_treasure_time)
+	#
+	#if game_manager.round_duration - game_manager.game_timer < 30:
+		#if spawned_treasures < 2:
+			#spawn_treasure()
+			#time_to_spawn = 1000
+			#time_since_spawn = -1000
+		#elif time_since_spawn > min_treasure_time:
+			#spawn_treasure()
+		#else:
+			#time_to_spawn = 1000
+			#time_since_spawn = -1000
 	
 	
 	

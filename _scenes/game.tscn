@@ -2,21 +2,22 @@
 
 [ext_resource type="PackedScene" uid="uid://c1fnyt64wu0b1" path="res://_scenes/entitys/shark.tscn" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://cpddqal215nxs" path="res://_scenes/fish/blue_fish.tscn" id="1_uwrxv"]
-[ext_resource type="Script" uid="uid://co4hvliqg3q3y" path="res://Scripts/Global/game_manager.gd" id="2_ir15t"]
+[ext_resource type="Script" uid="uid://beda33vgka2r" path="res://Scripts/Global/game_manager.gd" id="2_ir15t"]
 [ext_resource type="PackedScene" uid="uid://bb6ifiejbxjb7" path="res://_scenes/entitys/player.tscn" id="2_trtic"]
 [ext_resource type="PackedScene" uid="uid://by4oxgbthjk4u" path="res://_scenes/fish/big_fish.tscn" id="2_yqjtg"]
-[ext_resource type="Script" uid="uid://cr57ww4x28u4n" path="res://Scripts/fish_spawner.gd" id="3_lnu2h"]
+[ext_resource type="Script" uid="uid://ddvlq8luidfup" path="res://Scripts/fish_spawner.gd" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cq4o85mwl4g24" path="res://artes joao/player_icon png.png" id="3_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://cpjcbme3mfnnl" path="res://Sprites/mar 1.png" id="4_1kice"]
 [ext_resource type="Texture2D" uid="uid://b2f2rmiut0qmt" path="res://artes joao/trophy.png" id="4_264po"]
 [ext_resource type="Texture2D" uid="uid://bjgivjbi6ryan" path="res://Sprites/SpearFishing Assets Pack/Sprite names.png" id="4_lbhrr"]
 [ext_resource type="Shader" uid="uid://dftd0pk6ql231" path="res://Shaders/water_distortion.gdshader" id="7_gee14"]
 [ext_resource type="PackedScene" uid="uid://dy5jp3gig3bp8" path="res://_scenes/fish/gold_fish.tscn" id="7_ir15t"]
-[ext_resource type="Script" uid="uid://b5r7kedlv3x68" path="res://Scripts/Entitys/spawn_treasure.gd" id="8_w7lom"]
-[ext_resource type="Script" uid="uid://dlvbdjkojbuuw" path="res://Scripts/Effects/spawn_shine.gd" id="9_gkrq6"]
-[ext_resource type="Script" uid="uid://dtlem1127x0m6" path="res://Scripts/Events/events_timer.gd" id="10_2lena"]
-[ext_resource type="Script" uid="uid://didkagiwa30s8" path="res://Scripts/Events/cegonha_spawner.gd" id="11_3fbtg"]
-[ext_resource type="Script" uid="uid://2yj540ysy547" path="res://Scripts/Player/boat_clone.gd" id="11_ca42v"]
+[ext_resource type="Script" uid="uid://8ibfv0m8mvo7" path="res://Scripts/Entitys/spawn_treasure.gd" id="8_w7lom"]
+[ext_resource type="Script" uid="uid://blhgj1a31tpky" path="res://Scripts/Effects/spawn_shine.gd" id="9_gkrq6"]
+[ext_resource type="Script" uid="uid://bu06qdm3jqlpp" path="res://Scripts/Events/events_timer.gd" id="10_2lena"]
+[ext_resource type="Script" uid="uid://dnf7xjxrhtet3" path="res://Scripts/Events/cegonha_spawner.gd" id="11_3fbtg"]
+[ext_resource type="Script" uid="uid://vt3ganurqkyu" path="res://Scripts/Player/boat_clone.gd" id="11_ca42v"]
+[ext_resource type="Script" uid="uid://by1ljeh6kvemg" path="res://Scripts/Events/event_starter.gd" id="12_j2pq6"]
 [ext_resource type="Texture2D" uid="uid://dfrqtdtraoj7h" path="res://artes joao/13-04-2026/icon_girl.png" id="13_5newe"]
 [ext_resource type="Texture2D" uid="uid://5qv7nmcjftw2" path="res://Sprites/mar 2.png" id="15_4suqf"]
 [ext_resource type="Texture2D" uid="uid://c3w6d0f0471i5" path="res://Sprites/mar 3.png" id="16_orwkc"]
@@ -24,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://cyj8rt37sxm2f" path="res://Sprites/mar5.png" id="17_orwkc"]
 [ext_resource type="LabelSettings" uid="uid://uqdlbglqj00m" path="res://Fonts/label_settings/time_labell.tres" id="18_1kice"]
 [ext_resource type="Texture2D" uid="uid://bbhh048s27tqx" path="res://Sprites/mar profundo 1.png" id="19_prxok"]
-[ext_resource type="Script" uid="uid://bv08l4gt2jmvq" path="res://Scripts/clone_boats.gd" id="21_5newe"]
+[ext_resource type="Script" uid="uid://c0vxvn8t5gu1x" path="res://Scripts/clone_boats.gd" id="21_5newe"]
 [ext_resource type="Shader" uid="uid://biug62tv1oe0q" path="res://Shaders/Post Processing/color_limitation.gdshader" id="21_gkrq6"]
 [ext_resource type="Texture2D" uid="uid://x0glq3m2m7jv" path="res://Sprites/GRAFXKID/Tropics/4 - Background_clouds.png" id="22_aght6"]
 [ext_resource type="Shader" uid="uid://bimqhb28ph5g" path="res://Shaders/Post Processing/emerald_shader.gdshader" id="23_gkrq6"]
@@ -89,6 +90,7 @@ position = Vector2(0, -28.099174)
 script = ExtResource("21_5newe")
 
 [node name="SpawnTreasure" type="Node2D" parent="." unique_id=1565602299]
+unique_name_in_owner = true
 script = ExtResource("8_w7lom")
 
 [node name="SpawnShine" type="Node2D" parent="." unique_id=495107154]
@@ -98,7 +100,11 @@ script = ExtResource("9_gkrq6")
 script = ExtResource("10_2lena")
 
 [node name="CegonhaSpawner" type="Node2D" parent="." unique_id=1031139942]
+unique_name_in_owner = true
 script = ExtResource("11_3fbtg")
+
+[node name="EventStarter" type="Node2D" parent="." unique_id=476574326]
+script = ExtResource("12_j2pq6")
 
 [node name="Céu" type="Node2D" parent="." unique_id=602447243]
 
