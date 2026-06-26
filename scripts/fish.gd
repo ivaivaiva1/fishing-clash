@@ -21,11 +21,12 @@ var is_shiny: bool = false
 
 func _ready():
 	if !pescavel: return
+	sprite.material = sprite.material.duplicate()
 	
 	if shiny_rain:
-		make_shiny()
+		make_shiny(true)
 	elif randf_range(0, 100) < 2:
-		make_shiny()
+		make_shiny(true)
 	
 	
 	if(!move_right):
@@ -85,7 +86,6 @@ func spawn_bubble():
 		spawn_bubble()
 
 
-
 func spawn_catch_effect():
 	var spawn_pos: Vector2
 	#if move_right: spawn_pos = right_effectPos.global_position
@@ -95,9 +95,88 @@ func spawn_catch_effect():
 	queue_free()
 
 
-func make_shiny():
+func make_shiny(is_borning: bool = false):
 	if is_shiny: return
 	is_shiny = true
-	sprite.play("shiny")
 	points *= 5
 	peso *= 2
+	
+	if is_borning:
+		sprite.play("shiny")
+		return
+	shiny_pump()
+	do_blink()
+	await get_tree().create_timer(0.3).timeout
+	sprite.play("shiny")
+
+
+func do_blink():
+	sprite.material.set_shader_parameter("flash_pct", 0.0)
+	
+	var blink_tween = create_tween()
+	blink_tween.set_trans(Tween.TRANS_BACK)
+	blink_tween.set_ease(Tween.EASE_OUT)
+	
+	blink_tween.tween_property(
+		sprite.material,
+		"shader_parameter/flash_pct",
+		0.55,
+		0.3
+	)
+	
+	blink_tween.tween_property(
+		sprite.material,
+		"shader_parameter/flash_pct",
+		0.0,
+		0.5
+	)
+
+
+func shiny_pump():
+	var original_scale := sprite.scale
+	
+	var pump_tween = create_tween()
+	pump_tween.set_trans(Tween.TRANS_SINE)
+	pump_tween.set_ease(Tween.EASE_IN_OUT)
+	
+	pump_tween.tween_property(
+		sprite,
+		"scale",
+		original_scale * 1.3,
+		0.1
+	)
+	
+	pump_tween.tween_property(
+		sprite,
+		"scale",
+		original_scale * 0.8,
+		0.1
+	)
+	
+	pump_tween.tween_property(
+		sprite,
+		"scale",
+		original_scale * 1.15,
+		0.1
+	)
+	
+	pump_tween.tween_property(
+		sprite,
+		"scale",
+		original_scale * 0.9,
+		0.1
+	)
+	
+	pump_tween.tween_property(
+		sprite,
+		"scale",
+		original_scale * 1.07,
+		0.1
+	)
+	
+	pump_tween.tween_property(
+		sprite,
+		"scale",
+		original_scale,
+		0.1
+	)

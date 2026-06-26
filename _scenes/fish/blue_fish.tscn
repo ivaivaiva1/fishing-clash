@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://cpddqal215nxs"]
 
-[ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://Scripts/fish.gd" id="1_n6yr6"]
+[ext_resource type="Script" uid="uid://dncwjw63uhp8i" path="res://Scripts/fish.gd" id="1_n6yr6"]
+[ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://Shaders/blink.gdshader" id="2_fjfr3"]
 [ext_resource type="Texture2D" uid="uid://cd1ve8npy0abc" path="res://Sprites/Fish Sprites/blue_fish_shiny.png" id="3_bjjtm"]
 [ext_resource type="Texture2D" uid="uid://bsw56ryji4eos" path="res://Sprites/Fish Sprites/blue_fish.png" id="3_ggbtn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_354b3"]
+shader = ExtResource("2_fjfr3")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_pct = 0.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_11b87"]
 atlas = ExtResource("3_ggbtn")
@@ -142,6 +148,7 @@ effect_size = 1.414
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=152551972]
 unique_name_in_owner = true
 z_as_relative = false
+material = SubResource("ShaderMaterial_354b3")
 position = Vector2(0, 0.052099228)
 scale = Vector2(1.311, 1.311)
 sprite_frames = SubResource("SpriteFrames_6u8uh")

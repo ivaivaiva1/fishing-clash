@@ -11,9 +11,8 @@ func _process(delta: float) -> void:
 
 
 func start_event():
-	#var event_index: EVENTS_LIST = [EVENTS_LIST.RED_RAIN, EVENTS_LIST.SHINY_RAIN, EVENTS_LIST.BIG_TREASURE, EVENTS_LIST.CEGONHAS].pick_random()
 	var event_index: int = EVENTS_LIST.values().pick_random()
-	event_index = 4
+	event_index = 1
 	match event_index:
 		0:
 			fish_spawner.do_red_rain()
@@ -26,7 +25,7 @@ func start_event():
 		4:
 			fish_spawner.spawn_chest_fish()
 		null:
-			print("sem evento")
+			push_error("evento invalido")
 
 
 
