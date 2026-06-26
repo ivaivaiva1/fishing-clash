@@ -2,6 +2,7 @@ extends Node2D
 class_name FishSpawner
 
 var spawned_fish: Array[Node2D] = []
+var chest_fish: PackedScene = preload("uid://pj5f4o6fc50o")
 
 @export var blue_fish: PackedScene
 @export var red_fish: PackedScene
@@ -76,6 +77,10 @@ func spawn_fish():
 	add_child(fish_instance)
 	spawned_fish.append(fish_instance)
 
+
+func spawn_chest_fish():
+	var chest_fish := chest_fish.instantiate()
+	add_child(chest_fish)
 
 
 func shiny_all_fish():

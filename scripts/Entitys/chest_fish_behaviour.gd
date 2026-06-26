@@ -39,7 +39,6 @@ var coin_scene: PackedScene = preload("uid://bgjkqcjdfprnn")
 
 
 func _ready() -> void:
-	Engine.time_scale = 1.5
 	var spawn_side: int = [-1, 1].pick_random()
 	sprite = %AnimatedSprite2D
 	

@@ -6,14 +6,14 @@ extends Node2D
 
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("red_rain"):
+	if Input.is_action_just_pressed("start_event"):
 		start_event()
 
 
 func start_event():
 	#var event_index: EVENTS_LIST = [EVENTS_LIST.RED_RAIN, EVENTS_LIST.SHINY_RAIN, EVENTS_LIST.BIG_TREASURE, EVENTS_LIST.CEGONHAS].pick_random()
 	var event_index: int = EVENTS_LIST.values().pick_random()
-	event_index = 3
+	event_index = 4
 	match event_index:
 		0:
 			fish_spawner.do_red_rain()
@@ -23,6 +23,8 @@ func start_event():
 			spawn_treasure.spawn_treasure()
 		3:
 			cegonha_spawner.do_cegonhas()
+		4:
+			fish_spawner.spawn_chest_fish()
 		null:
 			print("sem evento")
 
@@ -33,5 +35,6 @@ enum EVENTS_LIST{
 	RED_RAIN,
 	SHINY_RAIN,
 	BIG_TREASURE,
-	CEGONHAS
+	CEGONHAS,
+	CHEST_FISH
 }
