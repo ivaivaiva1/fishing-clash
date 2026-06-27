@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dc57mbk216h87" path="res://Sprites/Pingente/pingente_roxo.png" id="1_urb7x"]
 [ext_resource type="Script" uid="uid://biuij4cssxhov" path="res://Scripts/Entitys/pingente.gd" id="1_wg78v"]
 [ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://Shaders/blink.gdshader" id="2_w8ovl"]
+[ext_resource type="Texture2D" uid="uid://l85evopm8f7a" path="res://Sprites/Graksyn/24_Pixels.png" id="5_32g3h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wg78v"]
 shader = ExtResource("2_w8ovl")
@@ -65,6 +66,69 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pb7jk"]
+shader = ExtResource("2_w8ovl")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_pct = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psiw4"]
+atlas = ExtResource("5_32g3h")
+region = Rect2(216, 192, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1iv5"]
+atlas = ExtResource("5_32g3h")
+region = Rect2(0, 216, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dv2fo"]
+atlas = ExtResource("5_32g3h")
+region = Rect2(24, 216, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0um2f"]
+atlas = ExtResource("5_32g3h")
+region = Rect2(48, 216, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbmg8"]
+atlas = ExtResource("5_32g3h")
+region = Rect2(72, 216, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb52q"]
+atlas = ExtResource("5_32g3h")
+region = Rect2(96, 216, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_60sw7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psiw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1iv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dv2fo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0um2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbmg8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb52q")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb52q")
+}],
+"loop": 1,
+"name": &"reset",
+"speed": 10.0
+}]
+
 [node name="Pingente" type="CharacterBody2D" unique_id=1832836983]
 script = ExtResource("1_wg78v")
 
@@ -75,3 +139,12 @@ sprite_frames = SubResource("SpriteFrames_oc0xf")
 animation = &"purple"
 autoplay = "red"
 flip_h = true
+
+[node name="destroy_anim" type="AnimatedSprite2D" parent="." unique_id=1499053563]
+unique_name_in_owner = true
+z_index = 51
+material = SubResource("ShaderMaterial_pb7jk")
+position = Vector2(-7.992897, 7.998907)
+sprite_frames = SubResource("SpriteFrames_60sw7")
+animation = &"reset"
+autoplay = "reset"
