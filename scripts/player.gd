@@ -38,6 +38,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func add_points(value: int):
 	current_money += value
 	
+	print("add points")
 	if player_name == "player1":
 		GlobalVars.player1_money = current_money
 	elif player_name == "player2":

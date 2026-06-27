@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://5n5ruuiimy7b"]
+
+[ext_resource type="Texture2D" uid="uid://ciax0ihrrcl4l" path="res://Sprites/Pingente/pingente_vermelho.png" id="1_heito"]
+[ext_resource type="Texture2D" uid="uid://dc57mbk216h87" path="res://Sprites/Pingente/pingente_roxo.png" id="1_urb7x"]
+[ext_resource type="Script" uid="uid://biuij4cssxhov" path="res://Scripts/Entitys/pingente.gd" id="1_wg78v"]
+[ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://Shaders/blink.gdshader" id="2_w8ovl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wg78v"]
+shader = ExtResource("2_w8ovl")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_pct = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32g3h"]
+atlas = ExtResource("1_urb7x")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pb7jk"]
+atlas = ExtResource("1_urb7x")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60sw7"]
+atlas = ExtResource("1_urb7x")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urb7x"]
+atlas = ExtResource("1_heito")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wg78v"]
+atlas = ExtResource("1_heito")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8ovl"]
+atlas = ExtResource("1_heito")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oc0xf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32g3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pb7jk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60sw7")
+}],
+"loop": 1,
+"name": &"purple",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urb7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wg78v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8ovl")
+}],
+"loop": 1,
+"name": &"red",
+"speed": 5.0
+}]
+
+[node name="Pingente" type="CharacterBody2D" unique_id=1832836983]
+script = ExtResource("1_wg78v")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1334405200]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_wg78v")
+sprite_frames = SubResource("SpriteFrames_oc0xf")
+animation = &"purple"
+autoplay = "red"
+flip_h = true

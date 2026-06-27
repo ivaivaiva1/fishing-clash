@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 func start_event():
 	var event_index: int = EVENTS_LIST.values().pick_random()
-	event_index = 1
+	event_index = 5
 	match event_index:
 		0:
 			fish_spawner.do_red_rain()
@@ -24,6 +24,8 @@ func start_event():
 			cegonha_spawner.do_cegonhas()
 		4:
 			fish_spawner.spawn_chest_fish()
+		5:
+			fish_spawner.do_pingente()
 		null:
 			push_error("evento invalido")
 
@@ -35,5 +37,6 @@ enum EVENTS_LIST{
 	SHINY_RAIN,
 	BIG_TREASURE,
 	CEGONHAS,
-	CHEST_FISH
+	CHEST_FISH,
+	PINGENTE
 }

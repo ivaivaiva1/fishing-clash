@@ -4,6 +4,7 @@
 [ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://Shaders/blink.gdshader" id="2_ktlce"]
 [ext_resource type="Texture2D" uid="uid://oxc2xlbgd8xw" path="res://Sprites/Fish Sprites/gold_fish.png" id="3_q6l0k"]
 [ext_resource type="Texture2D" uid="uid://dgxpd2sca0c1o" path="res://Sprites/Fish Sprites/gold_fish_shiny2.png" id="3_wqbv3"]
+[ext_resource type="PackedScene" uid="uid://5n5ruuiimy7b" path="res://_scenes/entitys/pingente.tscn" id="5_8783r"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oc0xf"]
 shader = ExtResource("2_ktlce")
@@ -182,3 +183,8 @@ position = Vector2(14, 3)
 unique_name_in_owner = true
 visible = false
 position = Vector2(-14, 3)
+
+[node name="Pingente" parent="." unique_id=1431694881 instance=ExtResource("5_8783r")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(2.4073877, 6.3123503)

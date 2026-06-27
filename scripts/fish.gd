@@ -12,7 +12,10 @@ var move_right: bool = true
 @onready var sprite: AnimatedSprite2D = %AnimatedSprite2D
 @onready var right_effectPos: Marker2D = %right_effectPos
 @onready var left_effectPos: Marker2D = %left_effectPos
+@onready var pingente: Pingente = %Pingente
 var shiny_rain = false
+var pingente_rain = false
+var has_pingente = false
 @onready var fish_characterbody: CharacterBody2D = self
 @export var pescavel: bool = true
 var is_shiny: bool = false
@@ -28,6 +31,10 @@ func _ready():
 	elif randf_range(0, 100) < 2:
 		make_shiny(true)
 	
+	if pingente_rain:
+		if randf_range(0, 100) <= 30:
+			pingente.visible = true
+			has_pingente = true
 	
 	if(!move_right):
 		speed = speed * -1
@@ -36,15 +43,14 @@ func _ready():
 	if(fish_name != "red"): 
 		speed = randf_range(speed * 0.8, speed * 1.2)
 	
-	sprite.z_index = randi_range(0, 10)
+	var rendering_index: int = randi_range(0, 10)
+	z_index = rendering_index
 	
-	var reduction_percent = (10 - sprite.z_index) * 0.01
+	var reduction_percent = (10 - rendering_index) * 0.01
 	reduction_percent = clamp(reduction_percent, 0.0, 0.10)
 	
 	var final_scale = 1.0 - reduction_percent
 	scale *= final_scale
-
-
 
 
 func _process(delta):
@@ -57,7 +63,6 @@ func _process(delta):
 		bubble_timer -= delta
 	if  bubble_timer < 0:
 		spawn_bubble()
-
 
 
 
@@ -86,13 +91,15 @@ func spawn_bubble():
 		spawn_bubble()
 
 
-func spawn_catch_effect():
+func is_collected(bait: Bait):
+	pingente.reparent(get_parent())
+	pingente.start(bait, speed)
+	
 	var spawn_pos: Vector2
-	#if move_right: spawn_pos = right_effectPos.global_position
-	#else: spawn_pos = left_effectPos.global_position
 	spawn_pos = right_effectPos.global_position
 	EffectSpawner.spawn_effect(spawn_pos, effect_size)
 	queue_free()
+
 
 
 func make_shiny(is_borning: bool = false):
@@ -108,6 +115,7 @@ func make_shiny(is_borning: bool = false):
 	do_blink()
 	await get_tree().create_timer(0.3).timeout
 	sprite.play("shiny")
+
 
 
 func do_blink():

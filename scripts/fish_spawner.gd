@@ -23,6 +23,7 @@ func _ready():
 func _process(delta):
 	red_rain_counter(delta)
 	shiny_rain_counter(delta)
+	pingente_counter(delta)
 	spawn_fish_counter(delta)
 
 
@@ -74,6 +75,7 @@ func spawn_fish():
 	fish_instance.move_right = move_right
 	fish_instance.global_position = Vector2(posX, posY)
 	if shiny_rain: fish_instance.shiny_rain = true
+	if pingente: fish_instance.pingente_rain = true
 	add_child(fish_instance)
 	spawned_fish.append(fish_instance)
 
@@ -117,3 +119,17 @@ func shiny_rain_counter(delta: float):
 		shiny_rain_timer -= delta
 		if shiny_rain_timer <= 0:
 			shiny_rain = false
+
+
+var pingente: bool = false
+var pingente_duration: float = 50
+var pingente_timer: float
+func do_pingente():
+	if pingente: return
+	pingente = true
+	pingente_timer = pingente_duration
+func pingente_counter(delta: float):
+	if pingente:
+		pingente_timer -= delta
+		if pingente_timer <= 0:
+			pingente = false

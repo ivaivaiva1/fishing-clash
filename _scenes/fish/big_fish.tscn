@@ -5,6 +5,7 @@
 [ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://Shaders/blink.gdshader" id="2_vu2ot"]
 [ext_resource type="Script" uid="uid://dgqkcp4w43rxy" path="res://Scripts/Effects/sea_zigzag.gd" id="4_c3pe1"]
 [ext_resource type="Texture2D" uid="uid://k3vyhqbyr7oe" path="res://Sprites/Fish Sprites/big_fish_shiny.png" id="4_vu2ot"]
+[ext_resource type="PackedScene" uid="uid://5n5ruuiimy7b" path="res://_scenes/entitys/pingente.tscn" id="6_354b3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j2pq6"]
 shader = ExtResource("2_vu2ot")
@@ -188,3 +189,8 @@ zigzag_distance = 3.0
 zigzag_time = 0.8
 is_horizontal = false
 is_fish = true
+
+[node name="Pingente" parent="." unique_id=1431694881 instance=ExtResource("6_354b3")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(9.789966, 11.249063)
