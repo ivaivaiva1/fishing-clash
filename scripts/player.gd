@@ -20,6 +20,7 @@ var texture_boat2: Texture2D = load("res://artes joao/13-04-2026/barco_nana_moto
 var texture_arrow2: Texture2D = load("res://artes joao/player_arrows/seta roxa.png")
 var texture_bait2: Texture2D = load("res://artes joao/14.04.26/isca/isca 2 cinza rosa.png")
 @onready var col: CollisionShape2D = %CollisionShape2D
+@onready var players_head: Marker2D = %players_head
 
 
 func _ready() -> void:
@@ -31,6 +32,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if(area.is_in_group("bait")):
 		var bait: Bait = area.get_parent()
 		if(bait.points == 0): return
+		EffectSpawner.points_label(bait.points, players_head.global_position, self)
 		add_points(bait.points)
 		bait.reset()
 

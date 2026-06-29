@@ -5,9 +5,9 @@ class_name Bait
 var input_action := ""
 var player: Player
 var player_name
-@export var blue_fish_list: Array[Node2D] 
-@export var red_fish_list: Array[Node2D] 
-@export var golden_fish_list: Array[Node2D]
+@export var blue_fish_list: Array[AnimatedSprite2D] 
+@export var red_fish_list: Array[AnimatedSprite2D] 
+@export var golden_fish_list: Array[AnimatedSprite2D]
 @onready var treasure_sprite: AnimatedSprite2D = %treasure_sprite 
 @onready var coin_spawn_area: Area2D = %coin_spawn_area
 @onready var bait_sprite: Sprite2D = %BaitSprite
@@ -44,7 +44,6 @@ var peso: float = 1
 var feedback_tween: Tween
 
 
-
 func _physics_process(delta):
 	var target_velocity_y = 0.0
 	
@@ -79,7 +78,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func get_fish(fish_name: String, fish_peso: float, fish_points: float) -> void:
+func get_fish(fish_name: String, fish_peso: float, fish_points: float, is_shiny: bool) -> void:
 	bait_state = "catch"
 	peso += fish_peso 
 	points += fish_points
@@ -92,7 +91,7 @@ func get_fish(fish_name: String, fish_peso: float, fish_points: float) -> void:
 	elif player_name == "player4":
 		GlobalVars.player4_peso = peso
 	
-	update_fishs(fish_name)
+	update_fishs(fish_name, is_shiny)
 
 
 func get_treasure(treasure_peso: float, treasure_points: float) -> void:
@@ -107,20 +106,35 @@ func get_treasure(treasure_peso: float, treasure_points: float) -> void:
 	update_fishs("treasure")
 
 
-func update_fishs(fish_name: String):
+func update_fishs(fish_name: String, is_shiny: bool = false):
 	match fish_name:
 		"blue":
 			has_blue_fishs += 1
 			if(blue_fish_list.size() < has_blue_fishs): return
-			blue_fish_list[has_blue_fishs - 1].visible = true
+			var target_sprite = blue_fish_list[has_blue_fishs - 1]
+			target_sprite.visible = true
+			if !is_shiny:
+				target_sprite.play("default")
+			else:
+				target_sprite.play("shiny")
 		"red":
 			has_red_fishs += 1
 			if(red_fish_list.size() < has_red_fishs): return
-			red_fish_list[has_red_fishs - 1].visible = true
+			var target_sprite = red_fish_list[has_red_fishs - 1]
+			target_sprite.visible = true
+			if !is_shiny:
+				target_sprite.play("default")
+			else:
+				target_sprite.play("shiny")
 		"golden":
 			has_golden_fishs += 1
 			if(golden_fish_list.size() < has_golden_fishs): return
-			golden_fish_list[has_golden_fishs - 1].visible = true
+			var target_sprite = golden_fish_list[has_golden_fishs - 1]
+			target_sprite.visible = true
+			if !is_shiny:
+				target_sprite.play("default")
+			else:
+				target_sprite.play("shiny")
 		"treasure":
 			treasure_sprite.visible = true
 		_:
@@ -264,7 +278,7 @@ func _on_bait_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("fish"):
 		var fish: Fish = area.get_parent() as Fish 
 		if !fish.pescavel: return 
-		get_fish(fish.fish_name, fish.peso, fish.points)
+		get_fish(fish.fish_name, fish.peso, fish.points, fish.is_shiny)
 		fish.is_collected(self as Bait)
 		SfxManager.play_sfx(SoundsList.FIGHTSTICK_CLICK)
 	
@@ -284,5 +298,6 @@ func _on_bait_area_area_entered(area: Area2D) -> void:
 				coin = child as FallingCoin
 				break
 		if !coin.is_alive: return
+		EffectSpawner.points_label(coin.points, coin.global_position)
 		player.add_points(coin.points)
 		coin.is_collected()

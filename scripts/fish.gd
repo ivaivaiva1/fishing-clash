@@ -92,8 +92,9 @@ func spawn_bubble():
 
 
 func is_collected(bait: Bait):
-	pingente.reparent(get_parent())
-	pingente.start(bait, speed)
+	if has_pingente:
+		pingente.reparent(get_parent())
+		pingente.start(bait, speed)
 	
 	var spawn_pos: Vector2
 	spawn_pos = right_effectPos.global_position

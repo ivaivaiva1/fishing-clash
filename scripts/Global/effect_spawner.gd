@@ -1,11 +1,15 @@
 extends Node
 
+var fish_spawner: Node2D
+
 var effect_scene: PackedScene = preload("uid://dymjc3rwm5np6")
 var collision_effect_scene: PackedScene = preload("uid://bg645xjsyvikf")
 var bubble_scene: PackedScene = preload("res://_scenes/effects/bubble.tscn")
 var collected_coin_scene: PackedScene = preload("res://_scenes/effects/collected_coin.tscn")
 var blood_scene: PackedScene = preload("res://_scenes/effects/blood.tscn")
-var fish_spawner: Node2D
+var points_label_scene: PackedScene = preload("res://_scenes/effects/points_label.tscn")
+
+
 
 
 func spawn_blood(shark: Shark, is_blood: bool, target_pos: Vector2, flip_h: bool, flip_v: bool):
@@ -58,6 +62,15 @@ func collect_coin_effect(target_pos: Vector2):
 	effect.global_position = target_pos
 
 
-enum DEFAULT_EFFECTS{
-	BLOOD 
-}
+func points_label(label_value: int, target_pos: Vector2, target_father: Node2D = null):
+	var effect = points_label_scene.instantiate()
+	if target_father == null: target_father = get_tree().current_scene
+	target_father.add_child(effect)
+	
+	if target_pos.y > 476.613: target_pos.y = 476.613
+	if target_pos.x < 9.796: target_pos.x = 9.796
+	if target_pos.x > 531.772: target_pos.x = 531.772
+	effect.global_position = target_pos
+	
+	var label = effect as PointsLabel
+	label.start(label_value)

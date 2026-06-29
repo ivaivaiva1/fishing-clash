@@ -1,17 +1,20 @@
 [gd_scene format=3 uid="uid://b3t4xw41cxb2n"]
 
-[ext_resource type="Script" uid="uid://dn2m2bg4gmlh8" path="res://Scripts/bait.gd" id="1_er5pq"]
+[ext_resource type="Script" uid="uid://darroqs1uu31x" path="res://Scripts/bait.gd" id="1_er5pq"]
 [ext_resource type="PackedScene" uid="uid://c7qt0ej6xtmqc" path="res://_scenes/effects/coin_falling.tscn" id="2_5nkbj"]
 [ext_resource type="PackedScene" uid="uid://b65gxg7dm233r" path="res://_scenes/effects/coin_jumping.tscn" id="3_xq470"]
 [ext_resource type="Shader" uid="uid://dltsjnvd5v5sk" path="res://Shaders/shake.gdshader" id="3_yu7fc"]
 [ext_resource type="Texture2D" uid="uid://bfknudkvo2ya4" path="res://artes joao/14.04.26/isca/isca 2.png" id="4_xr7ih"]
 [ext_resource type="Texture2D" uid="uid://oxc2xlbgd8xw" path="res://Sprites/Fish Sprites/gold_fish.png" id="5_up2ac"]
 [ext_resource type="Texture2D" uid="uid://bsw56ryji4eos" path="res://Sprites/Fish Sprites/blue_fish.png" id="6_xq470"]
+[ext_resource type="Texture2D" uid="uid://cd1ve8npy0abc" path="res://Sprites/Fish Sprites/blue_fish_shiny.png" id="7_5rhwt"]
 [ext_resource type="Texture2D" uid="uid://bj7iplhc0ajfs" path="res://Sprites/Fish Sprites/big_fish.png" id="7_up2ac"]
 [ext_resource type="Texture2D" uid="uid://cw54xs24pb6u0" path="res://artes joao/bau_contorno_preto.png" id="8_chrn6"]
-[ext_resource type="Script" uid="uid://b1y7jwgfvfrda" path="res://Scripts/boost_controller.gd" id="9_16gtk"]
-[ext_resource type="Script" uid="uid://bkawldx4t15f6" path="res://Scripts/Player/bait_rotation.gd" id="10_7j41f"]
-[ext_resource type="Script" uid="uid://3fntxsuthvye" path="res://Scripts/Player/magnetic_behaviour.gd" id="11_5nkbj"]
+[ext_resource type="Texture2D" uid="uid://dgxpd2sca0c1o" path="res://Sprites/Fish Sprites/gold_fish_shiny2.png" id="8_o6hk6"]
+[ext_resource type="Script" uid="uid://ckinr2aqtxyiu" path="res://Scripts/boost_controller.gd" id="9_16gtk"]
+[ext_resource type="Texture2D" uid="uid://k3vyhqbyr7oe" path="res://Sprites/Fish Sprites/big_fish_shiny.png" id="9_usgw0"]
+[ext_resource type="Script" uid="uid://c55yb58exwhrg" path="res://Scripts/Player/bait_rotation.gd" id="10_7j41f"]
+[ext_resource type="Script" uid="uid://dt5nk2h7obhx5" path="res://Scripts/Player/magnetic_behaviour.gd" id="11_5nkbj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f1ej7"]
 shader = ExtResource("3_yu7fc")
@@ -62,6 +65,38 @@ region = Rect2(64, 32, 32, 32)
 atlas = ExtResource("6_xq470")
 region = Rect2(96, 32, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ci1xy"]
+atlas = ExtResource("7_5rhwt")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfqcw"]
+atlas = ExtResource("7_5rhwt")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pficf"]
+atlas = ExtResource("7_5rhwt")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1v72"]
+atlas = ExtResource("7_5rhwt")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_necvn"]
+atlas = ExtResource("7_5rhwt")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ys43j"]
+atlas = ExtResource("7_5rhwt")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6r8qe"]
+atlas = ExtResource("7_5rhwt")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7j3tc"]
+atlas = ExtResource("7_5rhwt")
+region = Rect2(96, 32, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_pl11u"]
 animations = [{
 "frames": [{
@@ -91,6 +126,35 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ci1xy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfqcw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pficf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1v72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_necvn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ys43j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6r8qe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7j3tc")
+}],
+"loop": 1,
+"name": &"shiny",
 "speed": 25.0
 }]
 
@@ -126,6 +190,38 @@ region = Rect2(64, 32, 32, 32)
 atlas = ExtResource("5_up2ac")
 region = Rect2(96, 32, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvhco"]
+atlas = ExtResource("8_o6hk6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ac8ma"]
+atlas = ExtResource("8_o6hk6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ubxg"]
+atlas = ExtResource("8_o6hk6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w56e0"]
+atlas = ExtResource("8_o6hk6")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ti2d"]
+atlas = ExtResource("8_o6hk6")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80h3h"]
+atlas = ExtResource("8_o6hk6")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipjv0"]
+atlas = ExtResource("8_o6hk6")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4uskg"]
+atlas = ExtResource("8_o6hk6")
+region = Rect2(96, 32, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_v2yb1"]
 animations = [{
 "frames": [{
@@ -156,6 +252,35 @@ animations = [{
 "loop": 1,
 "name": &"default",
 "speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvhco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ac8ma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ubxg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w56e0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ti2d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80h3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipjv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4uskg")
+}],
+"loop": 1,
+"name": &"shiny",
+"speed": 30.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fbuyw"]
@@ -172,6 +297,22 @@ region = Rect2(128, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7yk14"]
 atlas = ExtResource("7_up2ac")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_up2sy"]
+atlas = ExtResource("9_usgw0")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3unt"]
+atlas = ExtResource("9_usgw0")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqjal"]
+atlas = ExtResource("9_usgw0")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_renoi"]
+atlas = ExtResource("9_usgw0")
 region = Rect2(192, 128, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ool0"]
@@ -191,6 +332,23 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_up2sy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3unt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqjal")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_renoi")
+}],
+"loop": 1,
+"name": &"shiny",
 "speed": 20.0
 }]
 

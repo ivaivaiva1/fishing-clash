@@ -36,7 +36,6 @@
 [ext_resource type="Texture2D" uid="uid://dybx0bpe0255s" path="res://artes joao/14.04.26/isca/isca 2 cinza rosa.png" id="33_j2pq6"]
 [ext_resource type="Texture2D" uid="uid://d04m3mxj5opt7" path="res://artes joao/14.04.26/isca/isca 2 rosa.png" id="34_lkaj3"]
 [ext_resource type="Texture2D" uid="uid://bfknudkvo2ya4" path="res://artes joao/14.04.26/isca/isca 2.png" id="35_22kd2"]
-[ext_resource type="PackedScene" uid="uid://e1a07dplrlo4" path="res://_scenes/effects/points_label.tscn" id="37_lkaj3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2lena"]
 shader = ExtResource("21_gkrq6")
@@ -131,6 +130,7 @@ scale = Vector2(2.040282, 2.0402818)
 texture = ExtResource("23_w7lom")
 
 [node name="Mar" type="Node2D" parent="." unique_id=165544676]
+visible = false
 
 [node name="Superficie" type="Sprite2D" parent="Mar" unique_id=1568365985]
 z_index = -200
@@ -154,7 +154,6 @@ position = Vector2(265.20328, 408.65707)
 texture = ExtResource("29_fdh18")
 
 [node name="SHADERS" type="Node2D" parent="." unique_id=1224380565]
-visible = false
 
 [node name="MASTER_SYSTEM" type="ColorRect" parent="SHADERS" unique_id=874511029]
 visible = false
@@ -580,6 +579,3 @@ texture = ExtResource("34_lkaj3")
 visible = false
 position = Vector2(250.6547, 201.24464)
 texture = ExtResource("35_22kd2")
-
-[node name="points_label" parent="." unique_id=364982892 instance=ExtResource("37_lkaj3")]
-position = Vector2(228, 217.09091)

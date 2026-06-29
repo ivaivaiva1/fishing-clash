@@ -136,7 +136,7 @@ script = ExtResource("1_wg78v")
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_wg78v")
 sprite_frames = SubResource("SpriteFrames_oc0xf")
-animation = &"purple"
+animation = &"red"
 autoplay = "red"
 flip_h = true
 
@@ -148,3 +148,7 @@ position = Vector2(-7.992897, 7.998907)
 sprite_frames = SubResource("SpriteFrames_60sw7")
 animation = &"reset"
 autoplay = "reset"
+
+[node name="middle_pos" type="Marker2D" parent="." unique_id=434770216]
+unique_name_in_owner = true
+position = Vector2(-7.9882536, 8.010493)

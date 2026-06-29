@@ -6,6 +6,7 @@ var red_value: int = 20
 var purple_value: int = 50
 @onready var sprite: AnimatedSprite2D = %Sprite
 @onready var destroy_anim: AnimatedSprite2D = %destroy_anim
+@onready var middle_pos: Marker2D = %middle_pos
 
 var is_started: bool = false
 var current_bait: Bait
@@ -46,6 +47,7 @@ func blink():
 		.set_ease(Tween.EASE_IN)
 	
 	await tween.finished
+	EffectSpawner.points_label(actual_value, middle_pos.global_position)
 	current_bait.player.add_points(actual_value)
 	do_destroy_animation()
 
@@ -54,36 +56,5 @@ func do_destroy_animation():
 	is_started = false
 	sprite.visible = false
 	destroy_anim.play("default")
-	
 	await destroy_anim.animation_finished
 	queue_free()
-
-
-#func auto_destroy():
-	#var blink_duration : float = 0.2
-	#
-	#for i in 6:
-		#var blink_tween = create_tween()
-		#blink_tween.set_trans(Tween.TRANS_SINE)
-		#blink_tween.set_ease(Tween.EASE_IN_OUT)
-		#
-		#blink_tween.tween_property(
-			#sprite.material,
-			#"shader_parameter/flash_pct",
-			#0.8,
-			#blink_duration
-		#)
-		#
-		#blink_tween.tween_property(
-			#sprite.material,
-			#"shader_parameter/flash_pct",
-			#0.0,
-			#blink_duration
-		#)
-		#
-		#await blink_tween.finished
-		#blink_duration -= 0.03
-		#
-		#if i == 5:
-			#current_bait.player.add_points(actual_value)
-			#queue_free()

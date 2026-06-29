@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://e1a07dplrlo4"]
 
+[ext_resource type="Script" uid="uid://b8e4l0m5h24fc" path="res://Scripts/Effects/points_label.gd" id="1_c0djs"]
 [ext_resource type="FontFile" uid="uid://bx1rplw8473y5" path="res://Fonts/magofonts/mago3.ttf" id="1_r7rwk"]
 
 [sub_resource type="FontVariation" id="FontVariation_r7rwk"]
 base_font = ExtResource("1_r7rwk")
 
 [node name="points_label" type="Node2D" unique_id=364982892]
+script = ExtResource("1_c0djs")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1289537070]
+[node name="Label" type="RichTextLabel" parent="." unique_id=1289537070]
+unique_name_in_owner = true
 z_index = 4000
 anchors_preset = 8
 anchor_left = 0.5
@@ -22,9 +25,14 @@ grow_horizontal = 2
 grow_vertical = 2
 offset_transform_enabled = true
 theme_override_colors/font_outline_color = Color(0.12156863, 0.12156863, 0.12156863, 1)
+theme_override_constants/outline_size = 1
 theme_override_fonts/normal_font = SubResource("FontVariation_r7rwk")
 text = "100
 "
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=469618411]
+unique_name_in_owner = true
+wait_time = 0.1

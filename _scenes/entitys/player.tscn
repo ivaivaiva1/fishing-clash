@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bb6ifiejbxjb7"]
 
-[ext_resource type="Script" uid="uid://c7qfstejcicpp" path="res://Scripts/player.gd" id="1_tuyoq"]
+[ext_resource type="Script" uid="uid://d1b1fte72co05" path="res://Scripts/player.gd" id="1_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://dkcvk4uojtq6w" path="res://artes joao/13-04-2026/barco 2 joao.png" id="3_smehm"]
-[ext_resource type="Script" uid="uid://g51artpoga0q" path="res://Scripts/Player/skin_handler.gd" id="4_qfm1y"]
+[ext_resource type="Script" uid="uid://doo5vo7pdfnxe" path="res://Scripts/Player/skin_handler.gd" id="4_qfm1y"]
 [ext_resource type="PackedScene" uid="uid://b3t4xw41cxb2n" path="res://_scenes/misc/bait.tscn" id="8_smehm"]
-[ext_resource type="Script" uid="uid://bgh28c2s6hwh3" path="res://Scripts/Player/player_movement.gd" id="9_ur7pv"]
+[ext_resource type="Script" uid="uid://blwugyiwwking" path="res://Scripts/Player/player_movement.gd" id="9_ur7pv"]
 [ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://Shaders/blink.gdshader" id="12_f1ej7"]
-[ext_resource type="Script" uid="uid://33iignvffuty" path="res://Scripts/Effects/collision_effect.gd" id="15_oprun"]
+[ext_resource type="Script" uid="uid://b1ca4waxvaxm4" path="res://Scripts/Effects/collision_effect.gd" id="15_oprun"]
 [ext_resource type="Texture2D" uid="uid://dj24xdkgncopb" path="res://artes joao/player_arrows/seta cinza azul.png" id="16_a8ls1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
@@ -166,5 +166,9 @@ script = ExtResource("9_ur7pv")
 [node name="skin_handler" type="Node2D" parent="." unique_id=2115151140]
 unique_name_in_owner = true
 script = ExtResource("4_qfm1y")
+
+[node name="players_head" type="Marker2D" parent="." unique_id=776894364]
+unique_name_in_owner = true
+position = Vector2(0, -56.754818)
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
