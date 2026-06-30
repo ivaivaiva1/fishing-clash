@@ -9,15 +9,12 @@ var player2: Player
 var player3: Player
 var player4: Player
 
-@onready var rounds_player1_label: Label = %player1_rounds
-@onready var rounds_player2_label: Label = %player2_rounds
-@onready var rounds_player3_label: Label = %player3_rounds
-@onready var rounds_player4_label: Label = %player4_rounds
 
-@onready var money_1_label: Label = %player1_money
-@onready var money_2_label: Label = %player2_money
-@onready var money_3_label: Label = %player3_money
-@onready var money_4_label: Label = %player4_money
+@onready var player_1info: PlayerInfo = %PLAYER1INFO
+@onready var player_2info: PlayerInfo = %PLAYER2INFO
+@onready var player_3info: PlayerInfo = %PLAYER3INFO
+@onready var player_4info: PlayerInfo = %PLAYER4INFO
+
 
 @onready var game_countdown_label: Label = %game_countdown
 @export var peso_1: Label 
@@ -41,7 +38,7 @@ func _ready() -> void:
 	FishSpawner_intance.big_fish_rate = GlobalVars.big_fish_rate_menu
 	FishSpawner_intance.red_fish_rate = GlobalVars.red_fish_rate_menu
 	EffectSpawner.fish_spawner = FishSpawner_intance
-	att_score()
+	att_points()
 	start_game()
 
 
@@ -98,13 +95,6 @@ func start_game():
 	GlobalVars.player1_money = 0
 	GlobalVars.player2_money = 0
 	
-	#Shark.re_start()
-	#press_to_play.visible = false
-	money_1_label.visible = true
-	money_2_label.visible = true
-		#peso_1.visible = true
-		#peso_2.visible = true
-	
 	
 	var player_instance_1 = player_scene.instantiate()
 	player1 = player_instance_1
@@ -148,14 +138,14 @@ func start_game():
 
 
 func att_money():
-	money_1_label.text = "$ " + str(GlobalVars.player1_money)
-	money_2_label.text = "$ " + str(GlobalVars.player2_money)
-	money_3_label.text = "$ " + str(GlobalVars.player3_money)
-	money_4_label.text = "$ " + str(GlobalVars.player4_money)
+	player_1info.att_money_label(GlobalVars.player1_money)
+	player_2info.att_money_label(GlobalVars.player2_money)
+	player_3info.att_money_label(GlobalVars.player3_money)
+	player_4info.att_money_label(GlobalVars.player4_money)
 
 
-func att_score():
-	rounds_player1_label.text = str(GlobalVars.player1_score)
-	rounds_player2_label.text = str(GlobalVars.player2_score)
-	rounds_player3_label.text = str(GlobalVars.player3_score)
-	rounds_player4_label.text = str(GlobalVars.player4_score)
+func att_points():
+	player_1info.att_points_label(GlobalVars.player1_score)
+	player_2info.att_points_label(GlobalVars.player2_score)
+	player_3info.att_points_label(GlobalVars.player3_score)
+	player_4info.att_points_label(GlobalVars.player4_score)

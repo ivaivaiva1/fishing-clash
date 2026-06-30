@@ -6,9 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bb6ifiejbxjb7" path="res://_scenes/entitys/player.tscn" id="2_trtic"]
 [ext_resource type="PackedScene" uid="uid://by4oxgbthjk4u" path="res://_scenes/fish/big_fish.tscn" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://ddvlq8luidfup" path="res://Scripts/fish_spawner.gd" id="3_lnu2h"]
-[ext_resource type="Texture2D" uid="uid://cq4o85mwl4g24" path="res://artes joao/player_icon png.png" id="3_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://cpjcbme3mfnnl" path="res://Sprites/mar 1.png" id="4_1kice"]
-[ext_resource type="Texture2D" uid="uid://b2f2rmiut0qmt" path="res://artes joao/trophy.png" id="4_264po"]
 [ext_resource type="Texture2D" uid="uid://bjgivjbi6ryan" path="res://Sprites/SpearFishing Assets Pack/Sprite names.png" id="4_lbhrr"]
 [ext_resource type="Shader" uid="uid://dftd0pk6ql231" path="res://Shaders/water_distortion.gdshader" id="7_gee14"]
 [ext_resource type="PackedScene" uid="uid://dy5jp3gig3bp8" path="res://_scenes/fish/gold_fish.tscn" id="7_ir15t"]
@@ -18,7 +16,6 @@
 [ext_resource type="Script" uid="uid://dnf7xjxrhtet3" path="res://Scripts/Events/cegonha_spawner.gd" id="11_3fbtg"]
 [ext_resource type="Script" uid="uid://vt3ganurqkyu" path="res://Scripts/Player/boat_clone.gd" id="11_ca42v"]
 [ext_resource type="Script" uid="uid://by1ljeh6kvemg" path="res://Scripts/Events/event_starter.gd" id="12_j2pq6"]
-[ext_resource type="Texture2D" uid="uid://dfrqtdtraoj7h" path="res://artes joao/13-04-2026/icon_girl.png" id="13_5newe"]
 [ext_resource type="Texture2D" uid="uid://5qv7nmcjftw2" path="res://Sprites/mar 2.png" id="15_4suqf"]
 [ext_resource type="Texture2D" uid="uid://c3w6d0f0471i5" path="res://Sprites/mar 3.png" id="16_orwkc"]
 [ext_resource type="FontFile" uid="uid://jftlu6i4v8kh" path="res://Fonts/madspixel/madspixel.ttf" id="17_1kice"]
@@ -30,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://x0glq3m2m7jv" path="res://Sprites/GRAFXKID/Tropics/4 - Background_clouds.png" id="22_aght6"]
 [ext_resource type="Shader" uid="uid://bimqhb28ph5g" path="res://Shaders/Post Processing/emerald_shader.gdshader" id="23_gkrq6"]
 [ext_resource type="Texture2D" uid="uid://dkpesntnrp5ug" path="res://Sprites/GRAFXKID/Tropics/3 - Floating_clouds.png" id="23_w7lom"]
+[ext_resource type="PackedScene" uid="uid://bcrse5ombb3ow" path="res://_scenes/menus/player_info.tscn" id="27_sntvj"]
 [ext_resource type="Texture2D" uid="uid://btyhn1ur144p6" path="res://Sprites/mar corpo 1.png" id="29_fdh18"]
 [ext_resource type="Texture2D" uid="uid://7t1e0od1dsbw" path="res://Sprites/Sea/Superficie.png" id="31_mj01u"]
 [ext_resource type="Texture2D" uid="uid://c4nq1b1gu7xk0" path="res://artes joao/14.04.26/isca/isca 1.png" id="32_6urtb"]
@@ -64,9 +62,6 @@ size = Vector2(89.443, 38.67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e1j6l"]
 size = Vector2(49, 64)
-
-[sub_resource type="LabelSettings" id="LabelSettings_trtic"]
-font_size = 21
 
 [node name="game" type="Node2D" unique_id=760273511]
 
@@ -357,191 +352,29 @@ limit_enabled = false
 unique_name_in_owner = true
 position = Vector2(-98.288, 130)
 
-[node name="BLACK COLOR RECTS" type="ColorRect" parent="." unique_id=1340791473]
-z_index = 4010
-offset_left = -209.59259
-offset_top = -53.405777
-offset_right = 0.10498047
-offset_bottom = 492.78027
-color = Color(0.12225223, 0.12225223, 0.12225223, 1)
+[node name="PLAYERS INFO" type="HBoxContainer" parent="." unique_id=267023238]
+offset_left = 21.459335
+offset_top = -5.5980988
+offset_right = 21.459335
+offset_bottom = -5.5980988
 
-[node name="PLAYER1INFO" type="ColorRect" parent="BLACK COLOR RECTS" unique_id=664119518]
-layout_mode = 0
-offset_left = 25.334763
-offset_top = 223.92313
-offset_right = 199.71289
-offset_bottom = 263.63312
-color = Color(0.12156863, 0.12156863, 0.12156863, 1)
-
-[node name="PlayerIconPng" type="Sprite2D" parent="BLACK COLOR RECTS/PLAYER1INFO" unique_id=246572327]
-position = Vector2(57.045, 21.592)
-scale = Vector2(0.966, 0.966)
-texture = ExtResource("3_ssvqc")
-
-[node name="player1_money" type="Label" parent="BLACK COLOR RECTS/PLAYER1INFO" unique_id=890581008]
+[node name="PLAYER1INFO" parent="PLAYERS INFO" unique_id=603717198 instance=ExtResource("27_sntvj")]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 76.63989
-offset_top = 4.779175
-offset_right = 145.66362
-offset_bottom = 34.779175
-text = "$ 0"
-label_settings = SubResource("LabelSettings_trtic")
-horizontal_alignment = 1
-vertical_alignment = 1
+position = Vector2(-2.3173065, -39.97368)
 
-[node name="player1_rounds" type="Label" parent="BLACK COLOR RECTS/PLAYER1INFO" unique_id=378935352]
+[node name="PLAYER2INFO" parent="PLAYERS INFO" unique_id=2001832068 instance=ExtResource("27_sntvj")]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 76.63989
-offset_top = 48.88817
-offset_right = 145.66362
-offset_bottom = 78.88817
-text = "0"
-label_settings = SubResource("LabelSettings_trtic")
-horizontal_alignment = 1
-vertical_alignment = 1
+position = Vector2(112.389755, -39.104683)
 
-[node name="Trophy" type="Sprite2D" parent="BLACK COLOR RECTS/PLAYER1INFO" unique_id=1182390879]
-position = Vector2(56.285904, 64.22458)
-scale = Vector2(0.10549085, 0.10549084)
-texture = ExtResource("4_264po")
-
-[node name="PLAYER3INFO" type="ColorRect" parent="BLACK COLOR RECTS" unique_id=1991480297]
+[node name="PLAYER3INFO" parent="PLAYERS INFO" unique_id=152538890 instance=ExtResource("27_sntvj")]
+unique_name_in_owner = true
 visible = false
-layout_mode = 0
-offset_left = -0.728302
-offset_top = 343.39993
-offset_right = 173.64981
-offset_bottom = 383.10992
-color = Color(0, 0, 0, 1)
+position = Vector2(229.53296, -38.889297)
 
-[node name="PlayerIconPng" type="Sprite2D" parent="BLACK COLOR RECTS/PLAYER3INFO" unique_id=1038882812]
-position = Vector2(57.045, 21.592)
-scale = Vector2(0.966, 0.966)
-texture = ExtResource("3_ssvqc")
-
-[node name="player3_money" type="Label" parent="BLACK COLOR RECTS/PLAYER3INFO" unique_id=1335311300]
+[node name="PLAYER4INFO" parent="PLAYERS INFO" unique_id=672852278 instance=ExtResource("27_sntvj")]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 76.63989
-offset_top = 4.779175
-offset_right = 145.66362
-offset_bottom = 34.779175
-text = "$ 0"
-label_settings = SubResource("LabelSettings_trtic")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="player3_rounds" type="Label" parent="BLACK COLOR RECTS/PLAYER3INFO" unique_id=950209491]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 76.63989
-offset_top = 48.88817
-offset_right = 145.66362
-offset_bottom = 78.88817
-text = "0"
-label_settings = SubResource("LabelSettings_trtic")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Trophy" type="Sprite2D" parent="BLACK COLOR RECTS/PLAYER3INFO" unique_id=68414616]
-position = Vector2(56.285904, 64.22458)
-scale = Vector2(0.10549085, 0.10549084)
-texture = ExtResource("4_264po")
-
-[node name="BLACK COLOR RECTS2" type="ColorRect" parent="." unique_id=1627553549]
-z_index = 4010
-offset_left = 540.3882
-offset_top = -51.88469
-offset_right = 754.4785
-offset_bottom = 497.1761
-color = Color(0.12225223, 0.12225223, 0.12225223, 1)
-
-[node name="PLAYER2INFO" type="ColorRect" parent="BLACK COLOR RECTS2" unique_id=595410992]
-layout_mode = 0
-offset_left = 16.85913
-offset_top = 218.30469
-offset_right = 191.23724
-offset_bottom = 258.0147
-color = Color(0.12156863, 0.12156863, 0.12156863, 1)
-
-[node name="PlayerIconPng" type="Sprite2D" parent="BLACK COLOR RECTS2/PLAYER2INFO" unique_id=2665651]
-position = Vector2(57.045, 21.592)
-scale = Vector2(0.966, 0.966)
-texture = ExtResource("13_5newe")
-
-[node name="player2_money" type="Label" parent="BLACK COLOR RECTS2/PLAYER2INFO" unique_id=165597416]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 76.63989
-offset_top = 4.779175
-offset_right = 145.66362
-offset_bottom = 34.779175
-text = "$ 0"
-label_settings = SubResource("LabelSettings_trtic")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="player2_rounds" type="Label" parent="BLACK COLOR RECTS2/PLAYER2INFO" unique_id=723098183]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 76.63989
-offset_top = 48.88817
-offset_right = 145.66362
-offset_bottom = 78.88817
-text = "0"
-label_settings = SubResource("LabelSettings_trtic")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Trophy" type="Sprite2D" parent="BLACK COLOR RECTS2/PLAYER2INFO" unique_id=1215334482]
-position = Vector2(56.285904, 64.22458)
-scale = Vector2(0.10549085, 0.10549084)
-texture = ExtResource("4_264po")
-
-[node name="PLAYER4INFO" type="ColorRect" parent="BLACK COLOR RECTS2" unique_id=1648810501]
 visible = false
-layout_mode = 0
-offset_left = 0.4790039
-offset_top = 346.62497
-offset_right = 174.85712
-offset_bottom = 386.33496
-color = Color(0, 0, 0, 1)
-
-[node name="PlayerIconPng" type="Sprite2D" parent="BLACK COLOR RECTS2/PLAYER4INFO" unique_id=2095714873]
-position = Vector2(57.045, 21.592)
-scale = Vector2(0.966, 0.966)
-texture = ExtResource("13_5newe")
-
-[node name="player4_money" type="Label" parent="BLACK COLOR RECTS2/PLAYER4INFO" unique_id=1147669261]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 76.63989
-offset_top = 4.779175
-offset_right = 145.66362
-offset_bottom = 34.779175
-text = "$ 0"
-label_settings = SubResource("LabelSettings_trtic")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="player4_rounds" type="Label" parent="BLACK COLOR RECTS2/PLAYER4INFO" unique_id=1953681170]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 76.63989
-offset_top = 48.88817
-offset_right = 145.66362
-offset_bottom = 78.88817
-text = "0"
-label_settings = SubResource("LabelSettings_trtic")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Trophy" type="Sprite2D" parent="BLACK COLOR RECTS2/PLAYER4INFO" unique_id=283258094]
-position = Vector2(56.285904, 64.22458)
-scale = Vector2(0.10549085, 0.10549084)
-texture = ExtResource("4_264po")
+position = Vector2(342.63562, -38.9487)
 
 [node name="game_countdown" type="Label" parent="." unique_id=1392337292]
 unique_name_in_owner = true
@@ -579,3 +412,26 @@ texture = ExtResource("34_lkaj3")
 visible = false
 position = Vector2(250.6547, 201.24464)
 texture = ExtResource("35_22kd2")
+
+[node name="BLACK MARGINS" type="Node2D" parent="." unique_id=1766270913]
+
+[node name="BLACK COLOR RECTS" type="ColorRect" parent="BLACK MARGINS" unique_id=1340791473]
+z_index = 4010
+offset_left = -209.59259
+offset_top = -53.405777
+offset_right = 0.10498047
+offset_bottom = 492.78027
+color = Color(0.12225223, 0.12225223, 0.12225223, 1)
+
+[node name="BLACK COLOR RECTS2" type="ColorRect" parent="BLACK MARGINS" unique_id=1627553549]
+z_index = 4010
+offset_left = 540.3882
+offset_top = -51.88469
+offset_right = 754.4785
+offset_bottom = 497.1761
+color = Color(0.12225223, 0.12225223, 0.12225223, 1)
+
+[editable path="PLAYERS INFO/PLAYER1INFO"]
+[editable path="PLAYERS INFO/PLAYER2INFO"]
+[editable path="PLAYERS INFO/PLAYER3INFO"]
+[editable path="PLAYERS INFO/PLAYER4INFO"]

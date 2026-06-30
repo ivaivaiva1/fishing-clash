@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bcrse5ombb3ow"]
+
+[ext_resource type="Texture2D" uid="uid://cq4o85mwl4g24" path="res://artes joao/player_icon png.png" id="1_62fok"]
+[ext_resource type="Script" uid="uid://bn1xedqdio14w" path="res://Scripts/Menus/player_info.gd" id="1_pb44k"]
+[ext_resource type="FontFile" uid="uid://dctkm18d5afd7" path="res://Fonts/dungeonmode/dungeon-mode.ttf" id="2_pb44k"]
+[ext_resource type="Texture2D" uid="uid://b2f2rmiut0qmt" path="res://artes joao/trophy.png" id="3_e4k1k"]
+
+[sub_resource type="FontVariation" id="FontVariation_6urtb"]
+base_font = ExtResource("2_pb44k")
+spacing_glyph = -1
+
+[sub_resource type="FontVariation" id="FontVariation_62fok"]
+base_font = ExtResource("2_pb44k")
+
+[node name="PLAYER_INFO" type="Node2D" unique_id=603717198]
+script = ExtResource("1_pb44k")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1883637030]
+visible = false
+offset_left = 8.21051
+offset_top = -1.0263062
+offset_right = 111.8421
+offset_bottom = 61.552658
+color = Color(0.12156863, 0.12156863, 0.12156863, 1)
+
+[node name="PlayerIconPng" type="Sprite2D" parent="." unique_id=543528359]
+position = Vector2(30.163895, 20.014776)
+scale = Vector2(0.8293667, 0.8293667)
+texture = ExtResource("1_62fok")
+
+[node name="money_label" type="RichTextLabel" parent="." unique_id=246544274]
+unique_name_in_owner = true
+offset_left = 50.663147
+offset_top = 0.8877449
+offset_right = 125.44644
+offset_bottom = 35.617313
+theme_override_colors/font_outline_color = Color(0.12156863, 0.12156863, 0.12156863, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/normal_font = SubResource("FontVariation_6urtb")
+theme_override_font_sizes/normal_font_size = 13
+text = "$5000"
+vertical_alignment = 1
+
+[node name="points_label" type="RichTextLabel" parent="." unique_id=619171016]
+unique_name_in_owner = true
+offset_left = 20.736229
+offset_top = 35.450405
+offset_right = 90.90452
+offset_bottom = 54.658882
+theme_override_colors/font_outline_color = Color(0.12156863, 0.12156863, 0.12156863, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/normal_font = SubResource("FontVariation_62fok")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Trophy" type="Sprite2D" parent="." unique_id=373556107]
+position = Vector2(30.188385, 44.605938)
+scale = Vector2(0.07790516, 0.077905156)
+texture = ExtResource("3_e4k1k")

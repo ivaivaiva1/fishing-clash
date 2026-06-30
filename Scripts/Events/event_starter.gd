@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 func start_event():
 	var event_index: int = EVENTS_LIST.values().pick_random()
-	event_index = 3
+	#event_index = 2
 	match event_index:
 		0:
 			fish_spawner.do_red_rain()
