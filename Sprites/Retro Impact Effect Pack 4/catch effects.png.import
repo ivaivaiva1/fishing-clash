@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvwh7tdl1kw31"
-path="res://.godot/imported/pingente_vermelho.png-c0109d095a9eddfa1b76e3fc36c47034.ctex"
+uid="uid://gtakyet4du46"
+path="res://.godot/imported/catch effects.png-1cbb656faf943c8b75ec84bd6e167b43.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Pingente/pingente_vermelho.png"
-dest_files=["res://.godot/imported/pingente_vermelho.png-c0109d095a9eddfa1b76e3fc36c47034.ctex"]
+source_file="res://Sprites/Retro Impact Effect Pack 4/catch effects.png"
+dest_files=["res://.godot/imported/catch effects.png-1cbb656faf943c8b75ec84bd6e167b43.ctex"]
 
 [params]
 

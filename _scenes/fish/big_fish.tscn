@@ -193,4 +193,6 @@ is_fish = true
 [node name="Pingente" parent="." unique_id=1431694881 instance=ExtResource("6_354b3")]
 unique_name_in_owner = true
 visible = false
-position = Vector2(9.789966, 11.249063)
+position = Vector2(12.816176, 11.509561)
+
+[editable path="Pingente"]

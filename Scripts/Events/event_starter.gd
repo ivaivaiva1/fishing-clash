@@ -4,6 +4,9 @@ extends Node2D
 @onready var spawn_treasure: SpawnTreasure = %SpawnTreasure
 @onready var cegonha_spawner: CegonhasSpawner = %CegonhaSpawner
 
+func _ready() -> void:
+	randomize()
+
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("start_event"):
@@ -12,7 +15,7 @@ func _process(delta: float) -> void:
 
 func start_event():
 	var event_index: int = EVENTS_LIST.values().pick_random()
-	#event_index = 2
+	#event_index = 3
 	match event_index:
 		0:
 			fish_spawner.do_red_rain()

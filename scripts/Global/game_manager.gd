@@ -38,6 +38,7 @@ func _ready() -> void:
 	FishSpawner_intance.big_fish_rate = GlobalVars.big_fish_rate_menu
 	FishSpawner_intance.red_fish_rate = GlobalVars.red_fish_rate_menu
 	EffectSpawner.fish_spawner = FishSpawner_intance
+	att_money()
 	att_points()
 	start_game()
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://5n5ruuiimy7b"]
 
-[ext_resource type="Texture2D" uid="uid://ciax0ihrrcl4l" path="res://Sprites/Pingente/pingente_vermelho.png" id="1_heito"]
+[ext_resource type="Texture2D" uid="uid://cvwh7tdl1kw31" path="res://Sprites/Pingente/pingente_vermelho.png" id="1_heito"]
 [ext_resource type="Texture2D" uid="uid://dc57mbk216h87" path="res://Sprites/Pingente/pingente_roxo.png" id="1_urb7x"]
 [ext_resource type="Script" uid="uid://biuij4cssxhov" path="res://Scripts/Entitys/pingente.gd" id="1_wg78v"]
 [ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://Shaders/blink.gdshader" id="2_w8ovl"]
@@ -23,17 +23,25 @@ region = Rect2(32, 0, 32, 32)
 atlas = ExtResource("1_urb7x")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_urb7x"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h3n1"]
+atlas = ExtResource("1_urb7x")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25q7l"]
 atlas = ExtResource("1_heito")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wg78v"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt3gx"]
 atlas = ExtResource("1_heito")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w8ovl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_y60f3"]
 atlas = ExtResource("1_heito")
 region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6rxu"]
+atlas = ExtResource("1_heito")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oc0xf"]
 animations = [{
@@ -46,6 +54,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_60sw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7h3n1")
 }],
 "loop": 1,
 "name": &"purple",
@@ -53,13 +64,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_urb7x")
+"texture": SubResource("AtlasTexture_25q7l")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wg78v")
+"texture": SubResource("AtlasTexture_qt3gx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w8ovl")
+"texture": SubResource("AtlasTexture_y60f3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6rxu")
 }],
 "loop": 1,
 "name": &"red",
@@ -138,6 +152,7 @@ material = SubResource("ShaderMaterial_wg78v")
 sprite_frames = SubResource("SpriteFrames_oc0xf")
 animation = &"red"
 autoplay = "red"
+frame_progress = 0.09860661
 flip_h = true
 
 [node name="destroy_anim" type="AnimatedSprite2D" parent="." unique_id=1499053563]

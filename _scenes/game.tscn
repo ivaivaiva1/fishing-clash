@@ -30,10 +30,6 @@
 [ext_resource type="PackedScene" uid="uid://bcrse5ombb3ow" path="res://_scenes/menus/player_info.tscn" id="27_sntvj"]
 [ext_resource type="Texture2D" uid="uid://btyhn1ur144p6" path="res://Sprites/mar corpo 1.png" id="29_fdh18"]
 [ext_resource type="Texture2D" uid="uid://7t1e0od1dsbw" path="res://Sprites/Sea/Superficie.png" id="31_mj01u"]
-[ext_resource type="Texture2D" uid="uid://c4nq1b1gu7xk0" path="res://artes joao/14.04.26/isca/isca 1.png" id="32_6urtb"]
-[ext_resource type="Texture2D" uid="uid://dybx0bpe0255s" path="res://artes joao/14.04.26/isca/isca 2 cinza rosa.png" id="33_j2pq6"]
-[ext_resource type="Texture2D" uid="uid://d04m3mxj5opt7" path="res://artes joao/14.04.26/isca/isca 2 rosa.png" id="34_lkaj3"]
-[ext_resource type="Texture2D" uid="uid://bfknudkvo2ya4" path="res://artes joao/14.04.26/isca/isca 2.png" id="35_22kd2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2lena"]
 shader = ExtResource("21_gkrq6")
@@ -368,50 +364,23 @@ position = Vector2(112.389755, -39.104683)
 
 [node name="PLAYER3INFO" parent="PLAYERS INFO" unique_id=152538890 instance=ExtResource("27_sntvj")]
 unique_name_in_owner = true
-visible = false
 position = Vector2(229.53296, -38.889297)
 
 [node name="PLAYER4INFO" parent="PLAYERS INFO" unique_id=672852278 instance=ExtResource("27_sntvj")]
 unique_name_in_owner = true
-visible = false
 position = Vector2(342.63562, -38.9487)
 
 [node name="game_countdown" type="Label" parent="." unique_id=1392337292]
 unique_name_in_owner = true
-offset_left = 489.78125
-offset_top = -41.515556
-offset_right = 535.78125
-offset_bottom = -9.515556
+offset_left = 483.46738
+offset_top = -40.17307
+offset_right = 529.4674
+offset_bottom = -8.173069
 theme_override_fonts/font = ExtResource("17_1kice")
 text = "2:30"
 label_settings = ExtResource("18_1kice")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="spearFishing_package" type="Sprite2D" parent="." unique_id=1356140479]
-texture_filter = 1
-position = Vector2(978, 92.90082)
-texture = ExtResource("4_lbhrr")
-
-[node name="Isca1" type="Sprite2D" parent="." unique_id=1226108647]
-visible = false
-position = Vector2(152.81694, 202.36295)
-texture = ExtResource("32_6urtb")
-
-[node name="Isca2CinzaRosa" type="Sprite2D" parent="." unique_id=1073301985]
-visible = false
-position = Vector2(186.98471, 203.04324)
-texture = ExtResource("33_j2pq6")
-
-[node name="Isca2Rosa" type="Sprite2D" parent="." unique_id=236877128]
-visible = false
-position = Vector2(223.31616, 201.60437)
-texture = ExtResource("34_lkaj3")
-
-[node name="Isca2" type="Sprite2D" parent="." unique_id=917933647]
-visible = false
-position = Vector2(250.6547, 201.24464)
-texture = ExtResource("35_22kd2")
 
 [node name="BLACK MARGINS" type="Node2D" parent="." unique_id=1766270913]
 
@@ -430,6 +399,12 @@ offset_top = -51.88469
 offset_right = 754.4785
 offset_bottom = 497.1761
 color = Color(0.12225223, 0.12225223, 0.12225223, 1)
+
+[node name="spearFishing_package" type="Sprite2D" parent="." unique_id=1356140479]
+visible = false
+texture_filter = 1
+position = Vector2(260.9972, 264.67017)
+texture = ExtResource("4_lbhrr")
 
 [editable path="PLAYERS INFO/PLAYER1INFO"]
 [editable path="PLAYERS INFO/PLAYER2INFO"]

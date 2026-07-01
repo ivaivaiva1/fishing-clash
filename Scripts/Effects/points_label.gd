@@ -4,6 +4,7 @@ class_name PointsLabel
 @onready var label: RichTextLabel = %Label
 @onready var timer: Timer = %Timer
 
+
 func start(value: int):
 	label.text = str(value)
 	for i in 15:

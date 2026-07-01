@@ -187,4 +187,6 @@ position = Vector2(-14, 3)
 [node name="Pingente" parent="." unique_id=1431694881 instance=ExtResource("5_8783r")]
 unique_name_in_owner = true
 visible = false
-position = Vector2(2.4073877, 6.3123503)
+position = Vector2(3.782792, 6.598893)
+
+[editable path="Pingente"]
