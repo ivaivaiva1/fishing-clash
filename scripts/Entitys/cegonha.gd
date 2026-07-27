@@ -7,7 +7,7 @@ var speed: float = randf_range(min_speed, max_speed)
 var dir
 var has_money_bag: bool = true
 var moneybag: PackedScene = preload("uid://mboxchoqsmho")
-@onready var sprite: Sprite2D = %sprite
+@onready var sprite: AnimatedSprite2D = %sprite
 @onready var moneybag_sprite: Sprite2D = %moneybag
 @onready var marker_left: Marker2D = %MarkerLeft
 @onready var marker_right: Marker2D = %MarkerRight
@@ -18,10 +18,11 @@ func _ready() -> void:
 	if dir > 0:
 		global_position.x = -185
 		sprite.flip_h = false
-		moneybag_sprite.position = Vector2(53, 17.84)
+		moneybag_sprite.position = marker_right.position
 	else:
 		sprite.flip_h = true
 		global_position.x = 680
+		moneybag_sprite.position = marker_left.position
 
 
 

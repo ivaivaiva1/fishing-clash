@@ -93,10 +93,22 @@ func finish_round():
 func start_game():
 	if game_state == "game": return
 	game_state = "game"
+	spawn_players()
+	
+	FishSpawner_intance.spawn_cooldown = GlobalVars.spawn_cooldown_game
+	FishSpawner_intance.big_fish_rate = GlobalVars.big_fish_rate_game
+	FishSpawner_intance.red_fish_rate = GlobalVars.red_fish_rate_game
+	#FishSpawner_intance.shrimp_fish_rate = GlobalVars.shrimp_fish_rate_game
+
+var players_number: int = 2
+func spawn_players():
 	GlobalVars.player1_money = 0
 	GlobalVars.player2_money = 0
+	GlobalVars.player3_money = 0
+	GlobalVars.player4_money = 0
 	
 	
+	player_1info.make_active()
 	var player_instance_1 = player_scene.instantiate()
 	player1 = player_instance_1
 	player1.player_name = "player1"
@@ -105,6 +117,7 @@ func start_game():
 	add_child(player_instance_1)
 	player_instance_1.global_position = Vector2(180, 90.849)
 	
+	player_2info.make_active()
 	var player_instance_2 = player_scene.instantiate()
 	player2 = player_instance_2
 	player2.player_name = "player2"
@@ -113,29 +126,30 @@ func start_game():
 	add_child(player_instance_2)
 	player_instance_2.global_position = Vector2(353.0, 90.849)
 	
-	#var player_instance_3 = player_scene.instantiate()
-	#player3 = player_instance_3
-	#player3.player_name = "player3"
-	#player3.current_player = 3
-	#player3.game_manager = self
-	#add_child(player_instance_3)
-	#player_instance_3.global_position = Vector2(180, 79)
-	#
-	#var player_instance_4 = player_scene.instantiate()
-	#player4 = player_instance_4
-	#player4.player_name = "player4"
-	#player4.current_player = 4
-	#player4.game_manager = self
-	#add_child(player_instance_4)
-	#player_instance_4.global_position = Vector2(450, 79)
-	#
+	if players_number < 3: 
+		player_3info.make_empty()
+		player_4info.make_empty()
+		return
+	player_3info.visible = true
+	var player_instance_3 = player_scene.instantiate()
+	player3 = player_instance_3
+	player3.player_name = "player3"
+	player3.current_player = 3
+	player3.game_manager = self
+	add_child(player_instance_3)
+	player_instance_3.global_position = Vector2(180, 79)
 	
-	
-	FishSpawner_intance.spawn_cooldown = GlobalVars.spawn_cooldown_game
-	FishSpawner_intance.big_fish_rate = GlobalVars.big_fish_rate_game
-	FishSpawner_intance.red_fish_rate = GlobalVars.red_fish_rate_game
-	#FishSpawner_intance.shrimp_fish_rate = GlobalVars.shrimp_fish_rate_game
-
+	if players_number < 4: 
+		player_4info.make_empty()
+		return
+	player_4info.visible = true
+	var player_instance_4 = player_scene.instantiate()
+	player4 = player_instance_4
+	player4.player_name = "player4"
+	player4.current_player = 4
+	player4.game_manager = self
+	add_child(player_instance_4)
+	player_instance_4.global_position = Vector2(450, 79)
 
 
 func att_money():

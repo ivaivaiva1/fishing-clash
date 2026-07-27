@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://mboxchoqsmho"]
 
 [ext_resource type="Script" uid="uid://ccwngsnpftvm1" path="res://Scripts/Entitys/moneybag.gd" id="1_iu0r5"]
-[ext_resource type="Texture2D" uid="uid://psac6qfkoh16" path="res://Sprites/moneybag.png" id="1_m4fer"]
 [ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://Shaders/blink.gdshader" id="2_l8wca"]
-[ext_resource type="Texture2D" uid="uid://4wh1y6x35spf" path="res://Sprites/Entitys/moneybag nana.png" id="4_4h2x1"]
+[ext_resource type="Texture2D" uid="uid://4wh1y6x35spf" path="res://Sprites/Entitys/Cegonha/moneybag nana.png" id="4_4h2x1"]
+[ext_resource type="Texture2D" uid="uid://cuhmvu3b7rbtd" path="res://Sprites/Entitys/Cegonha/saco dinhero.png" id="4_7wtpd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4h2x1"]
 shader = ExtResource("2_l8wca")
@@ -14,16 +14,17 @@ shader_parameter/flash_pct = 0.0
 z_index = -51
 script = ExtResource("1_iu0r5")
 
-[node name="sprite" type="Sprite2D" parent="." unique_id=1966014457]
+[node name="sprite_OLD" type="Sprite2D" parent="." unique_id=1555920023]
 unique_name_in_owner = true
+visible = false
 material = SubResource("ShaderMaterial_4h2x1")
 position = Vector2(0.25215912, 0.6733475)
 scale = Vector2(0.51, 0.51)
 texture = ExtResource("4_4h2x1")
 
-[node name="sprite_old" type="Sprite2D" parent="." unique_id=2009384967]
+[node name="sprite" type="Sprite2D" parent="." unique_id=1966014457]
 unique_name_in_owner = true
-visible = false
 material = SubResource("ShaderMaterial_4h2x1")
-scale = Vector2(0.057, 0.047)
-texture = ExtResource("1_m4fer")
+position = Vector2(0, 2)
+scale = Vector2(1.11, 1.11)
+texture = ExtResource("4_7wtpd")

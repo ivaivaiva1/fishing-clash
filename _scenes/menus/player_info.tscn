@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bn1xedqdio14w" path="res://Scripts/Menus/player_info.gd" id="1_pb44k"]
 [ext_resource type="FontFile" uid="uid://dctkm18d5afd7" path="res://Fonts/dungeonmode/dungeon-mode.ttf" id="2_pb44k"]
 [ext_resource type="Texture2D" uid="uid://b2f2rmiut0qmt" path="res://artes joao/trophy.png" id="3_e4k1k"]
+[ext_resource type="Texture2D" uid="uid://c2qok0ti30xks" path="res://Sprites/UI/press to play.png" id="5_e4k1k"]
 
 [sub_resource type="FontVariation" id="FontVariation_6urtb"]
 base_font = ExtResource("2_pb44k")
@@ -12,10 +13,18 @@ spacing_glyph = -1
 [sub_resource type="FontVariation" id="FontVariation_62fok"]
 base_font = ExtResource("2_pb44k")
 
+[sub_resource type="FontVariation" id="FontVariation_e4k1k"]
+base_font = ExtResource("2_pb44k")
+spacing_space = -5
+
 [node name="PLAYER_INFO" type="Node2D" unique_id=603717198]
 script = ExtResource("1_pb44k")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1883637030]
+[node name="active_ui" type="Node2D" parent="." unique_id=2054770254]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="active_ui" unique_id=1883637030]
 visible = false
 offset_left = 8.21051
 offset_top = -1.0263062
@@ -23,12 +32,12 @@ offset_right = 111.8421
 offset_bottom = 61.552658
 color = Color(0.12156863, 0.12156863, 0.12156863, 1)
 
-[node name="PlayerIconPng" type="Sprite2D" parent="." unique_id=543528359]
+[node name="PlayerIconPng" type="Sprite2D" parent="active_ui" unique_id=543528359]
 position = Vector2(30.163895, 20.014776)
 scale = Vector2(0.8293667, 0.8293667)
 texture = ExtResource("1_62fok")
 
-[node name="money_label" type="RichTextLabel" parent="." unique_id=246544274]
+[node name="money_label" type="RichTextLabel" parent="active_ui" unique_id=246544274]
 unique_name_in_owner = true
 offset_left = 50.663147
 offset_top = 0.8877449
@@ -41,7 +50,7 @@ theme_override_font_sizes/normal_font_size = 13
 text = "$5000"
 vertical_alignment = 1
 
-[node name="points_label" type="RichTextLabel" parent="." unique_id=619171016]
+[node name="points_label" type="RichTextLabel" parent="active_ui" unique_id=619171016]
 unique_name_in_owner = true
 offset_left = 20.736229
 offset_top = 35.450405
@@ -54,7 +63,34 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Trophy" type="Sprite2D" parent="." unique_id=373556107]
+[node name="Trophy" type="Sprite2D" parent="active_ui" unique_id=373556107]
 position = Vector2(30.188385, 44.605938)
 scale = Vector2(0.07790516, 0.077905156)
 texture = ExtResource("3_e4k1k")
+
+[node name="empty_ui" type="Node2D" parent="." unique_id=803360265]
+unique_name_in_owner = true
+visible = false
+
+[node name="PressToPlay" type="Sprite2D" parent="empty_ui" unique_id=1811999453]
+position = Vector2(59.999996, 16.5)
+scale = Vector2(3.3124998, 2.59375)
+texture = ExtResource("5_e4k1k")
+
+[node name="empty_label" type="RichTextLabel" parent="empty_ui" unique_id=1778707447]
+unique_name_in_owner = true
+offset_left = 32.0
+offset_top = -13.0
+offset_right = 85.0
+offset_bottom = 45.0
+theme_override_colors/font_outline_color = Color(0.12156863, 0.12156863, 0.12156863, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/normal_font = SubResource("FontVariation_e4k1k")
+theme_override_font_sizes/normal_font_size = 10
+text = "PRESS SPACE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="empty_timer" type="Timer" parent="empty_ui" unique_id=669633159]
+unique_name_in_owner = true
+wait_time = 0.5

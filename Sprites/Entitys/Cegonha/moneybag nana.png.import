@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4wh1y6x35spf"
-path="res://.godot/imported/moneybag nana.png-084a65ca418a2acccc19ecb4544e57db.ctex"
+path="res://.godot/imported/moneybag nana.png-91e817bbda2704a6d448f14220e36b8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Entitys/moneybag nana.png"
-dest_files=["res://.godot/imported/moneybag nana.png-084a65ca418a2acccc19ecb4544e57db.ctex"]
+source_file="res://Sprites/Entitys/Cegonha/moneybag nana.png"
+dest_files=["res://.godot/imported/moneybag nana.png-91e817bbda2704a6d448f14220e36b8e.ctex"]
 
 [params]
 

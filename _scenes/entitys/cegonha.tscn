@@ -2,8 +2,44 @@
 
 [ext_resource type="Script" uid="uid://c71houkraycft" path="res://Scripts/Entitys/cegonha.gd" id="1_2j00t"]
 [ext_resource type="Texture2D" uid="uid://cg65bd1oyrdka" path="res://Sprites/pelicanooo.png" id="2_it1oc"]
-[ext_resource type="Texture2D" uid="uid://psac6qfkoh16" path="res://Sprites/moneybag.png" id="3_lwl5p"]
-[ext_resource type="Texture2D" uid="uid://4wh1y6x35spf" path="res://Sprites/Entitys/moneybag nana.png" id="3_sbwa8"]
+[ext_resource type="Texture2D" uid="uid://cuhmvu3b7rbtd" path="res://Sprites/Entitys/Cegonha/saco dinhero.png" id="2_sbwa8"]
+[ext_resource type="Texture2D" uid="uid://drbg40fl537sc" path="res://Sprites/Entitys/Cegonha/Passoro.png" id="5_sfruv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7uyc0"]
+atlas = ExtResource("5_sfruv")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lo7xn"]
+atlas = ExtResource("5_sfruv")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_643kk"]
+atlas = ExtResource("5_sfruv")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fet5y"]
+atlas = ExtResource("5_sfruv")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sbwa8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7uyc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lo7xn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_643kk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fet5y")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="Cegonha" type="CharacterBody2D" unique_id=1636568896]
 z_index = -50
@@ -11,27 +47,37 @@ script = ExtResource("1_2j00t")
 
 [node name="MarkerRight" type="Marker2D" parent="." unique_id=393859374]
 unique_name_in_owner = true
-position = Vector2(54.35814, 12.403431)
+position = Vector2(55.28, 17.28)
 
 [node name="MarkerLeft" type="Marker2D" parent="." unique_id=2043022468]
 unique_name_in_owner = true
-position = Vector2(-5.062149, 12.403431)
-
-[node name="moneybag" type="Sprite2D" parent="." unique_id=1916255952]
-unique_name_in_owner = true
-position = Vector2(-3.2222505, 18.397017)
-scale = Vector2(0.51, 0.51)
-texture = ExtResource("3_sbwa8")
+position = Vector2(1.2800007, 18.28)
 
 [node name="moneybag3" type="Sprite2D" parent="." unique_id=1864782694]
 unique_name_in_owner = true
 visible = false
-position = Vector2(-3.4996247, 17.84227)
-scale = Vector2(0.057, 0.047)
-texture = ExtResource("3_lwl5p")
+position = Vector2(-3, 19)
+scale = Vector2(1.1296499, 1.1296499)
+texture = ExtResource("2_sbwa8")
 
-[node name="sprite" type="Sprite2D" parent="." unique_id=109564783]
+[node name="moneybag" type="Sprite2D" parent="." unique_id=1916255952]
 unique_name_in_owner = true
+position = Vector2(55.28, 17.28)
+scale = Vector2(1.205, 1.205)
+texture = ExtResource("2_sbwa8")
+
+[node name="sprite_old" type="Sprite2D" parent="." unique_id=109564783]
+unique_name_in_owner = true
+visible = false
 position = Vector2(24.753143, 10.796577)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("2_it1oc")
+
+[node name="sprite" type="AnimatedSprite2D" parent="." unique_id=1827192215]
+unique_name_in_owner = true
+position = Vector2(27.999998, 8)
+scale = Vector2(1.865, 1.865)
+sprite_frames = SubResource("SpriteFrames_sbwa8")
+autoplay = "default"
+frame_progress = 0.015690241
+flip_h = true
