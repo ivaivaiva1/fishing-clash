@@ -7,6 +7,7 @@ class_name Player
 @onready var collision_effect: Collision_Effect = %collision_effect
 @onready var skin_handler: SkinHandler = %skin_handler
 var player_name: String 
+var player_color: String
 var current_money: int
 var current_player: int
 var game_manager: GameManager

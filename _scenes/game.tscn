@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://by4oxgbthjk4u" path="res://_scenes/fish/big_fish.tscn" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://ddvlq8luidfup" path="res://Scripts/fish_spawner.gd" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cpjcbme3mfnnl" path="res://Sprites/mar 1.png" id="4_1kice"]
-[ext_resource type="Texture2D" uid="uid://bjgivjbi6ryan" path="res://Sprites/SpearFishing Assets Pack/Sprite names.png" id="4_lbhrr"]
 [ext_resource type="Shader" uid="uid://dftd0pk6ql231" path="res://Shaders/water_distortion.gdshader" id="7_gee14"]
 [ext_resource type="PackedScene" uid="uid://dy5jp3gig3bp8" path="res://_scenes/fish/gold_fish.tscn" id="7_ir15t"]
 [ext_resource type="Script" uid="uid://8ibfv0m8mvo7" path="res://Scripts/Entitys/spawn_treasure.gd" id="8_w7lom"]
@@ -399,12 +398,6 @@ offset_top = -51.88469
 offset_right = 754.4785
 offset_bottom = 497.1761
 color = Color(0.12225223, 0.12225223, 0.12225223, 1)
-
-[node name="spearFishing_package" type="Sprite2D" parent="." unique_id=1356140479]
-visible = false
-texture_filter = 1
-position = Vector2(260.9972, 264.67017)
-texture = ExtResource("4_lbhrr")
 
 [editable path="PLAYERS INFO/PLAYER1INFO"]
 [editable path="PLAYERS INFO/PLAYER2INFO"]

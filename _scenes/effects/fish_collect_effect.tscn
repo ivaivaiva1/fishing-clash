@@ -1,108 +1,117 @@
 [gd_scene format=3 uid="uid://dymjc3rwm5np6"]
 
-[ext_resource type="Texture2D" uid="uid://clhqq8caxstjv" path="res://Sprites/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 B.png" id="1_3yy06"]
-[ext_resource type="Texture2D" uid="uid://c42syxfudpkqx" path="res://Sprites/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 F.png" id="1_bq0vt"]
 [ext_resource type="Script" uid="uid://chu5xry6u6ex7" path="res://Scripts/Effects/animation_finish.gd" id="2_3yy06"]
-[ext_resource type="Texture2D" uid="uid://d1e5ytxo5wryh" path="res://Sprites/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 A.png" id="3_5x6cj"]
-[ext_resource type="Texture2D" uid="uid://nejkia4i3414" path="res://Sprites/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 C.png" id="4_ewx03"]
-[ext_resource type="Texture2D" uid="uid://eair1sb7vvat" path="res://Sprites/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 D.png" id="5_ruphl"]
-[ext_resource type="Texture2D" uid="uid://d1ee1ffje8nl6" path="res://Sprites/Retro Impact Effect Pack 4/Retro Impact Effect Pack 4 E.png" id="6_s6elp"]
+[ext_resource type="Texture2D" uid="uid://b2mxjc1mscjmc" path="res://Sprites/catch_effects.png" id="3_msl51"]
 
-[sub_resource type="Animation" id="Animation_3yy06"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [113]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1os5"]
+atlas = ExtResource("3_msl51")
+region = Rect2(0, 72, 32, 36)
 
-[sub_resource type="Animation" id="Animation_bq0vt"]
-resource_name = "idle"
-length = 0.3
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [113, 114, 115, 116, 117, 118, 119]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("animation_finish")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.3),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"on_finish_anim"
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqcjt"]
+atlas = ExtResource("3_msl51")
+region = Rect2(32, 72, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyavo"]
+atlas = ExtResource("3_msl51")
+region = Rect2(64, 72, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27ugt"]
+atlas = ExtResource("3_msl51")
+region = Rect2(96, 72, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hanmk"]
+atlas = ExtResource("3_msl51")
+region = Rect2(128, 72, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6lgi"]
+atlas = ExtResource("3_msl51")
+region = Rect2(160, 72, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apdyn"]
+atlas = ExtResource("3_msl51")
+region = Rect2(0, 144, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msl51"]
+atlas = ExtResource("3_msl51")
+region = Rect2(32, 144, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2j3xv"]
+atlas = ExtResource("3_msl51")
+region = Rect2(64, 144, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vllic"]
+atlas = ExtResource("3_msl51")
+region = Rect2(96, 144, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ercm7"]
+atlas = ExtResource("3_msl51")
+region = Rect2(128, 144, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl3sp"]
+atlas = ExtResource("3_msl51")
+region = Rect2(160, 144, 32, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rf3b4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1os5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oqcjt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyavo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27ugt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hanmk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6lgi")
+}],
+"loop": 0,
+"name": &"roxo",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apdyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msl51")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2j3xv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vllic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ercm7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl3sp")
+}],
+"loop": 0,
+"name": &"verde",
+"speed": 12.0
 }]
-}
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3yy06"]
-_data = {
-&"RESET": SubResource("Animation_3yy06"),
-&"idle": SubResource("Animation_bq0vt")
-}
-
-[node name="fish_collect_effect" type="Sprite2D" unique_id=140967120]
+[node name="fish_collect_effect" type="AnimatedSprite2D" unique_id=351768846]
 z_index = 3500
 z_as_relative = false
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("1_3yy06")
-hframes = 6
-vframes = 30
-frame = 113
+sprite_frames = SubResource("SpriteFrames_rf3b4")
+animation = &"roxo"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=900566221]
-libraries/ = SubResource("AnimationLibrary_3yy06")
-autoplay = &"idle"
-speed_scale = 0.6
-
-[node name="animation_finish" type="Node" parent="." unique_id=897507133]
+[node name="animation_finish" type="Node" parent="." unique_id=897507133 node_paths=PackedStringArray("auto_destroy_timer")]
 script = ExtResource("2_3yy06")
+auto_destroy_timer = NodePath("../Timer")
 
-[node name="RetroImpactEffectPack4A" type="Sprite2D" parent="." unique_id=1479034487]
-visible = false
-position = Vector2(225.58163, -73.4711)
-texture = ExtResource("3_5x6cj")
+[node name="Timer" type="Timer" parent="." unique_id=1245220847]
+autostart = true
 
-[node name="RetroImpactEffectPack4B" type="Sprite2D" parent="." unique_id=1462049666]
-visible = false
-position = Vector2(400.8884, -44.329205)
-texture = ExtResource("1_3yy06")
-
-[node name="RetroImpactEffectPack4C" type="Sprite2D" parent="." unique_id=1322962950]
-visible = false
-position = Vector2(570.33307, -46.117676)
-texture = ExtResource("4_ewx03")
-
-[node name="RetroImpactEffectPack4D" type="Sprite2D" parent="." unique_id=1618185275]
-visible = false
-position = Vector2(770.7335, 39.13338)
-texture = ExtResource("5_ruphl")
-
-[node name="RetroImpactEffectPack4E" type="Sprite2D" parent="." unique_id=1942378439]
-visible = false
-position = Vector2(932.0668, -96.533165)
-texture = ExtResource("6_s6elp")
-
-[node name="RetroImpactEffectPack4F" type="Sprite2D" parent="." unique_id=197105252]
-visible = false
-position = Vector2(1135.9333, -60.599834)
-texture = ExtResource("1_bq0vt")
+[connection signal="timeout" from="Timer" to="animation_finish" method="_on_timer_timeout"]

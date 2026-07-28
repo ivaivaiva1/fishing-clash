@@ -279,7 +279,7 @@ func _on_bait_area_area_entered(area: Area2D) -> void:
 		var fish: Fish = area.get_parent() as Fish 
 		if !fish.pescavel: return 
 		get_fish(fish.fish_name, fish.peso, fish.points, fish.is_shiny)
-		fish.is_collected(self as Bait)
+		fish.is_collected(self as Bait, player.player_color)
 		SfxManager.play_sfx(SoundsList.FIGHTSTICK_CLICK)
 	
 	if area.is_in_group("bubble"):

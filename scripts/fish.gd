@@ -91,14 +91,14 @@ func spawn_bubble():
 		spawn_bubble()
 
 
-func is_collected(bait: Bait):
+func is_collected(bait: Bait, player_color: String):
 	if has_pingente:
 		pingente.reparent(get_parent())
 		pingente.start(bait, speed)
 	
 	var spawn_pos: Vector2
 	spawn_pos = right_effectPos.global_position
-	EffectSpawner.spawn_effect(spawn_pos, effect_size)
+	EffectSpawner.spawn_effect(spawn_pos, effect_size, player_color)
 	queue_free()
 
 

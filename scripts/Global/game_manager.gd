@@ -112,6 +112,7 @@ func spawn_players():
 	var player_instance_1 = player_scene.instantiate()
 	player1 = player_instance_1
 	player1.player_name = "player1"
+	player1.player_color = "roxo"
 	player1.current_player = 1
 	player1.game_manager = self
 	add_child(player_instance_1)
@@ -121,6 +122,7 @@ func spawn_players():
 	var player_instance_2 = player_scene.instantiate()
 	player2 = player_instance_2
 	player2.player_name = "player2"
+	player2.player_color = "verde"
 	player2.current_player = 2
 	player2.game_manager = self
 	add_child(player_instance_2)

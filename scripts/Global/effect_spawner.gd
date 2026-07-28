@@ -26,13 +26,14 @@ func spawn_blood(shark: Shark, is_blood: bool, target_pos: Vector2, flip_h: bool
 	blood_effect.start(is_blood)
 
 
-func spawn_effect(target_pos: Vector2, target_scale: float):
+func spawn_effect(target_pos: Vector2, target_scale: float, target_color: String):
 	var effect = effect_scene.instantiate()
 	get_tree().current_scene.add_child(effect)
 	# define a posição
 	effect.global_position = target_pos
 	effect.scale = Vector2(target_scale, target_scale)
-	
+	var effect_anim = effect as AnimatedSprite2D
+	effect_anim.play(target_color)
 	# adiciona na cena (usa o root atual)
 
 
