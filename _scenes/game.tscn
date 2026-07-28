@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://dkpesntnrp5ug" path="res://Sprites/GRAFXKID/Tropics/3 - Floating_clouds.png" id="23_w7lom"]
 [ext_resource type="PackedScene" uid="uid://bcrse5ombb3ow" path="res://_scenes/menus/player_info.tscn" id="27_sntvj"]
 [ext_resource type="Texture2D" uid="uid://btyhn1ur144p6" path="res://Sprites/mar corpo 1.png" id="29_fdh18"]
+[ext_resource type="Texture2D" uid="uid://8mucsh0a1otk" path="res://Sprites/Splash Screen/reimagined-large-light.png" id="30_prxok"]
 [ext_resource type="Texture2D" uid="uid://7t1e0od1dsbw" path="res://Sprites/Sea/Superficie.png" id="31_mj01u"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2lena"]
@@ -398,6 +399,12 @@ offset_top = -51.88469
 offset_right = 754.4785
 offset_bottom = 497.1761
 color = Color(0.12225223, 0.12225223, 0.12225223, 1)
+
+[node name="ReimaginedLargeLight" type="Sprite2D" parent="." unique_id=1574185517]
+visible = false
+position = Vector2(270, 221.688)
+scale = Vector2(0.24878474, 0.24878472)
+texture = ExtResource("30_prxok")
 
 [editable path="PLAYERS INFO/PLAYER1INFO"]
 [editable path="PLAYERS INFO/PLAYER2INFO"]

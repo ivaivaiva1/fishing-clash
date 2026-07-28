@@ -17,6 +17,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="Fishing Clash"
 run/main_scene="uid://ebbi0lca86e4"
 config/features=PackedStringArray("4.7", "Forward Plus")
+boot_splash/image="uid://8mucsh0a1otk"
 config/icon="res://icon.svg"
 
 [autoload]
