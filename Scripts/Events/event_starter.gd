@@ -4,7 +4,7 @@ extends Node2D
 @onready var spawn_treasure: SpawnTreasure = %SpawnTreasure
 @onready var cegonha_spawner: CegonhasSpawner = %CegonhaSpawner
 var banished_events: Array[int] = []
-@onready var spawn_event_counter: float = randf_range(20, 60)
+@onready var spawn_event_counter: float = randf_range(20, 40)
 var last_event_is_checked: bool = false
 
 func _ready() -> void:

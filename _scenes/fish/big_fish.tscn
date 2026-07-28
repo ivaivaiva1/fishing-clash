@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dgqkcp4w43rxy" path="res://Scripts/Effects/sea_zigzag.gd" id="4_c3pe1"]
 [ext_resource type="Texture2D" uid="uid://k3vyhqbyr7oe" path="res://Sprites/Fish Sprites/big_fish_shiny.png" id="4_vu2ot"]
 [ext_resource type="PackedScene" uid="uid://5n5ruuiimy7b" path="res://_scenes/entitys/pingente.tscn" id="6_354b3"]
+[ext_resource type="Script" uid="uid://3ere2y01j8w4" path="res://Scripts/Effects/bubble_destroyer.gd" id="6_ctx04"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j2pq6"]
 shader = ExtResource("2_vu2ot")
@@ -190,9 +191,15 @@ zigzag_time = 0.8
 is_horizontal = false
 is_fish = true
 
+[node name="bubble_destroyer" type="Node2D" parent="." unique_id=284993683]
+scale = Vector2(1.0000001, 1.0000001)
+script = ExtResource("6_ctx04")
+
 [node name="Pingente" parent="." unique_id=1431694881 instance=ExtResource("6_354b3")]
 unique_name_in_owner = true
 visible = false
 position = Vector2(12.816176, 11.509561)
+
+[connection signal="area_entered" from="Area2D" to="bubble_destroyer" method="_on_area_2d_area_entered"]
 
 [editable path="Pingente"]

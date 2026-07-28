@@ -1,6 +1,7 @@
 extends Node2D
 class_name Bubble
 
+var bubble_origin
 @onready var sprite: AnimatedSprite2D = %Sprite
 @onready var auto_destruction_position: float = randf_range(120, 130)
 var is_alive: bool = true

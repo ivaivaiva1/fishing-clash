@@ -83,8 +83,9 @@ func spawn_bubble():
 	#if sprite.flip_h: bubble_pos = bubble_rightPos.global_position
 	#else: bubble_pos = bubble_leftPos.global_position
 	bubble_pos = bubble_rightPos.global_position
-	
-	EffectSpawner.spawn_bubble(bubble_pos, (effect_size * scale.x), (sprite.z_index + 1))
+	var bubble_origin = null
+	if fish_name == "golden": bubble_origin = self
+	EffectSpawner.spawn_bubble(bubble_pos, (effect_size * scale.x), (sprite.z_index + 1), bubble_origin)
 	bubble_timer = randf_range(min_bubble_time, max_bubble_time)
 	var doubleB_rand: float = randf_range(0, 100)
 	if doubleB_rand < double_bouble_change:

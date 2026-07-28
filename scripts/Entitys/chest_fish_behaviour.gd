@@ -158,6 +158,7 @@ func _update_velocity(delta: float) -> void:
 
 
 func spurge_coins():
+	ScreenShake.do_screen_shake(2, 0.1)
 	has_coins -= 1
 	already_purge = true
 	chest_fish.scale *= 0.98

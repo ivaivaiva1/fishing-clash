@@ -45,7 +45,7 @@ func collision_effect(target_pos: Vector2):
 
 
 
-func spawn_bubble(target_pos: Vector2, target_scale: float, target_ordering: int):
+func spawn_bubble(target_pos: Vector2, target_scale: float, target_ordering: int, bubble_origin = null):
 	var effect = bubble_scene.instantiate()
 	
 	
@@ -53,8 +53,14 @@ func spawn_bubble(target_pos: Vector2, target_scale: float, target_ordering: int
 	effect.scale = Vector2(target_scale, target_scale)
 	effect.global_position = target_pos
 	effect.z_index = target_ordering
-	#var sprite = effect.get_node("Sprite")
-	#sprite.z_index = target_ordering 
+	if bubble_origin == null: return
+	var bubble: Bubble
+	for child in effect.get_children():
+		if child is Bubble:
+			bubble = child as Bubble
+			break
+	bubble.bubble_origin = bubble_origin
+
 
 
 func collect_coin_effect(target_pos: Vector2):

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dyruejh301o1y"]
 
-[ext_resource type="Script" uid="uid://cvdrx3lifgqm0" path="res://Scripts/Effects/vertical_basic_movement.gd" id="1_bk5m0"]
+[ext_resource type="Script" uid="uid://cm0u58majwih8" path="res://Scripts/Effects/vertical_basic_movement.gd" id="1_bk5m0"]
 [ext_resource type="Texture2D" uid="uid://d0gat5xnfnf7h" path="res://Sprites/bolha_16x16.png" id="2_3jkn6"]
 [ext_resource type="Texture2D" uid="uid://qb5owawq05gt" path="res://Sprites/SpearFishing Assets Pack/Sprites/Bubble - 8x8.png" id="2_6h5b0"]
-[ext_resource type="Script" uid="uid://btqnq0i37wfd6" path="res://Scripts/Effects/bubble.gd" id="3_3jkn6"]
-[ext_resource type="Script" uid="uid://j7wupq54lltf" path="res://Scripts/Effects/sea_zigzag.gd" id="4_crspo"]
+[ext_resource type="Script" uid="uid://ckfagl1vsm3lg" path="res://Scripts/Effects/bubble.gd" id="3_3jkn6"]
+[ext_resource type="Script" uid="uid://dgqkcp4w43rxy" path="res://Scripts/Effects/sea_zigzag.gd" id="4_crspo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h2k0n"]
 radius = 3.0621638
@@ -67,7 +67,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bhx41")
 }],
-"loop": false,
+"loop": 0,
 "name": &"default",
 "speed": 10.0
 }, {
@@ -87,7 +87,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6etcm")
 }],
-"loop": false,
+"loop": 0,
 "name": &"kabum",
 "speed": 10.0
 }]

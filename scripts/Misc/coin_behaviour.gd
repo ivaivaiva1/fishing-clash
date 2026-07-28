@@ -26,7 +26,6 @@ func _ready() -> void:
 	elif randf_range(0, 100) < father_obj.red_chance:
 		sprite.texture = texture_red
 		points = father_obj.red_value
-		father_obj.scale = Vector2(0.95, 0.95)
 	elif randf_range(0, 100) < father_obj.blue_chance:
 		sprite.texture = texture_blue
 		points = father_obj.blue_value

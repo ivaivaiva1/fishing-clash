@@ -29,6 +29,8 @@ func _physics_process(delta: float) -> void:
 
 
 func hit_sea():
+	ScreenShake.do_screen_shake(3, 0.2)
+	
 	blink_tween()
 	var coin_instance = COIN_CONTAINER.instantiate()
 	get_tree().current_scene.add_child(coin_instance)

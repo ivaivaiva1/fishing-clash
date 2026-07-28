@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://pj5f4o6fc50o"]
 
-[ext_resource type="Script" uid="uid://b3hff3kr1alg2" path="res://Scripts/fish.gd" id="1_kvppo"]
+[ext_resource type="Script" uid="uid://dncwjw63uhp8i" path="res://Scripts/fish.gd" id="1_kvppo"]
 [ext_resource type="Texture2D" uid="uid://rsejho4l2w80" path="res://Sprites/SpearFishing Assets Pack/Sprites/Fish1 - 16x16/Red.png" id="2_okpkt"]
-[ext_resource type="Script" uid="uid://c3pq7quoidk37" path="res://Scripts/Entitys/chest_fish_behaviour.gd" id="4_kvppo"]
+[ext_resource type="Script" uid="uid://3ere2y01j8w4" path="res://Scripts/Effects/bubble_destroyer.gd" id="4_ebha6"]
+[ext_resource type="Script" uid="uid://bl7hp1u0bf1fw" path="res://Scripts/Entitys/chest_fish_behaviour.gd" id="4_kvppo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvppo"]
 atlas = ExtResource("2_okpkt")
@@ -123,3 +124,9 @@ position = Vector2(22.922, 23.08)
 
 [node name="chest_fish_behaviour" type="Node2D" parent="." unique_id=334047371]
 script = ExtResource("4_kvppo")
+
+[node name="bubble_destroyer" type="Node2D" parent="." unique_id=96691227]
+scale = Vector2(1.0000001, 1.0000001)
+script = ExtResource("4_ebha6")
+
+[connection signal="area_entered" from="Area2D" to="bubble_destroyer" method="_on_area_2d_area_entered"]
