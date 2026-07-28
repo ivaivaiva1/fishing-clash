@@ -3,6 +3,30 @@
 [ext_resource type="Script" uid="uid://chu5xry6u6ex7" path="res://Scripts/Effects/animation_finish.gd" id="2_3yy06"]
 [ext_resource type="Texture2D" uid="uid://b2mxjc1mscjmc" path="res://Sprites/catch_effects.png" id="3_msl51"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbgcy"]
+atlas = ExtResource("3_msl51")
+region = Rect2(0, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1df2"]
+atlas = ExtResource("3_msl51")
+region = Rect2(32, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ip2y5"]
+atlas = ExtResource("3_msl51")
+region = Rect2(64, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2y0p"]
+atlas = ExtResource("3_msl51")
+region = Rect2(96, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5sco"]
+atlas = ExtResource("3_msl51")
+region = Rect2(128, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kgy4"]
+atlas = ExtResource("3_msl51")
+region = Rect2(160, 0, 32, 36)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_n1os5"]
 atlas = ExtResource("3_msl51")
 region = Rect2(0, 72, 32, 36)
@@ -55,6 +79,29 @@ region = Rect2(160, 144, 32, 36)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_qbgcy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1df2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ip2y5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2y0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5sco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kgy4")
+}],
+"loop": 0,
+"name": &"cinza",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_n1os5")
 }, {
 "duration": 1.0,
@@ -105,7 +152,7 @@ z_index = 3500
 z_as_relative = false
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_rf3b4")
-animation = &"roxo"
+animation = &"cinza"
 
 [node name="animation_finish" type="Node" parent="." unique_id=897507133 node_paths=PackedStringArray("auto_destroy_timer")]
 script = ExtResource("2_3yy06")

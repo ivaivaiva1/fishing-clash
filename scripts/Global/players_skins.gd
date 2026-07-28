@@ -13,7 +13,7 @@ var player2_bait_texture: Texture2D = preload("uid://cp50ws7qej87x")
 # Player 3 -------------------------------------------------
 var player3_arrow_texture: Texture2D = preload("res://artes joao/player_arrows/seta_laranja.png")
 var player3_boat_texture: Texture2D = preload("res://artes joao/13-04-2026/barco 2 joao.png")
-var player3_bait_texture: Texture2D = preload("res://artes joao/14.04.26/isca/isca 1.png")
+var player3_bait_texture: Texture2D = preload("uid://dmstwt7wn1yxw")
 
 # Player 4 -------------------------------------------------
 var player4_arrow_texture: Texture2D = preload("res://artes joao/player_arrows/seta verde.png")

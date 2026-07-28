@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1fnyt64wu0b1"]
 
-[ext_resource type="Script" uid="uid://cxgmfjf0icfrf" path="res://Scripts/default_shark_behaviour.gd" id="1_po4rd"]
+[ext_resource type="Script" uid="uid://5hhk5hgreilw" path="res://Scripts/default_shark_behaviour.gd" id="1_po4rd"]
 [ext_resource type="Shader" uid="uid://d1yqqtu208nmx" path="res://Shaders/blink.gdshader" id="2_d6m34"]
 [ext_resource type="Texture2D" uid="uid://ci6nr1yv30juf" path="res://Sprites/Fish Sprites/shark.png" id="2_po4rd"]
 
@@ -132,7 +132,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_by2yj")
 }],
-"loop": true,
+"loop": 1,
 "name": &"attack",
 "speed": 25.0
 }, {
@@ -161,7 +161,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g7nwe")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 4.5
 }, {
@@ -190,7 +190,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5g25l")
 }],
-"loop": true,
+"loop": 1,
 "name": &"resting",
 "speed": 5.0
 }]

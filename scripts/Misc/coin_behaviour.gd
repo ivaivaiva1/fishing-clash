@@ -22,12 +22,15 @@ func _ready() -> void:
 	if randf_range(0, 100) < father_obj.purple_chance:
 		sprite.texture = texture_purple
 		points = father_obj.purple_value
+		father_obj.scale = Vector2(0.8, 0.8)
 	elif randf_range(0, 100) < father_obj.red_chance:
 		sprite.texture = texture_red
 		points = father_obj.red_value
+		father_obj.scale = Vector2(0.95, 0.95)
 	elif randf_range(0, 100) < father_obj.blue_chance:
 		sprite.texture = texture_blue
 		points = father_obj.blue_value
+		father_obj.scale = Vector2(1.05, 1.05)
 	elif randf_range(0, 100) < father_obj.yellow_chance:
 		sprite.texture = texture_gold
 		points = father_obj.yellow_value

@@ -20,7 +20,7 @@ var player4: Player
 @export var peso_1: Label 
 @export var peso_2: Label 
 @onready var clone_boats: CloneBoats = %CloneBoats
-var round_duration: float = 240
+var round_duration: float = 180
 var game_timer: float = 0
 var time_left: float
 
@@ -38,7 +38,6 @@ func _ready() -> void:
 	FishSpawner_intance.big_fish_rate = GlobalVars.big_fish_rate_menu
 	FishSpawner_intance.red_fish_rate = GlobalVars.red_fish_rate_menu
 	EffectSpawner.fish_spawner = FishSpawner_intance
-	att_money()
 	att_points()
 	start_game()
 
@@ -106,7 +105,7 @@ func spawn_players():
 	GlobalVars.player2_money = 0
 	GlobalVars.player3_money = 0
 	GlobalVars.player4_money = 0
-	
+	att_money()
 	
 	player_1info.make_active()
 	var player_instance_1 = player_scene.instantiate()
@@ -116,7 +115,7 @@ func spawn_players():
 	player1.current_player = 1
 	player1.game_manager = self
 	add_child(player_instance_1)
-	player_instance_1.global_position = Vector2(180, 90.849)
+	player_instance_1.global_position = Vector2(170, 90.849)
 	
 	player_2info.make_active()
 	var player_instance_2 = player_scene.instantiate()
@@ -126,25 +125,26 @@ func spawn_players():
 	player2.current_player = 2
 	player2.game_manager = self
 	add_child(player_instance_2)
-	player_instance_2.global_position = Vector2(353.0, 90.849)
+	player_instance_2.global_position = Vector2(370, 90.849)
 	
 	if players_number < 3: 
 		player_3info.make_empty()
 		player_4info.make_empty()
 		return
-	player_3info.visible = true
+	player_3info.make_active()
 	var player_instance_3 = player_scene.instantiate()
 	player3 = player_instance_3
 	player3.player_name = "player3"
+	player3.player_color = "cinza"
 	player3.current_player = 3
 	player3.game_manager = self
 	add_child(player_instance_3)
-	player_instance_3.global_position = Vector2(180, 79)
+	player_instance_3.global_position = Vector2(270, 79)
 	
 	if players_number < 4: 
 		player_4info.make_empty()
 		return
-	player_4info.visible = true
+	player_4info.make_active()
 	var player_instance_4 = player_scene.instantiate()
 	player4 = player_instance_4
 	player4.player_name = "player4"
