@@ -22,7 +22,7 @@ var player4: Player
 @onready var clone_boats: CloneBoats = %CloneBoats
 var round_duration: float = 240
 var game_timer: float = 0
-
+var time_left: float
 
 # Event Vars
 var coin_madness_enabled: bool = false
@@ -47,7 +47,7 @@ func _process(delta: float) -> void:
 	if game_state == "game":
 		game_timer += delta
 	
-	var time_left: float = max(0.0, round_duration - game_timer)
+	time_left = max(0.0, round_duration - game_timer)
 	
 	var minutes: int = floori(time_left / 60.0)
 	var seconds: int = int(time_left) % 60

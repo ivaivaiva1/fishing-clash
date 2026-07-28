@@ -107,7 +107,7 @@ func red_rain_counter(delta: float):
 
 
 var shiny_rain: bool = false
-var shiny_rain_duration: float = 50
+var shiny_rain_duration: float = 10
 var shiny_rain_timer: float 
 func do_shiny_rain():
 	if shiny_rain: return 

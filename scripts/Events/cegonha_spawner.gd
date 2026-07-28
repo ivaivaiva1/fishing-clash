@@ -28,7 +28,7 @@ func spawn_cegonha():
 
 
 var cegonhas_enabled: bool = false
-var cegonhas_cooldown: float = 40
+var cegonhas_cooldown: float = 10
 var cegonhas_timer: float
 func do_cegonhas():
 	if cegonhas_enabled: return
