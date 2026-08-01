@@ -17,6 +17,7 @@ var player4: Player
 
 
 @onready var game_countdown_label: Label = %game_countdown
+@onready var game_fps: Label = %game_fps
 @export var peso_1: Label 
 @export var peso_2: Label 
 @onready var clone_boats: CloneBoats = %CloneBoats
@@ -55,6 +56,7 @@ func _process(delta: float) -> void:
 	
 	if game_timer > round_duration:
 		finish_round()
+	game_fps.text = str(Engine.get_frames_per_second())
 
 
 func finish_round():

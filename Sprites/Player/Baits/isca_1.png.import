@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1pyne10083f4"
-path="res://.godot/imported/isca_2.png-5a76f6b82ebd4c0b70260de64f807b2c.ctex"
+uid="uid://dmstwt7wn1yxw"
+path="res://.godot/imported/isca_1.png-6bf0ad6917f928a914458ab782945250.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Baits/isca_2.png"
-dest_files=["res://.godot/imported/isca_2.png-5a76f6b82ebd4c0b70260de64f807b2c.ctex"]
+source_file="res://Sprites/Player/Baits/isca_1.png"
+dest_files=["res://.godot/imported/isca_1.png-6bf0ad6917f928a914458ab782945250.ctex"]
 
 [params]
 

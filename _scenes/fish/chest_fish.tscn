@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://pj5f4o6fc50o"]
 
 [ext_resource type="Script" uid="uid://dncwjw63uhp8i" path="res://Scripts/fish.gd" id="1_kvppo"]
+[ext_resource type="Texture2D" uid="uid://bao6i0be7672d" path="res://Sprites/Fish Sprites/Peixe_BauTesouro-1.png.png" id="2_ebha6"]
 [ext_resource type="Texture2D" uid="uid://rsejho4l2w80" path="res://Sprites/SpearFishing Assets Pack/Sprites/Fish1 - 16x16/Red.png" id="2_okpkt"]
 [ext_resource type="Script" uid="uid://3ere2y01j8w4" path="res://Scripts/Effects/bubble_destroyer.gd" id="4_ebha6"]
 [ext_resource type="Script" uid="uid://bl7hp1u0bf1fw" path="res://Scripts/Entitys/chest_fish_behaviour.gd" id="4_kvppo"]
@@ -80,8 +81,14 @@ points = 100.0
 effect_size = 1.8
 pescavel = false
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1838229913]
+position = Vector2(8, 5)
+scale = Vector2(2.005, 2.005)
+texture = ExtResource("2_ebha6")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=720800471]
 unique_name_in_owner = true
+visible = false
 position = Vector2(1, 0)
 scale = Vector2(4.605, 4.605)
 sprite_frames = SubResource("SpriteFrames_jrlim")
@@ -90,37 +97,35 @@ frame_progress = 0.44736078
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1186832392 groups=["fish"]]
 visible = false
+position = Vector2(6.0000005, 9)
+scale = Vector2(1.48, 1.48)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=304766951]
 polygon = PackedVector2Array(-14, -22, -14, -22, 8, -22, 18, -12, 20, -8, 21, -1, 21, 8, 13, 14, -14, 14, -20, 7, -28, 10, -28, -7, -21, -3, -19, -12, -14, -16)
 
 [node name="right_effectPos" type="Marker2D" parent="." unique_id=681224076]
 unique_name_in_owner = true
-visible = false
-position = Vector2(3, 0)
+position = Vector2(11, 7)
 
 [node name="left_effectPos" type="Marker2D" parent="." unique_id=279669195]
 unique_name_in_owner = true
-visible = false
-position = Vector2(-2, 0)
+position = Vector2(-11, 7)
 
 [node name="bubble_rightPos" type="Marker2D" parent="." unique_id=259068415]
 unique_name_in_owner = true
-visible = false
-position = Vector2(15, 9)
+position = Vector2(35, 9)
 
 [node name="bubble_leftPos" type="Marker2D" parent="." unique_id=1701793375]
 unique_name_in_owner = true
-visible = false
-position = Vector2(-15, 9)
+position = Vector2(-31, 9)
 
 [node name="coin_pos_right" type="Marker2D" parent="." unique_id=29409393]
 unique_name_in_owner = true
-position = Vector2(-22.921577, 23.080132)
+position = Vector2(-23, 12.000132)
 
 [node name="coin_pos_left" type="Marker2D" parent="." unique_id=1233909752]
 unique_name_in_owner = true
-position = Vector2(22.922, 23.08)
+position = Vector2(22.843578, 12)
 
 [node name="chest_fish_behaviour" type="Node2D" parent="." unique_id=334047371]
 script = ExtResource("4_kvppo")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmstwt7wn1yxw"
-path="res://.godot/imported/isca_1.png-c8b02be9310ba1e0cea6a8b13062ad65.ctex"
+uid="uid://bqrlan6c45bqq"
+path="res://.godot/imported/PlayerBarco-4.png.png-3e045306f8503e4e6510e387c02176d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Baits/isca_1.png"
-dest_files=["res://.godot/imported/isca_1.png-c8b02be9310ba1e0cea6a8b13062ad65.ctex"]
+source_file="res://Sprites/Player/Boats/PlayerBarco-4.png.png"
+dest_files=["res://.godot/imported/PlayerBarco-4.png.png-3e045306f8503e4e6510e387c02176d4.ctex"]
 
 [params]
 

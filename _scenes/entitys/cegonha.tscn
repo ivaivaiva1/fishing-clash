@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bvpehhb1kmmc3"]
 
 [ext_resource type="Script" uid="uid://c71houkraycft" path="res://Scripts/Entitys/cegonha.gd" id="1_2j00t"]
-[ext_resource type="Texture2D" uid="uid://cg65bd1oyrdka" path="res://Sprites/pelicanooo.png" id="2_it1oc"]
 [ext_resource type="Texture2D" uid="uid://cuhmvu3b7rbtd" path="res://Sprites/Entitys/Cegonha/saco dinhero.png" id="2_sbwa8"]
 [ext_resource type="Texture2D" uid="uid://drbg40fl537sc" path="res://Sprites/Entitys/Cegonha/Passoro.png" id="5_sfruv"]
 
@@ -53,25 +52,11 @@ position = Vector2(55.28, 17.28)
 unique_name_in_owner = true
 position = Vector2(1.2800007, 18.28)
 
-[node name="moneybag3" type="Sprite2D" parent="." unique_id=1864782694]
-unique_name_in_owner = true
-visible = false
-position = Vector2(-3, 19)
-scale = Vector2(1.1296499, 1.1296499)
-texture = ExtResource("2_sbwa8")
-
 [node name="moneybag" type="Sprite2D" parent="." unique_id=1916255952]
 unique_name_in_owner = true
 position = Vector2(55.28, 17.28)
 scale = Vector2(1.205, 1.205)
 texture = ExtResource("2_sbwa8")
-
-[node name="sprite_old" type="Sprite2D" parent="." unique_id=109564783]
-unique_name_in_owner = true
-visible = false
-position = Vector2(24.753143, 10.796577)
-scale = Vector2(0.16, 0.16)
-texture = ExtResource("2_it1oc")
 
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=1827192215]
 unique_name_in_owner = true
