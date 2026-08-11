@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqrlan6c45bqq"
-path="res://.godot/imported/PlayerBarco-4.png.png-3e045306f8503e4e6510e387c02176d4.ctex"
+uid="uid://drds620g7vclu"
+path="res://.godot/imported/playerboat_orange.png-a12807c984e20e769333a8623293bdd0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/Boats/PlayerBarco-4.png.png"
-dest_files=["res://.godot/imported/PlayerBarco-4.png.png-3e045306f8503e4e6510e387c02176d4.ctex"]
+source_file="res://Sprites/Player/Boats/playerboat_orange.png"
+dest_files=["res://.godot/imported/playerboat_orange.png-a12807c984e20e769333a8623293bdd0.ctex"]
 
 [params]
 

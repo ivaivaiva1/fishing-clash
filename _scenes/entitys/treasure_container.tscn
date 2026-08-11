@@ -6,14 +6,6 @@
 [node name="treasure_container" type="Node2D" unique_id=1341208970]
 z_as_relative = false
 
-[node name="BubbleNORMAL21" parent="." unique_id=806134887 instance=ExtResource("2_4b1xs")]
-z_index = -30
-z_as_relative = false
-position = Vector2(-20.705658, -132.53525)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -100.0
-
 [node name="BubbleNORMAL22" parent="." unique_id=165428783 instance=ExtResource("2_4b1xs")]
 z_index = -30
 z_as_relative = false
@@ -54,14 +46,6 @@ scale = Vector2(1.414, 1.414)
 min_speed = -50.0
 max_speed = -100.0
 
-[node name="BubbleNORMAL28" parent="." unique_id=192366751 instance=ExtResource("2_4b1xs")]
-z_index = -30
-z_as_relative = false
-position = Vector2(0.44771576, -131.02179)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -100.0
-
 [node name="BubbleNORMAL29" parent="." unique_id=300316778 instance=ExtResource("2_4b1xs")]
 z_index = -30
 z_as_relative = false
@@ -78,22 +62,6 @@ scale = Vector2(1.414, 1.414)
 min_speed = -50.0
 max_speed = -100.0
 
-[node name="BubbleNORMAL31" parent="." unique_id=721644197 instance=ExtResource("2_4b1xs")]
-z_index = -30
-z_as_relative = false
-position = Vector2(12.062569, -129.68088)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -100.0
-
-[node name="BubbleMINI" parent="." unique_id=884649817 instance=ExtResource("2_4b1xs")]
-z_index = -30
-z_as_relative = false
-position = Vector2(-0.8804247, -133.49693)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -100.0
-
 [node name="BubbleMINI2" parent="." unique_id=656842715 instance=ExtResource("2_4b1xs")]
 z_index = -30
 z_as_relative = false
@@ -106,22 +74,6 @@ max_speed = -100.0
 z_index = -30
 z_as_relative = false
 position = Vector2(-0.85671216, -128.66716)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -100.0
-
-[node name="BubbleMINI4" parent="." unique_id=283126836 instance=ExtResource("2_4b1xs")]
-z_index = -30
-z_as_relative = false
-position = Vector2(-27.10283, -129.12166)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -100.0
-
-[node name="BubbleMINI5" parent="." unique_id=1725534061 instance=ExtResource("2_4b1xs")]
-z_index = -30
-z_as_relative = false
-position = Vector2(0.35572076, -131.5951)
 scale = Vector2(1.176, 1.176)
 min_speed = -50.0
 max_speed = -100.0
@@ -150,14 +102,6 @@ scale = Vector2(1.176, 1.176)
 min_speed = -50.0
 max_speed = -100.0
 
-[node name="BubbleMINI9" parent="." unique_id=628315409 instance=ExtResource("2_4b1xs")]
-z_index = -30
-z_as_relative = false
-position = Vector2(14.428715, -133.11868)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -100.0
-
 [node name="BubbleMINI10" parent="." unique_id=260004011 instance=ExtResource("2_4b1xs")]
 z_index = -30
 z_as_relative = false
@@ -170,14 +114,6 @@ max_speed = -100.0
 z_index = -30
 z_as_relative = false
 position = Vector2(-28.00521, -129.3866)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -100.0
-
-[node name="BubbleNORMAL33" parent="." unique_id=814377199 instance=ExtResource("2_4b1xs")]
-z_index = -30
-z_as_relative = false
-position = Vector2(-23.170692, -127.72769)
 scale = Vector2(1.414, 1.414)
 min_speed = -50.0
 max_speed = -100.0
@@ -214,14 +150,6 @@ scale = Vector2(1.414, 1.414)
 min_speed = -50.0
 max_speed = -100.0
 
-[node name="BubbleNORMAL38" parent="." unique_id=1595339502 instance=ExtResource("2_4b1xs")]
-z_index = -30
-z_as_relative = false
-position = Vector2(-5.016487, -129.68878)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -100.0
-
 [node name="BubbleNORMAL40" parent="." unique_id=1048629385 instance=ExtResource("2_4b1xs")]
 z_index = -30
 z_as_relative = false
@@ -235,22 +163,6 @@ z_index = -30
 z_as_relative = false
 position = Vector2(-13.791344, -124.57941)
 scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -100.0
-
-[node name="BubbleNORMAL42" parent="." unique_id=1078192786 instance=ExtResource("2_4b1xs")]
-z_index = -30
-z_as_relative = false
-position = Vector2(9.397652, -130.29787)
-scale = Vector2(1.414, 1.414)
-min_speed = -50.0
-max_speed = -100.0
-
-[node name="BubbleMINI11" parent="." unique_id=774007533 instance=ExtResource("2_4b1xs")]
-z_index = -30
-z_as_relative = false
-position = Vector2(-2.097023, -127.16197)
-scale = Vector2(1.176, 1.176)
 min_speed = -50.0
 max_speed = -100.0
 
@@ -290,14 +202,6 @@ max_speed = -100.0
 z_index = -30
 z_as_relative = false
 position = Vector2(22.316471, -123.16347)
-scale = Vector2(1.176, 1.176)
-min_speed = -50.0
-max_speed = -100.0
-
-[node name="BubbleMINI18" parent="." unique_id=1268803798 instance=ExtResource("2_4b1xs")]
-z_index = -30
-z_as_relative = false
-position = Vector2(10.975468, -124.36284)
 scale = Vector2(1.176, 1.176)
 min_speed = -50.0
 max_speed = -100.0

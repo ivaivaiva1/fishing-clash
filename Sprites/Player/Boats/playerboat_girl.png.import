@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2vglyug7ppff"
-path="res://.godot/imported/PlayerBarco-7.png.png-5b409beef15889b1ed00edcb45b73f3c.ctex"
+uid="uid://brgd7vbwnflde"
+path="res://.godot/imported/playerboat_girl.png-fa35353acaadb771075398b729c4eb39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/Boats/PlayerBarco-7.png.png"
-dest_files=["res://.godot/imported/PlayerBarco-7.png.png-5b409beef15889b1ed00edcb45b73f3c.ctex"]
+source_file="res://Sprites/Player/Boats/playerboat_girl.png"
+dest_files=["res://.godot/imported/playerboat_girl.png-fa35353acaadb771075398b729c4eb39.ctex"]
 
 [params]
 

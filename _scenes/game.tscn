@@ -385,6 +385,7 @@ vertical_alignment = 1
 
 [node name="game_fps" type="Label" parent="." unique_id=1344983389]
 unique_name_in_owner = true
+visible = false
 offset_top = 224.0
 offset_right = 537.0
 offset_bottom = 256.0
