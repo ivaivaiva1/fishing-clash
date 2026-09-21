@@ -41,6 +41,7 @@ func _ready() -> void:
 	EffectSpawner.fish_spawner = FishSpawner_intance
 	att_points()
 	start_game()
+	MusicManager.play_instant(SoundsList.GAMEPLAY_THEME)
 
 
 func _process(delta: float) -> void:

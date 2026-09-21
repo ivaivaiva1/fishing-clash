@@ -4,8 +4,8 @@ func _ready() -> void:
 	randomize()
 
 
-## musics 
-#const LAVA_MUSIC := {"stream": preload("uid://dad5yqmo2357y"), "volume": -12.0}
+# musics 
+const GAMEPLAY_THEME := {"stream": preload("uid://dhhg5njv476b0"), "volume": 0.0}
 
 
 # effects 

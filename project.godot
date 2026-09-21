@@ -30,6 +30,7 @@ KnockbackManager="*uid://b5qfl22mjplck"
 PlayersController="*uid://b848wutn73bvw"
 PlayersSkins="*uid://c26me8qpmu4vg"
 ScreenShake="*uid://ciw7dq8gjjqaj"
+MusicManager="*uid://brvro50hbiy4u"
 
 [display]
 
